@@ -15,6 +15,9 @@ export default {
       manropeBold: ["ManropeBold"],
     },
     extend: {
+      gap: {
+        7.5: "30px"
+      },
       colors: {
         red: {
           45: "#E50000",
@@ -65,5 +68,9 @@ export default {
         },
       },
     }),
+    function ({ addVariant }) {
+      addVariant("child", "& > *");
+      addVariant("child-hover", "& > *:hover");
+    },
   ],
 };
