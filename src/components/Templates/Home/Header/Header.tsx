@@ -1,4 +1,4 @@
-import jokerImg from "../../../../assets/images/Rectangle 176.png";
+import jokerImg from "../../../../assets/images/joker.png";
 import { Image } from "@nextui-org/react";
 import playIcon from "../../../../assets/icons/play-circle.svg";
 
