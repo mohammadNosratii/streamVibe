@@ -16,8 +16,6 @@ export default {
     },
     extend: {
       colors: {
-        darkBackground: "#1E1E1E",
-        lightBackground: "#F3F4F6",
         red: {
           45: "#E50000",
           50: "#FF0000",
