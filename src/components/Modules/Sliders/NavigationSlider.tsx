@@ -1,5 +1,6 @@
+import React from "react";
 import { ReactNode } from "react";
-import { Swiper } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import {
   Navigation,
   Pagination,
@@ -17,6 +18,10 @@ interface NavigationSliderProps {
 }
 
 export default function NavigationSlider({ children }: NavigationSliderProps) {
+  const slides = React.Children.map(children, (child) => (
+    <SwiperSlide>{child}</SwiperSlide>
+  ));
+
   return (
     <>
       <Swiper
@@ -32,7 +37,7 @@ export default function NavigationSlider({ children }: NavigationSliderProps) {
         modules={[Navigation, Pagination, Mousewheel, Keyboard, Autoplay]}
         className="mySwiper"
       >
-        {children}
+        {slides}
       </Swiper>
     </>
   );
