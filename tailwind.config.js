@@ -25,16 +25,15 @@ export default {
     },
     extend: {
       gap: {
-        7.5: "30px"
+        7.5: "30px",
       },
       container: {
-        
         center: true,
         padding: {
-        "xs": "16px",
-        "2xl": "80px",
-        "3xl": "162px"
-        }
+          xs: "16px",
+          "2xl": "80px",
+          "3xl": "162px",
+        },
       },
       colors: {
         red: {
