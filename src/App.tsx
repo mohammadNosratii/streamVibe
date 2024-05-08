@@ -1,3 +1,9 @@
+import Navbar from "./components/Modules/Navbar/Navbar"
+
 export default function App() {
-  return <h1 className="font-manropeRegular">Hello</h1>;
+  return (
+    <>
+      <Navbar />
+    </>
+  )
 }

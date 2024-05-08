@@ -8,6 +8,16 @@ export default {
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      "xs": "380px",
+      "sm": "640px",
+      "md": "768px",
+      "lg": "1024px",
+      "xl": "1280px",
+      "2xl": "1440px",
+      "3xl": "1760px",
+      "4xl": "1920px"
+    },
     fontFamily: {
       manropeRegular: ["ManropeRegular"],
       manropeMedium: ["ManropeMedium"],
@@ -15,6 +25,17 @@ export default {
       manropeBold: ["ManropeBold"],
     },
     extend: {
+      gap: {
+        7.5: "30px"
+      },
+      container: {
+        center: true,
+        padding: {
+        "xs": "40px",
+        "2xl": "80px",
+        "3xl": "162px"
+        }
+      },
       colors: {
         red: {
           45: "#E50000",
@@ -65,5 +86,9 @@ export default {
         },
       },
     }),
+    function ({ addVariant }) {
+      addVariant("child", "& > *");
+      addVariant("child-hover", "& > *:hover");
+    },
   ],
 };
