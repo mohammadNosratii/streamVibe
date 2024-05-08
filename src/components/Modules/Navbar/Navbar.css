@@ -1,0 +1,15 @@
+@keyframes showStickyNavbar {
+  0% {
+    height: 0;
+  }
+  50%{
+    height: 11%;
+  }
+  100% {
+    height: auto;
+  }
+}
+
+.shownAnimation {
+  animation: showStickyNavbar 45ms ease-in-out 0s 1 normal forwards;
+}
