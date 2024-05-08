@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: MonropeRegular;
+  src: url(../fonts/Manrope/Manrope-Regular.ttf);
+}
+
+@font-face {
+  font-family: MonropeMedium;
+  src: url(../fonts/Manrope/Manrope-Medium.ttf);
+}
+
+@font-face {
+  font-family: MonropeSemiBold;
+  src: url(../fonts/Manrope/Manrope-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: MonropeBold;
+  src: url(../fonts/Manrope/Manrope-Bold.ttf);
+}
