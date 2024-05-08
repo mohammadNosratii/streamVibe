@@ -16,7 +16,7 @@ export default {
     },
     extend: {
       colors: {
-        darkBackground: "#1E1E1E" ,
+        darkBackground: "#1E1E1E",
         lightBackground: "#F3F4F6",
         red: {
           45: "#E50000",
@@ -52,5 +52,20 @@ export default {
     },
   },
   darkMode: "class",
-  plugins: [nextui()],
+  plugins: [
+    nextui({
+      themes: {
+        dark: {
+          colors: {
+            background: "#1E1E1E",
+          },
+        },
+        light: {
+          colors: {
+            background: "#F3F4F6",
+          },
+        },
+      },
+    }),
+  ],
 };
