@@ -10,10 +10,28 @@ import logo from "/icons/logo-desktop.svg";
 import searchIcon from "/icons/magnifying-glass.svg";
 import notificationIcon from "/icons/bell.svg";
 import menuIcon from "/icons/bars-3.svg";
+import { useEffect, useState } from "react";
+import "./Navbar.css";
 
 export default function Navbar() {
+  const [isNavbarSticky, setIsNavbarSticky] = useState<boolean>(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY >= 100 && !isNavbarSticky) {
+        setIsNavbarSticky(true);
+      } else if (window.scrollY < 100 && isNavbarSticky) {
+        console.log("trigger");
+        setIsNavbarSticky(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => removeEventListener("scroll", handleScroll);
+  }, [isNavbarSticky]);
+
   return (
-    <NextUINavbar>
+    <NextUINavbar
+      className={`z-50 py-3 transition-all ${isNavbarSticky ? `backdrop-blur-sm backdrop-saturate-[1.5] fixed shownAnimation` : `backdrop-blur-none bg-transparent backdrop-saturate-[1] absolute`}`}
+    >
       <NavbarBrand>
         <Image
           className="w-28 h-12 2xl:w-40 2xl:h-12 3xl:w-48 3xl:h-14"
