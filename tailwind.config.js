@@ -16,7 +16,6 @@ export default {
       "xl": "1280px",
       "2xl": "1440px",
       "3xl": "1760px",
-      "4xl": "1920px"
     },
     fontFamily: {
       manropeRegular: ["ManropeRegular"],
@@ -29,9 +28,10 @@ export default {
         7.5: "30px"
       },
       container: {
+        
         center: true,
         padding: {
-        "xs": "40px",
+        "xs": "16px",
         "2xl": "80px",
         "3xl": "162px"
         }
