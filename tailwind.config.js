@@ -30,7 +30,7 @@ export default {
       container: {
         center: true,
         padding: {
-          xs: "16px",
+          DEFAULT: "16px",
           "2xl": "80px",
           "3xl": "162px",
         },
