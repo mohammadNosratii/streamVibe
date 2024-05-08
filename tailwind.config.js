@@ -9,10 +9,10 @@ export default {
   ],
   theme: {
     fontFamily: {
-      monropeRegular: ["MonropeRegular"],
-      monropeMedium: ["MonropeMedium"],
-      monropeSemiBold: ["MonropeSemiBold"],
-      monropeBold: ["MonropeBold"],
+      manropeRegular: ["ManropeRegular"],
+      manropeMedium: ["ManropeMedium"],
+      manropeSemiBold: ["ManropeSemiBold"],
+      manropeBold: ["ManropeBold"],
     },
     extend: {
       colors: {
