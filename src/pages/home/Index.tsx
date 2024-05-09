@@ -1,13 +1,14 @@
 import NavigationSlider from "../../components/Modules/Sliders/NavigationSlider";
 import Header from "../../components/Templates/Home/Header/Header";
+import MovieInfo from "../../constants/HeaderMovieInfo";
 
 export default function Index() {
   return (
     <>
       <NavigationSlider>
-        <Header />
-        <Header />
-        <Header />
+        {MovieInfo.map((movie) => (
+          <Header key={movie.id} {...movie} />
+        ))}
       </NavigationSlider>
     </>
   );
