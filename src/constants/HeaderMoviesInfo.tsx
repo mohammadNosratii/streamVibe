@@ -1,6 +1,6 @@
-import joker from "../assets/images/joker.png";
+import joker from "../assets/images/joker.webp";
 import roadHouse from "../assets/images/road-house.avif";
-import passengers from "../assets/images/passengers.jpeg";
+import passengers from "../assets/images/passengers.webp";
 import topGun from "../assets/images/topgun.png";
 import granTurismo from "../assets/images/granTurismo.jpg";
 
