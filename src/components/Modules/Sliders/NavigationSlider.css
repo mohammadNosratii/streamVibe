@@ -1,0 +1,25 @@
+.swiper-pagination-bullet {
+  width: 1px;
+  height: 10px;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.swiper-pagination-bullet-active {
+  background-color: #e50000;
+  height: 15px;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  scale: 0.5;
+  color: white;
+}
+
+@media screen and (max-width: 640px) {
+  .swiper-button-prev, .swiper-button-next {
+    display: none;
+  }
+}
+

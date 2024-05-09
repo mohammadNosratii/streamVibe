@@ -11,7 +11,7 @@ import {
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "./styles.css";
+import "./NavigationSlider.css";
 
 interface NavigationSliderProps {
   children: ReactNode;

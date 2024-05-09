@@ -17,20 +17,24 @@ export default function Navbar() {
   const [isNavbarSticky, setIsNavbarSticky] = useState<boolean>(false);
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY >= 100 && !isNavbarSticky) {
+      if (window.scrollY >= 50 && !isNavbarSticky) {
         setIsNavbarSticky(true);
-      } else if (window.scrollY < 100 && isNavbarSticky) {
-        console.log("trigger");
+      } else if (window.scrollY < 50 && isNavbarSticky) {
         setIsNavbarSticky(false);
       }
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => removeEventListener("scroll", handleScroll);
   }, [isNavbarSticky]);
 
   return (
     <NextUINavbar
-      className={`z-50 py-3 transition-all ${isNavbarSticky ? `backdrop-blur-sm backdrop-saturate-[1.5] fixed shownAnimation` : `backdrop-blur-none bg-transparent backdrop-saturate-[1] absolute`}`}
+      className={`z-50 py-3 transition-all ${
+        isNavbarSticky
+          ? `backdrop-blur-sm backdrop-saturate-[1.5] shownAnimation fixed`
+          : `backdrop-blur-none bg-transparent backdrop-saturate-[1] absolute`
+      }`}
     >
       <NavbarBrand>
         <Image
