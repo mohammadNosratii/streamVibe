@@ -1,18 +1,12 @@
 import playIcon from "../../../../assets/icons/play-circle.svg";
-
-interface HeaderProps {
-  title: string;
-  img: string;
-  description: string;
-  genres: string;
-}
+import { movieNavigationSlider } from "../../../../interfaces/navigationSlider.interface";
 
 export default function Header({
   title,
   img,
   description,
   genres,
-}: HeaderProps) {
+}: movieNavigationSlider) {
   return (
     <div className="relative">
       <img

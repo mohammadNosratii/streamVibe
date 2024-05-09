@@ -1,11 +1,17 @@
-import Navbar from "./components/Modules/Navbar/Navbar"
-import Home from "./pages/home/Index"
+import { RouterProvider, createRouter } from "@tanstack/react-router";
+import { routeTree } from "./routeTree.gen";
+
+const router = createRouter({ routeTree });
+declare module "@tanstack/react-router" {
+  interface Register {
+    router: typeof router;
+  }
+}
 
 export default function App() {
   return (
     <>
-      <Navbar />
-      <Home />
+      <RouterProvider router={router} />
     </>
-  )
+  );
 }
