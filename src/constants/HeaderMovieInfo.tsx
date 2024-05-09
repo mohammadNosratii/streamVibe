@@ -27,7 +27,7 @@ const movieInfo = [
     img: passengers,
     description:
       "A malfunction in a sleeping pod on a spacecraft traveling to a distant colony planet wakes one passenger 90 years early.",
-      genres: "Drama, Romance, Sci-Fi, Thriller",
+    genres: "Drama, Romance, Sci-Fi, Thriller",
   },
   {
     id: 4,
@@ -35,7 +35,7 @@ const movieInfo = [
     img: topGun,
     description:
       "After thirty years, Maverick is still pushing the envelope as a top naval aviator, but must confront ghosts of his past when he leads TOP GUN's elite graduates on a mission that demands the ultimate sacrifice from those chosen to fly it.",
-      genres: "Action, Drama",
+    genres: "Action, Drama",
   },
   {
     id: 5,
@@ -43,7 +43,7 @@ const movieInfo = [
     img: granTurismo,
     description:
       "Based on the unbelievable, inspiring true story of a team of underdogs - a struggling, working-class gamer, a failed former race car driver, and an idealistic motorsport exec - who risk it all to take on the most elite sport in the world.",
-      genres: "Action, Adventure, Drama, Sport",
+    genres: "Action, Adventure, Drama, Sport",
   },
 ];
 export default movieInfo;
