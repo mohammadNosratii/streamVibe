@@ -1,5 +1,6 @@
-import playIcon from "../../../../assets/icons/play-circle.svg";
+import PlayCircle from "../../../../assets/icons/PlayCircle";
 import { movieNavigationSlider } from "../../../../interfaces/navigationSlider.interface";
+import { Button } from "@nextui-org/react";
 
 export default function Header({
   title,
@@ -21,10 +22,9 @@ export default function Header({
         </div>
         <h2 className="text-4xl font-manropeSemiBold">{title}</h2>
         <p className="line-clamp-2">{description}</p>
-        <div className="flex items-center justify-center gap-2.5 w-24 h-10 lg:w-36 lg:h-12 bg-red-45 rounded-3xl">
-          <button className="text-md lg:text-lg">Play</button>
-          <img className="w-4 h-4 lg:w-5 lg:h-5" src={playIcon} alt="" />
-        </div>
+        <Button className="bg-red-45 rounded-2xl px-5 md:px-8 text-base md:text-xl" endContent={<PlayCircle />}>
+          Play
+        </Button>
       </div>
     </div>
   );
