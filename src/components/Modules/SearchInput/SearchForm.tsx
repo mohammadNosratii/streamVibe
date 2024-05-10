@@ -24,9 +24,7 @@ export default function SearchForm() {
             "placeholder:text-default-700/50 dark:placeholder:text-white/60",
           ],
           inputWrapper: [
-            "w-[140px]",
-            "lg:w-[90%]",
-            "xl:w-auto",
+            "w-[100%]",
             "shadow-xl",
             "bg-default-200/50",
             "dark:bg-default/60",

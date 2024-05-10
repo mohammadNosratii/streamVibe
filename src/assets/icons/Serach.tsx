@@ -4,7 +4,7 @@ export default function Serach() {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       fill="currentColor"
-      className="w-4 h-4 lg:w-5 lg:h-5 xl:w-6 xl:h-6 cursor-pointer"
+      className="w-4 h-4 lg:w-5 lg:h-5 xl:w-6 xl:h-6 cursor-pointer lg:hidden"
     >
       <path
         fillRule="evenodd"
