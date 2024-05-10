@@ -31,11 +31,14 @@ export default function Navbar() {
 
   return (
     <NextUINavbar
-      className={`z-50 py-3 transition-all ${
+      className={`z-50 py-3 max-w- transition-all ${
         isNavbarSticky
           ? `backdrop-blur-sm backdrop-saturate-[1.5] shownAnimation fixed`
           : `backdrop-blur-none bg-transparent backdrop-saturate-[1] absolute`
       }`}
+      classNames={{
+        wrapper: ["max-w-[90%]"],
+      }}
     >
       <NavbarBrand>
         <Image
@@ -82,18 +85,22 @@ export default function Navbar() {
         </NavbarItem>
       </NavbarContent>
       <NavbarContent
-        className="flex items-center gap-4 3xl:gap-7.5"
+        className="flex items-center gap-2 3xl:gap-7.5"
         justify="end"
       >
-        <NavbarItem className="hidden md:block">
+        <NavbarItem className="hidden lg:block">
           <SearchForm />
+        </NavbarItem>
+        <NavbarItem className="flex items-center gap-3">
+          <Serach />
+          <Image
+            alt=""
+            src={menuIcon}
+            className="w-6 h-6 3xl:w-8 3xl:h-8 md:hidden"
+          />
         </NavbarItem>
         <NavbarItem className="hidden md:block">
           <PopOver />
-        </NavbarItem>
-        <NavbarItem className="flex items-center gap-3 md:hidden">
-          <Serach />
-          <Image alt="" src={menuIcon} className="w-6 h-6 3xl:w-8 3xl:h-8" />
         </NavbarItem>
       </NavbarContent>
     </NextUINavbar>
