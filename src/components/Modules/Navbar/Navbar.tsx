@@ -7,11 +7,12 @@ import {
   Image,
 } from "@nextui-org/react";
 import logo from "/icons/logo-desktop.svg";
-import notificationIcon from "/icons/bell.svg";
 import menuIcon from "/icons/bars-3.svg";
 import { useEffect, useState } from "react";
 import "./Navbar.css";
 import SearchForm from "../SearchInput/SearchForm";
+import Serach from "../../../assets/icons/Serach";
+import PopOver from "../PopOver/PopOver";
 
 export default function Navbar() {
   const [isNavbarSticky, setIsNavbarSticky] = useState<boolean>(false);
@@ -44,26 +45,38 @@ export default function Navbar() {
         />
       </NavbarBrand>
       <NavbarContent
-        className="hidden md:flex items-center gap-4 2xl:gap-7.5 bg-black-6 py-2 ps-2 pe-8 2xl:py-2.5 2xl:ps-2.5 2xl:pe-10 rounded-xl border-4 border-black-12"
+        className="hidden h-auto md:flex items-center gap-4 2xl:gap-7.5 bg-black-6 py-1 ps-1 pe-5 lg:py-1.5 lg:ps-1.5 lg:pe-6 xl:py-2 xl:ps-2 xl:pe-8 2xl:py-2.5 2xl:ps-2.5 2xl:pe-10 rounded-xl border-4 border-black-12"
         justify="center"
       >
-        <NavbarItem className="bg-black-10 py-2 px-5 2xl:py-1.5 2xl:px-6 rounded-lg border-1 border-transparent">
-          <Link href="#" className="text-white font-manropeMedium">
+        <NavbarItem className="bg-black-10 py-1 px-3 lg:py-1.5 lg:px-4 xl:py-2 xl:px-5 2xl:py-1.5 2xl:px-6 rounded-lg border-1 border-transparent">
+          <Link
+            href="#"
+            className="text-sm lg:text-base text-white font-manropeMedium"
+          >
             Home
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="#" className="text-gray-75 font-manropeRegular">
+          <Link
+            href="#"
+            className="text-sm lg:text-base text-gray-75 font-manropeRegular"
+          >
             Movies & Shows
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="#" className="text-gray-75 font-manropeRegular">
+          <Link
+            href="#"
+            className="text-sm lg:text-base text-gray-75 font-manropeRegular"
+          >
             Support
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="#" className="text-gray-75 font-manropeRegular">
+          <Link
+            href="#"
+            className="text-sm lg:text-base text-gray-75 font-manropeRegular"
+          >
             Subscription
           </Link>
         </NavbarItem>
@@ -76,13 +89,10 @@ export default function Navbar() {
           <SearchForm />
         </NavbarItem>
         <NavbarItem className="hidden md:block">
-          <Image
-            alt=""
-            src={notificationIcon}
-            className="w-6 h-6 3xl:w-8 3xl:h-8"
-          />
+          <PopOver />
         </NavbarItem>
-        <NavbarItem className="block md:hidden">
+        <NavbarItem className="flex items-center gap-3 md:hidden">
+          <Serach />
           <Image alt="" src={menuIcon} className="w-6 h-6 3xl:w-8 3xl:h-8" />
         </NavbarItem>
       </NavbarContent>
