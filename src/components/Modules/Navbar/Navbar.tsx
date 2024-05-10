@@ -92,14 +92,16 @@ export default function Navbar() {
           <SearchForm />
         </NavbarItem>
         <NavbarItem className="flex items-center gap-3">
-          <span className="lg:hidden">
+          <div className="lg:hidden bg-white/40 py-2 px-2 rounded-full backdrop-blur-lg">
             <Search />
-          </span>
-          <Image
-            alt=""
-            src={menuIcon}
-            className="w-6 h-6 3xl:w-8 3xl:h-8 md:hidden"
-          />
+          </div>
+          <div className="md:hidden flex items-center justify-center w-12 h-12 bg-black-10 border-3 border-black-15 rounded-lg">
+            <Image
+              alt=""
+              src={menuIcon}
+              className="w-6 h-6 3xl:w-8 3xl:h-8 md:hidden"
+            />
+          </div>
         </NavbarItem>
         <NavbarItem className="hidden md:block">
           <PopOver />
