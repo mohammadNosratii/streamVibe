@@ -1,10 +1,10 @@
 import NavigationSlider from "../../components/Modules/Sliders/NavigationSlider";
-import moviesInfo from "../../constants/HeaderMoviesInfo";
+import getMoviesInfo from "../../mock/getMoviesInfo";
 
 export default function Home() {
   return (
     <>
-      <NavigationSlider data={moviesInfo} />
+      <NavigationSlider data={getMoviesInfo()} />
     </>
   );
 }
