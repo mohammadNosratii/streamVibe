@@ -13,6 +13,11 @@ import "./Navbar.css";
 import SearchForm from "../SearchInput/SearchForm";
 import Search from "../../../assets/icons/Search";
 import PopOver from "../PopOver/PopOver";
+import {
+  SerachPopOverContent,
+  UserPopOverContent,
+} from "../PopOverContent/PopOverContent";
+import { UserPopOverTrigger } from "../PopOverTrigger/PopOverTrigger";
 
 export default function Navbar() {
   const [isNavbarSticky, setIsNavbarSticky] = useState<boolean>(false);
@@ -93,7 +98,11 @@ export default function Navbar() {
         </NavbarItem>
         <NavbarItem className="flex items-center gap-3">
           <div className="lg:hidden py-3 px-3 rounded-full bg-black-25">
-            <Search />
+            <PopOver content={<SerachPopOverContent />}>
+              <span>
+                <Search />
+              </span>
+            </PopOver>
           </div>
           <div className="md:hidden flex items-center justify-center w-12 h-12 bg-black-10 border-3 border-black-15 rounded-lg">
             <Image
@@ -103,8 +112,12 @@ export default function Navbar() {
             />
           </div>
         </NavbarItem>
-        <NavbarItem className="hidden md:flex">
-          <PopOver />
+        <NavbarItem className="hidden md:inline-block">
+          <PopOver content={<UserPopOverContent />}>
+            <span className="flex items-center justify-center">
+              <UserPopOverTrigger />
+            </span>
+          </PopOver>
         </NavbarItem>
       </NavbarContent>
     </NextUINavbar>
