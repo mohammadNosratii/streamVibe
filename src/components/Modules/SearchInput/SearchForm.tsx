@@ -13,15 +13,20 @@ export default function SearchForm() {
         {...register("searchText", {
           required: true,
         })}
-        isClearable
         radius="lg"
         classNames={{
           input: [
             "bg-transparent",
+            "placeholder:text-xs",
+            "lg:placeholder:text-sm",
+            "xl:placeholder:text-base",
             "text-black/90 dark:text-white/90",
             "placeholder:text-default-700/50 dark:placeholder:text-white/60",
           ],
           inputWrapper: [
+            "w-[140px]",
+            "lg:w-[90%]",
+            "xl:w-auto",
             "shadow-xl",
             "bg-default-200/50",
             "dark:bg-default/60",
