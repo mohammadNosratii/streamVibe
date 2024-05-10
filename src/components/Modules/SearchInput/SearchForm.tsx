@@ -1,5 +1,5 @@
 import { Input } from "@nextui-org/react";
-import SerachIcon from "../../../assets/icons/Serach";
+import SearchIcon from "../../../assets/icons/Search";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { searchInput } from "../../../interfaces/searchInput.interface";
 
@@ -40,7 +40,7 @@ export default function SearchForm() {
         placeholder="Type to search..."
         startContent={
           <button>
-            <SerachIcon />
+            <SearchIcon />
           </button>
         }
       />

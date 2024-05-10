@@ -11,7 +11,7 @@ import menuIcon from "/icons/bars-3.svg";
 import { useEffect, useState } from "react";
 import "./Navbar.css";
 import SearchForm from "../SearchInput/SearchForm";
-import Serach from "../../../assets/icons/Serach";
+import Search from "../../../assets/icons/Search";
 import PopOver from "../PopOver/PopOver";
 
 export default function Navbar() {
@@ -92,7 +92,9 @@ export default function Navbar() {
           <SearchForm />
         </NavbarItem>
         <NavbarItem className="flex items-center gap-3">
-          <Serach />
+          <span className="lg:hidden">
+            <Search />
+          </span>
           <Image
             alt=""
             src={menuIcon}
