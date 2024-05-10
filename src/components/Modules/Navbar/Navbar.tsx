@@ -42,7 +42,7 @@ export default function Navbar() {
     >
       <NavbarBrand>
         <Image
-          className="w-28 h-12 2xl:w-40 2xl:h-12 3xl:w-48 3xl:h-14"
+          className="w-28 h-12 lg:w-36 2xl:w-40 3xl:w-48 3xl:h-14"
           src={logo}
           alt=""
         />
@@ -92,7 +92,7 @@ export default function Navbar() {
           <SearchForm />
         </NavbarItem>
         <NavbarItem className="flex items-center gap-3">
-          <div className="lg:hidden bg-white/40 py-2 px-2 rounded-full backdrop-blur-lg">
+          <div className="lg:hidden py-3 px-3 rounded-full bg-black-25">
             <Search />
           </div>
           <div className="md:hidden flex items-center justify-center w-12 h-12 bg-black-10 border-3 border-black-15 rounded-lg">
@@ -103,7 +103,7 @@ export default function Navbar() {
             />
           </div>
         </NavbarItem>
-        <NavbarItem className="hidden md:block">
+        <NavbarItem className="hidden md:flex">
           <PopOver />
         </NavbarItem>
       </NavbarContent>
