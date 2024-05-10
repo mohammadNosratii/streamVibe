@@ -7,11 +7,11 @@ import {
   Image,
 } from "@nextui-org/react";
 import logo from "/icons/logo-desktop.svg";
-import searchIcon from "/icons/magnifying-glass.svg";
 import notificationIcon from "/icons/bell.svg";
 import menuIcon from "/icons/bars-3.svg";
 import { useEffect, useState } from "react";
 import "./Navbar.css";
+import SearchForm from "../SearchInput/SearchForm";
 
 export default function Navbar() {
   const [isNavbarSticky, setIsNavbarSticky] = useState<boolean>(false);
@@ -73,7 +73,7 @@ export default function Navbar() {
         justify="end"
       >
         <NavbarItem className="hidden md:block">
-          <Image alt="" src={searchIcon} className="w-6 h-6 3xl:w-8 3xl:h-8" />
+          <SearchForm />
         </NavbarItem>
         <NavbarItem className="hidden md:block">
           <Image
