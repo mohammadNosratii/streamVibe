@@ -1,5 +1,5 @@
 interface PopOverProps {
   content: React.JSX.Element;
-  children: any;
+  children: React.JSX.Element;
 }
 export type { PopOverProps };
