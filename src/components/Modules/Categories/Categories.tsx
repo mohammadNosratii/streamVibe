@@ -14,12 +14,12 @@ export default function Categories() {
             make you think, or a documentary to learn something new
           </p>
         </div>
-        <div className="hidden md:flex items-center gap-3 2xl:gap-5 dark:bg-black-6 border border-black-12 rounded-lg 2xl:rounded-xl p-3 2xl:p-4">
-          <div className="dark:bg-black-10 p-2.5 2xl:p-3.5 border border-black-12 rounded-lg cursor-pointer swiper-custom-button-prev">
+        <div className="hidden md:flex items-center gap-3 2xl:gap-5 bg-white dark:bg-black-6 rounded-lg 2xl:rounded-xl p-3 2xl:p-4">
+          <div className="bg-mainLight dark:bg-black-10 p-2.5 2xl:p-3.5 rounded-lg cursor-pointer swiper-custom-button-prev">
             <ArrowLeft />
           </div>
           <div className="flex items-center gap-1 custom-pagination"></div>
-          <div className="dark:bg-black-10 p-2.5 2xl:p-3.5 border border-black-12 rounded-lg cursor-pointer swiper-custom-button-next">
+          <div className="bg-mainLight dark:bg-black-10 p-2.5 2xl:p-3.5 rounded-lg cursor-pointer swiper-custom-button-next">
             <ArrowRight />
           </div>
         </div>
