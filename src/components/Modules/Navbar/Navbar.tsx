@@ -53,13 +53,13 @@ export default function Navbar() {
         />
       </NavbarBrand>
       <NavbarContent
-        className="hidden h-auto md:flex items-center gap-4 2xl:gap-7.5 bg-black-6 py-1 ps-1 pe-5 lg:py-1.5 lg:ps-1.5 lg:pe-6 xl:py-2 xl:ps-2 xl:pe-8 2xl:py-2.5 2xl:ps-2.5 2xl:pe-10 rounded-xl border-4 border-black-12"
+        className="hidden h-auto md:flex items-center gap-4 2xl:gap-7.5 bg-white dark:bg-black-6 py-1 ps-1 pe-5 lg:py-1.5 lg:ps-1.5 lg:pe-6 xl:py-2 xl:ps-2 xl:pe-8 2xl:py-2.5 2xl:ps-2.5 2xl:pe-10 rounded-xl border-4 border-white dark:border-black-12"
         justify="center"
       >
-        <NavbarItem className="bg-black-10 py-1 px-3 lg:py-1.5 lg:px-4 xl:py-2 xl:px-5 2xl:py-1.5 2xl:px-6 rounded-lg border-1 border-transparent">
+        <NavbarItem className="bg-mainLight dark:bg-black-10 py-1 px-3 lg:py-1.5 lg:px-4 xl:py-2 xl:px-5 2xl:py-1.5 2xl:px-6 rounded-lg border-1 border-transparent">
           <Link
             href="#"
-            className="text-sm lg:text-base text-white font-manropeMedium"
+            className="text-sm lg:text-base text-black dark:text-white font-manropeMedium"
           >
             Home
           </Link>

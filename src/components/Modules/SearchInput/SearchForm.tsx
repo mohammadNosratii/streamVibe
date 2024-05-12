@@ -32,7 +32,7 @@ export default function SearchForm() {
             "backdrop-saturate-200",
             "hover:bg-default-200/70",
             "dark:hover:bg-default/70",
-            "group-data-[focus=true]:bg-black-12",
+            "group-data-[focus=true]:bg-mainLight",
             "dark:group-data-[focus=true]:bg-black-6",
             "!cursor-text",
           ],

@@ -20,9 +20,12 @@ export default function Header({
           <div className="w-16 h-0.5 bg-gray-75"></div>
           <span className="text-gray-60">{genres}</span>
         </div>
-        <h2 className="text-4xl font-manropeSemiBold">{title}</h2>
-        <p className="line-clamp-2">{description}</p>
-        <Button className="bg-red-45 rounded-2xl px-5 md:px-8 text-base md:text-xl" endContent={<PlayCircle />}>
+        <h2 className="text-white text-4xl font-manropeSemiBold">{title}</h2>
+        <p className="text-white line-clamp-2">{description}</p>
+        <Button
+          className="text-white bg-red-45 rounded-2xl px-5 md:px-8 text-base md:text-xl"
+          endContent={<PlayCircle />}
+        >
           Play
         </Button>
       </div>
