@@ -21,6 +21,8 @@ export default function CategoriesSlider() {
         pagination={{
           clickable: true,
           el: ".custom-pagination",
+          bulletActiveClass: "categorySlider-active-bullet",
+          bulletClass: "categorySlider-bullet",
         }}
         breakpoints={{
           640: {
