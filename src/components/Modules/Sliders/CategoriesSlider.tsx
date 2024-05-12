@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/pagination";
-import "./CategoriesSlider.css"
+import "./CategoriesSlider.css";
 
 import { Pagination, Navigation } from "swiper/modules";
 import CategoryBox from "../Categories/CategoryBox";
@@ -12,7 +12,7 @@ export default function CategoriesSlider() {
   return (
     <>
       <Swiper
-        slidesPerView={5}
+        slidesPerView={2}
         spaceBetween={30}
         navigation={{
           prevEl: ".swiper-custom-button-prev",
@@ -21,6 +21,14 @@ export default function CategoriesSlider() {
         pagination={{
           clickable: true,
           el: ".custom-pagination",
+        }}
+        breakpoints={{
+          640: {
+            slidesPerView: 3,
+          },
+          1024: {
+            slidesPerView: 4,
+          },
         }}
         modules={[Pagination, Navigation]}
         className="mySwiper"

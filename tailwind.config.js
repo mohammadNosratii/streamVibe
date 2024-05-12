@@ -27,6 +27,9 @@ export default {
       gap: {
         7.5: "30px",
       },
+      boxShadow: {
+        "normal": "0px 1px 10px rgba(0, 0, 0, 0.5)"
+      },
       container: {
         center: true,
         padding: {

@@ -1,11 +1,10 @@
 .custom-pagination .swiper-pagination-bullet {
-    width: 23px !important;
-    height: 4px !important;
-    border-radius: 10px !important;
-  }
-  
-  .custom-pagination .swiper-pagination-bullet-active {
-    background-color: #e50000 !important;
-    width: 35px !important;
-  }
-  
+  width: 23px;
+  height: 4px;
+  border-radius: 10px;
+}
+
+.custom-pagination .swiper-pagination-bullet-active {
+  background-color: #e50000;
+  width: 35px;
+}
