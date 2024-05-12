@@ -9,11 +9,11 @@ export default {
   ],
   theme: {
     screens: {
-      "xs": "380px",
-      "sm": "640px",
-      "md": "768px",
-      "lg": "1024px",
-      "xl": "1280px",
+      xs: "380px",
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
       "2xl": "1440px",
       "3xl": "1760px",
     },
@@ -36,6 +36,8 @@ export default {
         },
       },
       colors: {
+        mainLight: "#F3F4F6",
+        mainDark: "#1E1E1E",
         red: {
           45: "#E50000",
           50: "#FF0000",

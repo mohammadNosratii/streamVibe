@@ -5,6 +5,7 @@ import SearchForm from "../SearchInput/SearchForm";
 import joker from "../../../assets/images/joker.webp";
 import roadHouse from "../../../assets/images/road-house.avif";
 import granTurismo from "../../../assets/images/granTurismo.jpg";
+import ThemeSwitch from "../ThemeSwitch/ThemeSwitch";
 
 const UserPopOverContent = () => {
   return (
@@ -21,7 +22,8 @@ const UserPopOverContent = () => {
         </div>
       </div>
       <Divider className="my-2" />
-      <ul className="w-full child:transition-all child:duration-200 child-hover:bg-black-30 child:p-2 child:rounded-lg child:cursor-pointer">
+      <ul className="w-full child:transition-all child:duration-200 child-hover:bg-mainLight dark:child-hover:bg-black-30 child:p-2 child:rounded-lg child:cursor-pointer">
+        <ThemeSwitch />
         <li>
           <a href="">Subscription</a>
         </li>
@@ -39,7 +41,7 @@ const UserPopOverContent = () => {
         </li>
       </ul>
       <Divider className="my-2" />
-      <div className="flex items-center justify-between gap-2 hover:bg-red-45 translate-x-0 duration-200 w-full p-2 cursor-pointer rounded-lg">
+      <div className="flex items-center justify-between gap-2 hover:text-white hover:bg-red-45 translate-x-0 duration-200 w-full p-2 cursor-pointer rounded-lg">
         <span>Sign out</span>
         <SignOut />
       </div>
