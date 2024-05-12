@@ -24,10 +24,11 @@ export default function SearchForm() {
             "placeholder:text-default-700/50 dark:placeholder:text-white/60",
           ],
           inputWrapper: [
+            "backdrop-blur-3xl",
             "w-[100%]",
             "shadow-xl",
             "bg-default-200/50",
-            "dark:bg-default/60",
+            "dark:bg-white/30",
             "backdrop-blur-xl",
             "backdrop-saturate-200",
             "hover:bg-default-200/70",
