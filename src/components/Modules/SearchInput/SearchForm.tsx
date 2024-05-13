@@ -26,7 +26,6 @@ export default function SearchForm() {
           inputWrapper: [
             "backdrop-blur-3xl",
             "w-[100%]",
-            "shadow-xl",
             "bg-default-200/50",
             "dark:bg-white/30",
             "backdrop-blur-xl",
