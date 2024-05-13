@@ -97,14 +97,14 @@ export default function Navbar() {
           <SearchForm />
         </NavbarItem>
         <NavbarItem className="flex items-center gap-3">
-          <div className="lg:hidden py-3 px-3 rounded-full bg-black-25">
+          <div className="lg:hidden py-3 px-3 rounded-full bg-mainLight dark:bg-black-10 md:dark:bg-black-25">
             <PopOver content={<SerachPopOverContent />}>
               <span>
                 <Search />
               </span>
             </PopOver>
           </div>
-          <div className="md:hidden flex items-center justify-center w-12 h-12 bg-black-10 border-3 border-black-15 rounded-lg">
+          <div className="md:hidden flex items-center justify-center w-12 h-12 bg-mainLight dark:bg-black-10 border-3 dark:border-black-15 rounded-lg">
             <Image
               alt=""
               src={menuIcon}
