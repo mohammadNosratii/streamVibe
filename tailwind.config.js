@@ -66,6 +66,7 @@ export default {
           65: "#A6A6A6",
           70: "#B3B3B3",
           75: "#BFBFBF",
+          85: "#d4d4d8",
           90: "#E4E4E7",
           95: "#F1F1F3",
           97: "#F7F7F8",
