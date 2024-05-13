@@ -10,7 +10,6 @@ import logo from "/icons/logo-desktop.svg";
 import menuIcon from "/icons/bars-3.svg";
 import { useEffect, useState } from "react";
 import "./Navbar.css";
-import SearchForm from "../SearchInput/SearchForm";
 import Search from "../../../assets/icons/Search";
 import PopOver from "../PopOver/PopOver";
 import {
@@ -36,10 +35,10 @@ export default function Navbar() {
 
   return (
     <NextUINavbar
-      className={`z-50 py-3 transition-all ${
+      className={`z-50 py-3 transition-all fixed bg-gradient-to-b from-black-6 to-black-6/0 ${
         isNavbarSticky
-          ? `backdrop-blur-sm backdrop-saturate-[1.5] shownAnimation fixed`
-          : `backdrop-blur-none bg-transparent backdrop-saturate-[1] absolute`
+          ? `backdrop-blur-sm bg-black-6/20 backdrop-saturate-[1.5]`
+          : `backdrop-blur-none bg-transparent backdrop-saturate-[1]`
       }`}
       classNames={{
         wrapper: ["max-w-[90%]"],
@@ -53,10 +52,10 @@ export default function Navbar() {
         />
       </NavbarBrand>
       <NavbarContent
-        className="hidden h-auto md:flex items-center gap-4 2xl:gap-7.5 bg-white dark:bg-black-6 py-1 ps-1 pe-5 lg:py-1.5 lg:ps-1.5 lg:pe-6 xl:py-2 xl:ps-2 xl:pe-8 2xl:py-2.5 2xl:ps-2.5 2xl:pe-10 rounded-xl border-4 border-white dark:border-black-12"
+        className="hidden h-auto md:flex items-center gap-4 2xl:gap-7.5 bg-white/10 backdrop-blur py-2 ps-2 pe-5 lg:pe-6 xl:py-2 xl:ps-2 xl:pe-8 2xl:py-2.5 2xl:ps-2.5 2xl:pe-10 rounded-xl border-1 border-gray-85/30 dark:border-black-12"
         justify="center"
       >
-        <NavbarItem className="bg-mainLight dark:bg-black-10 py-1 px-3 lg:py-1.5 lg:px-4 xl:py-2 xl:px-5 2xl:py-1.5 2xl:px-6 rounded-lg border-1 border-transparent">
+        <NavbarItem className="bg-mainLight dark:bg-black-10 py-1 px-3 lg:py-1.5 lg:px-4 xl:py-2 xl:px-5 2xl:px-6 rounded-lg border-1 border-transparent">
           <Link
             href="#"
             className="text-sm lg:text-base text-black dark:text-white font-manropeMedium"
@@ -90,25 +89,20 @@ export default function Navbar() {
         </NavbarItem>
       </NavbarContent>
       <NavbarContent
-        className="flex items-center gap-2 3xl:gap-7.5"
+        className="flex items-center gap-2 2xl:gap-3.5"
         justify="end"
       >
-        <NavbarItem className="hidden lg:block">
-          <SearchForm />
-        </NavbarItem>
         <NavbarItem className="flex items-center gap-3">
-          <div className="lg:hidden py-3 px-3 rounded-full bg-mainLight dark:bg-black-10 md:dark:bg-black-25">
-            <PopOver content={<SerachPopOverContent />}>
-              <span>
-                <Search />
-              </span>
-            </PopOver>
-          </div>
-          <div className="md:hidden flex items-center justify-center w-12 h-12 bg-mainLight dark:bg-black-10 border-3 dark:border-black-15 rounded-lg">
+          <PopOver content={<SerachPopOverContent />}>
+            <div className="py-[11px] px-[11px] md:py-3 md:px-3 border-2 dark:border-black-15 rounded-full bg-gray-85 dark:bg-black-10 cursor-pointer">
+              <Search />
+            </div>
+          </PopOver>
+          <div className="md:hidden flex items-center justify-center w-10 h-10 bg-gray-85 dark:bg-black-10 border-2 dark:border-black-15 rounded-lg">
             <Image
               alt=""
               src={menuIcon}
-              className="w-6 h-6 3xl:w-8 3xl:h-8 md:hidden"
+              className="w-6 h-6 md:hidden"
             />
           </div>
         </NavbarItem>

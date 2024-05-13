@@ -1,12 +1,8 @@
-import { User } from "@nextui-org/react";
+import { Avatar} from "@nextui-org/react";
 
 function UserPopOverTrigger() {
   return (
-    <User
-      name=""
-      className="transition-transform cursor-pointer"
-      avatarProps={{}}
-    />
+    <Avatar className="border-2 dark:border-black-15 dark:bg-black-10 w-[44px] h-[44px] 2xl:w-[52px] 2xl:h-[52px] cursor-pointer" />
   );
 }
 
