@@ -36,7 +36,7 @@ export default function Navbar() {
 
   return (
     <NextUINavbar
-      className={`z-50 py-3 max-w- transition-all ${
+      className={`z-50 py-3 transition-all ${
         isNavbarSticky
           ? `backdrop-blur-sm backdrop-saturate-[1.5] shownAnimation fixed`
           : `backdrop-blur-none bg-transparent backdrop-saturate-[1] absolute`
