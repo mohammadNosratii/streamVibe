@@ -1,29 +1,28 @@
 import { ArrowRight } from "../../../assets/icons/Arrows";
 import { categoryProps } from "../../../interfaces/category.interface";
-import { Card, CardFooter, Image, Button } from "@nextui-org/react";
+import { Card, CardFooter, Image, Button, CardHeader } from "@nextui-org/react";
 
 export default function CategoryBox({ img, title }: categoryProps) {
   return (
     <Card
       isFooterBlurred
-      className="w-full h-[300px] shadow-none rounded-[30px] col-span-12 sm:col-span-7 border dark:border-none dark:bg-gradient-to-b dark:from-white/70 dark:to-black-6/0 to-90% bg-gradient-to-t from-black-6/60 to-black-6/10"
+      className="w-full h-[300px] text-white shadow-none rounded-[30px] col-span-12 sm:col-span-7 border dark:border-none dark:bg-gradient-to-b dark:from-white/70 dark:to-black-6/0 to-90% bg-gradient-to-t from-black-6/60 to-black-6/10"
     >
-      <Image
-        removeWrapper
-        alt="Relaxing app background"
-        className="z-0 w-full h-full object-cover pt-1 px-1 rounded-[30px]"
-        src={img}
-      />
-      <CardFooter className="absolute bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
-        <div className="flex justify-between flex-grow gap-2 items-center">
-          <div className="flex flex-col">
-            <p className="text-2xl text-white/60">{title}</p>
-          </div>
+      <div className="relative h-full">
+        <Image
+          removeWrapper
+          alt="Relaxing app background"
+          className="z-0 w-full h-full object-cover p-1 rounded-[30px]"
+          src={img}
+        />
+        <div className="text-center absolute top-1 left-1 text-sm sm:text-base 2xl:text-xl overflow-hidden bg-black-6/20 backdrop-blur-lg py-3 px-8 rounded-br-[35px] rounded-tl-[25px]">
+          {title}
         </div>
-        <Button className="dark:bg-gradient-to-tr dark:from-black-6 dark:to-black-6/0" radius="full" size="sm">
+
+        <button className="flex justify-center items-center absolute bottom-1 right-1 py-3 px-8 bg-black-6/20 backdrop-blur-lg rounded-tl-[30px] rounded-br-[25px]">
           <ArrowRight />
-        </Button>
-      </CardFooter>
+        </button>
+      </div>
     </Card>
   );
 }
