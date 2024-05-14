@@ -16,9 +16,27 @@ import { Route as rootRoute } from './routes/__root'
 
 // Create Virtual Routes
 
+const SupportLazyImport = createFileRoute('/support')()
+const SubscriptionLazyImport = createFileRoute('/subscription')()
+const MoviesShowsLazyImport = createFileRoute('/movies-shows')()
 const IndexLazyImport = createFileRoute('/')()
 
 // Create/Update Routes
+
+const SupportLazyRoute = SupportLazyImport.update({
+  path: '/support',
+  getParentRoute: () => rootRoute,
+} as any).lazy(() => import('./routes/support.lazy').then((d) => d.Route))
+
+const SubscriptionLazyRoute = SubscriptionLazyImport.update({
+  path: '/subscription',
+  getParentRoute: () => rootRoute,
+} as any).lazy(() => import('./routes/subscription.lazy').then((d) => d.Route))
+
+const MoviesShowsLazyRoute = MoviesShowsLazyImport.update({
+  path: '/movies-shows',
+  getParentRoute: () => rootRoute,
+} as any).lazy(() => import('./routes/movies-shows.lazy').then((d) => d.Route))
 
 const IndexLazyRoute = IndexLazyImport.update({
   path: '/',
@@ -33,11 +51,28 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexLazyImport
       parentRoute: typeof rootRoute
     }
+    '/movies-shows': {
+      preLoaderRoute: typeof MoviesShowsLazyImport
+      parentRoute: typeof rootRoute
+    }
+    '/subscription': {
+      preLoaderRoute: typeof SubscriptionLazyImport
+      parentRoute: typeof rootRoute
+    }
+    '/support': {
+      preLoaderRoute: typeof SupportLazyImport
+      parentRoute: typeof rootRoute
+    }
   }
 }
 
 // Create and export the route tree
 
-export const routeTree = rootRoute.addChildren([IndexLazyRoute])
+export const routeTree = rootRoute.addChildren([
+  IndexLazyRoute,
+  MoviesShowsLazyRoute,
+  SubscriptionLazyRoute,
+  SupportLazyRoute,
+])
 
 /* prettier-ignore-end */

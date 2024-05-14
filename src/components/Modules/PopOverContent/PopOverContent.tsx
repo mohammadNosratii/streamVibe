@@ -1,29 +1,26 @@
-import { Avatar, Chip, Divider } from "@nextui-org/react";
+import { Avatar, Chip, Divider, User } from "@nextui-org/react";
 import profile from "../../../assets/images/joker.webp";
 import SignOut from "../../../assets/icons/SignOut";
 import SearchForm from "../SearchInput/SearchForm";
 import joker from "../../../assets/images/joker.webp";
 import roadHouse from "../../../assets/images/road-house.avif";
 import granTurismo from "../../../assets/images/granTurismo.jpg";
-import ThemeSwitch from "../ThemeSwitch/ThemeSwitch";
 
 const UserPopOverContent = () => {
   return (
     <div className="w-48">
-      <div className="w-full flex items-center gap-2 px-2">
-        <img
-          className="rounded-full object-cover w-8 h-8"
-          src={profile}
-          alt=""
-        />
-        <div>
-          <h3>joker</h3>
-          <span className="text-orange-400">Premium user</span>
-        </div>
-      </div>
+      <User
+        name="Mohammad Nosrati"
+        description="Premium"
+        avatarProps={{
+          src: profile,
+        }}
+        classNames={{
+          description: ["text-red-45"],
+        }}
+      />
       <Divider className="my-2" />
       <ul className="w-full child:transition-all child:duration-200 child-hover:bg-mainLight dark:child-hover:bg-black-30 child:p-2 child:rounded-lg child:cursor-pointer">
-        <ThemeSwitch />
         <li>
           <a href="">Subscription</a>
         </li>
