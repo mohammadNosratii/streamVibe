@@ -5,6 +5,11 @@ import {
   NavbarItem,
   Link,
   Image,
+  NavbarMenuToggle,
+  NavbarMenu,
+  NavbarMenuItem,
+  Divider,
+  User,
 } from "@nextui-org/react";
 import logo from "/icons/logo-desktop.svg";
 import menuIcon from "/icons/bars-3.svg";
@@ -17,6 +22,10 @@ import {
   UserPopOverContent,
 } from "../PopOverContent/PopOverContent";
 import { UserPopOverTrigger } from "../PopOverTrigger/PopOverTrigger";
+import { navbarItems } from "../../../constants/navbarItems";
+import profile from "../../../assets/images/joker.webp";
+import ThemeSwitch from "../ThemeSwitch/ThemeSwitch";
+import ThemeToggle from "../ThemeSwitch/ThemeToggle";
 
 export default function Navbar() {
   const [isNavbarSticky, setIsNavbarSticky] = useState<boolean>(false);
@@ -52,59 +61,48 @@ export default function Navbar() {
         />
       </NavbarBrand>
       <NavbarContent
-        className="hidden h-auto md:flex items-center gap-4 2xl:gap-7.5 bg-white/10 backdrop-blur py-2 ps-2 pe-5 lg:pe-6 xl:py-2 xl:ps-2 xl:pe-8 2xl:py-2.5 2xl:ps-2.5 2xl:pe-10 rounded-xl border-1 border-gray-85/30 dark:border-black-12"
+        className="hidden md:flex items-center gap-4 2xl:gap-7.5 bg-white/10 backdrop-blur px-2.5 lg:px-3 xl:px-4 py-2 xl:py-2 2xl:px-4.5 2xl:py-2.5 rounded-xl border-1 border-gray-85/30 dark:border-black-12"
         justify="center"
       >
-        <NavbarItem className="bg-mainLight dark:bg-black-10 py-1 px-3 lg:py-1.5 lg:px-4 xl:py-2 xl:px-5 2xl:px-6 rounded-lg border-1 border-transparent">
-          <Link
-            href="#"
-            className="text-sm lg:text-base text-black dark:text-white font-manropeMedium"
+        {navbarItems.map((item, index) => (
+          <NavbarItem
+            className={
+              item.route === window.location.pathname
+                ? "bg-mainLight dark:bg-black-10 py-1 px-3 lg:py-1.5 lg:px-4 xl:py-2 xl:px-5 2xl:px-6 rounded-lg border-1 border-transparent"
+                : ""
+            }
+            key={index}
           >
-            Home
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link
-            href="#"
-            className="text-sm lg:text-base text-gray-75 font-manropeRegular"
-          >
-            Movies & Shows
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link
-            href="#"
-            className="text-sm lg:text-base text-gray-75 font-manropeRegular"
-          >
-            Support
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link
-            href="#"
-            className="text-sm lg:text-base text-gray-75 font-manropeRegular"
-          >
-            Subscription
-          </Link>
-        </NavbarItem>
+            <Link
+              href={item.route}
+              className={`${item.route === window.location.pathname ? "text-black dark:text-white font-manropeMedium" : "text-gray-75 font-manropeRegular"} text-sm lg:text-base`}
+            >
+              {item.title}
+            </Link>
+          </NavbarItem>
+        ))}
       </NavbarContent>
       <NavbarContent
         className="flex items-center gap-2 2xl:gap-3.5"
         justify="end"
       >
+        <NavbarItem>
+          <ThemeToggle />
+        </NavbarItem>
         <NavbarItem className="flex items-center gap-3">
           <PopOver content={<SerachPopOverContent />}>
             <div className="py-[11px] px-[11px] md:py-3 md:px-3 border-2 dark:border-black-15 rounded-full bg-gray-85 dark:bg-black-10 cursor-pointer">
               <Search />
             </div>
           </PopOver>
-          <div className="md:hidden flex items-center justify-center w-10 h-10 bg-gray-85 dark:bg-black-10 border-2 dark:border-black-15 rounded-lg">
-            <Image
-              alt=""
-              src={menuIcon}
-              className="w-6 h-6 md:hidden"
-            />
-          </div>
+          <NavbarMenuToggle
+            className="block md:hidden"
+            icon={() => (
+              <div className="md:hidden flex items-center justify-center w-10 h-10 bg-gray-85 dark:bg-black-10 border-2 dark:border-black-15 rounded-lg">
+                <Image alt="" src={menuIcon} className="w-6 h-6 md:hidden" />
+              </div>
+            )}
+          />
         </NavbarItem>
         <NavbarItem className="hidden md:inline-block">
           <PopOver content={<UserPopOverContent />}>
@@ -114,6 +112,34 @@ export default function Navbar() {
           </PopOver>
         </NavbarItem>
       </NavbarContent>
+      <NavbarMenu className="pt-8 container px-14 space-y-1.5">
+        {navbarItems.map((item, index) => (
+          <NavbarMenuItem key={index}>
+            <Link
+              href={item.route}
+              className="text-black-12 dark:text-white w-full"
+              size="lg"
+            >
+              {item.title}
+            </Link>
+          </NavbarMenuItem>
+        ))}
+        <NavbarMenuItem>
+          <ThemeSwitch />
+        </NavbarMenuItem>
+        <Divider className="my-2" />
+        <User
+          name="Mohammad Nosrati"
+          description="Premium"
+          avatarProps={{
+            src: profile,
+          }}
+          classNames={{
+            description: ["text-red-45"],
+            wrapper: ["w-full"],
+          }}
+        />
+      </NavbarMenu>
     </NextUINavbar>
   );
 }
