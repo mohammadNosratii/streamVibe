@@ -18,7 +18,8 @@ import { Route as rootRoute } from './routes/__root'
 
 const SupportLazyImport = createFileRoute('/support')()
 const SubscriptionLazyImport = createFileRoute('/subscription')()
-const MoviesShowsLazyImport = createFileRoute('/movies-shows')()
+const ShowsLazyImport = createFileRoute('/shows')()
+const MoviesLazyImport = createFileRoute('/movies')()
 const IndexLazyImport = createFileRoute('/')()
 
 // Create/Update Routes
@@ -33,10 +34,15 @@ const SubscriptionLazyRoute = SubscriptionLazyImport.update({
   getParentRoute: () => rootRoute,
 } as any).lazy(() => import('./routes/subscription.lazy').then((d) => d.Route))
 
-const MoviesShowsLazyRoute = MoviesShowsLazyImport.update({
-  path: '/movies-shows',
+const ShowsLazyRoute = ShowsLazyImport.update({
+  path: '/shows',
   getParentRoute: () => rootRoute,
-} as any).lazy(() => import('./routes/movies-shows.lazy').then((d) => d.Route))
+} as any).lazy(() => import('./routes/shows.lazy').then((d) => d.Route))
+
+const MoviesLazyRoute = MoviesLazyImport.update({
+  path: '/movies',
+  getParentRoute: () => rootRoute,
+} as any).lazy(() => import('./routes/movies.lazy').then((d) => d.Route))
 
 const IndexLazyRoute = IndexLazyImport.update({
   path: '/',
@@ -54,11 +60,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexLazyImport
       parentRoute: typeof rootRoute
     }
-    '/movies-shows': {
-      id: '/movies-shows'
-      path: '/movies-shows'
-      fullPath: '/movies-shows'
-      preLoaderRoute: typeof MoviesShowsLazyImport
+    '/movies': {
+      id: '/movies'
+      path: '/movies'
+      fullPath: '/movies'
+      preLoaderRoute: typeof MoviesLazyImport
+      parentRoute: typeof rootRoute
+    }
+    '/shows': {
+      id: '/shows'
+      path: '/shows'
+      fullPath: '/shows'
+      preLoaderRoute: typeof ShowsLazyImport
       parentRoute: typeof rootRoute
     }
     '/subscription': {
@@ -82,7 +95,8 @@ declare module '@tanstack/react-router' {
 
 export const routeTree = rootRoute.addChildren({
   IndexLazyRoute,
-  MoviesShowsLazyRoute,
+  MoviesLazyRoute,
+  ShowsLazyRoute,
   SubscriptionLazyRoute,
   SupportLazyRoute,
 })
