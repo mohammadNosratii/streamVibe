@@ -1,0 +1,19 @@
+.categorySlider-bullet:not(.categorySlider-active-bullet) {
+  width: 35px;
+  height: 4px;
+  border-radius: 10px;
+  background-color: black !important;
+}
+
+.categorySlider-active-bullet {
+  width: 35px !important;
+  height: 4px !important;
+  border-radius: 10px !important;
+  background-color: #e50000 !important;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  .categorySlider-bullet:not(.categorySlider-active-bullet) {
+    background-color: #1e1e1e !important;
+  }
+}
