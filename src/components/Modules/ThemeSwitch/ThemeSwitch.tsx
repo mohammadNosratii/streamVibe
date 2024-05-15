@@ -19,9 +19,9 @@ export default function ThemeSwitch() {
   };
 
   return (
-    <li onClick={switchThemeHandler} className="flex items-center gap-2">
+    <div onClick={switchThemeHandler} className="bg-mainLight/20 rounded-md backdrop-blur-sm p-2 mx-3 cursor-pointer flex items-center gap-2">
       {theme === "light" ? <SunIcon /> : <MoonIcon />}
-      <span>Switch To {theme === "light" ? "Dark Mode" : "Light Mode"}</span>
-    </li>
+      <span>{theme === "light" ? "Dark Mode" : "Light Mode"}</span>
+    </div>
   );
 }
