@@ -3,7 +3,7 @@ import { ArrowLeft, ArrowRight } from "../../../assets/icons/Arrows";
 
 export default function Categories() {
   return (
-    <div className="container mt-32 space-y-20 mb-32">
+    <div className="container my-32 space-y-20">
       <div className="flex items-center justify-between md:gap-14 xl:gap-20 2xl:gap-24 ">
         <div className="space-y-3">
           <h2 className="text-2xl lg:text-3xl 2xl:text-4xl">
