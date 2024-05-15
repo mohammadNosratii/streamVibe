@@ -5,11 +5,6 @@ import {
   NavbarItem,
   Link,
   Image,
-  NavbarMenuToggle,
-  NavbarMenu,
-  NavbarMenuItem,
-  Divider,
-  User,
 } from "@nextui-org/react";
 import logo from "/icons/logo-desktop.svg";
 import menuIcon from "/icons/bars-3.svg";
@@ -23,8 +18,6 @@ import {
 } from "../PopOverContent/PopOverContent";
 import { UserPopOverTrigger } from "../PopOverTrigger/PopOverTrigger";
 import { navbarItems } from "../../../constants/navbarItems";
-import profile from "../../../assets/images/joker.webp";
-import ThemeSwitch from "../ThemeSwitch/ThemeSwitch";
 import ThemeToggle from "../ThemeSwitch/ThemeToggle";
 
 export default function Navbar() {
@@ -44,11 +37,10 @@ export default function Navbar() {
 
   return (
     <NextUINavbar
-      className={`z-50 py-3 transition-all fixed bg-gradient-to-b from-black-6 to-black-6/0 ${
-        isNavbarSticky
-          ? `backdrop-blur-sm bg-black-6/20 backdrop-saturate-[1.5]`
-          : `backdrop-blur-none bg-transparent backdrop-saturate-[1]`
-      }`}
+      className={`z-50 py-3 transition-all fixed bg-gradient-to-b from-black-6 to-black-6/0 ${isNavbarSticky
+        ? `backdrop-blur-sm bg-black-6/20 backdrop-saturate-[1.5]`
+        : `backdrop-blur-none bg-transparent backdrop-saturate-[1]`
+        }`}
       classNames={{
         wrapper: ["max-w-[90%]"],
       }}
@@ -95,14 +87,9 @@ export default function Navbar() {
               <Search />
             </div>
           </PopOver>
-          <NavbarMenuToggle
-            className="block md:hidden"
-            icon={() => (
-              <div className="md:hidden flex items-center justify-center w-10 h-10 bg-gray-85 dark:bg-black-10 border-2 dark:border-black-15 rounded-lg">
-                <Image alt="" src={menuIcon} className="w-6 h-6 md:hidden" />
-              </div>
-            )}
-          />
+          <div className="md:hidden flex items-center justify-center w-10 h-10 bg-gray-85 dark:bg-black-10 border-2 dark:border-black-15 rounded-lg">
+            <Image alt="" src={menuIcon} className="w-6 h-6 md:hidden" />
+          </div>
         </NavbarItem>
         <NavbarItem className="hidden md:inline-block">
           <PopOver content={<UserPopOverContent />}>
@@ -112,34 +99,6 @@ export default function Navbar() {
           </PopOver>
         </NavbarItem>
       </NavbarContent>
-      <NavbarMenu className="pt-8 container px-14 space-y-1.5">
-        {navbarItems.map((item, index) => (
-          <NavbarMenuItem key={index}>
-            <Link
-              href={item.route}
-              className="text-black-12 dark:text-white w-full"
-              size="lg"
-            >
-              {item.title}
-            </Link>
-          </NavbarMenuItem>
-        ))}
-        <NavbarMenuItem>
-          <ThemeSwitch />
-        </NavbarMenuItem>
-        <Divider className="my-2" />
-        <User
-          name="Mohammad Nosrati"
-          description="Premium"
-          avatarProps={{
-            src: profile,
-          }}
-          classNames={{
-            description: ["text-red-45"],
-            wrapper: ["w-full"],
-          }}
-        />
-      </NavbarMenu>
     </NextUINavbar>
   );
 }
