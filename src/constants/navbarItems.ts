@@ -1,11 +1,34 @@
-export const navbarItems = [
+export const navbarHorizontalItems = [
   {
     title: "Home",
     route: "/",
   },
   {
-    title: "Movies & Shows",
-    route: "/movies-shows",
+    title: "Movies",
+    route: "/movies",
+  },
+  {
+    title: "Shows",
+    route: "/shows",
+  },
+  {
+    title: "Subscription",
+    route: "/subscription",
+  },
+];
+
+export const navbarVerticalItems = [
+  {
+    title: "Home",
+    route: "/",
+  },
+  {
+    title: "Movies",
+    route: "/movies",
+  },
+  {
+    title: "Shows",
+    route: "/shows",
   },
   {
     title: "Support",
