@@ -1,4 +1,4 @@
-import { subscriptionPlan } from "../../../interfaces/subscription.interface";
+import { subscriptionPlan } from "../../../interfaces/subscriptionPlan.interface";
 import SubscriptionBox from "./SubscriptionBox";
 
 export default function Subscription({ plans }: { plans: subscriptionPlan[] }) {

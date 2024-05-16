@@ -1,4 +1,4 @@
-import { subscriptionPlan } from "../../../interfaces/subscription.interface";
+import { subscriptionPlan } from "../../../interfaces/subscriptionPlan.interface";
 
 export default function SubscriptionBox({
   title,
