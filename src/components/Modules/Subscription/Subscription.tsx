@@ -2,6 +2,7 @@ import { Button } from "@nextui-org/react";
 import { subscriptionPlan } from "../../../interfaces/subscriptionPlan.interface";
 import SubscriptionBox from "./SubscriptionBox";
 
+
 export default function Subscription({ plans }: { plans: subscriptionPlan[] }) {
   return (
     <div className="container my-32 space-y-20">
