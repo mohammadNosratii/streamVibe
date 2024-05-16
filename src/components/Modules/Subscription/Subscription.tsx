@@ -4,7 +4,7 @@ import SubscriptionBox from "./SubscriptionBox";
 export default function Subscription({ plans }: { plans: subscriptionPlan[] }) {
   return (
     <div className="container my-32 space-y-20">
-      <div className="flex flex-col gap-5 items-start md:items-center justify-between md:gap-14 xl:gap-20 2xl:gap-24 ">
+      <div className="flex flex-col lg:flex-row gap-5 items-start md:items-center justify-between md:gap-14 xl:gap-20 2xl:gap-24 ">
         <div className="space-y-3">
           <h2 className="text-2xl lg:text-3xl 2xl:text-4xl">
             Choose the plan that's right for you
