@@ -1,8 +1,8 @@
-interface subscription {
+interface subscriptionPlan {
   title: string;
   des: string;
   price: string;
   attributes: {title: string}[];
 }
 
-export type { subscription };
+export type { subscriptionPlan };

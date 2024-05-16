@@ -1,11 +1,11 @@
-import { subscription } from "../../../interfaces/subscription.interface";
+import { subscriptionPlan } from "../../../interfaces/subscription.interface";
 
 export default function SubscriptionBox({
   title,
   des,
   price,
   attributes,
-}: subscription) {
+}: subscriptionPlan) {
   return (
     <div className="flex flex-col items-center gap-10 bg-black-10 border border-black-15 rounded-xl p-6 2xl:p-12">
       <div className="text-center space-y-5">
