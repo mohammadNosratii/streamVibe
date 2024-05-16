@@ -6,7 +6,7 @@ import profile from "../../../assets/images/joker.webp"
 
 export default function NavbarVertical({ isNavbarShown }: { isNavbarShown: boolean }) {
     return (
-        <div className={`w-[220px] fixed h-screen ${isNavbarShown ? 'showSidebarAnimation' : 'hideSidebarAnimation'} bg-white/10 backdrop-blur-2xl z-50 transition-all duration-500 py-6 flex flex-col justify-between`}>
+        <div className={`w-[220px] fixed ${isNavbarShown ? 'left-0' : '-left-96'} h-screen bg-white/10 backdrop-blur-2xl z-50 transition-all duration-500 py-6 flex flex-col justify-between`}>
             <div><Image src={logo} alt="" className="mb-6 px-4" />
                 <ul className="space-y-2 px-4 mb-4">
                     {navbarVerticalItems.map((item, index) => (
