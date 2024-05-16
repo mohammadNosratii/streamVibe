@@ -4,7 +4,7 @@ import Devices from "../../components/Templates/Home/Devices/Devices";
 import getMoviesInfo from "../../mock/getMoviesInfo";
 import devicesBoxInfo from "../../mock/devicesBoxInfo"
 import Subscription from "../../components/Modules/Subscription/Subscription";
-import subscriptionPlan from "../../mock/subscriptionPlan";
+import subscriptionPlansData from "../../mock/subscriptionPlan";
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
       <NavigationSlider data={getMoviesInfo()} />
       <Categories />
       <Devices devices={devicesBoxInfo()} />
-      <Subscription plans={subscriptionPlan()} />
+      <Subscription plans={subscriptionPlansData()} />
     </>
   );
 }

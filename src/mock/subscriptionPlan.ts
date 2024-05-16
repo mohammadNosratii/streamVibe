@@ -1,4 +1,4 @@
-export default function subscriptionPlan() {
+export default function subscriptionPlansData() {
   return [
     {
       title: "Basic Plan",
