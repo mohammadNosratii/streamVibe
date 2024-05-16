@@ -19,9 +19,11 @@ export default function ThemeSwitch() {
   };
 
   return (
-    <div onClick={switchThemeHandler} className="bg-mainLight/20 rounded-md backdrop-blur-sm p-2 mx-3 cursor-pointer flex items-center gap-2">
+    <div
+      onClick={switchThemeHandler}
+      className="py-2 px-2 md:py-[11px] md:px-[11px] 2xl:py-4 2xl:px-4 md:border-2 dark:border-black-15 rounded-full bg-gray-85 dark:bg-black-10 cursor-pointer"
+    >
       {theme === "light" ? <SunIcon /> : <MoonIcon />}
-      <span>{theme === "light" ? "Dark Mode" : "Light Mode"}</span>
     </div>
   );
 }
