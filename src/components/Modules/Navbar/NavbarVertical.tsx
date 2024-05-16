@@ -46,7 +46,7 @@ export default function NavbarVertical({
             base: ["rounded-md backdrop-blur-2xl p-2 cursor-pointer"],
             description: ["text-red-45"],
           }}
-          name="Mohammad Nosrati"
+          name="Mohammad Nosratii"
           description="Premium"
           avatarProps={{
             src: profile,
