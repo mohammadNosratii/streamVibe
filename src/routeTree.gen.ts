@@ -60,44 +60,26 @@ const IndexLazyRoute = IndexLazyImport.update({
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
     '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
       preLoaderRoute: typeof IndexLazyImport
       parentRoute: typeof rootRoute
     }
     '/movies': {
-      id: '/movies'
-      path: '/movies'
-      fullPath: '/movies'
       preLoaderRoute: typeof MoviesLazyImport
       parentRoute: typeof rootRoute
     }
     '/movies-shows': {
-      id: '/movies-shows'
-      path: '/movies-shows'
-      fullPath: '/movies-shows'
       preLoaderRoute: typeof MoviesShowsLazyImport
       parentRoute: typeof rootRoute
     }
     '/shows': {
-      id: '/shows'
-      path: '/shows'
-      fullPath: '/shows'
       preLoaderRoute: typeof ShowsLazyImport
       parentRoute: typeof rootRoute
     }
     '/subscription': {
-      id: '/subscription'
-      path: '/subscription'
-      fullPath: '/subscription'
       preLoaderRoute: typeof SubscriptionLazyImport
       parentRoute: typeof rootRoute
     }
     '/support': {
-      id: '/support'
-      path: '/support'
-      fullPath: '/support'
       preLoaderRoute: typeof SupportLazyImport
       parentRoute: typeof rootRoute
     }
@@ -106,13 +88,13 @@ declare module '@tanstack/react-router' {
 
 // Create and export the route tree
 
-export const routeTree = rootRoute.addChildren({
+export const routeTree = rootRoute.addChildren([
   IndexLazyRoute,
   MoviesLazyRoute,
   MoviesShowsLazyRoute,
   ShowsLazyRoute,
   SubscriptionLazyRoute,
   SupportLazyRoute,
-})
+])
 
 /* prettier-ignore-end */
