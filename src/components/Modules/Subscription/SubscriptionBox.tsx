@@ -1,3 +1,4 @@
+import { Button } from "@nextui-org/react";
 import { subscriptionPlan } from "../../../interfaces/subscriptionPlan.interface";
 
 export default function SubscriptionBox({
@@ -24,9 +25,10 @@ export default function SubscriptionBox({
           </li>
         ))}
       </ul>
-      <button className="bg-red-45 text-sm rounded-[45px] py-3 px-5">
+
+      <Button radius="full" className="bg-red-45">
         Choose Plan
-      </button>
+      </Button>
     </div>
   );
 }
