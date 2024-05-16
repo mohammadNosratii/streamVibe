@@ -16,9 +16,9 @@ export default function Subscription({ plans }: { plans: subscriptionPlan[] }) {
             entertainment!
           </p>
         </div>
-        <div className="flex items-center gap-2.5 dark:bg-black-6 border border-black-15 p-2.5 rounded-lg">
+        <div className="flex items-center gap-2.5 bg-white dark:bg-black-6 border dark:border-black-15 p-2.5 rounded-lg">
           <Button
-            className="bg-black-12 py-3 px-5
+            className="bg-mainLight dark:bg-black-12 py-3 px-5
            md:py-3.5 md:px-6 rounded-lg"
           >
             Monthly
@@ -26,7 +26,7 @@ export default function Subscription({ plans }: { plans: subscriptionPlan[] }) {
           <Button className="py-3 px-5 bg-transparent">Yearly</Button>
         </div>
       </div>
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-9">
+      <div className="flex flex-wrap justify-center gap-9">
         {plans.map((plan, index) => (
           <SubscriptionBox key={index} {...plan} />
         ))}
