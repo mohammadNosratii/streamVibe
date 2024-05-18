@@ -8,7 +8,7 @@ export default function SubscriptionBox({
   attributes,
 }: subscriptionPlan) {
   return (
-    <div className="flex flex-col items-center justify-between gap-10 bg-white dark:bg-black-10 border dark:border-black-15 rounded-xl p-6 2xl:p-12 w-[350px]">
+    <div className="flex flex-col items-center justify-between gap-10 bg-white dark:bg-black-10 border dark:border-black-15 rounded-xl p-6 2xl:p-12">
       <div className="text-center space-y-5">
         <h3 className="text-black-6 dark:text-white text-lg md:text-2xl">{title}</h3>
         <p className="text-black-30/100 dark:text-gray-60 text-sm md:text-[16px] h-[60px] line-clamp-3">{des}</p>
