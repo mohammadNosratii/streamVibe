@@ -15,7 +15,7 @@ export default function Navbar() {
       <NavbarHorizontal triggerNavbarVertical={triggerNavbarVerticalHandler} />
       <NavbarVertical
         isNavbarShown={showNavbarVertical}
-        setShowNavbarVertical={setShowNavbarVertical}
+        triggerNavbarVertical={triggerNavbarVerticalHandler}
       />
     </>
   );

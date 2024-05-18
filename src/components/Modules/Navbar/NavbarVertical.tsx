@@ -3,17 +3,17 @@ import { Link, Image, User, Divider } from "@nextui-org/react";
 import logo from "/icons/logo-mobile.svg";
 import ThemeSwitch from "../ThemeSwitch/ThemeSwitch";
 import profile from "../../../assets/images/joker.webp";
-import { navbarShown } from "../../../interfaces/navbarShown.interface";
+import { navbarVerticalProps } from "../../../interfaces/navbarVerticalProps.interface";
 
 export default function NavbarVertical({
   isNavbarShown,
-  setShowNavbarVertical,
-}: navbarShown) {
+  triggerNavbarVertical,
+}: navbarVerticalProps) {
   return (
     <>
       {isNavbarShown && (
         <div
-          onClick={() => setShowNavbarVertical(false)}
+          onClick={triggerNavbarVertical}
           className="fixed inset-0 bg-black-6/80 z-40"
         ></div>
       )}
