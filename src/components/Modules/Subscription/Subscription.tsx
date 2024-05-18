@@ -27,7 +27,7 @@ export default function Subscription({ plans }: { plans: subscriptionPlan[] }) {
           <Button className="py-3 px-5 bg-transparent">Yearly</Button>
         </div>
       </div>
-      <div className="flex flex-wrap justify-center gap-9">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-9">
         {plans.map((plan, index) => (
           <SubscriptionBox key={index} {...plan} />
         ))}

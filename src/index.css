@@ -19,3 +19,10 @@
   font-family: ManropeBold;
   src: url(../fonts/Manrope/Manrope-Bold.ttf);
 }
+
+@layer components {
+  .freeTrail {
+    background:url("./assets/images/freeTrail.png");
+    background-position: center;
+  }
+}
