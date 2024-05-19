@@ -2,6 +2,7 @@ import { Button } from "@nextui-org/react";
 import { subscriptionPlan } from "../../../interfaces/subscriptionPlan.interface";
 
 export default function SubscriptionBox({
+  type,
   title,
   des,
   price,
@@ -10,11 +11,18 @@ export default function SubscriptionBox({
   return (
     <div className="flex flex-col items-center justify-between gap-10 bg-white dark:bg-black-10 border dark:border-black-15 rounded-xl p-6 2xl:p-12">
       <div className="text-center space-y-5">
-        <h3 className="text-black-6 dark:text-white text-lg md:text-2xl">{title}</h3>
-        <p className="text-black-30/100 dark:text-gray-60 text-sm md:text-[16px] h-[60px] line-clamp-3">{des}</p>
+        <h3 className="text-black-6 dark:text-white text-lg md:text-2xl">
+          {title}
+        </h3>
+        <p className="text-black-30/100 dark:text-gray-60 text-sm md:text-[16px] h-[60px] line-clamp-3">
+          {des}
+        </p>
         <div className="pt-4">
           <span className="text-red-45 text-2xl 2xl:text-4xl">${price}</span>
-          <span className="text-black-30/100 dark:text-gray-60 text-sm">/Month</span>
+
+          <span className="text-black-30/100 dark:text-gray-60 text-sm">
+            /{type}
+          </span>
         </div>
       </div>
       <ul className="child:flex child:items-center child:gap-3 child:dark:text-gray-60 child:text-base">
