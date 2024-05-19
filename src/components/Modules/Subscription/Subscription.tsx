@@ -1,9 +1,17 @@
-import { Button } from "@nextui-org/react";
+import { Tab, Tabs } from "@nextui-org/react";
 import { subscriptionPlan } from "../../../interfaces/subscriptionPlan.interface";
 import SubscriptionBox from "./SubscriptionBox";
-
+import { useState } from "react";
 
 export default function Subscription({ plans }: { plans: subscriptionPlan[] }) {
+  const [subscriptionPlanTime, setSubscriptionPlanTime] = useState("Monthly");
+
+  const handleTabChange = (key: any) => {
+    setSubscriptionPlanTime(key);
+  };
+
+  const uniqueTypes = Array.from(new Set(plans.map((plan) => plan.type)));
+
   return (
     <div className="container my-32 space-y-20">
       <div className="flex flex-col lg:flex-row gap-5 items-center justify-between md:gap-14 xl:gap-20 2xl:gap-24 ">
@@ -17,20 +25,24 @@ export default function Subscription({ plans }: { plans: subscriptionPlan[] }) {
             entertainment!
           </p>
         </div>
-        <div className="flex items-center gap-2.5 bg-white dark:bg-black-6 border dark:border-black-15 p-2.5 rounded-lg">
-          <Button
-            className="bg-mainLight dark:bg-black-12 py-3 px-5
-           md:py-3.5 md:px-6 rounded-lg"
-          >
-            Monthly
-          </Button>
-          <Button className="py-3 px-5 bg-transparent">Yearly</Button>
+        <div className="flex items-center gap-2.5 bg-white dark:bg-black-6 border dark:border-black-15 p-2.5 rounded-2xl">
+          <Tabs aria-label="Dynamic tabs" onSelectionChange={handleTabChange}>
+            {uniqueTypes.map((plan) => (
+              <Tab key={plan} title={plan} />
+            ))}
+          </Tabs>
         </div>
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-9">
-        {plans.map((plan, index) => (
-          <SubscriptionBox key={index} {...plan} />
-        ))}
+        {plans
+          .filter(
+            (plan) =>
+              plan.type.toLocaleLowerCase() ===
+              subscriptionPlanTime.toLocaleLowerCase()
+          )
+          .map((plan, index) => (
+            <SubscriptionBox key={index} {...plan} />
+          ))}
       </div>
     </div>
   );
