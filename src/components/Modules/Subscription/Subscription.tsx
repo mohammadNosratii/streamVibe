@@ -4,11 +4,7 @@ import SubscriptionBox from "./SubscriptionBox";
 import { useState } from "react";
 
 export default function Subscription({ plans }: { plans: subscriptionPlan[] }) {
-  const [subscriptionPlanTime, setSubscriptionPlanTime] = useState("Monthly");
-
-  const handleTabChange = (key: any) => {
-    setSubscriptionPlanTime(key);
-  };
+  const [subscriptionPlanTime, setSubscriptionPlanTime] = useState<string | number>("Monthly");
 
   const uniqueTypes = Array.from(new Set(plans.map((plan) => plan.type)));
 
@@ -26,7 +22,8 @@ export default function Subscription({ plans }: { plans: subscriptionPlan[] }) {
           </p>
         </div>
         <div className="flex items-center gap-2.5 bg-white dark:bg-black-6 border dark:border-black-15 p-2.5 rounded-2xl">
-          <Tabs aria-label="Dynamic tabs" onSelectionChange={handleTabChange}>
+          <Tabs aria-label="Dynamic tabs" selectedKey={subscriptionPlanTime}
+            onSelectionChange={setSubscriptionPlanTime}>
             {uniqueTypes.map((plan) => (
               <Tab key={plan} title={plan} />
             ))}
@@ -37,8 +34,8 @@ export default function Subscription({ plans }: { plans: subscriptionPlan[] }) {
         {plans
           .filter(
             (plan) =>
-              plan.type.toLocaleLowerCase() ===
-              subscriptionPlanTime.toLocaleLowerCase()
+              plan.type ===
+              subscriptionPlanTime
           )
           .map((plan, index) => (
             <SubscriptionBox key={index} {...plan} />
