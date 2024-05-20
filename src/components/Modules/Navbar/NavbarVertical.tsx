@@ -14,13 +14,12 @@ export default function NavbarVertical({
       {isNavbarShown && (
         <div
           onClick={triggerNavbarVertical}
-          className="fixed inset-0 bg-black-6/80 z-40"
+          className="fixed md:hidden inset-0 bg-black-6/80 z-40"
         ></div>
       )}
       <div
-        className={`w-[220px] fixed ${
-          isNavbarShown ? "left-0" : "-left-96"
-        } h-screen bg-white/60 dark:bg-black-6/50 backdrop-blur-2xl z-50 transition-all duration-500 pt-6 pb-2 px-3 flex flex-col justify-between md:hidden`}
+        className={`w-[220px] fixed ${isNavbarShown ? "left-0" : "-left-96"
+          } h-screen bg-white/60 dark:bg-black-6/50 backdrop-blur-2xl z-50 transition-all duration-500 pt-6 pb-2 px-3 flex flex-col justify-between md:hidden`}
       >
         <div>
           <div className="flex items-center justify-between">

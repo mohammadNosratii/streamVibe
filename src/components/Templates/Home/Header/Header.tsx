@@ -16,9 +16,9 @@ export default function Header({
         src={img}
       />
       <div className="container absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 md:left-32 md:translate-x-0 w-[80%] md:w-[60%] space-y-5">
-        <div className="flex items-center gap-2">
-          <div className="w-16 h-0.5 bg-gray-75"></div>
-          <span className="text-gray-60">{genres}</span>
+        <div className="items-center gap-2  p-1 rounded-2xl inline-flex">
+          <div className="w-16 h-0.5 bg-mainLight"></div>
+          <span className="text-mainLight">{genres}</span>
         </div>
         <h2 className="text-white text-4xl font-manropeSemiBold">{title}</h2>
         <p className="text-white line-clamp-2">{description}</p>
