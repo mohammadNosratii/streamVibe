@@ -23,11 +23,11 @@ export default function Subscription({ plans }: { plans: subscriptionPlan[] }) {
         </div>
         <div className="flex items-center gap-2.5 p-2.5 rounded-2xl">
           <Tabs aria-label="Dynamic tabs" classNames={{
-            tabList: ["bg-white dark:bg-black-6 border-[1px] border-1 dark:border-black-15 p-3"]
+            tabList: ["bg-white dark:bg-black-6 border-[1px] border-1 dark:border-black-15 p-3 sm:p-3.5 lg:p-4"],
           }} selectedKey={subscriptionPlanTime}
             onSelectionChange={setSubscriptionPlanTime}>
             {uniqueTypes.map((plan) => (
-              <Tab key={plan} title={plan} />
+              <Tab key={plan} title={plan} className="p-2 sm:p-3 md:p-3.5 lg:p-5" />
             ))}
           </Tabs>
         </div>
