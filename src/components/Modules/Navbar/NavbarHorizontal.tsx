@@ -40,11 +40,10 @@ export default function NavbarHorizontal({
 
   return (
     <NextUINavbar
-      className={`z-50 py-3 transition-all fixed bg-gradient-to-b from-black-6 to-black-6/0 ${
-        isNavbarSticky
+      className={`z-50 py-3 transition-all fixed bg-gradient-to-b from-black-6 to-black-6/0 ${isNavbarSticky
           ? `backdrop-blur-sm bg-black-6/20 backdrop-saturate-[1.5]`
           : `backdrop-blur-none bg-transparent backdrop-saturate-[1]`
-      }`}
+        }`}
       classNames={{
         wrapper: ["max-w-[90%]"],
       }}
