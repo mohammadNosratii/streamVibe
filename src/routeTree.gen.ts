@@ -20,6 +20,7 @@ const SupportLazyImport = createFileRoute('/support')()
 const SubscriptionLazyImport = createFileRoute('/subscription')()
 const ShowsLazyImport = createFileRoute('/shows')()
 const MoviesLazyImport = createFileRoute('/movies')()
+const LoginLazyImport = createFileRoute('/login')()
 const IndexLazyImport = createFileRoute('/')()
 
 // Create/Update Routes
@@ -44,6 +45,11 @@ const MoviesLazyRoute = MoviesLazyImport.update({
   getParentRoute: () => rootRoute,
 } as any).lazy(() => import('./routes/movies.lazy').then((d) => d.Route))
 
+const LoginLazyRoute = LoginLazyImport.update({
+  path: '/login',
+  getParentRoute: () => rootRoute,
+} as any).lazy(() => import('./routes/login.lazy').then((d) => d.Route))
+
 const IndexLazyRoute = IndexLazyImport.update({
   path: '/',
   getParentRoute: () => rootRoute,
@@ -58,6 +64,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexLazyImport
+      parentRoute: typeof rootRoute
+    }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginLazyImport
       parentRoute: typeof rootRoute
     }
     '/movies': {
@@ -95,6 +108,7 @@ declare module '@tanstack/react-router' {
 
 export const routeTree = rootRoute.addChildren({
   IndexLazyRoute,
+  LoginLazyRoute,
   MoviesLazyRoute,
   ShowsLazyRoute,
   SubscriptionLazyRoute,
