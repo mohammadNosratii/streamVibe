@@ -1,13 +1,21 @@
 import { createRootRoute, Outlet } from "@tanstack/react-router";
-import Navbar from "../components/Modules/Navbar/Navbar";
-import Footer from "../components/Modules/Footer/Footer";
+import AuthLayout from "../Layouts/AuthLayout";
+import DefaultLayout from "../Layouts/DefaultLayout";
+
+const authRoutes: string[] = ["/login", "/register"]
 
 export const Route = createRootRoute({
-  component: () => (
-    <>
-      <Navbar />
-      <Outlet />
-      <Footer />
-    </>
-  ),
+  component: () => {
+    const pathname = window.location.pathname
+
+    const Layout = authRoutes.includes(pathname)
+      ? AuthLayout
+      : DefaultLayout;
+
+    return (<>
+      <Layout>
+        <Outlet />
+      </Layout>
+    </>)
+  },
 });
