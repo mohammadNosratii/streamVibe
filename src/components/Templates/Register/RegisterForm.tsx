@@ -39,123 +39,103 @@ export default function Register() {
         onSubmit={handleSubmit(submitRegisterFormHandler)}
         className="flex flex-col gap-4 items-center mt-12 child:w-full"
       >
-        <div>
-          <Input
-            classNames={{
-              mainWrapper: ["bg-transparent border-1 rounded-2xl"],
-              inputWrapper: ["bg-transparent border-1 rounded-2xl"],
-              input: ["bg-transparent cursor-pointer"],
-              innerWrapper: ["bg-transparent"],
-            }}
-            type="text"
-            placeholder="Full Name"
-            {...register("fullname", {
-              required: "Please Enter Your Name",
-            })}
-            endContent={
-              <div className="cursor-pointer">
-                <User />
-              </div>
-            }
-            isInvalid={Boolean(errors.fullname)}
-          />
-          <span className="formErrorsMessage">{errors.fullname?.message}</span>
-        </div>
-        <div>
-          <Input
-            classNames={{
-              mainWrapper: ["bg-transparent border-1 rounded-2xl"],
-              inputWrapper: ["bg-transparent border-1 rounded-2xl"],
-              input: ["bg-transparent cursor-pointer"],
-              innerWrapper: ["bg-transparent"],
-            }}
-            type="text"
-            placeholder="Username"
-            {...register("username", {
-              required: "Please Enter Username",
-              minLength: { value: 8, message: "At Least Enter 8 Character" },
-            })}
-            endContent={
-              <div className="cursor-pointer">
-                <UserCircle />
-              </div>
-            }
-            isInvalid={Boolean(errors.username)}
-          />
-          <span className="formErrorsMessage">{errors.username?.message}</span>
-        </div>
-        <div>
-          <Input
-            classNames={{
-              mainWrapper: ["bg-transparent border-1 rounded-2xl"],
-              inputWrapper: ["bg-transparent border-1 rounded-2xl"],
-              input: ["bg-transparent cursor-pointer"],
-              innerWrapper: ["bg-transparent"],
-            }}
-            type={`${isPasswordVisible ? "text" : "password"}`}
-            placeholder="Password"
-            {...register("password", {
-              required: "Please Enter Your Password",
-              minLength: { value: 8, message: "At Least Enter 8 Character" },
-            })}
-            endContent={
-              <div className="cursor-pointer" onClick={togglePassword}>
-                {isPasswordVisible ? <EyeSlashIcon /> : <EyeIcon />}
-              </div>
-            }
-            isInvalid={Boolean(errors.password)}
-          />
-          <span className="formErrorsMessage">{errors.password?.message}</span>
-        </div>
-        <div>
-          <Input
-            startContent={<AutoCompletePhone />}
-            classNames={{
-              mainWrapper: ["bg-transparent border-1 rounded-2xl h-11"],
-              inputWrapper: ["bg-transparent border-1 rounded-2xl h-full ps-0 pe-3"],
-              input: ["bg-transparent cursor-pointer"],
-              innerWrapper: ["bg-transparent"],
-            }}
-            type="number"
-            placeholder="Phone"
-            {...register("phone", {
-              required: "Please Enter Your Phone Number",
-            })}
-            endContent={
-              <div className="flex items-center gap-1">
-                <PhoneIcon />
-              </div>
-            }
-            isInvalid={Boolean(errors.phone)}
-          />
-          <span className="formErrorsMessage">{errors.phone?.message}</span>
-        </div>
         <Input
           classNames={{
-            mainWrapper: ["bg-transparent border-1 rounded-2xl"],
-            inputWrapper: ["bg-transparent border-1 rounded-2xl"],
-            input: ["bg-transparent cursor-pointer"],
+            mainWrapper: ["bg-transparent outline-none rounded-2xl"],
+            inputWrapper: ["bg-transparent border-1 dark:border-black-15 rounded-2xl"],
+            input: ["bg-transparent"],
+            innerWrapper: ["bg-transparent"],
+          }}
+          type="text"
+          label="Full Name"
+          placeholder="Enter Your Name"
+          {...register("fullname", {
+            required: "Please Enter Your Name",
+          })}
+          endContent={<User />}
+          errorMessage={errors.fullname?.message}
+          isInvalid={Boolean(errors.fullname)}
+        />
+        <Input
+          classNames={{
+            mainWrapper: ["bg-transparent outline-none rounded-2xl"],
+            inputWrapper: ["bg-transparent border-1 dark:border-black-15 rounded-2xl"],
+            input: ["bg-transparent"],
+            innerWrapper: ["bg-transparent"],
+          }}
+          type="text"
+          label="Username"
+          placeholder="Enter Your Username"
+          {...register("username", {
+            required: "Please Enter Username",
+            minLength: { value: 8, message: "At Least Enter 8 Character" },
+          })}
+          endContent={<UserCircle />}
+          errorMessage={errors.username?.message}
+          isInvalid={Boolean(errors.username)}
+        />
+        <Input
+          classNames={{
+            mainWrapper: ["bg-transparent outline-none rounded-2xl"],
+            inputWrapper: ["bg-transparent border-1 dark:border-black-15 rounded-2xl"],
+            input: ["bg-transparent"],
+            innerWrapper: ["bg-transparent"],
+          }}
+          type={`${isPasswordVisible ? "text" : "password"}`}
+          label="Password"
+          placeholder="Enter Your Password"
+          {...register("password", {
+            required: "Please Enter Your Password",
+            minLength: { value: 8, message: "At Least Enter 8 Character" },
+          })}
+          endContent={
+            <div className="cursor-pointer" onClick={togglePassword}>
+              {isPasswordVisible ? <EyeSlashIcon /> : <EyeIcon />}
+            </div>
+          }
+          errorMessage={errors.password?.message}
+          isInvalid={Boolean(errors.password)}
+        />
+        <Input
+          startContent={<AutoCompletePhone />}
+          classNames={{
+            mainWrapper: ["bg-transparent outline-none rounded-2xl h-11"],
+            inputWrapper: ["bg-transparent border-1 dark:border-black-15 rounded-2xl h-full ps-0 pe-3"],
+            input: ["bg-transparent"],
+            innerWrapper: ["bg-transparent"],
+          }}
+          type="number"
+          placeholder="Phone Number"
+          {...register("phone", {
+            required: "Please Enter Your Phone Number",
+          })}
+          endContent={<PhoneIcon />}
+          errorMessage={errors.phone?.message}
+          isInvalid={Boolean(errors.phone)}
+        />
+        <Input
+          classNames={{
+            mainWrapper: ["bg-transparent outline-none rounded-2xl"],
+            inputWrapper: ["bg-transparent border-1 dark:border-black-15 rounded-2xl"],
+            input: ["bg-transparent"],
             innerWrapper: ["bg-transparent"],
           }}
           type="email"
-          placeholder="Email (Optional)"
+          label="Email"
+          placeholder="Enter Your Email (Optional)"
           {...register("email")}
-          endContent={
-            <div className="flex items-center gap-1">
-              <MailIcon />
-            </div>
-          }
+          endContent={<MailIcon />}
         />
-        <Button className="w-full" type="submit">
+        <Button type="submit">
           Continue
         </Button>
-        <p className="text-[#717179] text-sm text-center">
-          Already have an acount ?{" "}
+        <p className="text-gray-60 text-sm text-center">
+          Already have an acount?{" "}
           <Link to="/login" className="underline">
             Login
           </Link>
         </p>
-      </form>
-    </div>
+      </form >
+    </div >
   );
 }
