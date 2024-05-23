@@ -10,7 +10,7 @@ export default function AuthenticationCard({ children }: { children: ReactNode }
                 duration: 0.8,
                 ease: "easeInOut",
             }}
-            className="relative flex flex-col gap-4 items-center justify-center bg-[#ffffff33] shadow-md backdrop-blur-lg rounded-md p-8 w-[350px] md:w-[400px]">
+            className="relative flex flex-col gap-4 items-center justify-center bg-[#ffffff33] shadow-normal backdrop-blur-lg rounded-xl p-8 w-[350px] md:w-[400px]">
             {children}
         </motion.div>
     )
