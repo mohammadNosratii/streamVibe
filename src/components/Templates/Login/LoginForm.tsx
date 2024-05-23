@@ -92,7 +92,7 @@ export default function LoginForm() {
             Forget Password?
           </Link>
         </div>
-        <Button type="submit">Login</Button>
+        <Button type="submit" className="dark:bg-mainLight text-black-6">Login</Button>
         <p className="text-gray-60 text-sm text-center">
           Don't have an account?{" "}
           <Link to="/register" className="underline">
