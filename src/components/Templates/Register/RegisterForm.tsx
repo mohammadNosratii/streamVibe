@@ -126,7 +126,7 @@ export default function Register() {
           {...register("email")}
           endContent={<MailIcon />}
         />
-        <Button type="submit">
+        <Button type="submit" className="dark:bg-mainLight text-black-6">
           Continue
         </Button>
         <p className="text-gray-60 text-sm text-center">
