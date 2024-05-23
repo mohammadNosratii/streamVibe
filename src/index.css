@@ -22,7 +22,10 @@
 
 @layer components {
   .freeTrail {
-    background:url("./assets/images/freeTrail.png");
+    background: url("./assets/images/freeTrail.png");
     background-position: center;
+  }
+  .formErrorsMessage {
+    @apply text-red-45 text-xs;
   }
 }
