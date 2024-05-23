@@ -9,6 +9,7 @@ import EyeSlashIcon from "../../../assets/icons/EyeSlash";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { registerFormProps } from "../../../interfaces/registerForm.interface";
 import { Link } from "@tanstack/react-router";
+import AutoCompletePhone from "../../Modules/AutoCompletePhone/AutoCompletePhone";
 
 export default function Register() {
   const {
@@ -108,9 +109,10 @@ export default function Register() {
         </div>
         <div>
           <Input
+            startContent={<AutoCompletePhone />}
             classNames={{
-              mainWrapper: ["bg-transparent border-1 rounded-2xl"],
-              inputWrapper: ["bg-transparent border-1 rounded-2xl"],
+              mainWrapper: ["bg-transparent border-1 rounded-2xl h-11"],
+              inputWrapper: ["bg-transparent border-1 rounded-2xl h-full ps-0 pe-3"],
               input: ["bg-transparent cursor-pointer"],
               innerWrapper: ["bg-transparent"],
             }}
