@@ -29,3 +29,10 @@
     @apply text-red-45 text-xs;
   }
 }
+
+/* Hide Input number arrows */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

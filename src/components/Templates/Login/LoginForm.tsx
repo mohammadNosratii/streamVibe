@@ -35,42 +35,42 @@ export default function LoginForm() {
         onSubmit={handleSubmit(submitLoginFormHandler)}
         className="flex flex-col justify-center gap-4 mt-12"
       >
-        <div>
-          <Input
-            classNames={{
-              mainWrapper: ["bg-transparent border-1 rounded-2xl"],
-              inputWrapper: ["bg-transparent border-1 rounded-2xl"],
-              input: ["bg-transparent"],
-              innerWrapper: ["bg-transparent"],
-            }}
-            placeholder="Email / Phone"
-            {...register("emailOrPhone", {
-              required: true,
-              pattern: {
-                value: combinedEmailAndPhoneRegex(),
-                message: "Your Email / Phone must be valid",
-              },
-            })}
-            endContent={
-              <div className="flex items-center gap-1">
-                <MailIcon />/<PhoneIcon />
-              </div>
-            }
-            isInvalid={Boolean(errors.emailOrPhone)}
-          />
-          <span className="formErrorsMessage">
-            {errors.emailOrPhone?.message}
-          </span>
-        </div>
         <Input
           classNames={{
-            mainWrapper: ["bg-transparent border-1 rounded-2xl"],
-            inputWrapper: ["bg-transparent border-1 rounded-2xl"],
+            mainWrapper: ["bg-transparent outline-noen rounded-2xl"],
+            inputWrapper: ["bg-transparent border-1 dark:border-black-15 rounded-2xl"],
+            input: ["bg-transparent"],
+            innerWrapper: ["bg-transparent"],
+          }}
+          label="Email / Phone"
+          placeholder="Enter Your Email or Phone"
+          {...register("emailOrPhone", {
+            required: true,
+            pattern: {
+              value: combinedEmailAndPhoneRegex(),
+              message: "Your Email / Phone must be valid",
+            },
+          })}
+          endContent={
+            <div className="flex items-center gap-1">
+              <MailIcon />
+              <span className="text-black-6 dark:text-mainLight">/</span>
+              <PhoneIcon />
+            </div>
+          }
+          errorMessage={errors.emailOrPhone?.message}
+          isInvalid={Boolean(errors.emailOrPhone)}
+        />
+        <Input
+          classNames={{
+            mainWrapper: ["bg-transparent outline-none rounded-2xl"],
+            inputWrapper: ["bg-transparent border-1 dark:border-black-15 rounded-2xl"],
             input: ["bg-transparent"],
             innerWrapper: ["bg-transparent"],
           }}
           type={isPasswordVisible ? "text" : "password"}
-          placeholder="Password"
+          label="Password"
+          placeholder="Enter Your Password"
           {...register("password", {
             required: true,
           })}
@@ -84,16 +84,16 @@ export default function LoginForm() {
         <div className="flex items-center justify-between">
           <Checkbox
             {...register("rememberMe")}
-            classNames={{ label: ["text-[#717179] text-sm"] }}
+            classNames={{ label: ["text-gray-60 text-sm"] }}
           >
             Remember Me
           </Checkbox>
-          <Link to="/forget-password" className="text-[#717179] text-sm">
+          <Link to="/forget-password" className="text-gray-60 text-sm">
             Forget Password?
           </Link>
         </div>
         <Button type="submit">Login</Button>
-        <p className="text-[#717179] text-sm text-center">
+        <p className="text-gray-60 text-sm text-center">
           Don't have an account?{" "}
           <Link to="/register" className="underline">
             Register
