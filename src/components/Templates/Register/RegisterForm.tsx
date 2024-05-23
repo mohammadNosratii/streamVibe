@@ -147,7 +147,7 @@ export default function Register() {
           }
         />
         <Button className="w-full" type="submit">
-          Register
+          Continue
         </Button>
         <p className="text-[#717179] text-sm text-center">
           Already have an acount ?{" "}
