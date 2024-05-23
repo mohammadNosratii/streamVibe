@@ -7,9 +7,10 @@ export default function AutoCompletePhone() {
       variant="flat"
       defaultSelectedKey={"Iran"}
       radius="lg"
+      aria-label="phoneFlags"
       classNames={{
         popoverContent: ["w-52"],
-        base: ["w-32"],
+        base: ["w-[135px] md:w-[125px]"],
         clearButton: ["hidden"],
       }}
     >
