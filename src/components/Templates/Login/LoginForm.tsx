@@ -42,8 +42,8 @@ export default function LoginForm() {
             input: ["bg-transparent"],
             innerWrapper: ["bg-transparent"],
           }}
+          size="sm"
           label="Email / Phone"
-          placeholder="Enter Your Email or Phone"
           {...register("emailOrPhone", {
             required: true,
             pattern: {
@@ -68,9 +68,9 @@ export default function LoginForm() {
             input: ["bg-transparent"],
             innerWrapper: ["bg-transparent"],
           }}
+          size="sm"
           type={isPasswordVisible ? "text" : "password"}
           label="Password"
-          placeholder="Enter Your Password"
           {...register("password", {
             required: true,
           })}
