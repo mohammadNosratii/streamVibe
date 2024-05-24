@@ -11,7 +11,11 @@ import { registerFormProps } from "../../../interfaces/registerForm.interface";
 import { Link } from "@tanstack/react-router";
 import AutoCompletePhone from "../../Modules/AutoCompletePhone/AutoCompletePhone";
 
-export default function Register() {
+export default function Register({
+  showOtpHandler,
+}: {
+  showOtpHandler: () => void;
+}) {
   const {
     register,
     handleSubmit,
@@ -28,6 +32,7 @@ export default function Register() {
     data
   ) => {
     console.log(data);
+    showOtpHandler();
   };
 
   return (
