@@ -11,7 +11,11 @@ import { registerFormProps } from "../../../interfaces/registerForm.interface";
 import { Link } from "@tanstack/react-router";
 import AutoCompletePhone from "../../Modules/AutoCompletePhone/AutoCompletePhone";
 
-export default function Register() {
+export default function Register({
+  showOtpHandler,
+}: {
+  showOtpHandler: () => void;
+}) {
   const {
     register,
     handleSubmit,
@@ -28,6 +32,7 @@ export default function Register() {
     data
   ) => {
     console.log(data);
+    showOtpHandler();
   };
 
   return (
@@ -42,7 +47,9 @@ export default function Register() {
         <Input
           classNames={{
             mainWrapper: ["bg-transparent outline-none rounded-2xl"],
-            inputWrapper: ["bg-transparent border-1 dark:border-black-15 rounded-2xl"],
+            inputWrapper: [
+              "bg-transparent border-1 dark:border-black-15 rounded-2xl",
+            ],
             input: ["bg-transparent"],
             innerWrapper: ["bg-transparent"],
           }}
@@ -59,7 +66,9 @@ export default function Register() {
         <Input
           classNames={{
             mainWrapper: ["bg-transparent outline-none rounded-2xl"],
-            inputWrapper: ["bg-transparent border-1 dark:border-black-15 rounded-2xl"],
+            inputWrapper: [
+              "bg-transparent border-1 dark:border-black-15 rounded-2xl",
+            ],
             input: ["bg-transparent"],
             innerWrapper: ["bg-transparent"],
           }}
@@ -77,7 +86,9 @@ export default function Register() {
         <Input
           classNames={{
             mainWrapper: ["bg-transparent outline-none rounded-2xl"],
-            inputWrapper: ["bg-transparent border-1 dark:border-black-15 rounded-2xl"],
+            inputWrapper: [
+              "bg-transparent border-1 dark:border-black-15 rounded-2xl",
+            ],
             input: ["bg-transparent"],
             innerWrapper: ["bg-transparent"],
           }}
@@ -100,7 +111,9 @@ export default function Register() {
           startContent={<AutoCompletePhone />}
           classNames={{
             mainWrapper: ["bg-transparent outline-none rounded-2xl h-11"],
-            inputWrapper: ["bg-transparent border-1 dark:border-black-15 rounded-2xl h-full ps-0 pe-3"],
+            inputWrapper: [
+              "bg-transparent border-1 dark:border-black-15 rounded-2xl h-full ps-0 pe-3",
+            ],
             input: ["bg-transparent"],
             innerWrapper: ["bg-transparent"],
           }}
@@ -116,7 +129,9 @@ export default function Register() {
         <Input
           classNames={{
             mainWrapper: ["bg-transparent outline-none rounded-2xl"],
-            inputWrapper: ["bg-transparent border-1 dark:border-black-15 rounded-2xl"],
+            inputWrapper: [
+              "bg-transparent border-1 dark:border-black-15 rounded-2xl",
+            ],
             input: ["bg-transparent"],
             innerWrapper: ["bg-transparent"],
           }}
@@ -135,7 +150,7 @@ export default function Register() {
             Login
           </Link>
         </p>
-      </form >
-    </div >
+      </form>
+    </div>
   );
 }
