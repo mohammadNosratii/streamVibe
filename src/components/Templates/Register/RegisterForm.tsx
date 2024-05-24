@@ -42,13 +42,15 @@ export default function Register() {
         <Input
           classNames={{
             mainWrapper: ["bg-transparent outline-none rounded-2xl"],
-            inputWrapper: ["bg-transparent border-1 dark:border-black-15 rounded-2xl"],
+            inputWrapper: [
+              "bg-transparent border-1 dark:border-black-15 rounded-2xl",
+            ],
             input: ["bg-transparent"],
             innerWrapper: ["bg-transparent"],
           }}
+          size="sm"
           type="text"
           label="Full Name"
-          placeholder="Enter Your Name"
           {...register("fullname", {
             required: "Please Enter Your Name",
           })}
@@ -59,13 +61,15 @@ export default function Register() {
         <Input
           classNames={{
             mainWrapper: ["bg-transparent outline-none rounded-2xl"],
-            inputWrapper: ["bg-transparent border-1 dark:border-black-15 rounded-2xl"],
+            inputWrapper: [
+              "bg-transparent border-1 dark:border-black-15 rounded-2xl",
+            ],
             input: ["bg-transparent"],
             innerWrapper: ["bg-transparent"],
           }}
+          size="sm"
           type="text"
           label="Username"
-          placeholder="Enter Your Username"
           {...register("username", {
             required: "Please Enter Username",
             minLength: { value: 8, message: "At Least Enter 8 Character" },
@@ -77,13 +81,15 @@ export default function Register() {
         <Input
           classNames={{
             mainWrapper: ["bg-transparent outline-none rounded-2xl"],
-            inputWrapper: ["bg-transparent border-1 dark:border-black-15 rounded-2xl"],
+            inputWrapper: [
+              "bg-transparent border-1 dark:border-black-15 rounded-2xl",
+            ],
             input: ["bg-transparent"],
             innerWrapper: ["bg-transparent"],
           }}
+          size="sm"
           type={`${isPasswordVisible ? "text" : "password"}`}
           label="Password"
-          placeholder="Enter Your Password"
           {...register("password", {
             required: "Please Enter Your Password",
             minLength: { value: 8, message: "At Least Enter 8 Character" },
@@ -100,7 +106,9 @@ export default function Register() {
           startContent={<AutoCompletePhone />}
           classNames={{
             mainWrapper: ["bg-transparent outline-none rounded-2xl h-11"],
-            inputWrapper: ["bg-transparent border-1 dark:border-black-15 rounded-2xl h-full ps-0 pe-3"],
+            inputWrapper: [
+              "bg-transparent border-1 dark:border-black-15 rounded-2xl h-full ps-0 pe-3",
+            ],
             input: ["bg-transparent"],
             innerWrapper: ["bg-transparent"],
           }}
@@ -116,13 +124,15 @@ export default function Register() {
         <Input
           classNames={{
             mainWrapper: ["bg-transparent outline-none rounded-2xl"],
-            inputWrapper: ["bg-transparent border-1 dark:border-black-15 rounded-2xl"],
+            inputWrapper: [
+              "bg-transparent border-1 dark:border-black-15 rounded-2xl",
+            ],
             input: ["bg-transparent"],
             innerWrapper: ["bg-transparent"],
           }}
+          size="sm"
           type="email"
-          label="Email"
-          placeholder="Enter Your Email (Optional)"
+          label="Email (optional)"
           {...register("email")}
           endContent={<MailIcon />}
         />
@@ -135,7 +145,7 @@ export default function Register() {
             Login
           </Link>
         </p>
-      </form >
-    </div >
+      </form>
+    </div>
   );
 }
