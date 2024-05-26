@@ -28,11 +28,11 @@
   .formErrorsMessage {
     @apply text-red-45 text-xs;
   }
-  .HomeheaderMovies {
-    @apply  top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 md:left-32 md:translate-x-0
+  .homeHeader {
+    @apply top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 md:left-32 md:translate-x-0;
   }
-  .headerMovies {
-    @apply flex flex-col items-center absolute bottom-20 left-1/2 -translate-x-1/2
+  .moviesHeader {
+    @apply flex flex-col items-center absolute bottom-20 left-1/2 -translate-x-1/2;
   }
 }
 

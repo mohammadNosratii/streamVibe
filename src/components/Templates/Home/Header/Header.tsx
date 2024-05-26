@@ -21,8 +21,8 @@ export default function Header({
       <div
         className={`container absolute w-[80%] md:w-[60%] space-y-5 ${
           window.location.pathname === "/movies"
-            ? "headerMovies"
-            : "HomeheaderMovies"
+            ? "moviesHeader"
+            : "homeHeader"
         }`}
       >
         <div className="items-center gap-2 rounded-2xl inline-flex">
