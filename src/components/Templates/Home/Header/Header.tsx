@@ -40,7 +40,7 @@ export default function Header({
             Play
           </Button>
           <div
-            className={` items-center gap-2 child:bg-black-6 child:p-2 child:rounded-lg ${
+            className={`items-center gap-2 child:bg-black-6 child:p-2 child:rounded-lg text-white ${
               window.location.pathname === "/movies" ? "flex" : "hidden"
             }`}
           >
