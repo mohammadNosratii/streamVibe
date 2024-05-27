@@ -3,7 +3,7 @@ import { Button } from "@nextui-org/react";
 import { movieNavigationSlider } from "../../../../interfaces/navigationSlider.interface";
 import PlusIcon from "../../../../assets/icons/Plus";
 import Speaker from "../../../../assets/icons/Speaker";
-import LikeIcon from "../../../../assets/icons/LikeIcon";
+import LikeIcon from "../../../../assets/icons/Like";
 
 export default function Header({
   img,
