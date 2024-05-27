@@ -3,7 +3,6 @@ import {
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-  Link,
   Image,
 } from "@nextui-org/react";
 import logo from "/icons/logo-desktop.svg";
@@ -18,6 +17,7 @@ import {
 import { UserPopOverTrigger } from "../PopOverTrigger/PopOverTrigger";
 import { navbarHorizontalItems } from "../../../constants/navbarItems";
 import ThemeSwitch from "../ThemeSwitch/ThemeSwitch";
+import { Link } from "@tanstack/react-router";
 
 export default function NavbarHorizontal({
   triggerNavbarVertical,
@@ -40,10 +40,11 @@ export default function NavbarHorizontal({
 
   return (
     <NextUINavbar
-      className={`z-50 py-3 transition-all fixed bg-gradient-to-b from-black-6 to-black-6/0 ${isNavbarSticky
+      className={`z-50 py-3 transition-all fixed bg-gradient-to-b from-black-6 to-black-6/0 ${
+        isNavbarSticky
           ? `backdrop-blur-sm bg-black-6/20 backdrop-saturate-[1.5]`
           : `backdrop-blur-none bg-transparent backdrop-saturate-[1]`
-        }`}
+      }`}
       classNames={{
         wrapper: ["max-w-[90%]"],
       }}
@@ -69,8 +70,12 @@ export default function NavbarHorizontal({
             key={index}
           >
             <Link
-              href={item.route}
-              className={`${item.route === window.location.pathname ? "text-black dark:text-white font-manropeMedium" : "text-gray-75 font-manropeRegular"} text-sm lg:text-base`}
+              to={item.route}
+              className={`${
+                item.route === window.location.pathname
+                  ? "text-black dark:text-white font-manropeMedium"
+                  : "text-gray-75 font-manropeRegular"
+              } text-sm lg:text-base`}
             >
               {item.title}
             </Link>
