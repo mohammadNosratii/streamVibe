@@ -4,7 +4,7 @@ export default function MoonIcon() {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       fill="currentColor"
-      className="w-[17px] h-[17px]"
+      className="w-[19px] h-[19px]"
     >
       <path
         fillRule="evenodd"
