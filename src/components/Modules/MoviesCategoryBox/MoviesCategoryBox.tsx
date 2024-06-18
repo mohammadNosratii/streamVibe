@@ -1,8 +1,13 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "../../../assets/icons/Arrows";
 import MovieCart from "./MovieCart";
+import { moviesCardProps } from "../../../interfaces/moviesCardInfo.interface";
 
-export default function MoviesCategoryBox() {
+export default function MoviesCategoryBox({
+  moviesCardInfo,
+}: {
+  moviesCardInfo: moviesCardProps[];
+}) {
   return (
     <div>
       <div className="flex items-center justify-between">
@@ -12,12 +17,10 @@ export default function MoviesCategoryBox() {
           <ArrowRight />
         </Link>
       </div>
-      <div className="grid grid-cols-4 gap-5 mt-6">
-        <MovieCart />
-        <MovieCart />
-        <MovieCart />
-        <MovieCart />
-        <MovieCart />
+      <div className="grid lg:grid-cols-2 gap-5 mt-6">
+        {moviesCardInfo.map((card, index) => (
+          <MovieCart key={index} {...card} />
+        ))}
       </div>
     </div>
   );
