@@ -1,12 +1,4 @@
-import {
-  Card,
-  CardBody,
-  CardHeader,
-  Chip,
-  Divider,
-  Image,
-  ScrollShadow,
-} from "@nextui-org/react";
+import { Chip, Divider } from "@nextui-org/react";
 import Star from "../../../assets/icons/Star";
 import { moviesCardProps } from "../../../interfaces/moviesCardInfo.interface";
 
