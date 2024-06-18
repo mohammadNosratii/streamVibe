@@ -3,15 +3,70 @@ import {
   CardBody,
   CardHeader,
   Chip,
+  Divider,
   Image,
   ScrollShadow,
 } from "@nextui-org/react";
-import MadMax from "../../../assets/images/cropped-3840-2160-338840.jpg";
 import Star from "../../../assets/icons/Star";
+import { moviesCardProps } from "../../../interfaces/moviesCardInfo.interface";
 
-export default function MovieCart() {
+export default function MovieCart({
+  title,
+  img,
+  date,
+  rate,
+  review,
+  dec,
+  geners,
+  color,
+  mainColor,
+}: moviesCardProps) {
   return (
-    <Card isFooterBlurred radius="lg" className="border-none">
+    <div
+      className={`text-white rounded-xl overflow-hidden bg-gradient-to-br ${color} to-red-45/10 ${mainColor} relative border-4 border-white/70 dark:border-black-6/60 cursor-pointer`}
+    >
+      <div className="movieCardImg overflow-hidden w-[60%] absolute top-0 right-0 h-full">
+        <img className="h-full object-cover" src={img} alt="" />
+      </div>
+      <div className="p-4 flex flex-col gap-7 items-start justify-between h-full">
+        <div>
+          <h2 className="text-xl font-manropeSemiBold mb-2">MOVIE DETAILS</h2>
+          <Divider className="w-20" />
+        </div>
+        <div>
+          <h2 className="text-lg lg:text-base xl:text-lg font-manropeSemiBold max-w-[70%] lg:max-w-[60%] xl:max-w-[65%] bg-blue">
+            {title}
+          </h2>
+          <span className="text-xs dark:text-gray-75 inline-block max-w-44">
+            Release date: {date}
+          </span>
+        </div>
+        <div className="flex items-center">
+          <Star />
+          <p className="ms-2 text-sm font-bold text-white">{rate} / 10</p>
+          <span className="w-1 h-1 mx-1.5 bg-gray-500 rounded-full dark:bg-gray-400"></span>
+          <a
+            href="#"
+            className="text-sm font-medium underline hover:no-underline text-white"
+          >
+            {review} reviews
+          </a>
+        </div>
+        <p className="text-xs dark:text-gray-75 max-w-[50%] line-clamp-4">
+          {dec}
+        </p>
+        <div className="flex items-center gap-3 child:border child:bg-transparent child:border-gray-75 child:text-white">
+          {geners.map((gen, index) => (
+            <Chip key={index}>{gen.gen}</Chip>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+{
+  /* <Card isFooterBlurred radius="lg" className="border-none">
       <CardHeader className="group cursor-pointer">
         <Image
           isBlurred
@@ -51,6 +106,5 @@ export default function MovieCart() {
           <Chip>#Drama</Chip>
         </div>
       </CardBody>
-    </Card>
-  );
+    </Card> */
 }

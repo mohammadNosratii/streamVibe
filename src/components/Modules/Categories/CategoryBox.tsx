@@ -1,6 +1,6 @@
 import { ArrowRight } from "../../../assets/icons/Arrows";
 import { categoryProps } from "../../../interfaces/category.interface";
-import { Card, Image} from "@nextui-org/react";
+import { Card, Image } from "@nextui-org/react";
 
 export default function CategoryBox({ img, title }: categoryProps) {
   return (

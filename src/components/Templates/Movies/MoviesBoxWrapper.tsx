@@ -1,3 +1,4 @@
+import MoviesCardInfo from "../../../mock/MoviesCardInfo";
 import MoviesCategoryBox from "../../Modules/MoviesCategoryBox/MoviesCategoryBox";
 
 export default function MoviesBoxWrapper() {
@@ -7,7 +8,7 @@ export default function MoviesBoxWrapper() {
         <div className="text-white px-4 py-2 bg-red-45 rounded-lg absolute top-0 -translate-y-1/2 left-12">
           Movies
         </div>
-        <MoviesCategoryBox />
+        <MoviesCategoryBox moviesCardInfo={MoviesCardInfo()} />
       </div>
     </div>
   );
