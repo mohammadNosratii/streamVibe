@@ -2,7 +2,7 @@ import { Chip, Divider } from "@nextui-org/react";
 import Star from "../../../assets/icons/Star";
 import { moviesCardProps } from "../../../interfaces/moviesCardInfo.interface";
 
-export default function MovieCart({
+export default function MovieCard({
   title,
   img,
   date,

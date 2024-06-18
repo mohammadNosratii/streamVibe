@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "../../../assets/icons/Arrows";
-import MovieCart from "./MovieCart";
+import MovieCard from "./MovieCard";
 import { moviesCardProps } from "../../../interfaces/moviesCardInfo.interface";
 
 export default function MoviesCategoryBox({
@@ -19,7 +19,7 @@ export default function MoviesCategoryBox({
       </div>
       <div className="grid lg:grid-cols-2 gap-5 mt-6">
         {moviesCardInfo.map((card, index) => (
-          <MovieCart key={index} {...card} />
+          <MovieCard key={index} {...card} />
         ))}
       </div>
     </div>
