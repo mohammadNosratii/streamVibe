@@ -11,6 +11,8 @@ export default {
   theme: {
     screens: {
       xs: "380px",
+      "2xs": "430px",
+      "3xs": "520px",
       sm: "640px",
       md: "768px",
       lg: "1024px",
@@ -47,8 +49,7 @@ export default {
       container: {
         center: true,
         padding: {
-          DEFAULT: "4px",
-          md: "16px",
+          DEFAULT: "16px",
           "2xl": "80px",
           "3xl": "162px",
         },
