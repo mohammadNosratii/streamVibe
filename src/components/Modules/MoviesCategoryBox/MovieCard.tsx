@@ -16,9 +16,9 @@ export default function MovieCard({
 }: moviesCardProps["movies"][0]) {
   return (
     <div
-      className={`text-white rounded-xl overflow-hidden bg-gradient-to-br ${color} to-red-45/10 ${mainColor} relative border-4 border-white/70 dark:border-black-6/60 cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-normal`}
+      className={`text-white rounded-xl overflow-hidden bg-gradient-to-br ${color} to-red-45/10 ${mainColor} relative border-4 border-white/70 dark:border-black-6/60 transition-all duration-300 hover:-translate-y-2 hover:shadow-normal`}
     >
-      <div className="movieCardImg overflow-hidden w-full sm:w-[60%] absolute top-0 right-0 sm:h-full group">
+      <div className="movieCardImg overflow-hidden w-full sm:w-[60%] absolute top-0 right-0 sm:h-full group cursor-pointer">
         <img className="h-full object-cover" src={img} alt="" />
         <div className="opacity-0 transition-all duration-300 group-hover:opacity-100 absolute top-1/2 -translate-y-3/4 right-1/2 translate-x-3/4 bg-black-6/20 backdrop-blur-lg p-2 2xs:p-3 sm:p-4 rounded-3xl">
           <Play />
