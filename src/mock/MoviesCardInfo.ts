@@ -1,15 +1,15 @@
-import hitMan from "../assets/images/Hit-man.jpeg";
-import theFallGuy from "../assets/images/the-fall-guy.jpeg";
-import boyKillsWorld from "../assets/images/boy-kills-world.jpg";
-import civilWar from "../assets/images/civil-war.jpeg";
-import dunePart2 from "../assets/images/dune-part2.jpeg";
-import Ghostbusters from "../assets/images/ghostbusters-Frozen-Empire.jpg";
-import godzillaMinesOne from "../assets/images/godzilla-minus-one.jpeg";
-import badBoysRideOrDie from "../assets/images/badBoys-rideOrDie.jpeg";
-import oblivion from "../assets/images/oblivion.jpg";
-import spiderMan from "../assets/images/spider-man.jpeg";
-import mazeRunner from "../assets/images/the-maze-runner.jpg";
-import theHungerGames from "../assets/images/the-hunger-games.jpg";
+import hitMan from "../assets/images/Hit-man.webp";
+import theFallGuy from "../assets/images/the-fall-guy.webp";
+import boyKillsWorld from "../assets/images/boy-kills-world.webp";
+import civilWar from "../assets/images/civil-war.webp";
+import dunePart2 from "../assets/images/dune-part2.webp";
+import Ghostbusters from "../assets/images/ghostbusters-Frozen-Empire.webp";
+import godzillaMinesOne from "../assets/images/godzilla-minus-one.webp";
+import badBoysRideOrDie from "../assets/images/badBoys-rideOrDie.webp";
+import oblivion from "../assets/images/oblivion.webp";
+import spiderMan from "../assets/images/spider-man.webp";
+import mazeRunner from "../assets/images/the-maze-runner.webp";
+import theHungerGames from "../assets/images/the-hunger-games.webp";
 
 export default function MoviesCardInfo() {
   return [
