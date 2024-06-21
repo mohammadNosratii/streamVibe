@@ -4,21 +4,20 @@ import MovieCard from "./MovieCard";
 import { moviesCardProps } from "../../../interfaces/moviesCardInfo.interface";
 
 export default function MoviesCategoryBox({
-  moviesCardInfo,
-}: {
-  moviesCardInfo: moviesCardProps[];
-}) {
+  category,
+  movies,
+}: moviesCardProps) {
   return (
     <div>
       <div className="flex items-center justify-between">
-        <h1 className="text-4xl">Top 100 Movies</h1>
+        <h1 className="text-xl 2xs:text-2xl 3xs:text-3xl sm:text-4xl">{category}</h1>
         <Link className="flex items-center gap-2" to="/">
-          <span>See All</span>
+          <span className="text-sm 3xs:text-base sm:text-lg">See All</span>
           <ArrowRight />
         </Link>
       </div>
       <div className="grid lg:grid-cols-2 gap-5 mt-6">
-        {moviesCardInfo.map((card, index) => (
+        {movies.map((card, index) => (
           <MovieCard key={index} {...card} />
         ))}
       </div>
