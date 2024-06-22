@@ -9,7 +9,7 @@ export default function MovieDetail() {
           <Calender />
           <h3 className="text-lg">Release Date</h3>
         </div>
-        <span className="text-xl">12 september 2024</span>
+        <span className="text-xl">10 september 2024</span>
       </div>
       <div>
         <div className="flex items-center gap-1 text-gray-60">
