@@ -35,7 +35,10 @@
     @apply flex flex-col items-center absolute bottom-20 left-1/2 -translate-x-1/2;
   }
   .movieCardImg {
-    border-radius: 0% 100% 0% 100% / 0% 0% 100% 100% ;
+    border-radius: 0% 100% 0% 100% / 0% 0% 100% 100%;
+  }
+  .movieDetail {
+    @apply flex items-center gap-1 text-gray-60;
   }
 }
 
