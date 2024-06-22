@@ -26,8 +26,6 @@ export default function MovieDetail() {
           <Chip>France</Chip>
           <Chip>Spanish</Chip>
           <Chip>Italy</Chip>
-          <Chip>Italy</Chip>
-          <Chip>Italy</Chip>
         </div>
       </div>
       <div>
@@ -44,7 +42,7 @@ export default function MovieDetail() {
           <h3>Gernes</h3>
         </div>
         <div className="flex items-center gap-2.5 flex-wrap child:dark:bg-black-8 child:py-5 child:px-4 child:rounded-lg">
-          <Chip>ACtion</Chip>
+          <Chip>Action</Chip>
           <Chip>Adventure</Chip>
         </div>
       </div>

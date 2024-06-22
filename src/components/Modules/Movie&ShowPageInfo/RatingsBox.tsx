@@ -3,7 +3,7 @@ import StarRating from "../StarRating/StarRating";
 
 export default function RtingsBox() {
   return (
-    <div className="p-4 dark:bg-black-8 shadow-normal rounded-lg space-y-1">
+    <div className="p-4 dark:bg-black-8 border-2 dark:border-black-15 rounded-lg space-y-1">
       <div className="flex items-center gap-2">
         <Imdb />
         Imdb
