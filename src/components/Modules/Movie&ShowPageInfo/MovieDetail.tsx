@@ -1,4 +1,4 @@
-import { Card, CardHeader, Chip, Image } from "@nextui-org/react";
+import { Chip } from "@nextui-org/react";
 import Calender from "../../../assets/icons/Calender";
 import Language from "../../../assets/icons/Language";
 import StarOutline from "../../../assets/icons/StarOutline";
