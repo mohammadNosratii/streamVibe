@@ -9,7 +9,7 @@ interface moviesCardProps {
     des: string;
     color: string;
     mainColor: string;
-    geners: [];
+    geners: string[];
   }[];
 }
 
