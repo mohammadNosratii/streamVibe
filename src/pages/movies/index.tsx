@@ -1,3 +1,4 @@
+import FreeTrial from "../../components/Modules/FreeTrial/FreeTrial";
 import NavigationSlider from "../../components/Modules/Sliders/NavigationSlider";
 import MoviesBoxWrapper from "../../components/Templates/Movies/MoviesBoxWrapper";
 import MoviesCardInfo from "../../mock/MoviesCardInfo";
@@ -8,6 +9,7 @@ export default function Movies() {
     <>
       <NavigationSlider data={newMoviesInfo()} />
       <MoviesBoxWrapper moviesCardInfo={MoviesCardInfo()} />
+      <FreeTrial />
     </>
   );
 }

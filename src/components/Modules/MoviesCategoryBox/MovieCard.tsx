@@ -9,7 +9,7 @@ export default function MovieCard({
   date,
   rate,
   review,
-  dec,
+  des,
   geners,
   color,
   mainColor,
@@ -49,11 +49,11 @@ export default function MovieCard({
           </a>
         </div>
         <p className="text-xs dark:text-gray-75 sm:max-w-[50%] line-clamp-2 sm:line-clamp-4">
-          {dec}
+          {des}
         </p>
         <div className="flex flex-wrap items-center gap-3 child:border child:bg-transparent child:border-gray-75 child:text-white">
           {geners.map((gen, index) => (
-            <Chip key={index}>{gen.gen}</Chip>
+            <Chip key={index}>{gen}</Chip>
           ))}
         </div>
       </div>

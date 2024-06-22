@@ -1,18 +1,21 @@
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/pagination";
 import "./CategoriesSlider.css";
 
 import { Pagination, Navigation } from "swiper/modules";
-import CategoryBox from "../Categories/CategoryBox";
-import categoriesInfo from "../../../mock/categoriesInfo";
 
-export default function CategoriesSlider() {
+export default function CategoriesSlider({
+  children,
+  slidesPerViewXs,
+  slidesPerViewSm,
+  slidesPerViewLg,
+}: any) {
   return (
     <>
       <Swiper
-        slidesPerView={2}
+        slidesPerView={slidesPerViewXs}
         spaceBetween={30}
         navigation={{
           prevEl: ".swiper-custom-button-prev",
@@ -26,20 +29,16 @@ export default function CategoriesSlider() {
         }}
         breakpoints={{
           640: {
-            slidesPerView: 3,
+            slidesPerView: slidesPerViewSm,
           },
           1024: {
-            slidesPerView: 4,
+            slidesPerView: slidesPerViewLg,
           },
         }}
         modules={[Pagination, Navigation]}
         className="mySwiper"
       >
-        {categoriesInfo.map((category, index) => (
-          <SwiperSlide key={index}>
-            <CategoryBox {...category} />
-          </SwiperSlide>
-        ))}
+        {children}
       </Swiper>
     </>
   );

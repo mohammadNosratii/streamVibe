@@ -21,7 +21,7 @@ function ArrowRight() {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 20 20"
       fill="currentColor"
-      className="w-4 h-4 md:w-6 md:h-6 2xl:w-7 2xl:h-7"
+      className="w-6 h-6 2xl:w-7 2xl:h-7"
     >
       <path
         fillRule="evenodd"

@@ -1,16 +1,8 @@
+import { moviesDetail } from "./moviesDetail.interface";
+
 interface moviesCardProps {
   category: string;
-  movies: {
-    title: string;
-    img: string;
-    date: string;
-    rate: string;
-    review: string;
-    dec: string;
-    color: string;
-    mainColor: string;
-    geners: { gen: string }[];
-  }[];
+  movies: moviesDetail[];
 }
 
 export type { moviesCardProps };

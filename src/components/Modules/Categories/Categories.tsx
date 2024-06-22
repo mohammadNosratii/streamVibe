@@ -1,5 +1,8 @@
 import CategoriesSlider from "../Sliders/CategoriesSlider";
 import { ArrowLeft, ArrowRight } from "../../../assets/icons/Arrows";
+import CategoryBox from "./CategoryBox";
+import categoriesInfo from "../../../mock/categoriesInfo";
+import { SwiperSlide } from "swiper/react";
 
 export default function Categories() {
   return (
@@ -24,7 +27,13 @@ export default function Categories() {
           </div>
         </div>
       </div>
-      <CategoriesSlider />
+      <CategoriesSlider slidesPerViewXs={2} slidesPerViewSm={3} slidesPerViewLg={4}>
+        {categoriesInfo.map((category, index) => (
+          <SwiperSlide key={index}>
+            <CategoryBox {...category} />
+          </SwiperSlide>
+        ))}
+      </CategoriesSlider>
     </div>
   );
 }
