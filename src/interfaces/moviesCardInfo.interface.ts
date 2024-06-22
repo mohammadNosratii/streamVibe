@@ -6,10 +6,10 @@ interface moviesCardProps {
     date: string;
     rate: string;
     review: string;
-    dec: string;
+    des: string;
     color: string;
     mainColor: string;
-    geners: { gen: string }[];
+    geners: [];
   }[];
 }
 
