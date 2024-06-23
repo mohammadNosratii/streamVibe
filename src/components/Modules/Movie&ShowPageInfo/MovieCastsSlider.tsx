@@ -23,7 +23,7 @@ export default function MoviesCastsSlider() {
         {casts.map((cast, index) => (
           <SwiperSlide key={index}>
             <img
-              className="rounded-3xl h-28 sm:h-36 2xl:h-44"
+              className="rounded-3xl h-28 sm:h-36 2xl:h-44 object-cover"
               src={dune2}
               alt={cast}
             />

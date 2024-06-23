@@ -6,7 +6,7 @@ export default function CreatorMovieInfo() {
       <div className="movieDetail">
         <h3>Director</h3>
       </div>
-      <Card>
+      <Card className="shadow-none">
         <CardHeader className="flex gap-3">
           <Image
             className="w-16"

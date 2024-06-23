@@ -11,12 +11,13 @@ import spiderMan from "../assets/images/spider-man.webp";
 import mazeRunner from "../assets/images/the-maze-runner.webp";
 import theHungerGames from "../assets/images/the-hunger-games.webp";
 
-export default function MoviesCardInfo() {
+export default function moviesCardInfo() {
   return [
     {
       category: "New Release",
       movies: [
         {
+          id: 1,
           title: "Hit Man",
           img: hitMan,
           date: "24 May 2024",
@@ -28,6 +29,7 @@ export default function MoviesCardInfo() {
           mainColor: "bg-red-45/50",
         },
         {
+          id: 2,
           title: "The Fall Guy",
           img: theFallGuy,
           date: "12 March 2024",
@@ -39,6 +41,7 @@ export default function MoviesCardInfo() {
           mainColor: "bg-green-900/60",
         },
         {
+          id: 3,
           title: "Boy Kills World",
           img: boyKillsWorld,
           date: "26 April 2024",
@@ -50,6 +53,7 @@ export default function MoviesCardInfo() {
           mainColor: "bg-black-6/50",
         },
         {
+          id: 4,
           title: "Civil War",
           img: civilWar,
           date: "12 April 2024",
@@ -66,6 +70,7 @@ export default function MoviesCardInfo() {
       category: "Trending Now",
       movies: [
         {
+          id: 5,
           title: "Dune: Part Two",
           img: dunePart2,
           date: "16 April 2024",
@@ -78,6 +83,7 @@ export default function MoviesCardInfo() {
         },
 
         {
+          id: 6,
           title: "Ghostbusters: Frozen Empire",
           img: Ghostbusters,
           date: "29 March 2024",
@@ -89,6 +95,7 @@ export default function MoviesCardInfo() {
           mainColor: "bg-orange-100/80",
         },
         {
+          id: 7,
           title: "Godzilla Minus One",
           img: godzillaMinesOne,
           date: "1 Desember 2023",
@@ -100,6 +107,7 @@ export default function MoviesCardInfo() {
           mainColor: "bg-slate-900",
         },
         {
+          id: 8,
           title: "Bad Boys: Ride or Die",
           img: badBoysRideOrDie,
           date: "22 May 2024",
@@ -116,6 +124,7 @@ export default function MoviesCardInfo() {
       category: "Most Populars",
       movies: [
         {
+          id: 9,
           title: "Oblivion",
           img: oblivion,
           date: "12 April 2013",
@@ -127,6 +136,7 @@ export default function MoviesCardInfo() {
           mainColor: "bg-red-45/50",
         },
         {
+          id: 10,
           title: "Spider-Man: Across the Spider-Verse",
           img: spiderMan,
           date: "30 May 2023",
@@ -138,6 +148,7 @@ export default function MoviesCardInfo() {
           mainColor: "bg-green-900/60",
         },
         {
+          id: 11,
           title: "The Maze Runner",
           img: mazeRunner,
           date: "19 September 2014",
@@ -149,6 +160,7 @@ export default function MoviesCardInfo() {
           mainColor: "bg-blue-900/50",
         },
         {
+          id: 12,
           title: "The Hunger Games",
           img: theHungerGames,
           date: "12 April 2013",
@@ -165,6 +177,7 @@ export default function MoviesCardInfo() {
       category: "Top 250 movies",
       movies: [
         {
+          id: 13,
           title: "Oblivion",
           img: oblivion,
           date: "12 April 2013",
@@ -176,6 +189,7 @@ export default function MoviesCardInfo() {
           mainColor: "bg-red-45/50",
         },
         {
+          id: 14,
           title: "Spider-Man: Across the Spider-Verse",
           img: spiderMan,
           date: "30 May 2023",
@@ -187,6 +201,7 @@ export default function MoviesCardInfo() {
           mainColor: "bg-green-900/60",
         },
         {
+          id: 15,
           title: "The Maze Runner",
           img: mazeRunner,
           date: "19 September 2014",
@@ -198,6 +213,7 @@ export default function MoviesCardInfo() {
           mainColor: "bg-blue-900/50",
         },
         {
+          id: 16,
           title: "The Hunger Games",
           img: theHungerGames,
           date: "12 April 2013",
@@ -214,6 +230,7 @@ export default function MoviesCardInfo() {
       category: "Drama",
       movies: [
         {
+          id: 17,
           title: "Dune: Part Two",
           img: dunePart2,
           date: "16 April 2024",
@@ -226,6 +243,7 @@ export default function MoviesCardInfo() {
         },
 
         {
+          id: 18,
           title: "Ghostbusters: Frozen Empire",
           img: Ghostbusters,
           date: "29 March 2024",
@@ -237,6 +255,7 @@ export default function MoviesCardInfo() {
           mainColor: "bg-orange-100/80",
         },
         {
+          id: 19,
           title: "Godzilla Minus One",
           img: godzillaMinesOne,
           date: "1 Desember 2023",
@@ -248,6 +267,7 @@ export default function MoviesCardInfo() {
           mainColor: "bg-slate-900",
         },
         {
+          id: 20,
           title: "Bad Boys: Ride or Die",
           img: badBoysRideOrDie,
           date: "22 May 2024",
@@ -264,6 +284,7 @@ export default function MoviesCardInfo() {
       category: "Comedy",
       movies: [
         {
+          id: 21,
           title: "Dune: Part Two",
           img: dunePart2,
           date: "16 April 2024",
@@ -276,6 +297,7 @@ export default function MoviesCardInfo() {
         },
 
         {
+          id: 22,
           title: "Ghostbusters: Frozen Empire",
           img: Ghostbusters,
           date: "29 March 2024",
@@ -287,6 +309,7 @@ export default function MoviesCardInfo() {
           mainColor: "bg-orange-100/80",
         },
         {
+          id: 23,
           title: "Godzilla Minus One",
           img: godzillaMinesOne,
           date: "1 Desember 2023",
@@ -298,6 +321,7 @@ export default function MoviesCardInfo() {
           mainColor: "bg-slate-900",
         },
         {
+          id: 24,
           title: "Bad Boys: Ride or Die",
           img: badBoysRideOrDie,
           date: "22 May 2024",
@@ -314,6 +338,7 @@ export default function MoviesCardInfo() {
       category: "Horror",
       movies: [
         {
+          id: 25,
           title: "Dune: Part Two",
           img: dunePart2,
           date: "16 April 2024",
@@ -326,6 +351,7 @@ export default function MoviesCardInfo() {
         },
 
         {
+          id: 26,
           title: "Ghostbusters: Frozen Empire",
           img: Ghostbusters,
           date: "29 March 2024",
@@ -337,6 +363,7 @@ export default function MoviesCardInfo() {
           mainColor: "bg-orange-100/80",
         },
         {
+          id: 27,
           title: "Godzilla Minus One",
           img: godzillaMinesOne,
           date: "1 Desember 2023",
@@ -348,6 +375,7 @@ export default function MoviesCardInfo() {
           mainColor: "bg-slate-900",
         },
         {
+          id: 28,
           title: "Bad Boys: Ride or Die",
           img: badBoysRideOrDie,
           date: "22 May 2024",
@@ -364,6 +392,7 @@ export default function MoviesCardInfo() {
       category: "Adventure",
       movies: [
         {
+          id: 29,
           title: "Dune: Part Two",
           img: dunePart2,
           date: "16 April 2024",
@@ -376,6 +405,7 @@ export default function MoviesCardInfo() {
         },
 
         {
+          id: 30,
           title: "Ghostbusters: Frozen Empire",
           img: Ghostbusters,
           date: "29 March 2024",
@@ -387,6 +417,7 @@ export default function MoviesCardInfo() {
           mainColor: "bg-orange-100/80",
         },
         {
+          id: 31,
           title: "Godzilla Minus One",
           img: godzillaMinesOne,
           date: "1 Desember 2023",
@@ -398,6 +429,7 @@ export default function MoviesCardInfo() {
           mainColor: "bg-slate-900",
         },
         {
+          id: 32,
           title: "Bad Boys: Ride or Die",
           img: badBoysRideOrDie,
           date: "22 May 2024",

@@ -2,8 +2,10 @@ import { Chip, Divider } from "@nextui-org/react";
 import Star from "../../../assets/icons/Star";
 import { moviesCardProps } from "../../../interfaces/moviesCardInfo.interface";
 import Play from "../../../assets/icons/Play";
+import { Link } from "@tanstack/react-router";
 
 export default function MovieCard({
+  id,
   title,
   img,
   date,
@@ -15,8 +17,9 @@ export default function MovieCard({
   mainColor,
 }: moviesCardProps["movies"][0]) {
   return (
-    <div
-      className={`text-white rounded-xl overflow-hidden bg-gradient-to-br ${color} to-red-45/10 ${mainColor} relative border-4 border-white/70 dark:border-black-6/60 transition-all duration-300 hover:-translate-y-2 hover:shadow-normal`}
+    <Link
+      to={`/movies/${id}`}
+      className={`text-white rounded-xl overflow-hidden bg-gradient-to-br ${color} to-red-45/10 ${mainColor} relative border-4 border-white/70 dark:border-black-6/60 transition-all duration-300 hover:-translate-y-2 hover:shadow-normal delay-150`}
     >
       <div className="movieCardImg overflow-hidden w-full sm:w-[60%] absolute top-0 right-0 sm:h-full group cursor-pointer">
         <img className="h-full object-cover" src={img} alt="" />
@@ -41,12 +44,9 @@ export default function MovieCard({
           <Star />
           <p className="ms-2 text-sm font-bold text-white">{rate} / 10</p>
           <span className="w-1 h-1 mx-1.5 bg-gray-500 rounded-full dark:bg-gray-400"></span>
-          <a
-            href="#"
-            className="text-[13px] font-medium underline hover:no-underline text-white"
-          >
+          <span className="text-[13px] font-medium underline hover:no-underline text-white">
             {review} reviews
-          </a>
+          </span>
         </div>
         <p className="text-xs dark:text-gray-75 sm:max-w-[50%] line-clamp-2 sm:line-clamp-4">
           {des}
@@ -57,7 +57,7 @@ export default function MovieCard({
           ))}
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 

@@ -1,4 +1,4 @@
-interface moviesDetail {
+interface allMoviesData {
   id: number;
   title: string;
   img: string;
@@ -6,9 +6,7 @@ interface moviesDetail {
   rate: string;
   review: string;
   des: string;
-  color: string;
-  mainColor: string;
   geners: string[];
 }
 
-export type { moviesDetail };
+export type {allMoviesData}
