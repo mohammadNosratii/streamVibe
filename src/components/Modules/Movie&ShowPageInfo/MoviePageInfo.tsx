@@ -7,16 +7,15 @@ import MovieComment from "./MovieComment";
 import MovieDetail from "./MovieDetail";
 import { useParams } from "@tanstack/react-router";
 import { allMoviesData } from "../../../interfaces/allMoviesData.interface";
-import { moviePageInfoParams } from "../../../interfaces/moviePageInfoParams.interface";
 
 export default function MoviesPageInfo({
   allMoviesData,
 }: {
   allMoviesData: allMoviesData[];
 }) {
-  const params = useParams({ from: "/movies/$movieId" }) as moviePageInfoParams;
+  const params = useParams({ from: "/movies/$movieId" })
 
-  const getData = allMoviesData.find((movie) => movie.id == params.movieId);
+  const getData = allMoviesData.find((movie) => movie.id === Number(params.movieId));
 
   return (
     <div>
