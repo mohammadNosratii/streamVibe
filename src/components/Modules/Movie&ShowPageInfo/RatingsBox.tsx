@@ -1,7 +1,7 @@
 import { movieRatingProps } from "../../../interfaces/movieRatingProps.interface";
 import StarRating from "../StarRating/StarRating";
 
-export default function RtingsBox({
+export default function RatingsBox({
   title,
   movieRate,
   icon: Icon,
