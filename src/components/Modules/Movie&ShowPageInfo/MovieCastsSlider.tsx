@@ -1,11 +1,14 @@
 import { SwiperSlide } from "swiper/react";
 import { ArrowLeft, ArrowRight } from "../../../assets/icons/Arrows";
 import CategoriesSlider from "../Sliders/CategoriesSlider";
-import dune2 from "../../../assets/images/dune-part2.webp";
+import { allMoviesData } from "../../../interfaces/allMoviesData.interface";
+import MovieCastBox from "./MovieCastBox";
 
-export default function MoviesCastsSlider() {
-  const casts = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
-
+export default function MoviesCastsSlider({
+  movieData,
+}: {
+  movieData: allMoviesData;
+}) {
   return (
     <div>
       <div className="flex items-center justify-between mb-10">
@@ -19,14 +22,10 @@ export default function MoviesCastsSlider() {
           </div>
         </div>
       </div>
-      <CategoriesSlider slidesPerViewXs={2} slidesPerViewLg={5}>
-        {casts.map((cast, index) => (
+      <CategoriesSlider slidesPerViewXs={2} slidesPerViewLg={4}>
+        {movieData.casts.map((cast, index) => (
           <SwiperSlide key={index}>
-            <img
-              className="rounded-3xl h-28 sm:h-36 2xl:h-44 object-cover"
-              src={dune2}
-              alt={cast}
-            />
+            <MovieCastBox {...cast} />
           </SwiperSlide>
         ))}
       </CategoriesSlider>

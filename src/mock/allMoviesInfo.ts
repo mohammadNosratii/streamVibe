@@ -12,6 +12,7 @@ import mazeRunner from "../assets/images/the-maze-runner.webp";
 import theHungerGames from "../assets/images/the-hunger-games.webp";
 import Imdb from "../assets/icons/Imdb";
 import RottenTomatoes from "../assets/icons/RottenTomatos";
+import glenPowell from "../assets/images/glen-Powell.jpg";
 
 export default function allMoviesInfo() {
   return [
@@ -38,6 +39,48 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
+      casts: [
+        {
+          realName: "Glen Powell",
+          movieName: "Gary Johnson",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Adria Arjona",
+          movieName: "Madison Figueroa Masters",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Austin Amelio",
+          movieName: "Jasper",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+      ],
     },
     {
       id: 2,
@@ -61,6 +104,48 @@ export default function allMoviesInfo() {
           pic: dunePart2,
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
+      ],
+      casts: [
+        {
+          realName: "Glen Powell",
+          movieName: "Gary Johnson",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Adria Arjona",
+          movieName: "Madison Figueroa Masters",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Austin Amelio",
+          movieName: "Jasper",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
       ],
     },
     {
@@ -86,6 +171,48 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
+      casts: [
+        {
+          realName: "Glen Powell",
+          movieName: "Gary Johnson",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Adria Arjona",
+          movieName: "Madison Figueroa Masters",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Austin Amelio",
+          movieName: "Jasper",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+      ],
     },
     {
       id: 4,
@@ -109,6 +236,48 @@ export default function allMoviesInfo() {
           pic: dunePart2,
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
+      ],
+      casts: [
+        {
+          realName: "Glen Powell",
+          movieName: "Gary Johnson",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Adria Arjona",
+          movieName: "Madison Figueroa Masters",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Austin Amelio",
+          movieName: "Jasper",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
       ],
     },
 
@@ -135,6 +304,48 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
+      casts: [
+        {
+          realName: "Glen Powell",
+          movieName: "Gary Johnson",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Adria Arjona",
+          movieName: "Madison Figueroa Masters",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Austin Amelio",
+          movieName: "Jasper",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+      ],
     },
 
     {
@@ -160,6 +371,48 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
+      casts: [
+        {
+          realName: "Glen Powell",
+          movieName: "Gary Johnson",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Adria Arjona",
+          movieName: "Madison Figueroa Masters",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Austin Amelio",
+          movieName: "Jasper",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+      ],
     },
     {
       id: 7,
@@ -183,6 +436,48 @@ export default function allMoviesInfo() {
           pic: dunePart2,
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
+      ],
+      casts: [
+        {
+          realName: "Glen Powell",
+          movieName: "Gary Johnson",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Adria Arjona",
+          movieName: "Madison Figueroa Masters",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Austin Amelio",
+          movieName: "Jasper",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
       ],
     },
     {
@@ -208,6 +503,48 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
+      casts: [
+        {
+          realName: "Glen Powell",
+          movieName: "Gary Johnson",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Adria Arjona",
+          movieName: "Madison Figueroa Masters",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Austin Amelio",
+          movieName: "Jasper",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+      ],
     },
     {
       id: 9,
@@ -231,6 +568,48 @@ export default function allMoviesInfo() {
           pic: dunePart2,
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
+      ],
+      casts: [
+        {
+          realName: "Glen Powell",
+          movieName: "Gary Johnson",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Adria Arjona",
+          movieName: "Madison Figueroa Masters",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Austin Amelio",
+          movieName: "Jasper",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
       ],
     },
     {
@@ -256,6 +635,48 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
+      casts: [
+        {
+          realName: "Glen Powell",
+          movieName: "Gary Johnson",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Adria Arjona",
+          movieName: "Madison Figueroa Masters",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Austin Amelio",
+          movieName: "Jasper",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+      ],
     },
     {
       id: 11,
@@ -280,6 +701,48 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
+      casts: [
+        {
+          realName: "Glen Powell",
+          movieName: "Gary Johnson",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Adria Arjona",
+          movieName: "Madison Figueroa Masters",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Austin Amelio",
+          movieName: "Jasper",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+      ],
     },
     {
       id: 12,
@@ -303,6 +766,48 @@ export default function allMoviesInfo() {
           pic: dunePart2,
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
+      ],
+      casts: [
+        {
+          realName: "Glen Powell",
+          movieName: "Gary Johnson",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Adria Arjona",
+          movieName: "Madison Figueroa Masters",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Austin Amelio",
+          movieName: "Jasper",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
       ],
     },
 
@@ -329,6 +834,48 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
+      casts: [
+        {
+          realName: "Glen Powell",
+          movieName: "Gary Johnson",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Adria Arjona",
+          movieName: "Madison Figueroa Masters",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Austin Amelio",
+          movieName: "Jasper",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+      ],
     },
     {
       id: 14,
@@ -352,6 +899,48 @@ export default function allMoviesInfo() {
           pic: dunePart2,
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
+      ],
+      casts: [
+        {
+          realName: "Glen Powell",
+          movieName: "Gary Johnson",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Adria Arjona",
+          movieName: "Madison Figueroa Masters",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Austin Amelio",
+          movieName: "Jasper",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
       ],
     },
     {
@@ -377,6 +966,48 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
+      casts: [
+        {
+          realName: "Glen Powell",
+          movieName: "Gary Johnson",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Adria Arjona",
+          movieName: "Madison Figueroa Masters",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Austin Amelio",
+          movieName: "Jasper",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+      ],
     },
     {
       id: 16,
@@ -401,6 +1032,48 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
+      casts: [
+        {
+          realName: "Glen Powell",
+          movieName: "Gary Johnson",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Adria Arjona",
+          movieName: "Madison Figueroa Masters",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Austin Amelio",
+          movieName: "Jasper",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+      ],
     },
     {
       id: 17,
@@ -424,6 +1097,48 @@ export default function allMoviesInfo() {
           pic: dunePart2,
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
+      ],
+      casts: [
+        {
+          realName: "Glen Powell",
+          movieName: "Gary Johnson",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Adria Arjona",
+          movieName: "Madison Figueroa Masters",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Austin Amelio",
+          movieName: "Jasper",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
       ],
     },
 
@@ -450,6 +1165,48 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
+      casts: [
+        {
+          realName: "Glen Powell",
+          movieName: "Gary Johnson",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Adria Arjona",
+          movieName: "Madison Figueroa Masters",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Austin Amelio",
+          movieName: "Jasper",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+      ],
     },
     {
       id: 19,
@@ -474,6 +1231,48 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
+      casts: [
+        {
+          realName: "Glen Powell",
+          movieName: "Gary Johnson",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Adria Arjona",
+          movieName: "Madison Figueroa Masters",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Austin Amelio",
+          movieName: "Jasper",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+      ],
     },
     {
       id: 20,
@@ -497,6 +1296,48 @@ export default function allMoviesInfo() {
           pic: dunePart2,
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
+      ],
+      casts: [
+        {
+          realName: "Glen Powell",
+          movieName: "Gary Johnson",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Adria Arjona",
+          movieName: "Madison Figueroa Masters",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Austin Amelio",
+          movieName: "Jasper",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
       ],
     },
 
@@ -523,6 +1364,48 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
+      casts: [
+        {
+          realName: "Glen Powell",
+          movieName: "Gary Johnson",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Adria Arjona",
+          movieName: "Madison Figueroa Masters",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Austin Amelio",
+          movieName: "Jasper",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+      ],
     },
 
     {
@@ -548,6 +1431,48 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
+      casts: [
+        {
+          realName: "Glen Powell",
+          movieName: "Gary Johnson",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Adria Arjona",
+          movieName: "Madison Figueroa Masters",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Austin Amelio",
+          movieName: "Jasper",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+      ],
     },
     {
       id: 23,
@@ -572,6 +1497,48 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
+      casts: [
+        {
+          realName: "Glen Powell",
+          movieName: "Gary Johnson",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Adria Arjona",
+          movieName: "Madison Figueroa Masters",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Austin Amelio",
+          movieName: "Jasper",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+      ],
     },
     {
       id: 24,
@@ -595,6 +1562,48 @@ export default function allMoviesInfo() {
           pic: dunePart2,
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
+      ],
+      casts: [
+        {
+          realName: "Glen Powell",
+          movieName: "Gary Johnson",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Adria Arjona",
+          movieName: "Madison Figueroa Masters",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Austin Amelio",
+          movieName: "Jasper",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
       ],
     },
 
@@ -621,6 +1630,48 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
+      casts: [
+        {
+          realName: "Glen Powell",
+          movieName: "Gary Johnson",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Adria Arjona",
+          movieName: "Madison Figueroa Masters",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Austin Amelio",
+          movieName: "Jasper",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+      ],
     },
 
     {
@@ -646,6 +1697,48 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
+      casts: [
+        {
+          realName: "Glen Powell",
+          movieName: "Gary Johnson",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Adria Arjona",
+          movieName: "Madison Figueroa Masters",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Austin Amelio",
+          movieName: "Jasper",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+      ],
     },
     {
       id: 27,
@@ -670,6 +1763,48 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
+      casts: [
+        {
+          realName: "Glen Powell",
+          movieName: "Gary Johnson",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Adria Arjona",
+          movieName: "Madison Figueroa Masters",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Austin Amelio",
+          movieName: "Jasper",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+      ],
     },
     {
       id: 28,
@@ -693,6 +1828,48 @@ export default function allMoviesInfo() {
           pic: dunePart2,
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
+      ],
+      casts: [
+        {
+          realName: "Glen Powell",
+          movieName: "Gary Johnson",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Adria Arjona",
+          movieName: "Madison Figueroa Masters",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Austin Amelio",
+          movieName: "Jasper",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
       ],
     },
 
@@ -719,6 +1896,48 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
+      casts: [
+        {
+          realName: "Glen Powell",
+          movieName: "Gary Johnson",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Adria Arjona",
+          movieName: "Madison Figueroa Masters",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Austin Amelio",
+          movieName: "Jasper",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+      ],
     },
 
     {
@@ -744,6 +1963,48 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
+      casts: [
+        {
+          realName: "Glen Powell",
+          movieName: "Gary Johnson",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Adria Arjona",
+          movieName: "Madison Figueroa Masters",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Austin Amelio",
+          movieName: "Jasper",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+      ],
     },
     {
       id: 31,
@@ -768,6 +2029,48 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
+      casts: [
+        {
+          realName: "Glen Powell",
+          movieName: "Gary Johnson",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Adria Arjona",
+          movieName: "Madison Figueroa Masters",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Austin Amelio",
+          movieName: "Jasper",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+      ],
     },
     {
       id: 32,
@@ -791,6 +2094,48 @@ export default function allMoviesInfo() {
           pic: dunePart2,
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
+      ],
+      casts: [
+        {
+          realName: "Glen Powell",
+          movieName: "Gary Johnson",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Adria Arjona",
+          movieName: "Madison Figueroa Masters",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Austin Amelio",
+          movieName: "Jasper",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
+        {
+          realName: "Retta",
+          movieName: "Claudette",
+          castImg: glenPowell,
+        },
       ],
     },
   ];
