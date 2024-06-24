@@ -3,6 +3,8 @@ import Star from "../../../assets/icons/Star";
 import { moviesCardProps } from "../../../interfaces/moviesCardInfo.interface";
 import Play from "../../../assets/icons/Play";
 import { Link } from "@tanstack/react-router";
+import formatter from "../../../utils/compactReviewNumbers";
+import formattedDate from "../../../utils/calculateTimeStamp";
 
 export default function MovieCard({
   id,
@@ -37,7 +39,7 @@ export default function MovieCard({
             {title}
           </h2>
           <span className="text-xs dark:text-gray-75 inline-block sm:max-w-44">
-            Release date: {date}
+            Release date: {formattedDate(date)}
           </span>
         </div>
         <div className="flex items-center">
@@ -45,7 +47,7 @@ export default function MovieCard({
           <p className="ms-2 text-sm font-bold text-white">{rate} / 10</p>
           <span className="w-1 h-1 mx-1.5 bg-gray-500 rounded-full dark:bg-gray-400"></span>
           <span className="text-[13px] font-medium underline hover:no-underline text-white">
-            {review} reviews
+            {formatter.format(review)} reviews
           </span>
         </div>
         <p className="text-xs dark:text-gray-75 sm:max-w-[50%] line-clamp-2 sm:line-clamp-4">

@@ -13,25 +13,30 @@ export default function MoviesPageInfo({
 }: {
   allMoviesData: allMoviesData[];
 }) {
-  const params = useParams({ from: "/movies/$movieId" })
+  const params = useParams({ from: "/movies/$movieId" });
 
-  const getData = allMoviesData.find((movie) => movie.id === Number(params.movieId));
+  const getMovieData = allMoviesData.find(
+    (movie) => movie.id === Number(params.movieId)
+  );
+
+  if (!getMovieData) {
+    return <div>Movie not found</div>;
+  }
+
+  const {img, title, des} = getMovieData
 
   return (
     <div>
       <div className="relative flex justify-center rounded-xl overflow-hidden text-white">
         <img
           className="h-[90vh] w-full object-cover"
-          src={getData?.img}
-          alt=""
+          src={img}
+          alt="movie img"
         />
         <div className="absolute bottom-10 flex flex-col items-center gap-8">
-          <div className="flex flex-col items-center max-w-[85%]">
-            <h2 className="text-4xl text-center mb-6 font-manropeBold">
-              {getData?.title}
-            </h2>
-            <p>{getData?.des}</p>
-          </div>
+          <h2 className="text-4xl text-center font-manropeBold">
+            {title}
+          </h2>
           <div className="flex items-center gap-2">
             <Button
               className="bg-red-45 text-white"
@@ -56,7 +61,7 @@ export default function MoviesPageInfo({
             <h3 className="text-gray-600 dark:text-gray-60 text-lg">
               Description
             </h3>
-            <p className="text-lg">{getData?.des}</p>
+            <p className="text-lg">{des}</p>
           </div>
           <div>
             <MovieCastsSlider />
@@ -66,7 +71,7 @@ export default function MoviesPageInfo({
           </div>
         </div>
         <div className="dark:bg-black-10 border-2 dark:border-black-15 p-12 rounded-2xl">
-          <MovieDetail />
+          <MovieDetail movieData={getMovieData} />
         </div>
       </div>
     </div>

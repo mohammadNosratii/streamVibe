@@ -2,9 +2,9 @@ interface moviesDetail {
   id: number;
   title: string;
   img: string;
-  date: string;
-  rate: string;
-  review: string;
+  date: number;
+  rate: number;
+  review: number;
   des: string;
   color: string;
   mainColor: string;
