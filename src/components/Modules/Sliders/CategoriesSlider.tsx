@@ -5,13 +5,14 @@ import "swiper/css/pagination";
 import "./CategoriesSlider.css";
 
 import { Pagination, Navigation } from "swiper/modules";
+import { categorySliderProps } from "../../../interfaces/categorySlider.interface";
 
 export default function CategoriesSlider({
   children,
   slidesPerViewXs,
   slidesPerViewSm,
   slidesPerViewLg,
-}: any) {
+}: categorySliderProps) {
   return (
     <>
       <Swiper

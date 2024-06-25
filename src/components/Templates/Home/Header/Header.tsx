@@ -41,14 +41,14 @@ export default function Header({
               }`}
           >
             <MainTooltip content="Add to Favorites">
-              <span>
-                <PlusIcon />
-              </span>
+              <Button className="min-w-min">
+                <PlusIcon className="fill-white" />
+              </Button>
             </MainTooltip>
-            <MainTooltip content="Like Movie">
-              <span>
+            <MainTooltip content="Like">
+              <Button className="min-w-min">
                 <LikeIcon />
-              </span>
+              </Button>
             </MainTooltip>
           </div>
         </div>
