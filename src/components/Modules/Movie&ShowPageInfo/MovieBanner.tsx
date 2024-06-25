@@ -3,6 +3,7 @@ import PlusIcon from "../../../assets/icons/Plus";
 import LikeIcon from "../../../assets/icons/Like";
 import PlayCircle from "../../../assets/icons/PlayCircle";
 import { allMoviesData } from "../../../interfaces/allMoviesData.interface";
+import MainTooltip from "../Tooltip/MainTooltip";
 
 export default function MovieBanner({
   movieData,
@@ -21,12 +22,16 @@ export default function MovieBanner({
             Play Trailer
           </Button>
           <div className="child:bg-black-6 child:p-2 child:rounded-lg flex gap-2 child:cursor-pointer">
-            <span>
-              <PlusIcon />
-            </span>
-            <span>
-              <LikeIcon />
-            </span>
+            <MainTooltip content="Add to Favorites">
+              <Button className="min-w-min">
+                <PlusIcon className="fill-white"/>
+              </Button>
+            </MainTooltip>
+            <MainTooltip content="Like">
+              <Button className="min-w-min">
+                <LikeIcon />
+              </Button>
+            </MainTooltip>
           </div>
         </div>
       </div>
