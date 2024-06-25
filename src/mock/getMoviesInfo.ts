@@ -1,8 +1,8 @@
 import joker from "../assets/images/joker.webp";
-import roadHouse from "../assets/images/road-house.avif";
+import roadHouse from "../assets/images/road-house.webp";
 import passengers from "../assets/images/passengers.webp";
-import topGun from "../assets/images/topgun.png";
-import granTurismo from "../assets/images/granTurismo.jpg";
+import topGun from "../assets/images/topgun.webp";
+import granTurismo from "../assets/images/granTurismo.webp";
 
 export default function getMoviesInfo() {
   return [
