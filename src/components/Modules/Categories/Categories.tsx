@@ -5,6 +5,7 @@ import categoriesInfo from "../../../mock/categoriesInfo";
 import { SwiperSlide } from "swiper/react";
 
 export default function Categories() {
+  
   return (
     <div className="container my-32 space-y-20">
       <div className="flex items-center justify-between md:gap-14 xl:gap-20 2xl:gap-24 ">

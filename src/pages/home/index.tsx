@@ -9,6 +9,7 @@ import subscriptionPlansData from "../../mock/subscriptionPlansData";
 import FreeTrial from "../../components/Modules/FreeTrial/FreeTrial";
 
 export default function Home() {
+
   return (
     <>
       <NavigationSlider data={getMoviesInfo()} />
