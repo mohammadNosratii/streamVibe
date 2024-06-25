@@ -8,7 +8,7 @@ export default function RatingsBox({
 }: movieRatingProps) {
   return (
     <div className="p-4 bg-white dark:bg-black-8 rounded-lg space-y-1">
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2 text-sm md:text-lg">
         <Icon />
         {title}
       </div>

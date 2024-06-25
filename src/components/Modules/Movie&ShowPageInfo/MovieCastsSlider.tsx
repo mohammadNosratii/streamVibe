@@ -12,8 +12,8 @@ export default function MoviesCastsSlider({
   return (
     <div>
       <div className="flex items-center justify-between mb-10">
-        <h3 className="text-lg text-gray-600 dark:text-gray-60">Casts</h3>
-        <div className="flex items-center gap-2.5 child:border-2 child:dark:border-black-15 child:cursor-pointer child:dark:bg-black-8 child:p-3.5 child:rounded-full">
+        <h3 className="text-sm md:text-lg text-gray-600 dark:text-gray-60">Casts</h3>
+        <div className="flex items-center gap-2.5 child:border-2 child:dark:border-black-15 child:cursor-pointer child:dark:bg-black-8 child:p-2 child:md:p-3.5 child:rounded-full">
           <div className="swiper-custom-button-prev">
             <ArrowLeft />
           </div>
