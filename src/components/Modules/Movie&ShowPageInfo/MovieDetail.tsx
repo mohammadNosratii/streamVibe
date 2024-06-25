@@ -13,7 +13,7 @@ export default function MovieDetail({
 }: {
   movieData: allMoviesData;
 }) {
-  const { date, availableLanguage, score, geners, creatorInfo } = movieData;  
+  const { date, availableLanguage, score, geners, creatorInfo } = movieData;
 
   return (
     <div className="space-y-8 child:space-y-4">
@@ -40,11 +40,13 @@ export default function MovieDetail({
           <StarOutline />
           <h3 className="text-sm md:text-lg">Ratings</h3>
         </div>
-        {score.map((movieScore, index) => (
-          <div key={index}>
-            <RatingsBox {...movieScore} />
-          </div>
-        ))}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-1 gap-3">
+          {score.map((movieScore, index) => (
+            <div key={index}>
+              <RatingsBox {...movieScore} />
+            </div>
+          ))}
+        </div>
       </div>
       <div>
         <div className="movieDetail">
@@ -57,10 +59,12 @@ export default function MovieDetail({
           ))}
         </div>
       </div>
-      <div>
-        {creatorInfo.map((creator, index) => (
-          <CreatorMovieInfo key={index} {...creator} />
-        ))}
+      <div className="movieDetail">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-1 gap-5 w-full">
+          {creatorInfo.map((creator, index) => (
+            <CreatorMovieInfo key={index} {...creator} />
+          ))}
+        </div>
       </div>
     </div>
   );

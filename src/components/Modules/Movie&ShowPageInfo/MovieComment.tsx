@@ -12,10 +12,10 @@ export default function MovieComment({
     <div className="space-y-10">
       <div className="flex items-center justify-between">
         <h3 className="text-gray-600 dark:text-gray-60 text-sm md:text-lg">Reviews</h3>
-        <Button className="rounded-lg dark:bg-black-8 py-3.5 px-4 text-sm md:text-lg" startContent={<PlusIcon />}>Add Your Review</Button>
+        <Button className="rounded-lg dark:bg-black-8 p-3 md:py-3.5 md:px-4 text-sm md:text-lg" startContent={<PlusIcon />}>Add Your Review</Button>
       </div>
-      {movieData.comments.map((comment) => (
-        <MovieCommentBox {...comment} />
+      {movieData.comments.map((comment, index) => (
+        <MovieCommentBox key={index} {...comment} />
       ))}
     </div>
   );

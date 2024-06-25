@@ -22,7 +22,7 @@ export default function MoviesCastsSlider({
           </div>
         </div>
       </div>
-      <CategoriesSlider slidesPerViewXs={2} slidesPerViewLg={4}>
+      <CategoriesSlider slidesPerViewXs={3} slidesPerViewLg={4}>
         {movieData.casts.map((cast, index) => (
           <SwiperSlide key={index}>
             <MovieCastBox {...cast} />
