@@ -1,8 +1,8 @@
-import venom from "../assets/images/venom.jpg";
-import after from "../assets/images/after.jpg";
+import venom from "../assets/images/venom.webp";
+import after from "../assets/images/after.webp";
 import tedLasso from "../assets/images/tedLasso.webp";
-import badMoms from "../assets/images/badMoms.jpg";
-import dontBreath from "../assets/images/dontBreath.jpg";
+import badMoms from "../assets/images/badMoms.webp";
+import dontBreath from "../assets/images/dontBreath.webp";
 
 const categoriesInfo = [
   { img: venom, title: "Action" },

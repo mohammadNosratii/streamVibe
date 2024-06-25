@@ -3,8 +3,8 @@ import profile from "../../../assets/images/joker.webp";
 import SignOut from "../../../assets/icons/SignOut";
 import SearchForm from "../SearchInput/SearchForm";
 import joker from "../../../assets/images/joker.webp";
-import roadHouse from "../../../assets/images/road-house.avif";
-import granTurismo from "../../../assets/images/granTurismo.jpg";
+import roadHouse from "../../../assets/images/road-house.webp";
+import granTurismo from "../../../assets/images/granTurismo.webp";
 
 const UserPopOverContent = () => {
   return (
