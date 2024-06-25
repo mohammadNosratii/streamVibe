@@ -31,7 +31,7 @@ export default function MoviesPageInfo({
             <MovieDetail movieData={getMovieData} />
           </div>
           <MovieCastsSlider movieData={getMovieData} />
-          <MovieComment />
+          <MovieComment movieData={getMovieData}/>
         </div>
         <div className="hidden md:block dark:bg-black-10 border-2 dark:border-black-15 p-12 rounded-2xl">
           <MovieDetail movieData={getMovieData} />
