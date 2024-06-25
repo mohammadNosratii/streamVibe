@@ -24,13 +24,16 @@ export default function MoviesPageInfo({
   return (
     <div>
       <MovieBanner movieData={getMovieData} />
-      <div className="container flex items-start gap-5 dark:text-white my-20">
-        <div className="space-y-5 child:dark:bg-black-10 child:border-2 child:dark:border-black-15 child:p-12 child:space-y-4 child:rounded-2xl w-[63%]">
+      <div className="container flex flex-col md:flex-row items-start gap-5 dark:text-white my-20">
+        <div className="space-y-5 child:dark:bg-black-10 child:border-2 child:dark:border-black-15 child:p-12 child:space-y-4 child:rounded-2xl w-full md:w-[63%]">
           <MovieDescription movieData={getMovieData} />
-          <MovieCastsSlider movieData={getMovieData}  />
+          <div className="md:hidden">
+            <MovieDetail movieData={getMovieData} />
+          </div>
+          <MovieCastsSlider movieData={getMovieData} />
           <MovieComment />
         </div>
-        <div className="dark:bg-black-10 border-2 dark:border-black-15 p-12 rounded-2xl">
+        <div className="hidden md:block dark:bg-black-10 border-2 dark:border-black-15 p-12 rounded-2xl">
           <MovieDetail movieData={getMovieData} />
         </div>
       </div>

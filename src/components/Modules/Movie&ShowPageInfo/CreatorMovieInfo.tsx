@@ -10,14 +10,14 @@ export default function CreatorMovieInfo({
   return (
     <div className="space-y-4">
       <div className="movieDetail">
-        <h3>{job}</h3>
+        <h3 className="text-sm md:text-lg">{job}</h3>
       </div>
       <Card className="shadow-none">
         <CardHeader className="flex gap-3">
-          <Image className="w-16 h-16 object-cover" src={pic} />
+          <Image className="w-12 h-12 md:w-16 md:h-16 object-cover" src={pic} />
           <div className="flex flex-col">
-            <p className="text-md">{name}</p>
-            <p className="text-small text-default-500">{family}</p>
+            <p className="text-base md:text-lg">{name}</p>
+            <p className="text-sm md:text-base text-default-500">{family}</p>
           </div>
         </CardHeader>
       </Card>
