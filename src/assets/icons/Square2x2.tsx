@@ -6,7 +6,7 @@ export default function Square2x2() {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      className="w-5 h-5"
+      className="w-3.5 h-3.5 md:w-5 md:h-5"
     >
       <path
         strokeLinecap="round"

@@ -6,7 +6,7 @@ export default function RottenTomatos() {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 138.75 141.25"
       version="1.1"
-      className="w-8 h-8"
+      className="w-7 h-7 md:w-8 md:h-8"
     >
       <g id="layer1" fill="#f93208">
         <path
