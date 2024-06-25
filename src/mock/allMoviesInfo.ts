@@ -81,6 +81,22 @@ export default function allMoviesInfo() {
           castImg: glenPowell,
         },
       ],
+      comments: [
+        {
+          name: "Mohammad",
+          profileImg: hitMan,
+          commentRate: 3.8,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
+        },
+        {
+          name: "Aryan",
+          profileImg: dunePart2,
+          commentRate: 4.4,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
+        },
+      ],
     },
     {
       id: 2,
@@ -145,6 +161,22 @@ export default function allMoviesInfo() {
           realName: "Retta",
           movieName: "Claudette",
           castImg: glenPowell,
+        },
+      ],
+      comments: [
+        {
+          name: "Mohammad",
+          profileImg: hitMan,
+          commentRate: 3.8,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
+        },
+        {
+          name: "Aryan",
+          profileImg: dunePart2,
+          commentRate: 4.4,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
         },
       ],
     },
@@ -213,6 +245,22 @@ export default function allMoviesInfo() {
           castImg: glenPowell,
         },
       ],
+      comments: [
+        {
+          name: "Mohammad",
+          profileImg: hitMan,
+          commentRate: 3.8,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
+        },
+        {
+          name: "Aryan",
+          profileImg: dunePart2,
+          commentRate: 4.4,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
+        },
+      ],
     },
     {
       id: 4,
@@ -277,6 +325,22 @@ export default function allMoviesInfo() {
           realName: "Retta",
           movieName: "Claudette",
           castImg: glenPowell,
+        },
+      ],
+      comments: [
+        {
+          name: "Mohammad",
+          profileImg: hitMan,
+          commentRate: 3.8,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
+        },
+        {
+          name: "Aryan",
+          profileImg: dunePart2,
+          commentRate: 4.4,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
         },
       ],
     },
@@ -346,6 +410,22 @@ export default function allMoviesInfo() {
           castImg: glenPowell,
         },
       ],
+      comments: [
+        {
+          name: "Mohammad",
+          profileImg: hitMan,
+          commentRate: 3.8,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
+        },
+        {
+          name: "Aryan",
+          profileImg: dunePart2,
+          commentRate: 4.4,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
+        },
+      ],
     },
 
     {
@@ -411,6 +491,22 @@ export default function allMoviesInfo() {
           realName: "Retta",
           movieName: "Claudette",
           castImg: glenPowell,
+        },
+      ],
+      comments: [
+        {
+          name: "Mohammad",
+          profileImg: hitMan,
+          commentRate: 3.8,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
+        },
+        {
+          name: "Aryan",
+          profileImg: dunePart2,
+          commentRate: 4.4,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
         },
       ],
     },
@@ -479,6 +575,22 @@ export default function allMoviesInfo() {
           castImg: glenPowell,
         },
       ],
+      comments: [
+        {
+          name: "Mohammad",
+          profileImg: hitMan,
+          commentRate: 3.8,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
+        },
+        {
+          name: "Aryan",
+          profileImg: dunePart2,
+          commentRate: 4.4,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
+        },
+      ],
     },
     {
       id: 8,
@@ -543,6 +655,22 @@ export default function allMoviesInfo() {
           realName: "Retta",
           movieName: "Claudette",
           castImg: glenPowell,
+        },
+      ],
+      comments: [
+        {
+          name: "Mohammad",
+          profileImg: hitMan,
+          commentRate: 3.8,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
+        },
+        {
+          name: "Aryan",
+          profileImg: dunePart2,
+          commentRate: 4.4,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
         },
       ],
     },
@@ -611,6 +739,22 @@ export default function allMoviesInfo() {
           castImg: glenPowell,
         },
       ],
+      comments: [
+        {
+          name: "Mohammad",
+          profileImg: hitMan,
+          commentRate: 3.8,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
+        },
+        {
+          name: "Aryan",
+          profileImg: dunePart2,
+          commentRate: 4.4,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
+        },
+      ],
     },
     {
       id: 10,
@@ -675,6 +819,22 @@ export default function allMoviesInfo() {
           realName: "Retta",
           movieName: "Claudette",
           castImg: glenPowell,
+        },
+      ],
+      comments: [
+        {
+          name: "Mohammad",
+          profileImg: hitMan,
+          commentRate: 3.8,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
+        },
+        {
+          name: "Aryan",
+          profileImg: dunePart2,
+          commentRate: 4.4,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
         },
       ],
     },
@@ -743,6 +903,22 @@ export default function allMoviesInfo() {
           castImg: glenPowell,
         },
       ],
+      comments: [
+        {
+          name: "Mohammad",
+          profileImg: hitMan,
+          commentRate: 3.8,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
+        },
+        {
+          name: "Aryan",
+          profileImg: dunePart2,
+          commentRate: 4.4,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
+        },
+      ],
     },
     {
       id: 12,
@@ -807,6 +983,22 @@ export default function allMoviesInfo() {
           realName: "Retta",
           movieName: "Claudette",
           castImg: glenPowell,
+        },
+      ],
+      comments: [
+        {
+          name: "Mohammad",
+          profileImg: hitMan,
+          commentRate: 3.8,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
+        },
+        {
+          name: "Aryan",
+          profileImg: dunePart2,
+          commentRate: 4.4,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
         },
       ],
     },
@@ -876,6 +1068,22 @@ export default function allMoviesInfo() {
           castImg: glenPowell,
         },
       ],
+      comments: [
+        {
+          name: "Mohammad",
+          profileImg: hitMan,
+          commentRate: 3.8,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
+        },
+        {
+          name: "Aryan",
+          profileImg: dunePart2,
+          commentRate: 4.4,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
+        },
+      ],
     },
     {
       id: 14,
@@ -940,6 +1148,22 @@ export default function allMoviesInfo() {
           realName: "Retta",
           movieName: "Claudette",
           castImg: glenPowell,
+        },
+      ],
+      comments: [
+        {
+          name: "Mohammad",
+          profileImg: hitMan,
+          commentRate: 3.8,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
+        },
+        {
+          name: "Aryan",
+          profileImg: dunePart2,
+          commentRate: 4.4,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
         },
       ],
     },
@@ -1008,6 +1232,22 @@ export default function allMoviesInfo() {
           castImg: glenPowell,
         },
       ],
+      comments: [
+        {
+          name: "Mohammad",
+          profileImg: hitMan,
+          commentRate: 3.8,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
+        },
+        {
+          name: "Aryan",
+          profileImg: dunePart2,
+          commentRate: 4.4,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
+        },
+      ],
     },
     {
       id: 16,
@@ -1074,6 +1314,22 @@ export default function allMoviesInfo() {
           castImg: glenPowell,
         },
       ],
+      comments: [
+        {
+          name: "Mohammad",
+          profileImg: hitMan,
+          commentRate: 3.8,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
+        },
+        {
+          name: "Aryan",
+          profileImg: dunePart2,
+          commentRate: 4.4,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
+        },
+      ],
     },
     {
       id: 17,
@@ -1138,6 +1394,22 @@ export default function allMoviesInfo() {
           realName: "Retta",
           movieName: "Claudette",
           castImg: glenPowell,
+        },
+      ],
+      comments: [
+        {
+          name: "Mohammad",
+          profileImg: hitMan,
+          commentRate: 3.8,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
+        },
+        {
+          name: "Aryan",
+          profileImg: dunePart2,
+          commentRate: 4.4,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
         },
       ],
     },
@@ -1207,6 +1479,22 @@ export default function allMoviesInfo() {
           castImg: glenPowell,
         },
       ],
+      comments: [
+        {
+          name: "Mohammad",
+          profileImg: hitMan,
+          commentRate: 3.8,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
+        },
+        {
+          name: "Aryan",
+          profileImg: dunePart2,
+          commentRate: 4.4,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
+        },
+      ],
     },
     {
       id: 19,
@@ -1273,6 +1561,22 @@ export default function allMoviesInfo() {
           castImg: glenPowell,
         },
       ],
+      comments: [
+        {
+          name: "Mohammad",
+          profileImg: hitMan,
+          commentRate: 3.8,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
+        },
+        {
+          name: "Aryan",
+          profileImg: dunePart2,
+          commentRate: 4.4,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
+        },
+      ],
     },
     {
       id: 20,
@@ -1337,6 +1641,22 @@ export default function allMoviesInfo() {
           realName: "Retta",
           movieName: "Claudette",
           castImg: glenPowell,
+        },
+      ],
+      comments: [
+        {
+          name: "Mohammad",
+          profileImg: hitMan,
+          commentRate: 3.8,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
+        },
+        {
+          name: "Aryan",
+          profileImg: dunePart2,
+          commentRate: 4.4,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
         },
       ],
     },
@@ -1406,6 +1726,22 @@ export default function allMoviesInfo() {
           castImg: glenPowell,
         },
       ],
+      comments: [
+        {
+          name: "Mohammad",
+          profileImg: hitMan,
+          commentRate: 3.8,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
+        },
+        {
+          name: "Aryan",
+          profileImg: dunePart2,
+          commentRate: 4.4,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
+        },
+      ],
     },
 
     {
@@ -1471,6 +1807,22 @@ export default function allMoviesInfo() {
           realName: "Retta",
           movieName: "Claudette",
           castImg: glenPowell,
+        },
+      ],
+      comments: [
+        {
+          name: "Mohammad",
+          profileImg: hitMan,
+          commentRate: 3.8,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
+        },
+        {
+          name: "Aryan",
+          profileImg: dunePart2,
+          commentRate: 4.4,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
         },
       ],
     },
@@ -1539,6 +1891,22 @@ export default function allMoviesInfo() {
           castImg: glenPowell,
         },
       ],
+      comments: [
+        {
+          name: "Mohammad",
+          profileImg: hitMan,
+          commentRate: 3.8,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
+        },
+        {
+          name: "Aryan",
+          profileImg: dunePart2,
+          commentRate: 4.4,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
+        },
+      ],
     },
     {
       id: 24,
@@ -1603,6 +1971,22 @@ export default function allMoviesInfo() {
           realName: "Retta",
           movieName: "Claudette",
           castImg: glenPowell,
+        },
+      ],
+      comments: [
+        {
+          name: "Mohammad",
+          profileImg: hitMan,
+          commentRate: 3.8,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
+        },
+        {
+          name: "Aryan",
+          profileImg: dunePart2,
+          commentRate: 4.4,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
         },
       ],
     },
@@ -1672,6 +2056,22 @@ export default function allMoviesInfo() {
           castImg: glenPowell,
         },
       ],
+      comments: [
+        {
+          name: "Mohammad",
+          profileImg: hitMan,
+          commentRate: 3.8,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
+        },
+        {
+          name: "Aryan",
+          profileImg: dunePart2,
+          commentRate: 4.4,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
+        },
+      ],
     },
 
     {
@@ -1737,6 +2137,22 @@ export default function allMoviesInfo() {
           realName: "Retta",
           movieName: "Claudette",
           castImg: glenPowell,
+        },
+      ],
+      comments: [
+        {
+          name: "Mohammad",
+          profileImg: hitMan,
+          commentRate: 3.8,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
+        },
+        {
+          name: "Aryan",
+          profileImg: dunePart2,
+          commentRate: 4.4,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
         },
       ],
     },
@@ -1805,6 +2221,22 @@ export default function allMoviesInfo() {
           castImg: glenPowell,
         },
       ],
+      comments: [
+        {
+          name: "Mohammad",
+          profileImg: hitMan,
+          commentRate: 3.8,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
+        },
+        {
+          name: "Aryan",
+          profileImg: dunePart2,
+          commentRate: 4.4,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
+        },
+      ],
     },
     {
       id: 28,
@@ -1869,6 +2301,22 @@ export default function allMoviesInfo() {
           realName: "Retta",
           movieName: "Claudette",
           castImg: glenPowell,
+        },
+      ],
+      comments: [
+        {
+          name: "Mohammad",
+          profileImg: hitMan,
+          commentRate: 3.8,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
+        },
+        {
+          name: "Aryan",
+          profileImg: dunePart2,
+          commentRate: 4.4,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
         },
       ],
     },
@@ -1938,6 +2386,22 @@ export default function allMoviesInfo() {
           castImg: glenPowell,
         },
       ],
+      comments: [
+        {
+          name: "Mohammad",
+          profileImg: hitMan,
+          commentRate: 3.8,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
+        },
+        {
+          name: "Aryan",
+          profileImg: dunePart2,
+          commentRate: 4.4,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
+        },
+      ],
     },
 
     {
@@ -2003,6 +2467,22 @@ export default function allMoviesInfo() {
           realName: "Retta",
           movieName: "Claudette",
           castImg: glenPowell,
+        },
+      ],
+      comments: [
+        {
+          name: "Mohammad",
+          profileImg: hitMan,
+          commentRate: 3.8,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
+        },
+        {
+          name: "Aryan",
+          profileImg: dunePart2,
+          commentRate: 4.4,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
         },
       ],
     },
@@ -2071,6 +2551,22 @@ export default function allMoviesInfo() {
           castImg: glenPowell,
         },
       ],
+      comments: [
+        {
+          name: "Mohammad",
+          profileImg: hitMan,
+          commentRate: 3.8,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
+        },
+        {
+          name: "Aryan",
+          profileImg: dunePart2,
+          commentRate: 4.4,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
+        },
+      ],
     },
     {
       id: 32,
@@ -2135,6 +2631,22 @@ export default function allMoviesInfo() {
           realName: "Retta",
           movieName: "Claudette",
           castImg: glenPowell,
+        },
+      ],
+      comments: [
+        {
+          name: "Mohammad",
+          profileImg: hitMan,
+          commentRate: 3.8,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
+        },
+        {
+          name: "Aryan",
+          profileImg: dunePart2,
+          commentRate: 4.4,
+          commentText:
+            "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.",
         },
       ],
     },

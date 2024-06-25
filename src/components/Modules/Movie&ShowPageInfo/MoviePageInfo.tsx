@@ -28,7 +28,7 @@ export default function MoviesPageInfo({
         <div className="space-y-5 child:dark:bg-black-10 child:border-2 child:dark:border-black-15 child:p-12 child:space-y-4 child:rounded-2xl w-[63%]">
           <MovieDescription movieData={getMovieData} />
           <MovieCastsSlider movieData={getMovieData}  />
-          <MovieComment />
+          <MovieComment movieData={getMovieData} />
         </div>
         <div className="dark:bg-black-10 border-2 dark:border-black-15 p-12 rounded-2xl">
           <MovieDetail movieData={getMovieData} />
