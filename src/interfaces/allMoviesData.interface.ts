@@ -1,5 +1,6 @@
 import { castsMovie } from "./castsMovie.interface";
 import { creatorMovieInfo } from "./creatorMovieInfo";
+import { movieComment } from "./movieComment.interface";
 import { movieRatingProps } from "./movieRatingProps.interface";
 
 interface allMoviesData {
@@ -15,6 +16,7 @@ interface allMoviesData {
   score: movieRatingProps[];
   creatorInfo: creatorMovieInfo[];
   casts: castsMovie[];
+  comments: movieComment[];
 }
 
 export type { allMoviesData };
