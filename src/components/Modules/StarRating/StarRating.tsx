@@ -1,9 +1,9 @@
 import StarRatings from "react-star-ratings";
 
-export default function StarRating({rate}: {rate:number | undefined}) {
+export default function StarRating({ rate }: { rate: number | undefined }) {
   return (
     <StarRatings
-      starDimension="20px"
+      starDimension="16px"
       rating={rate}
       starRatedColor="#E50000"
       starEmptyColor="#999999"

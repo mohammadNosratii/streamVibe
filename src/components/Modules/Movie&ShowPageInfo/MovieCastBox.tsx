@@ -13,7 +13,7 @@ export default function MovieCastBox({
         alt=""
       />
       <div className="flex flex-col items-center gap-2 p-3">
-        <h3 className="text-xs md:text-base text-white font-manropeSemiBold">{realName}</h3>
+        <h3 className="text-xs xl:text-base text-white font-manropeSemiBold">{realName}</h3>
         <span className="text-[10px] md:text-xs text-gray-60 line-clamp-1">{movieName}</span>
       </div>
     </div>
