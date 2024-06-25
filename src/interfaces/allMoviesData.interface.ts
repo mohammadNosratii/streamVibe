@@ -1,3 +1,4 @@
+import { castsMovie } from "./castsMovie.interface";
 import { creatorMovieInfo } from "./creatorMovieInfo";
 import { movieRatingProps } from "./movieRatingProps.interface";
 
@@ -13,6 +14,7 @@ interface allMoviesData {
   availableLanguage: string[];
   score: movieRatingProps[];
   creatorInfo: creatorMovieInfo[];
+  casts: castsMovie[];
 }
 
 export type { allMoviesData };
