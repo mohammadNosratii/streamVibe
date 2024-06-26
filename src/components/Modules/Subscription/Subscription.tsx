@@ -3,15 +3,16 @@ import { subscriptionPlan } from "../../../interfaces/subscriptionPlan.interface
 import SubscriptionBox from "./SubscriptionBox";
 import { useState } from "react";
 import { useGetSubscriptionsApi } from "../../../hooks/api/useHomeApi";
+import SubscriptionBoxSkeleton from "../Skeletons/SubscriptionBoxSkeleton";
 
 export default function Subscription() {
   const [subscriptionPlanTime, setSubscriptionPlanTime] = useState<
     string | number
   >("Monthly");
 
-  const { data: getSubscriptions } = useGetSubscriptionsApi();
+  const { data: getSubscriptions, isLoading } = useGetSubscriptionsApi();
 
-  const uniqueTypes = Array.from(
+  const uniqueTypes: string[] = Array.from(
     new Set(getSubscriptions?.map((plan: subscriptionPlan) => plan.type))
   );
 
@@ -39,9 +40,9 @@ export default function Subscription() {
             selectedKey={subscriptionPlanTime}
             onSelectionChange={setSubscriptionPlanTime}
           >
-            {uniqueTypes.map((plan: any) => (
+            {uniqueTypes.map((plan, index) => (
               <Tab
-                key={plan}
+                key={index}
                 title={plan}
                 className="p-2 sm:p-3 md:p-3.5 lg:p-5"
               />
@@ -50,7 +51,9 @@ export default function Subscription() {
         </div>
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-9">
-        {getSubscriptions
+        {isLoading ? Array.from({ length: 3 }, (_, index) => (
+          <SubscriptionBoxSkeleton key={index} />
+        )) : getSubscriptions
           ?.filter(
             (plan: subscriptionPlan) => plan.type === subscriptionPlanTime
           )
