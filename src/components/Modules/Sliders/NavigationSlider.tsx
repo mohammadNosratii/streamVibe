@@ -10,17 +10,39 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "./NavigationSlider.css";
-import { movieNavigationSlider } from "../../../interfaces/navigationSlider.interface";
 import Header from "../../Templates/Home/Header/Header";
 import HeaderSkeleton from "../Skeletons/HeaderSkeleton";
+import { useGetSliderMoviesApi } from "../../../hooks/api/useHomeApi";
+import { useGetSliderNewMoviesApi } from "../../../hooks/api/useMovieApi";
+import { useLocation } from "@tanstack/react-router";
+import { movieNavigationSlider } from "../../../interfaces/navigationSlider.interface";
 
-export default function NavigationSlider({
-  data,
-  loading,
-}: {
-  data: movieNavigationSlider[];
-  loading?: boolean;
-}) {
+export default function NavigationSlider() {
+  const { pathname } = useLocation();
+
+  const isInMoviePage: boolean = pathname.includes("/movies");
+
+  const { data: getSliderMovies, isLoading: getSliderMoviesLoading } =
+    useGetSliderMoviesApi(isInMoviePage);
+
+  const { data: getSliderNewMovies, isLoading: getSliderNewMoviesLoading } =
+    useGetSliderNewMoviesApi(isInMoviePage);
+
+  const handleData = () => {
+    switch (isInMoviePage) {
+      case true:
+        return {
+          data: getSliderNewMovies,
+          isLoading: getSliderNewMoviesLoading,
+        };
+      case false:
+        return {
+          data: getSliderMovies,
+          isLoading: getSliderMoviesLoading,
+        };
+    }
+  };
+
   return (
     <Swiper
       cssMode={true}
@@ -35,10 +57,10 @@ export default function NavigationSlider({
       modules={[Navigation, Pagination, Mousewheel, Keyboard, Autoplay]}
       className="mySwiper"
     >
-      {loading ? (
+      {handleData().isLoading ? (
         <HeaderSkeleton />
       ) : (
-        data?.map((movie, index) => (
+        handleData().data.map((movie: movieNavigationSlider, index: number) => (
           <SwiperSlide key={index}>
             <Header {...movie} />
           </SwiperSlide>
