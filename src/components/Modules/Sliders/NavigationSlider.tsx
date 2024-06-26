@@ -19,7 +19,7 @@ export default function NavigationSlider({
   loading,
 }: {
   data: movieNavigationSlider[];
-  loading: boolean;
+  loading?: boolean;
 }) {
   return (
     <Swiper
