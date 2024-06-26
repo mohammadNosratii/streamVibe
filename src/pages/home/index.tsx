@@ -1,22 +1,22 @@
 import Categories from "../../components/Modules/Categories/Categories";
 import NavigationSlider from "../../components/Modules/Sliders/NavigationSlider";
 import Devices from "../../components/Templates/Home/Devices/Devices";
-import getMoviesInfo from "../../mock/getMoviesInfo";
 import devicesBoxInfo from "../../mock/devicesBoxInfo";
 import FrequentlyQuestions from "../../components/Templates/Home/Questions/FrequentlyQuestions";
 import Subscription from "../../components/Modules/Subscription/Subscription";
-import subscriptionPlansData from "../../mock/subscriptionPlansData";
 import FreeTrial from "../../components/Modules/FreeTrial/FreeTrial";
+import { useGetSliderMoviesApi } from "../../hooks/api/useHomeApi";
 
 export default function Home() {
+  const { data: getSliderMovies, isLoading } = useGetSliderMoviesApi();
 
   return (
     <>
-      <NavigationSlider data={getMoviesInfo()} />
+      <NavigationSlider loading={isLoading} data={getSliderMovies} />
       <Categories />
       <Devices devices={devicesBoxInfo()} />
       <FrequentlyQuestions />
-      <Subscription plans={subscriptionPlansData()} />
+      <Subscription />
       <FreeTrial />
     </>
   );

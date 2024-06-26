@@ -2,11 +2,18 @@ import { Tab, Tabs } from "@nextui-org/react";
 import { subscriptionPlan } from "../../../interfaces/subscriptionPlan.interface";
 import SubscriptionBox from "./SubscriptionBox";
 import { useState } from "react";
+import { useGetSubscriptionsApi } from "../../../hooks/api/useHomeApi";
 
-export default function Subscription({ plans }: { plans: subscriptionPlan[] }) {
-  const [subscriptionPlanTime, setSubscriptionPlanTime] = useState<string | number>("Monthly");
+export default function Subscription() {
+  const [subscriptionPlanTime, setSubscriptionPlanTime] = useState<
+    string | number
+  >("Monthly");
 
-  const uniqueTypes = Array.from(new Set(plans.map((plan) => plan.type)));
+  const { data: getSubscriptions } = useGetSubscriptionsApi();
+
+  const uniqueTypes = Array.from(
+    new Set(getSubscriptions?.map((plan: subscriptionPlan) => plan.type))
+  );
 
   return (
     <div className="container my-32 space-y-20">
@@ -22,24 +29,32 @@ export default function Subscription({ plans }: { plans: subscriptionPlan[] }) {
           </p>
         </div>
         <div className="flex items-center gap-2.5 p-2.5 rounded-2xl">
-          <Tabs aria-label="Dynamic tabs" classNames={{
-            tabList: ["bg-white dark:bg-black-6 border-[1px] border-1 dark:border-black-15 p-3 sm:p-3.5 lg:p-4"],
-          }} selectedKey={subscriptionPlanTime}
-            onSelectionChange={setSubscriptionPlanTime}>
-            {uniqueTypes.map((plan) => (
-              <Tab key={plan} title={plan} className="p-2 sm:p-3 md:p-3.5 lg:p-5" />
+          <Tabs
+            aria-label="Dynamic tabs"
+            classNames={{
+              tabList: [
+                "bg-white dark:bg-black-6 border-[1px] border-1 dark:border-black-15 p-3 sm:p-3.5 lg:p-4",
+              ],
+            }}
+            selectedKey={subscriptionPlanTime}
+            onSelectionChange={setSubscriptionPlanTime}
+          >
+            {uniqueTypes.map((plan: any) => (
+              <Tab
+                key={plan}
+                title={plan}
+                className="p-2 sm:p-3 md:p-3.5 lg:p-5"
+              />
             ))}
           </Tabs>
         </div>
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-9">
-        {plans
-          .filter(
-            (plan) =>
-              plan.type ===
-              subscriptionPlanTime
+        {getSubscriptions
+          ?.filter(
+            (plan: subscriptionPlan) => plan.type === subscriptionPlanTime
           )
-          .map((plan, index) => (
+          .map((plan: subscriptionPlan, index: number) => (
             <SubscriptionBox key={index} {...plan} />
           ))}
       </div>

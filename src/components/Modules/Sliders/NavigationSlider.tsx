@@ -12,11 +12,14 @@ import "swiper/css/pagination";
 import "./NavigationSlider.css";
 import { movieNavigationSlider } from "../../../interfaces/navigationSlider.interface";
 import Header from "../../Templates/Home/Header/Header";
+import HeaderSkeleton from "../HederSkeleton/HeaderSkeleton";
 
 export default function NavigationSlider({
   data,
+  loading,
 }: {
   data: movieNavigationSlider[];
+  loading?: boolean;
 }) {
   return (
     <Swiper
@@ -32,11 +35,15 @@ export default function NavigationSlider({
       modules={[Navigation, Pagination, Mousewheel, Keyboard, Autoplay]}
       className="mySwiper"
     >
-      {data.map((movie, index) => (
-        <SwiperSlide key={index}>
-          <Header {...movie} />
-        </SwiperSlide>
-      ))}
+      {loading ? (
+        <HeaderSkeleton />
+      ) : (
+        data?.map((movie, index) => (
+          <SwiperSlide key={index}>
+            <Header {...movie} />
+          </SwiperSlide>
+        ))
+      )}
     </Swiper>
   );
 }
