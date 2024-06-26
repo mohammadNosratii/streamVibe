@@ -12,7 +12,7 @@ import "swiper/css/pagination";
 import "./NavigationSlider.css";
 import { movieNavigationSlider } from "../../../interfaces/navigationSlider.interface";
 import Header from "../../Templates/Home/Header/Header";
-import HeaderSkeleton from "../HederSkeleton/HeaderSkeleton";
+import HeaderSkeleton from "../Skeletons/HeaderSkeleton";
 
 export default function NavigationSlider({
   data,
