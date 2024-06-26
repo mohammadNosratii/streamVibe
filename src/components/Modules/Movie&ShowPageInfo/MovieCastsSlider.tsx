@@ -10,9 +10,11 @@ export default function MoviesCastsSlider({
   movieData: allMoviesData;
 }) {
   return (
-    <div>
+    <div className="dark:bg-black-10 border-2 dark:border-black-15 p-6 md:p-12 space-y-4 rounded-2xl">
       <div className="flex items-center justify-between mb-10">
-        <h3 className="text-sm md:text-lg text-gray-600 dark:text-gray-60">Casts</h3>
+        <h3 className="text-sm md:text-lg text-gray-600 dark:text-gray-60">
+          Casts
+        </h3>
         <div className="flex items-center gap-2.5 child:border-2 child:dark:border-black-15 child:cursor-pointer child:bg-gray-95 child:dark:bg-black-8 child:p-2 child:md:p-3.5 child:rounded-full">
           <div className="swiper-custom-button-prev">
             <ArrowLeft />
@@ -22,7 +24,11 @@ export default function MoviesCastsSlider({
           </div>
         </div>
       </div>
-      <CategoriesSlider slidesPerViewXs={2} slidesPerViewSm={3} slidesPerViewLg={4}>
+      <CategoriesSlider
+        slidesPerViewXs={2}
+        slidesPerViewSm={3}
+        slidesPerViewLg={4}
+      >
         {movieData.casts.map((cast, index) => (
           <SwiperSlide key={index}>
             <MovieCastBox {...cast} />
