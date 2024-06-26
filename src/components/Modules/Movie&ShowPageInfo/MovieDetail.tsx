@@ -16,7 +16,7 @@ export default function MovieDetail({
   const { date, availableLanguage, score, geners, creatorInfo } = movieData;
 
   return (
-    <div className="space-y-8 child:space-y-4">
+    <div className="space-y-8 child:space-y-4 dark:bg-black-10 border-2 dark:border-black-15 p-6 md:p-12 rounded-2xl">
       <div>
         <div className="movieDetail">
           <Calender />
