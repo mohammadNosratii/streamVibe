@@ -1,7 +1,9 @@
+import { useGetTopMoviesApi } from "../../../hooks/api/useMovieApi";
 import moviesCardInfo from "../../../mock/movies";
 import MoviesCategoryBox from "../../Modules/MoviesCategoryBox/MoviesCategoryBox";
 
 export default function MoviesBoxWrapper() {
+  const { data, isLoading } = useGetTopMoviesApi()
   return (
     <div className="container my-20 max-w-[100%]">
       <div className="border border-gray-90 dark:border-black-15 p-12 rounded-xl relative">
