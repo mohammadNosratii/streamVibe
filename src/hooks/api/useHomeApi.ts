@@ -6,10 +6,11 @@ import {
   getSubscriptionsApi,
 } from "../../services/api/homeApi";
 
-export const useGetSliderMoviesApi = () => {
+export const useGetSliderMoviesApi = (isInMoviePage: boolean) => {
   return useQuery({
     queryKey: ["getSliderMovies"],
     queryFn: () => getSliderMoviesApi().then((data) => data.data),
+    enabled: !isInMoviePage,
   });
 };
 
