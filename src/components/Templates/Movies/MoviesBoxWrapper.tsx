@@ -1,4 +1,3 @@
-// import { moviesCardProps } from "../../../interfaces/moviesCardInfo.interface";
 import moviesCardInfo from "../../../mock/movies";
 import MoviesCategoryBox from "../../Modules/MoviesCategoryBox/MoviesCategoryBox";
 
