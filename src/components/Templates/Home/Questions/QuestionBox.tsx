@@ -18,7 +18,7 @@ export default function QuestionBox() {
               aria-label={question.title}
               title={question.title}
               indicator={({ isOpen }) =>
-                isOpen ? <MinusIcon /> : <PlusIcon />
+                isOpen ? <MinusIcon /> : <PlusIcon className="fill-current" />
               }
               startContent={
                 <Card className="bg-white dark:bg-black-15 w-12 h-12 flex items-center justify-center shadow-sm">
@@ -39,7 +39,7 @@ export default function QuestionBox() {
               aria-label={question.title}
               title={question.title}
               indicator={({ isOpen }) =>
-                isOpen ? <MinusIcon /> : <PlusIcon />
+                isOpen ? <MinusIcon /> : <PlusIcon className="fill-current" />
               }
               startContent={
                 <Card className="bg-white dark:bg-black-15 w-12 h-12 flex items-center justify-center shadow-sm">
