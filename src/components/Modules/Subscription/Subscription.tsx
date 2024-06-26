@@ -40,9 +40,9 @@ export default function Subscription() {
             selectedKey={subscriptionPlanTime}
             onSelectionChange={setSubscriptionPlanTime}
           >
-            {uniqueTypes.map((plan, index) => (
+            {uniqueTypes.map((plan) => (
               <Tab
-                key={index}
+                key={plan}
                 title={plan}
                 className="p-2 sm:p-3 md:p-3.5 lg:p-5"
               />
@@ -51,15 +51,17 @@ export default function Subscription() {
         </div>
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-9">
-        {isLoading ? Array.from({ length: 3 }, (_, index) => (
-          <SubscriptionBoxSkeleton key={index} />
-        )) : getSubscriptions
-          ?.filter(
-            (plan: subscriptionPlan) => plan.type === subscriptionPlanTime
-          )
-          .map((plan: subscriptionPlan, index: number) => (
-            <SubscriptionBox key={index} {...plan} />
-          ))}
+        {isLoading
+          ? Array.from({ length: 3 }, (_, index) => (
+              <SubscriptionBoxSkeleton key={index} />
+            ))
+          : getSubscriptions
+              ?.filter(
+                (plan: subscriptionPlan) => plan.type === subscriptionPlanTime
+              )
+              .map((plan: subscriptionPlan, index: number) => (
+                <SubscriptionBox key={index} {...plan} />
+              ))}
       </div>
     </div>
   );
