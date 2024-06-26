@@ -1,6 +1,5 @@
 import { Button } from "@nextui-org/react";
 import QuestionBox from "./QuestionBox";
-import { getFrequentlyQuestions } from "../../../../mock/frequentlyQuestions";
 
 export default function FrequentlyQuestions() {
     return (
@@ -19,7 +18,7 @@ export default function FrequentlyQuestions() {
                     Ask a Question
                 </Button>
             </div>
-            <QuestionBox data={getFrequentlyQuestions()} />
+            <QuestionBox />
         </div>
     )
 }

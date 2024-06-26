@@ -9,3 +9,11 @@ export const getSliderMoviesApi = () => {
 export const getCategoriesApi = () => {
   return httpService.get(baseUrl + "getCategories");
 };
+
+export const getFrequentlyQuestionsApi = () => {
+  return httpService.get(baseUrl + "getFrequentlyQuestions");
+};
+
+export const getSubscriptionsApi = () => {
+  return httpService.get(baseUrl + "getSubscriptions");
+};

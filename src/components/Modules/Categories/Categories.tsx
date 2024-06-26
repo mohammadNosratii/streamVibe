@@ -1,11 +1,14 @@
 import CategoriesSlider from "../Sliders/CategoriesSlider";
 import { ArrowLeft, ArrowRight } from "../../../assets/icons/Arrows";
 import CategoryBox from "./CategoryBox";
-import categoriesInfo from "../../../mock/categoriesInfo";
 import { SwiperSlide } from "swiper/react";
+import { useGetCategoriesApi } from "../../../hooks/api/useHomeApi";
+import { categoryProps } from "../../../interfaces/category.interface";
+import { Skeleton } from "@nextui-org/react";
 
 export default function Categories() {
-  
+  const { data: getCategories, isLoading } = useGetCategoriesApi();
+
   return (
     <div className="container my-32 space-y-20">
       <div className="flex items-center justify-between md:gap-14 xl:gap-20 2xl:gap-24 ">
@@ -28,12 +31,22 @@ export default function Categories() {
           </div>
         </div>
       </div>
-      <CategoriesSlider slidesPerViewXs={2} slidesPerViewSm={3} slidesPerViewLg={4}>
-        {categoriesInfo.map((category, index) => (
-          <SwiperSlide key={index}>
-            <CategoryBox {...category} />
-          </SwiperSlide>
-        ))}
+      <CategoriesSlider
+        slidesPerViewXs={2}
+        slidesPerViewSm={3}
+        slidesPerViewLg={4}
+      >
+        {isLoading
+          ? Array.from({ length: 5 }, (_, index) => (
+              <SwiperSlide key={index}>
+                <Skeleton className="h-[300px] rounded-[30px] overflow-hidden" />
+              </SwiperSlide>
+            ))
+          : getCategories?.map((category: categoryProps, index: number) => (
+              <SwiperSlide key={index}>
+                <CategoryBox {...category} />
+              </SwiperSlide>
+            ))}
       </CategoriesSlider>
     </div>
   );
