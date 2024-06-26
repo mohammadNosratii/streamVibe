@@ -9,7 +9,7 @@ export default function QuestionBox() {
   const { data: getFrequentlyQuestions, isLoading } = useGetFrequentlyQuestionsApi();
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 mt-16 w-[95%] mx-auto lg:gap-14">
+    <div className="grid grid-cols-1 lg:grid-cols-2 mt-16 w-[95%] mx-auto gap-8 lg:gap-14">
       {isLoading ?
 
         Array.from({ length: 8 }, (_, index) => (
