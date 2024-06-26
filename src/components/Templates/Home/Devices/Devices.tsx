@@ -1,7 +1,7 @@
-import { devicesInfo } from "../../../../interfaces/devices.interface";
+import devicesBoxInfo from "../../../../mock/devicesBoxInfo";
 import DevicesBox from "./DevicesBox";
 
-export default function Devices({ devices }: { devices: devicesInfo[] }) {
+export default function Devices() {
   return (
     <div className="container space-y-20">
       <div className="space-y-3">
@@ -16,7 +16,7 @@ export default function Devices({ devices }: { devices: devicesInfo[] }) {
         </p>
       </div>
       <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-7.5">
-        {devices.map((device, index) => (
+        {devicesBoxInfo().map((device, index) => (
           <DevicesBox key={index} {...device} />
         ))}
       </div>
