@@ -16,7 +16,7 @@ export default function MovieCommentBox({
           <h2 className="text-base md:text-xl font-manropeSemiBold">{name}</h2>
         </div>
         <div className="flex items-center gap-1 dark:bg-black-8 py-1 px-2 md:py-1.5 md:px-2.5 border-2 dark:border-black-15 rounded-[50px]">
-          <StarRating rate={commentRate} />
+          <StarRating rate={commentRate} isEditable={false} />
           <span className="text-gray-60 text-sm mt-0.5">{commentRate}</span>
         </div>
       </div>
