@@ -98,7 +98,7 @@ export default {
       themes: {
         dark: {
           colors: {
-            background: "#1E1E1E",
+            background: "#141414",
           },
         },
         light: {

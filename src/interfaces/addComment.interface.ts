@@ -1,7 +1,7 @@
 interface addCommentProps {
   name: string;
   message: string;
-  score: number;
+  score?: number;
 }
 
 export type { addCommentProps };
