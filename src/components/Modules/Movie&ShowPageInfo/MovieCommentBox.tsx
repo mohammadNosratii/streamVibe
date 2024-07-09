@@ -37,7 +37,7 @@ export default function MovieCommentBox({
         </div>
       </div>
       <p className="text-sm md:text-base text-gray-60">{commentText}</p>
-      <div className={`transition-all duration-250 ${addReplyTrigger ? "h-[260px] p-5" : "h-[0px]"} overflow-hidden bg-white dark:bg-black-10 rounded-lg`}>
+      <div className={`transition-all duration-250 ${addReplyTrigger ? "h-[260px] p-5" : "h-[0px]"} overflow-hidden bg-white dark:bg-black-10 rounded-xl`}>
         <AddReviewForm discardReview={triggerAddReplyHandler} isReply={true} />
       </div>
     </div>
