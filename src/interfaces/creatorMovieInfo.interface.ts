@@ -1,7 +1,7 @@
 interface creatorMovieInfo {
   job: string;
   name: string;
-  family: string
+  family: string;
   pic: string;
 }
 

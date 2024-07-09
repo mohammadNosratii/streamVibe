@@ -1,5 +1,5 @@
 import { Card, CardHeader, Image } from "@nextui-org/react";
-import { creatorMovieInfo } from "../../../interfaces/creatorMovieInfo";
+import { creatorMovieInfo } from "../../../interfaces/creatorMovieInfo.interface";
 
 export default function CreatorMovieInfo({
   job,
