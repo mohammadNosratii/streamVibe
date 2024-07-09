@@ -5,6 +5,7 @@ import MovieComment from "../../../components/Modules/Movie&ShowPageInfo/MovieCo
 import MovieDescription from "../../../components/Modules/Movie&ShowPageInfo/MovieDescription";
 import MovieDetail from "../../../components/Modules/Movie&ShowPageInfo/MovieDetail";
 import allMoviesInfo from "../../../mock/allMoviesInfo";
+import DownloadLink from "../../../components/Modules/Movie&ShowPageInfo/DownloadLink";
 
 export default function MovieDetailsPage() {
   const params = useParams({ from: "/movies/$movieId" });
@@ -26,6 +27,7 @@ export default function MovieDetailsPage() {
           <div className="lg:hidden">
             <MovieDetail movieData={getMovieData} />
           </div>
+          <DownloadLink movieData={getMovieData} />
           <MoviesCastsSlider movieData={getMovieData} />
           <MovieComment movieData={getMovieData} />
         </div>

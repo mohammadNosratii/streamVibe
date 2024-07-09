@@ -40,6 +40,9 @@
   .movieDetail {
     @apply flex items-center gap-1 text-gray-60;
   }
+  .accordion-item section {
+    overflow: visible !important;
+  }
 }
 
 /* Hide Input number arrows */

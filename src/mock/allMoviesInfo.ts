@@ -39,6 +39,66 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
+      downLoadLink: [
+        {
+          category: "softsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+        {
+          category: "hardsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+      ],
       casts: [
         {
           realName: "Glen Powell",
@@ -120,6 +180,67 @@ export default function allMoviesInfo() {
           pic: dunePart2,
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
+      ],
+
+      downLoadLink: [
+        {
+          category: "softsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+        {
+          category: "hardsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
       ],
       casts: [
         {
@@ -203,6 +324,67 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
+
+      downLoadLink: [
+        {
+          category: "softsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+        {
+          category: "hardsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+      ],
       casts: [
         {
           realName: "Glen Powell",
@@ -284,6 +466,67 @@ export default function allMoviesInfo() {
           pic: dunePart2,
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
+      ],
+
+      downLoadLink: [
+        {
+          category: "softsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+        {
+          category: "hardsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
       ],
       casts: [
         {
@@ -368,6 +611,67 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
+
+      downLoadLink: [
+        {
+          category: "softsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+        {
+          category: "hardsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+      ],
       casts: [
         {
           realName: "Glen Powell",
@@ -451,6 +755,67 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
+
+      downLoadLink: [
+        {
+          category: "softsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+        {
+          category: "hardsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+      ],
       casts: [
         {
           realName: "Glen Powell",
@@ -532,6 +897,67 @@ export default function allMoviesInfo() {
           pic: dunePart2,
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
+      ],
+
+      downLoadLink: [
+        {
+          category: "softsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+        {
+          category: "hardsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
       ],
       casts: [
         {
@@ -615,6 +1041,67 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
+
+      downLoadLink: [
+        {
+          category: "softsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+        {
+          category: "hardsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+      ],
       casts: [
         {
           realName: "Glen Powell",
@@ -696,6 +1183,67 @@ export default function allMoviesInfo() {
           pic: dunePart2,
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
+      ],
+
+      downLoadLink: [
+        {
+          category: "softsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+        {
+          category: "hardsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
       ],
       casts: [
         {
@@ -779,6 +1327,67 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
+
+      downLoadLink: [
+        {
+          category: "softsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+        {
+          category: "hardsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+      ],
       casts: [
         {
           realName: "Glen Powell",
@@ -861,6 +1470,67 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
+
+      downLoadLink: [
+        {
+          category: "softsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+        {
+          category: "hardsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+      ],
       casts: [
         {
           realName: "Glen Powell",
@@ -942,6 +1612,67 @@ export default function allMoviesInfo() {
           pic: dunePart2,
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
+      ],
+
+      downLoadLink: [
+        {
+          category: "softsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+        {
+          category: "hardsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
       ],
       casts: [
         {
@@ -1026,6 +1757,67 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
+
+      downLoadLink: [
+        {
+          category: "softsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+        {
+          category: "hardsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+      ],
       casts: [
         {
           realName: "Glen Powell",
@@ -1107,6 +1899,67 @@ export default function allMoviesInfo() {
           pic: dunePart2,
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
+      ],
+
+      downLoadLink: [
+        {
+          category: "softsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+        {
+          category: "hardsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
       ],
       casts: [
         {
@@ -1190,6 +2043,67 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
+
+      downLoadLink: [
+        {
+          category: "softsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+        {
+          category: "hardsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+      ],
       casts: [
         {
           realName: "Glen Powell",
@@ -1272,6 +2186,67 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
+
+      downLoadLink: [
+        {
+          category: "softsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+        {
+          category: "hardsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+      ],
       casts: [
         {
           realName: "Glen Powell",
@@ -1353,6 +2328,67 @@ export default function allMoviesInfo() {
           pic: dunePart2,
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
+      ],
+
+      downLoadLink: [
+        {
+          category: "softsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+        {
+          category: "hardsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
       ],
       casts: [
         {
@@ -1437,6 +2473,67 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
+
+      downLoadLink: [
+        {
+          category: "softsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+        {
+          category: "hardsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+      ],
       casts: [
         {
           realName: "Glen Powell",
@@ -1519,6 +2616,67 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
+
+      downLoadLink: [
+        {
+          category: "softsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+        {
+          category: "hardsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+      ],
       casts: [
         {
           realName: "Glen Powell",
@@ -1600,6 +2758,67 @@ export default function allMoviesInfo() {
           pic: dunePart2,
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
+      ],
+
+      downLoadLink: [
+        {
+          category: "softsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+        {
+          category: "hardsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
       ],
       casts: [
         {
@@ -1684,6 +2903,67 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
+
+      downLoadLink: [
+        {
+          category: "softsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+        {
+          category: "hardsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+      ],
       casts: [
         {
           realName: "Glen Powell",
@@ -1767,6 +3047,67 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
+
+      downLoadLink: [
+        {
+          category: "softsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+        {
+          category: "hardsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+      ],
       casts: [
         {
           realName: "Glen Powell",
@@ -1849,6 +3190,67 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
+
+      downLoadLink: [
+        {
+          category: "softsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+        {
+          category: "hardsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+      ],
       casts: [
         {
           realName: "Glen Powell",
@@ -1930,6 +3332,67 @@ export default function allMoviesInfo() {
           pic: dunePart2,
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
+      ],
+
+      downLoadLink: [
+        {
+          category: "softsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+        {
+          category: "hardsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
       ],
       casts: [
         {
@@ -2014,6 +3477,67 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
+
+      downLoadLink: [
+        {
+          category: "softsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+        {
+          category: "hardsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+      ],
       casts: [
         {
           realName: "Glen Powell",
@@ -2097,6 +3621,67 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
+
+      downLoadLink: [
+        {
+          category: "softsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+        {
+          category: "hardsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+      ],
       casts: [
         {
           realName: "Glen Powell",
@@ -2179,6 +3764,67 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
+
+      downLoadLink: [
+        {
+          category: "softsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+        {
+          category: "hardsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+      ],
       casts: [
         {
           realName: "Glen Powell",
@@ -2260,6 +3906,67 @@ export default function allMoviesInfo() {
           pic: dunePart2,
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
+      ],
+
+      downLoadLink: [
+        {
+          category: "softsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+        {
+          category: "hardsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
       ],
       casts: [
         {
@@ -2344,6 +4051,67 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
+
+      downLoadLink: [
+        {
+          category: "softsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+        {
+          category: "hardsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+      ],
       casts: [
         {
           realName: "Glen Powell",
@@ -2427,6 +4195,67 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
+
+      downLoadLink: [
+        {
+          category: "softsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+        {
+          category: "hardsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+      ],
       casts: [
         {
           realName: "Glen Powell",
@@ -2509,6 +4338,67 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
+
+      downLoadLink: [
+        {
+          category: "softsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+        {
+          category: "hardsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+      ],
       casts: [
         {
           realName: "Glen Powell",
@@ -2590,6 +4480,67 @@ export default function allMoviesInfo() {
           pic: dunePart2,
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
+      ],
+
+      downLoadLink: [
+        {
+          category: "softsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
+        {
+          category: "hardsub",
+          links: [
+            {
+              qualityTitle: "1080p Full HD WEB-DL SoftSub",
+              encoder: "FLUX",
+              size: "6.75",
+              channel: "MKV",
+            },
+            {
+              qualityTitle: "1080p WEB-DL SoftSub",
+              encoder: "YTS",
+              size: "2.12",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "1080p 10bit WEB-DL x265 SoftSub",
+              encoder: "PSA",
+              size: "2",
+              channel: "MTV",
+            },
+            {
+              qualityTitle: "720p WEB-DL HardSub",
+              encoder: "DigiMoviez",
+              size: "1.11",
+              channel: "MTV",
+            },
+          ],
+        },
       ],
       casts: [
         {

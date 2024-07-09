@@ -1,5 +1,6 @@
 import { castsMovie } from "./castsMovie.interface";
-import { creatorMovieInfo } from "./creatorMovieInfo";
+import { creatorMovieInfo } from "./creatorMovieInfo.interface";
+import { downloadLinksProps } from "./downloadLink.interface";
 import { movieComment } from "./movieComment.interface";
 import { movieRatingProps } from "./movieRatingProps.interface";
 
@@ -17,6 +18,7 @@ interface allMoviesData {
   creatorInfo: creatorMovieInfo[];
   casts: castsMovie[];
   comments: movieComment[];
+  downLoadLink: { category: string; links: downloadLinksProps[] }[];
 }
 
 export type { allMoviesData };
