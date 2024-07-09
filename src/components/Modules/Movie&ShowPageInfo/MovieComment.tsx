@@ -30,7 +30,7 @@ export default function MovieComment({
         </Button>
       </div>
       <div className={`transition-all duration-250 ${addReviewTrigger ? "h-[260px]" : "h-[0px]"} overflow-hidden`}>
-        <AddReviewForm />
+        <AddReviewForm discardReview={triggerAddReviewHandler} />
       </div>
       {movieData.comments.map((comment, index) => (
         <MovieCommentBox key={index} {...comment} />
