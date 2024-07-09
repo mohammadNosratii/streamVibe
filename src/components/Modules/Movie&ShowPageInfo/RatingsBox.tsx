@@ -13,7 +13,7 @@ export default function RatingsBox({
         {title}
       </div>
       <div className="flex items-center gap-1">
-        <StarRating rate={movieRate} />
+        <StarRating rate={movieRate} isEditable={false} />
         <span>{movieRate}</span>
       </div>
     </div>
