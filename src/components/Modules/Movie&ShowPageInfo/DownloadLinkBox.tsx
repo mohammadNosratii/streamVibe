@@ -18,7 +18,7 @@ export default function DownloadLinkBox({
           <span>{channel}</span>
         </div>
       </div>
-      <Button className="md:text-lg" endContent={<Download />}>
+      <Button className="sm:text-lg flex-shrink-0" endContent={<Download />}>
         Download
       </Button>
     </Card>

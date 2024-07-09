@@ -3,7 +3,7 @@ export default function ChevronDoubleRight() {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 20 20"
-      className="w-4 h-4 md:w-6 md:h-6"
+      className="w-4 h-4 sm:w-6 sm:h-6"
     >
       <g fillRule="evenodd" clipRule="evenodd">
         <path

@@ -20,7 +20,7 @@ export default function DownloadLink({
             classNames={{
               base: ["dark:!bg-black-6 rounded-xl py-2 px-4"],
               title: [
-                "text-[15px] font-manropeSemiBold md:text-xl md:font-manropeRegular",
+                "text-[15px] font-manropeSemiBold sm:text-xl sm:font-manropeRegular",
               ],
             }}
             key={index}

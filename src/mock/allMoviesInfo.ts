@@ -41,7 +41,7 @@ export default function allMoviesInfo() {
       ],
       downLoadLink: [
         {
-          category: "softsub",
+          category: "Softsub persian version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -70,7 +70,7 @@ export default function allMoviesInfo() {
           ],
         },
         {
-          category: "hardsub",
+          category: "hardsub version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -181,10 +181,9 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
-
       downLoadLink: [
         {
-          category: "softsub",
+          category: "Softsub persian version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -213,7 +212,7 @@ export default function allMoviesInfo() {
           ],
         },
         {
-          category: "hardsub",
+          category: "hardsub version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -324,10 +323,9 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
-
       downLoadLink: [
         {
-          category: "softsub",
+          category: "Softsub persian version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -356,7 +354,7 @@ export default function allMoviesInfo() {
           ],
         },
         {
-          category: "hardsub",
+          category: "hardsub version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -467,10 +465,9 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
-
       downLoadLink: [
         {
-          category: "softsub",
+          category: "Softsub persian version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -499,7 +496,7 @@ export default function allMoviesInfo() {
           ],
         },
         {
-          category: "hardsub",
+          category: "hardsub version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -611,10 +608,9 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
-
       downLoadLink: [
         {
-          category: "softsub",
+          category: "Softsub persian version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -643,7 +639,7 @@ export default function allMoviesInfo() {
           ],
         },
         {
-          category: "hardsub",
+          category: "hardsub version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -755,10 +751,9 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
-
       downLoadLink: [
         {
-          category: "softsub",
+          category: "Softsub persian version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -787,7 +782,7 @@ export default function allMoviesInfo() {
           ],
         },
         {
-          category: "hardsub",
+          category: "hardsub version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -898,10 +893,9 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
-
       downLoadLink: [
         {
-          category: "softsub",
+          category: "Softsub persian version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -930,7 +924,7 @@ export default function allMoviesInfo() {
           ],
         },
         {
-          category: "hardsub",
+          category: "hardsub version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -1041,10 +1035,9 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
-
       downLoadLink: [
         {
-          category: "softsub",
+          category: "Softsub persian version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -1073,7 +1066,7 @@ export default function allMoviesInfo() {
           ],
         },
         {
-          category: "hardsub",
+          category: "hardsub version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -1184,10 +1177,9 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
-
       downLoadLink: [
         {
-          category: "softsub",
+          category: "Softsub persian version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -1216,7 +1208,7 @@ export default function allMoviesInfo() {
           ],
         },
         {
-          category: "hardsub",
+          category: "hardsub version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -1327,10 +1319,9 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
-
       downLoadLink: [
         {
-          category: "softsub",
+          category: "Softsub persian version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -1359,7 +1350,7 @@ export default function allMoviesInfo() {
           ],
         },
         {
-          category: "hardsub",
+          category: "hardsub version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -1470,10 +1461,9 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
-
       downLoadLink: [
         {
-          category: "softsub",
+          category: "Softsub persian version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -1502,7 +1492,7 @@ export default function allMoviesInfo() {
           ],
         },
         {
-          category: "hardsub",
+          category: "hardsub version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -1613,10 +1603,9 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
-
       downLoadLink: [
         {
-          category: "softsub",
+          category: "Softsub persian version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -1645,7 +1634,7 @@ export default function allMoviesInfo() {
           ],
         },
         {
-          category: "hardsub",
+          category: "hardsub version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -1757,10 +1746,9 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
-
       downLoadLink: [
         {
-          category: "softsub",
+          category: "Softsub persian version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -1789,7 +1777,7 @@ export default function allMoviesInfo() {
           ],
         },
         {
-          category: "hardsub",
+          category: "hardsub version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -1900,10 +1888,9 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
-
       downLoadLink: [
         {
-          category: "softsub",
+          category: "Softsub persian version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -1932,7 +1919,7 @@ export default function allMoviesInfo() {
           ],
         },
         {
-          category: "hardsub",
+          category: "hardsub version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -2043,10 +2030,9 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
-
       downLoadLink: [
         {
-          category: "softsub",
+          category: "Softsub persian version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -2075,7 +2061,7 @@ export default function allMoviesInfo() {
           ],
         },
         {
-          category: "hardsub",
+          category: "hardsub version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -2186,10 +2172,9 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
-
       downLoadLink: [
         {
-          category: "softsub",
+          category: "Softsub persian version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -2218,7 +2203,7 @@ export default function allMoviesInfo() {
           ],
         },
         {
-          category: "hardsub",
+          category: "hardsub version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -2329,10 +2314,9 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
-
       downLoadLink: [
         {
-          category: "softsub",
+          category: "Softsub persian version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -2361,7 +2345,7 @@ export default function allMoviesInfo() {
           ],
         },
         {
-          category: "hardsub",
+          category: "hardsub version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -2473,10 +2457,9 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
-
       downLoadLink: [
         {
-          category: "softsub",
+          category: "Softsub persian version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -2505,7 +2488,7 @@ export default function allMoviesInfo() {
           ],
         },
         {
-          category: "hardsub",
+          category: "hardsub version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -2616,10 +2599,9 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
-
       downLoadLink: [
         {
-          category: "softsub",
+          category: "Softsub persian version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -2648,7 +2630,7 @@ export default function allMoviesInfo() {
           ],
         },
         {
-          category: "hardsub",
+          category: "hardsub version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -2759,10 +2741,9 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
-
       downLoadLink: [
         {
-          category: "softsub",
+          category: "Softsub persian version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -2791,7 +2772,7 @@ export default function allMoviesInfo() {
           ],
         },
         {
-          category: "hardsub",
+          category: "hardsub version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -2903,10 +2884,9 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
-
       downLoadLink: [
         {
-          category: "softsub",
+          category: "Softsub persian version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -2935,7 +2915,7 @@ export default function allMoviesInfo() {
           ],
         },
         {
-          category: "hardsub",
+          category: "hardsub version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -3047,10 +3027,9 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
-
       downLoadLink: [
         {
-          category: "softsub",
+          category: "Softsub persian version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -3079,7 +3058,7 @@ export default function allMoviesInfo() {
           ],
         },
         {
-          category: "hardsub",
+          category: "hardsub version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -3190,10 +3169,9 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
-
       downLoadLink: [
         {
-          category: "softsub",
+          category: "Softsub persian version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -3222,7 +3200,7 @@ export default function allMoviesInfo() {
           ],
         },
         {
-          category: "hardsub",
+          category: "hardsub version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -3333,10 +3311,9 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
-
       downLoadLink: [
         {
-          category: "softsub",
+          category: "Softsub persian version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -3365,7 +3342,7 @@ export default function allMoviesInfo() {
           ],
         },
         {
-          category: "hardsub",
+          category: "hardsub version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -3477,10 +3454,9 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
-
       downLoadLink: [
         {
-          category: "softsub",
+          category: "Softsub persian version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -3509,7 +3485,7 @@ export default function allMoviesInfo() {
           ],
         },
         {
-          category: "hardsub",
+          category: "hardsub version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -3621,10 +3597,9 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
-
       downLoadLink: [
         {
-          category: "softsub",
+          category: "Softsub persian version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -3653,7 +3628,7 @@ export default function allMoviesInfo() {
           ],
         },
         {
-          category: "hardsub",
+          category: "hardsub version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -3764,10 +3739,9 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
-
       downLoadLink: [
         {
-          category: "softsub",
+          category: "Softsub persian version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -3796,7 +3770,7 @@ export default function allMoviesInfo() {
           ],
         },
         {
-          category: "hardsub",
+          category: "hardsub version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -3907,10 +3881,9 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
-
       downLoadLink: [
         {
-          category: "softsub",
+          category: "Softsub persian version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -3939,7 +3912,7 @@ export default function allMoviesInfo() {
           ],
         },
         {
-          category: "hardsub",
+          category: "hardsub version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -4051,10 +4024,9 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
-
       downLoadLink: [
         {
-          category: "softsub",
+          category: "Softsub persian version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -4083,7 +4055,7 @@ export default function allMoviesInfo() {
           ],
         },
         {
-          category: "hardsub",
+          category: "hardsub version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -4195,10 +4167,9 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
-
       downLoadLink: [
         {
-          category: "softsub",
+          category: "Softsub persian version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -4227,7 +4198,7 @@ export default function allMoviesInfo() {
           ],
         },
         {
-          category: "hardsub",
+          category: "hardsub version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -4338,10 +4309,9 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
-
       downLoadLink: [
         {
-          category: "softsub",
+          category: "Softsub persian version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -4370,7 +4340,7 @@ export default function allMoviesInfo() {
           ],
         },
         {
-          category: "hardsub",
+          category: "hardsub version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -4481,10 +4451,9 @@ export default function allMoviesInfo() {
         },
         { job: "Music", family: "Linklater", name: "Ali", pic: hitMan },
       ],
-
       downLoadLink: [
         {
-          category: "softsub",
+          category: "Softsub persian version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
@@ -4513,7 +4482,7 @@ export default function allMoviesInfo() {
           ],
         },
         {
-          category: "hardsub",
+          category: "hardsub version",
           links: [
             {
               qualityTitle: "1080p Full HD WEB-DL SoftSub",
