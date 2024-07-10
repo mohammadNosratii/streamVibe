@@ -7,7 +7,7 @@ export default function MovieCastBox({
   castImg,
 }: castsMovie) {
   return (
-    <div className="bg-gray-90 dark:bg-black-12 rounded-xl">
+    <div className="bg-gray-95/80 dark:bg-black-12 rounded-xl">
       <Image
         className="rounded-2xl w-full h-44 sm:h-40 2xl:h-44 object-cover"
         src={castImg}

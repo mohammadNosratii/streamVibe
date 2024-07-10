@@ -1,7 +1,7 @@
 interface downloadLinksProps {
   qualityTitle: string;
   encoder: string;
-  size: string;
+  size: number;
   channel: string;
 }
 

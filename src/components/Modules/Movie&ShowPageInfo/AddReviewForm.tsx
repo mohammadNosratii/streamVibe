@@ -3,7 +3,7 @@ import { addCommentProps } from "../../../interfaces/addComment.interface"
 import { Button, Input, Textarea } from "@nextui-org/react";
 import StarRating from "../StarRating/StarRating";
 
-export default function AddReviewForm({ discardReview }: { discardReview: () => void }) {
+export default function AddReviewForm({ discardReview, isReply }: { discardReview: () => void, isReply: boolean }) {
     const { register, control, handleSubmit, formState: { errors } } = useForm<addCommentProps>()
 
     const addCommentHandler: SubmitHandler<addCommentProps> = (data) => {
@@ -12,9 +12,9 @@ export default function AddReviewForm({ discardReview }: { discardReview: () => 
 
     return (
         <form onSubmit={handleSubmit(addCommentHandler)} className="space-y-4 h-full">
-            <Controller name="score" control={control} render={({ field: { onChange, value } }) => (
+            {!isReply && <Controller name="score" control={control} render={({ field: { onChange, value } }) => (
                 <StarRating rate={value} onChange={(newValue) => onChange(newValue)} isEditable={true} />
-            )} />
+            )} />}
             <Input
                 classNames={{
                     mainWrapper: ["outline-none rounded-xl"],

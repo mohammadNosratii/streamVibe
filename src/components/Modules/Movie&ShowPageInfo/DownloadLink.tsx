@@ -10,17 +10,18 @@ export default function DownloadLink({
   movieData: allMoviesData;
 }) {
   return (
-    <div className="dark:bg-black-10 border-2 dark:border-black-15 p-6 md:p-12 space-y-4 rounded-2xl">
+    <div className="bg-white dark:bg-black-10 border-2 dark:border-black-15 p-6 md:p-12 space-y-4 rounded-2xl">
+      <h3 className="text-gray-600 dark:text-gray-60 text-sm md:text-lg">Download Links</h3>
       <Accordion
-        className="px-2 child:accordion-item !child:bg-red-45"
+        className="px-0 child:accordion-item !child:bg-red-45 !gap-4"
         variant="splitted"
       >
         {movieData.downLoadLink.map((item, index) => (
           <AccordionItem
             classNames={{
-              base: ["dark:!bg-black-6 rounded-xl py-2 px-4"],
+              base: ["!bg-mainLight !shadow-none dark:!bg-black-6 rounded-xl py-2 px-4"],
               title: [
-                "text-[15px] font-manropeSemiBold sm:text-xl sm:font-manropeRegular",
+                "text-[15px] font-manropeSemiBold sm:text-xl sm:font-manropeRegular capitalize",
               ],
             }}
             key={index}
