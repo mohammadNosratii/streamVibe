@@ -48,7 +48,7 @@ export default function AddReviewForm({ discardReview, isReply }: { discardRevie
             />
             <div className="flex items-center gap-2">
                 <Button className="bg-red-45 text-white">
-                    Submit Review
+                    Submit
                 </Button>
                 <Button className="dark:bg-black-8" onClick={discardReview}>
                     Discard
