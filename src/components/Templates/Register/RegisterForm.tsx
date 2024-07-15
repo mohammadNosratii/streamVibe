@@ -10,13 +10,9 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { registerFormProps } from "../../../interfaces/registerForm.interface";
 import { Link } from "@tanstack/react-router";
 // import AutoCompletePhone from "../../Modules/AutoCompletePhone/AutoCompletePhone";
-import { usePostRegisterApi } from "../../../hooks/api/useRegisterApi";
+import { useRegisterApi } from "../../../hooks/api/useAuthApi";
 
-export default function Register({
-  showOtpHandler,
-}: {
-  showOtpHandler: () => void;
-}) {
+export default function Register() {
   const {
     register,
     handleSubmit,
@@ -24,7 +20,7 @@ export default function Register({
   } = useForm<registerFormProps>();
 
   const [isPasswordVisible, setIsPasswordVisible] = useState<boolean>(false);
-  const { mutate, isPending } = usePostRegisterApi();
+  const { mutate, isPending } = useRegisterApi();
 
   const togglePassword = () => {
     setIsPasswordVisible(!isPasswordVisible);
@@ -34,7 +30,6 @@ export default function Register({
     data
   ) => {
     mutate(data);
-    showOtpHandler();
   };
 
   return (
@@ -148,25 +143,6 @@ export default function Register({
           errorMessage={errors.password?.message}
           isInvalid={Boolean(errors.password)}
         />
-        {/* <Input
-          startContent={<AutoCompletePhone />}
-          classNames={{
-            mainWrapper: ["bg-transparent outline-none rounded-2xl h-11"],
-            inputWrapper: [
-              "bg-transparent border-1 dark:border-black-15 rounded-2xl h-full ps-0 pe-3",
-            ],
-            input: ["bg-transparent"],
-            innerWrapper: ["bg-transparent"],
-          }}
-          type="number"
-          placeholder="Phone Number"
-          {...register("phone", {
-            required: "Please Enter Your Phone Number",
-          })}
-          endContent={<PhoneIcon />}
-          errorMessage={errors.phone?.message}
-          isInvalid={Boolean(errors.phone)}
-        /> */}
         <Button
           isLoading={isPending}
           type="submit"

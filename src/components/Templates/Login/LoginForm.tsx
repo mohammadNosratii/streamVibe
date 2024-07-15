@@ -1,20 +1,22 @@
 import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { loginFormProps } from "../../../interfaces/loginForm.interface";
-import { Button, Checkbox, Input } from "@nextui-org/react";
-import { combinedEmailAndPhoneRegex } from "../../../utils/combineEmailAndPhoneRegex";
+import { Button, Input } from "@nextui-org/react";
 import MailIcon from "../../../assets/icons/Mail";
 import PhoneIcon from "../../../assets/icons/Phone";
 import EyeSlashIcon from "../../../assets/icons/EyeSlash";
 import EyeIcon from "../../../assets/icons/Eye";
 import { Link } from "@tanstack/react-router";
+import { useLoginApi } from "../../../hooks/api/useAuthApi";
+import { loginUserProps } from "../../../interfaces/loginUser.interface";
 
 export default function LoginForm() {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<loginFormProps>();
+  } = useForm<loginUserProps>();
+
+  const { mutate, isPending } = useLoginApi()
 
   const [isPasswordVisible, setIsPasswordVisible] = useState<boolean>(false);
 
@@ -22,8 +24,8 @@ export default function LoginForm() {
     setIsPasswordVisible(!isPasswordVisible);
   };
 
-  const submitLoginFormHandler: SubmitHandler<loginFormProps> = (data) => {
-    console.log(data);
+  const submitLoginFormHandler: SubmitHandler<loginUserProps> = (data) => {
+    mutate(data)
   };
 
   return (
@@ -43,13 +45,9 @@ export default function LoginForm() {
             innerWrapper: ["bg-transparent"],
           }}
           size="sm"
-          label="Email / Phone"
-          {...register("emailOrPhone", {
-            required: true,
-            pattern: {
-              value: combinedEmailAndPhoneRegex(),
-              message: "Your Email / Phone must be valid",
-            },
+          label="Username"
+          {...register("username", {
+            required: "Username Could not be empty",
           })}
           endContent={
             <div className="flex items-center gap-1">
@@ -58,8 +56,8 @@ export default function LoginForm() {
               <PhoneIcon />
             </div>
           }
-          errorMessage={errors.emailOrPhone?.message}
-          isInvalid={Boolean(errors.emailOrPhone)}
+          errorMessage={errors.username?.message}
+          isInvalid={Boolean(errors.username)}
         />
         <Input
           classNames={{
@@ -72,7 +70,7 @@ export default function LoginForm() {
           type={isPasswordVisible ? "text" : "password"}
           label="Password"
           {...register("password", {
-            required: true,
+            required: "Password could not be empty",
           })}
           endContent={
             <div onClick={togglePassword} className="cursor-pointer">
@@ -81,7 +79,8 @@ export default function LoginForm() {
           }
           isInvalid={Boolean(errors.password)}
         />
-        <div className="flex items-center justify-between">
+        {/* // TODO Should Implement rememberMe */}
+        {/* <div className="flex items-center justify-between">
           <Checkbox
             {...register("rememberMe")}
             classNames={{ label: ["text-gray-60 text-sm"] }}
@@ -91,8 +90,8 @@ export default function LoginForm() {
           <Link to="/forget-password" className="text-gray-60 text-sm">
             Forget Password?
           </Link>
-        </div>
-        <Button type="submit" className="dark:bg-mainLight text-black-6">Login</Button>
+        </div> */}
+        <Button type="submit" className="dark:bg-mainLight text-black-6" isLoading={isPending}>Login</Button>
         <p className="text-gray-60 text-sm text-center">
           Don't have an account?{" "}
           <Link to="/register" className="underline">
