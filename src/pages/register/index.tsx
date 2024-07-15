@@ -15,7 +15,7 @@ export default function Register() {
       {isShowOtp ? (
         <RegisterOtp showOtpHandler={otphandler} />
       ) : (
-        <RegisterForm showOtpHandler={otphandler} />
+        <RegisterForm />
       )}
     </AuthenticationCard>
   );
