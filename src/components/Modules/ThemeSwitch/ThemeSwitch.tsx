@@ -1,6 +1,7 @@
 import { useTheme } from "next-themes";
 import SunIcon from "../../../assets/icons/Sun";
 import MoonIcon from "../../../assets/icons/Moon";
+import Cookies from 'js-cookie'
 
 export default function ThemeSwitch() {
   const { theme, setTheme } = useTheme();
@@ -9,12 +10,16 @@ export default function ThemeSwitch() {
     switch (theme) {
       case "light": {
         setTheme("dark");
+        Cookies.set("theme", "dark")
         break;
       }
       case "dark": {
         setTheme("light");
+        Cookies.set("theme", "light")
         break;
       }
+      default:
+        break
     }
   };
 
