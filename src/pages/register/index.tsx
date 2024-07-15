@@ -9,7 +9,7 @@ export default function Register() {
   const otphandler = () => {
     setIsShowOtp(!isShowOtp);
   };
-  
+
   return (
     <AuthenticationCard>
       {isShowOtp ? (
