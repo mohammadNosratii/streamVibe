@@ -10,11 +10,11 @@ export default function MovieComment({
 }: {
   movieData: allMoviesData;
 }) {
-  const [addReviewTrigger, setAddReviewTrigger] = useState(false)
+  const [addReviewTrigger, setAddReviewTrigger] = useState(false);
 
   const triggerAddReviewHandler = () => {
-    setAddReviewTrigger((prev) => !prev)
-  }
+    setAddReviewTrigger((prev) => !prev);
+  };
   return (
     <div className="space-y-10 bg-white dark:bg-black-10 border-2 dark:border-black-15 p-6 md:p-12 rounded-2xl">
       <div className="flex items-center justify-between">
@@ -29,12 +29,23 @@ export default function MovieComment({
           Add Your Review
         </Button>
       </div>
-      <div className={`transition-all duration-250 ${addReviewTrigger ? "h-[260px]" : "h-[0px]"} overflow-hidden !mt-0`}>
-        <AddReviewForm discardReview={triggerAddReviewHandler} isReply={false} />
+      <div
+        className={`transition-all duration-250 ${
+          addReviewTrigger ? "h-[260px]" : "h-[0px]"
+        } overflow-hidden !mt-0`}
+      >
+        <AddReviewForm
+          discardReview={triggerAddReviewHandler}
+          isReply={false}
+        />
       </div>
-      {useMemo(() => (movieData.comments.map((comment, index) => (
-        <MovieCommentBox key={index} {...comment} />
-      ))), [movieData.comments])}
+      {useMemo(
+        () =>
+          movieData.comments.map((comment, index) => (
+            <MovieCommentBox key={index} {...comment} />
+          )),
+        [movieData.comments]
+      )}
     </div>
   );
 }
