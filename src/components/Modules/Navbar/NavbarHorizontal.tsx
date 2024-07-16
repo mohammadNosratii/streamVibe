@@ -18,6 +18,9 @@ import { UserPopOverTrigger } from "../PopOverTrigger/PopOverTrigger";
 import { navbarHorizontalItems } from "../../../constants/navbarItems";
 import ThemeSwitch from "../ThemeSwitch/ThemeSwitch";
 import { Link } from "@tanstack/react-router";
+import { isAuthenticated } from "../../../utils/isAuthenticated";
+import LoginIcon from "../../../assets/icons/Login";
+import MainTooltip from "../Tooltip/MainTooltip";
 
 export default function NavbarHorizontal({
   triggerNavbarVertical,
@@ -103,11 +106,21 @@ export default function NavbarHorizontal({
           </div>
         </NavbarItem>
         <NavbarItem className="hidden md:inline-block">
-          <PopOver content={<UserPopOverContent />}>
-            <span className="flex items-center justify-center">
-              <UserPopOverTrigger />
-            </span>
-          </PopOver>
+          {isAuthenticated() ? (
+            <PopOver content={<UserPopOverContent />}>
+              <span className="flex items-center justify-center">
+                <UserPopOverTrigger />
+              </span>
+            </PopOver>
+          ) : (
+            <div className="py-[11px] px-[11px] md:py-3 md:px-3 border-2 dark:border-black-15 rounded-full bg-gray-85 dark:bg-black-10 cursor-pointer">
+              <MainTooltip content="Login">
+                <Link to="/login">
+                  <LoginIcon />
+                </Link>
+              </MainTooltip>
+            </div>
+          )}
         </NavbarItem>
       </NavbarContent>
     </NextUINavbar>
