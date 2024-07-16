@@ -5,6 +5,8 @@ import ThemeSwitch from "../ThemeSwitch/ThemeSwitch";
 import profile from "../../../assets/images/joker.webp";
 import { navbarVerticalProps } from "../../../interfaces/navbarVerticalProps.interface";
 import { Link } from "@tanstack/react-router";
+import { isAuthenticated } from "../../../utils/isAuthenticated";
+import Login from "../../../assets/icons/Login";
 
 export default function NavbarVertical({
   isNavbarShown,
@@ -46,17 +48,24 @@ export default function NavbarVertical({
             ))}
           </ul>
         </div>
-        <User
-          classNames={{
-            base: ["rounded-md backdrop-blur-2xl p-2 cursor-pointer"],
-            description: ["text-red-45"],
-          }}
-          name="Mohammad Nosrati"
-          description="Premium"
-          avatarProps={{
-            src: profile,
-          }}
-        />
+        {isAuthenticated() ? (
+          <User
+            classNames={{
+              base: ["rounded-md backdrop-blur-2xl p-2 cursor-pointer"],
+              description: ["text-red-45"],
+            }}
+            name="Mohammad Nosrati"
+            description="Premium"
+            avatarProps={{
+              src: profile,
+            }}
+          />
+        ) : (
+          <div className="rounded-md backdrop-blur-2xl p-2 cursor-pointer self-start flex items-center gap-2">
+            <Login />
+            <Link to="/login">Login / Sign up</Link>
+          </div>
+        )}
       </div>
     </>
   );
