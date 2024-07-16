@@ -24,7 +24,8 @@ axios.interceptors.response.use(
         break;
       }
       case 401: {
-        toast.error("شما برای این عمل، احراز هویت نشده اید");
+        console.log(error.response.data.detail);
+        toast.error(error.response.data.detail);
         break;
       }
       case 403: {

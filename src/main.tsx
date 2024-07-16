@@ -5,6 +5,7 @@ import { NextUIProvider } from "@nextui-org/react";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 import Cookies from 'js-cookie'
+import { Toaster } from "react-hot-toast";
 import "./index.css";
 
 const queryClient = new QueryClient()
@@ -16,6 +17,12 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       <NextThemesProvider attribute="class" defaultTheme={theme ? theme : "dark"}>
         <QueryClientProvider client={queryClient}>
           <App />
+          <Toaster
+            toastOptions={{
+              className: "font-manropeRegular !bg-mailLight dark:!bg-mainDark !text-black dark:!text-white"
+            }}
+            reverseOrder={true} />
+          <Toaster />
         </QueryClientProvider>
       </NextThemesProvider>
     </NextUIProvider>
