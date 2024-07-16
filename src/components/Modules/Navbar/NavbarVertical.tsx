@@ -6,7 +6,7 @@ import profile from "../../../assets/images/joker.webp";
 import { navbarVerticalProps } from "../../../interfaces/navbarVerticalProps.interface";
 import { Link } from "@tanstack/react-router";
 import { isAuthenticated } from "../../../utils/isAuthenticated";
-import Login from "../../../assets/icons/Login";
+import LoginIcon from "../../../assets/icons/Login";
 
 export default function NavbarVertical({
   isNavbarShown,
@@ -62,7 +62,7 @@ export default function NavbarVertical({
           />
         ) : (
           <div className="rounded-md backdrop-blur-2xl p-2 cursor-pointer self-start flex items-center gap-2">
-            <Login />
+            <LoginIcon />
             <Link to="/login">Login / Sign up</Link>
           </div>
         )}
