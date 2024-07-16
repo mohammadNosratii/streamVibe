@@ -1,8 +1,19 @@
 import axios from "axios";
-import toast from "react-hot-toast";
+import { refreshLoginTokenApi } from "./api/authApi";
+import Cookies from "js-cookie";
+import { revokeUser } from "../utils/revokeUser";
+
+let isRefreshTokenFetching = false;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+let failedApis: any[] = [];
 
 axios.interceptors.request.use(
   function (config) {
+    const accessToken = Cookies.get("accessToken");
+
+    if (accessToken) {
+      config.headers.Authorization = `Bearer ${accessToken}`;
+    }
     config.headers["Content-Type"] = "application/json";
     config.headers.Accept = "application/json";
     return config;
@@ -17,26 +28,46 @@ axios.interceptors.response.use(
   function (response) {
     return response;
   },
-  function (error) {
-    switch (error?.response?.status) {
-      case 400: {
-        toast.error(error?.response?.data.message);
-        break;
+  async function (error) {
+    // FIXME should check if refreshTokoen scenario is completed
+    try {
+      const originalRequest = error.config;
+      const refreshToken = Cookies.get("refreshToken");
+      const status = error?.response?.status;
+
+      if (status === 401 && !originalRequest._retry) {
+        originalRequest._retry = true;
+        if (!isRefreshTokenFetching) {
+          failedApis.push(originalRequest);
+          isRefreshTokenFetching = true;
+
+          const response = await refreshLoginTokenApi({
+            refresh: refreshToken,
+          });
+          if (response.status !== 200) {
+            throw response;
+          }
+          if (response.data) {
+            const { access } = response.data;
+            Cookies.set("accessToken", access);
+
+            if (failedApis.length > 0) {
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
+              const failedApiCalls = failedApis.map((api: any) => axios(api));
+              await Promise.all(failedApiCalls);
+              isRefreshTokenFetching = false;
+              failedApis = [];
+            }
+          }
+        } else {
+          failedApis.push(originalRequest);
+        }
       }
-      case 401: {
-        console.log(error.response.data.detail);
-        toast.error(error.response.data.detail);
-        break;
-      }
-      case 403: {
-        toast.error("دسترسی غیرمجاز");
-        break;
-      }
-      default: {
-        break;
-      }
+      return Promise.reject(error);
+    } catch (err) {
+      revokeUser();
+      window.location.href = "/";
     }
-    return Promise.reject(error);
   }
 );
 

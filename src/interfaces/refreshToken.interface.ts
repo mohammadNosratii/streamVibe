@@ -1,5 +1,5 @@
 interface refreshTokenProp {
-  refresh: string;
+  refresh: string | undefined;
 }
 
 export type { refreshTokenProp };

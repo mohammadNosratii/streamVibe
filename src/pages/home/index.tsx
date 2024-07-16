@@ -6,7 +6,6 @@ import Subscription from "../../components/Modules/Subscription/Subscription";
 import FreeTrial from "../../components/Modules/FreeTrial/FreeTrial";
 
 export default function Home() {
-
   return (
     <>
       <NavigationSlider />
