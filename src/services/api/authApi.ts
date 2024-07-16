@@ -1,4 +1,5 @@
 import { loginUserProps } from "../../interfaces/loginUser.interface";
+import { modifyUserProps } from "../../interfaces/modifyUser.interface";
 import { refreshTokenProp } from "../../interfaces/refreshToken.interface";
 import { registerUserProps } from "../../interfaces/registerUser.interface";
 import httpService from "../httpService";
@@ -16,4 +17,8 @@ export const loginApi = (payload: loginUserProps) => {
 
 export const refreshLoginTokenApi = (payload: refreshTokenProp) => {
   return httpService.post(baseUrl + baseEndPoint + "login/refresh/", payload);
+};
+
+export const modifyUserApi = (payload: modifyUserProps, id: number) => {
+  return httpService.put(baseUrl + baseEndPoint + `modify/${id}/`, payload);
 };
