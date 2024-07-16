@@ -5,8 +5,11 @@ import SearchForm from "../SearchInput/SearchForm";
 import joker from "../../../assets/images/joker.webp";
 import roadHouse from "../../../assets/images/road-house.webp";
 import granTurismo from "../../../assets/images/granTurismo.webp";
+import { useRevokeUser } from "../../../hooks/useRevokeUser";
 
 const UserPopOverContent = () => {
+  const { revokeUser } = useRevokeUser();
+
   return (
     <div className="w-48">
       <User
@@ -38,7 +41,10 @@ const UserPopOverContent = () => {
         </li>
       </ul>
       <Divider className="my-2" />
-      <div className="flex items-center justify-between gap-2 hover:text-white hover:bg-red-45 translate-x-0 duration-200 w-full p-2 cursor-pointer rounded-lg">
+      <div
+        onClick={revokeUser}
+        className="flex items-center justify-between gap-2 hover:text-white hover:bg-red-45 translate-x-0 duration-200 w-full p-2 cursor-pointer rounded-lg"
+      >
         <span>Sign out</span>
         <SignOut />
       </div>

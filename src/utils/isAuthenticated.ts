@@ -9,5 +9,8 @@ export const isAuthenticated = () => {
     case false: {
       return false;
     }
+    default: {
+      return false;
+    }
   }
 };
