@@ -1,6 +1,10 @@
 import Cookies from "js-cookie";
 
 export const revokeUser = () => {
-  Cookies.remove("accessToken");
-  Cookies.remove("refreshToken");
+  try {
+    Cookies.remove("accessToken");
+    Cookies.remove("refreshToken");
+  } catch (error) {
+    console.log(error);
+  }
 };
