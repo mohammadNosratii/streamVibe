@@ -5,11 +5,11 @@ import SearchForm from "../SearchInput/SearchForm";
 import joker from "../../../assets/images/joker.webp";
 import roadHouse from "../../../assets/images/road-house.webp";
 import granTurismo from "../../../assets/images/granTurismo.webp";
-import { revokeUser } from "../../../utils/revokeUser";
+import { userSession } from "../../../utils/userSession";
 
 const UserPopOverContent = () => {
   const signoutUserHandler = () => {
-    revokeUser()
+    userSession(false)
     window.location.reload()
   }
   return (

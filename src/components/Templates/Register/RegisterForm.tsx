@@ -58,7 +58,7 @@ export default function Register() {
           type="text"
           label="Username"
           {...register("username", {
-            required: "Please Enter Username",
+            required: "Username could not be empty",
             minLength: { value: 8, message: "At Least Enter 8 Character" },
           })}
           endContent={<UserCircle />}
@@ -123,7 +123,7 @@ export default function Register() {
           type={`${isPassword2Visible ? "text" : "password"}`}
           label="Confirm Password"
           {...register("password2", {
-            required: "Please Enter Your Password",
+            required: "Confirm Password could not be empty",
             minLength: { value: 8, message: "At Least Enter 8 Character" },
             validate: value =>
               value === getValues("password") || "Passwords do not match"

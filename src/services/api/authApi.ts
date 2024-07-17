@@ -2,6 +2,7 @@ import { loginUserProps } from "../../interfaces/loginUser.interface";
 import { modifyUserProps } from "../../interfaces/modifyUser.interface";
 import { refreshTokenProp } from "../../interfaces/refreshToken.interface";
 import { registerUserProps } from "../../interfaces/registerUser.interface";
+import { resetPasswordProps } from "../../interfaces/resetPassword.interface";
 import httpService from "../httpService";
 
 const baseUrl = import.meta.env.VITE_BASE_DJANGO_API;
@@ -21,4 +22,8 @@ export const refreshLoginTokenApi = (payload: refreshTokenProp) => {
 
 export const modifyUserApi = (payload: modifyUserProps, id: number) => {
   return httpService.put(baseUrl + baseEndPoint + `modify/${id}/`, payload);
+};
+
+export const resetPasswordApi = (payload: resetPasswordProps) => {
+  return httpService.post(baseUrl + baseEndPoint + "reset-password/", payload);
 };

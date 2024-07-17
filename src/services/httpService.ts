@@ -1,7 +1,7 @@
 import axios from "axios";
 import { refreshLoginTokenApi } from "./api/authApi";
 import Cookies from "js-cookie";
-import { revokeUser } from "../utils/revokeUser";
+import toast from "react-hot-toast";
 
 let isRefreshTokenFetching = false;
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -30,44 +30,53 @@ axios.interceptors.response.use(
   },
   async function (error) {
     // FIXME should check if refreshTokoen scenario is completed
-    try {
-      const originalRequest = error.config;
-      const refreshToken = Cookies.get("refreshToken");
-      const status = error?.response?.status;
+    const originalRequest = error.config;
+    const refreshToken = Cookies.get("refreshToken");
+    const status = error?.response?.status;
 
-      if (status === 401 && !originalRequest._retry) {
-        originalRequest._retry = true;
-        if (!isRefreshTokenFetching) {
-          failedApis.push(originalRequest);
-          isRefreshTokenFetching = true;
+    switch (status) {
+      case 401: {
+        if (!originalRequest._retry) {
+          originalRequest._retry = true;
+          if (!isRefreshTokenFetching) {
+            failedApis.push(originalRequest);
+            isRefreshTokenFetching = true;
 
-          const response = await refreshLoginTokenApi({
-            refresh: refreshToken,
-          });
-          if (response.status !== 200) {
-            throw response;
-          }
-          if (response.data) {
-            const { access } = response.data;
-            Cookies.set("accessToken", access);
-
-            if (failedApis.length > 0) {
-              // eslint-disable-next-line @typescript-eslint/no-explicit-any
-              const failedApiCalls = failedApis.map((api: any) => axios(api));
-              await Promise.all(failedApiCalls);
-              isRefreshTokenFetching = false;
-              failedApis = [];
+            const response = await refreshLoginTokenApi({
+              refresh: refreshToken,
+            });
+            if (response.status !== 200) {
+              throw response;
             }
+            if (response.data) {
+              const { access } = response.data;
+              Cookies.set("accessToken", access);
+
+              if (failedApis.length > 0) {
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                const failedApiCalls = failedApis.map((api: any) => axios(api));
+                await Promise.all(failedApiCalls);
+                isRefreshTokenFetching = false;
+                failedApis = [];
+              }
+            }
+          } else {
+            failedApis.push(originalRequest);
           }
-        } else {
-          failedApis.push(originalRequest);
         }
+        break;
       }
-      return Promise.reject(error);
-    } catch (err) {
-      revokeUser();
-      window.location.href = "/";
+      case 400: {
+        const errorMessages: string[][] = Object.values(error.response.data);
+        errorMessages.forEach((item: string[]) =>
+          item.forEach((message: string) => {
+            toast.error(message);
+          })
+        );
+        break;
+      }
     }
+    return Promise.reject(error);
   }
 );
 
