@@ -9,7 +9,6 @@ import {
 import { registerUserProps } from "../../interfaces/registerUser.interface";
 import { loginUserProps } from "../../interfaces/loginUser.interface";
 import { refreshTokenProp } from "../../interfaces/refreshToken.interface";
-import Cookies from "js-cookie";
 import { useNavigate } from "@tanstack/react-router";
 import { modifyUserProps } from "../../interfaces/modifyUser.interface";
 import { resetPasswordProps } from "../../interfaces/resetPassword.interface";
