@@ -20,8 +20,8 @@ export default function DashboardSidebar() {
           <Link
             className={`flex transition-all duration-250 p-2 rounded-lg cursor-pointer ${
               window.location.pathname === item.route
-                ? "bg-red-45/80"
-                : "hover:bg-black-12"
+                ? "bg-gray-60 dark:bg-red-45/80"
+                : "hover:bg-gray-85 dark:hover:bg-black-12"
             }`}
             key={index}
             to={item.route}
