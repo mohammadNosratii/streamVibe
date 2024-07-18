@@ -24,7 +24,16 @@ const LoginLazyImport = createFileRoute('/login')()
 const ForgetPasswordLazyImport = createFileRoute('/forget-password')()
 const IndexLazyImport = createFileRoute('/')()
 const MoviesIndexLazyImport = createFileRoute('/movies/')()
+const DashboardIndexLazyImport = createFileRoute('/dashboard/')()
 const MoviesMovieIdLazyImport = createFileRoute('/movies/$movieId')()
+const DashboardWalletLazyImport = createFileRoute('/dashboard/wallet')()
+const DashboardTicketsLazyImport = createFileRoute('/dashboard/tickets')()
+const DashboardSubscriptionLazyImport = createFileRoute(
+  '/dashboard/subscription',
+)()
+const DashboardPaymentsLazyImport = createFileRoute('/dashboard/payments')()
+const DashboardEditInfoLazyImport = createFileRoute('/dashboard/editInfo')()
+const DashboardCommentsLazyImport = createFileRoute('/dashboard/comments')()
 
 // Create/Update Routes
 
@@ -70,11 +79,60 @@ const MoviesIndexLazyRoute = MoviesIndexLazyImport.update({
   getParentRoute: () => rootRoute,
 } as any).lazy(() => import('./routes/movies/index.lazy').then((d) => d.Route))
 
+const DashboardIndexLazyRoute = DashboardIndexLazyImport.update({
+  path: '/dashboard/',
+  getParentRoute: () => rootRoute,
+} as any).lazy(() =>
+  import('./routes/dashboard/index.lazy').then((d) => d.Route),
+)
+
 const MoviesMovieIdLazyRoute = MoviesMovieIdLazyImport.update({
   path: '/movies/$movieId',
   getParentRoute: () => rootRoute,
 } as any).lazy(() =>
   import('./routes/movies/$movieId.lazy').then((d) => d.Route),
+)
+
+const DashboardWalletLazyRoute = DashboardWalletLazyImport.update({
+  path: '/dashboard/wallet',
+  getParentRoute: () => rootRoute,
+} as any).lazy(() =>
+  import('./routes/dashboard/wallet.lazy').then((d) => d.Route),
+)
+
+const DashboardTicketsLazyRoute = DashboardTicketsLazyImport.update({
+  path: '/dashboard/tickets',
+  getParentRoute: () => rootRoute,
+} as any).lazy(() =>
+  import('./routes/dashboard/tickets.lazy').then((d) => d.Route),
+)
+
+const DashboardSubscriptionLazyRoute = DashboardSubscriptionLazyImport.update({
+  path: '/dashboard/subscription',
+  getParentRoute: () => rootRoute,
+} as any).lazy(() =>
+  import('./routes/dashboard/subscription.lazy').then((d) => d.Route),
+)
+
+const DashboardPaymentsLazyRoute = DashboardPaymentsLazyImport.update({
+  path: '/dashboard/payments',
+  getParentRoute: () => rootRoute,
+} as any).lazy(() =>
+  import('./routes/dashboard/payments.lazy').then((d) => d.Route),
+)
+
+const DashboardEditInfoLazyRoute = DashboardEditInfoLazyImport.update({
+  path: '/dashboard/editInfo',
+  getParentRoute: () => rootRoute,
+} as any).lazy(() =>
+  import('./routes/dashboard/editInfo.lazy').then((d) => d.Route),
+)
+
+const DashboardCommentsLazyRoute = DashboardCommentsLazyImport.update({
+  path: '/dashboard/comments',
+  getParentRoute: () => rootRoute,
+} as any).lazy(() =>
+  import('./routes/dashboard/comments.lazy').then((d) => d.Route),
 )
 
 // Populate the FileRoutesByPath interface
@@ -130,11 +188,60 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SupportLazyImport
       parentRoute: typeof rootRoute
     }
+    '/dashboard/comments': {
+      id: '/dashboard/comments'
+      path: '/dashboard/comments'
+      fullPath: '/dashboard/comments'
+      preLoaderRoute: typeof DashboardCommentsLazyImport
+      parentRoute: typeof rootRoute
+    }
+    '/dashboard/editInfo': {
+      id: '/dashboard/editInfo'
+      path: '/dashboard/editInfo'
+      fullPath: '/dashboard/editInfo'
+      preLoaderRoute: typeof DashboardEditInfoLazyImport
+      parentRoute: typeof rootRoute
+    }
+    '/dashboard/payments': {
+      id: '/dashboard/payments'
+      path: '/dashboard/payments'
+      fullPath: '/dashboard/payments'
+      preLoaderRoute: typeof DashboardPaymentsLazyImport
+      parentRoute: typeof rootRoute
+    }
+    '/dashboard/subscription': {
+      id: '/dashboard/subscription'
+      path: '/dashboard/subscription'
+      fullPath: '/dashboard/subscription'
+      preLoaderRoute: typeof DashboardSubscriptionLazyImport
+      parentRoute: typeof rootRoute
+    }
+    '/dashboard/tickets': {
+      id: '/dashboard/tickets'
+      path: '/dashboard/tickets'
+      fullPath: '/dashboard/tickets'
+      preLoaderRoute: typeof DashboardTicketsLazyImport
+      parentRoute: typeof rootRoute
+    }
+    '/dashboard/wallet': {
+      id: '/dashboard/wallet'
+      path: '/dashboard/wallet'
+      fullPath: '/dashboard/wallet'
+      preLoaderRoute: typeof DashboardWalletLazyImport
+      parentRoute: typeof rootRoute
+    }
     '/movies/$movieId': {
       id: '/movies/$movieId'
       path: '/movies/$movieId'
       fullPath: '/movies/$movieId'
       preLoaderRoute: typeof MoviesMovieIdLazyImport
+      parentRoute: typeof rootRoute
+    }
+    '/dashboard/': {
+      id: '/dashboard/'
+      path: '/dashboard/'
+      fullPath: '/dashboard/'
+      preLoaderRoute: typeof DashboardIndexLazyImport
       parentRoute: typeof rootRoute
     }
     '/movies/': {
@@ -157,7 +264,14 @@ export const routeTree = rootRoute.addChildren({
   ShowsLazyRoute,
   SubscriptionLazyRoute,
   SupportLazyRoute,
+  DashboardCommentsLazyRoute,
+  DashboardEditInfoLazyRoute,
+  DashboardPaymentsLazyRoute,
+  DashboardSubscriptionLazyRoute,
+  DashboardTicketsLazyRoute,
+  DashboardWalletLazyRoute,
   MoviesMovieIdLazyRoute,
+  DashboardIndexLazyRoute,
   MoviesIndexLazyRoute,
 })
 
