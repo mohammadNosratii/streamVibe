@@ -6,12 +6,13 @@ import joker from "../../../assets/images/joker.webp";
 import roadHouse from "../../../assets/images/road-house.webp";
 import granTurismo from "../../../assets/images/granTurismo.webp";
 import { userSession } from "../../../utils/userSession";
+import { Link } from "@tanstack/react-router";
 
 const UserPopOverContent = () => {
   const signoutUserHandler = () => {
-    userSession(false)
-    window.location.reload()
-  }
+    userSession(false);
+    window.location.reload();
+  };
   return (
     <div className="w-48">
       <User
@@ -27,19 +28,16 @@ const UserPopOverContent = () => {
       <Divider className="my-2" />
       <ul className="w-full child:transition-all child:duration-200 child-hover:bg-mainLight dark:child-hover:bg-black-30 child:p-2 child:rounded-lg child:cursor-pointer">
         <li>
-          <a href="">Subscription</a>
+          <Link to="/dashboard/">Profile</Link>
         </li>
         <li>
-          <a href="">Wallet</a>
+          <Link to="/dashboard/subscription">Subscription</Link>
         </li>
         <li>
-          <a href="">Ticket</a>
+          <Link to="/dashboard/wallet">Wallet</Link>
         </li>
         <li>
-          <a href="">Favorite list</a>
-        </li>
-        <li>
-          <a href="">Edit Profile</a>
+          <Link to="/dashboard/tickets">Ticket</Link>
         </li>
       </ul>
       <Divider className="my-2" />
