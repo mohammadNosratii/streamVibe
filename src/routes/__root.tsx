@@ -2,7 +2,7 @@ import { createRootRoute, Outlet } from "@tanstack/react-router";
 import AuthLayout from "../Layouts/AuthLayout";
 import DefaultLayout from "../Layouts/DefaultLayout";
 
-const authRoutes: string[] = ["/login", "/register"]
+const authRoutes: string[] = ["/login", "/register", "/forget-password"]
 
 export const Route = createRootRoute({
   component: () => {

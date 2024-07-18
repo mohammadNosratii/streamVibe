@@ -43,11 +43,10 @@ export default function NavbarHorizontal({
 
   return (
     <NextUINavbar
-      className={`z-50 py-3 transition-all fixed bg-gradient-to-b from-black-6 to-black-6/0 ${
-        isNavbarSticky
-          ? `backdrop-blur-sm bg-black-6/20 backdrop-saturate-[1.5]`
-          : `backdrop-blur-none bg-transparent backdrop-saturate-[1]`
-      }`}
+      className={`z-50 py-3 transition-all fixed bg-gradient-to-b from-black-6 to-black-6/0 ${isNavbarSticky
+        ? `backdrop-blur-sm bg-black-6/20 backdrop-saturate-[1.5]`
+        : `backdrop-blur-none bg-transparent backdrop-saturate-[1]`
+        }`}
       classNames={{
         wrapper: ["max-w-[90%]"],
       }}
@@ -74,11 +73,10 @@ export default function NavbarHorizontal({
           >
             <Link
               to={item.route}
-              className={`${
-                item.route === window.location.pathname
-                  ? "text-black dark:text-white font-manropeMedium"
-                  : "text-gray-75 font-manropeRegular"
-              } text-sm lg:text-base`}
+              className={`${item.route === window.location.pathname
+                ? "text-black dark:text-white font-manropeMedium"
+                : "text-gray-75 font-manropeRegular"
+                } text-sm lg:text-base`}
             >
               {item.title}
             </Link>
@@ -113,13 +111,13 @@ export default function NavbarHorizontal({
               </span>
             </PopOver>
           ) : (
-            <div className="py-[11px] px-[11px] md:py-3 md:px-3 border-2 dark:border-black-15 rounded-full bg-gray-85 dark:bg-black-10 cursor-pointer">
-              <MainTooltip content="Login">
-                <Link to="/login">
+            <MainTooltip content="Login">
+              <Link to="/login">
+                <div className="py-[11px] px-[11px] md:py-3 md:px-3 border-2 dark:border-black-15 rounded-full bg-gray-85 dark:bg-black-10 cursor-pointer">
                   <LoginIcon />
-                </Link>
-              </MainTooltip>
-            </div>
+                </div>
+              </Link>
+            </MainTooltip>
           )}
         </NavbarItem>
       </NavbarContent>
