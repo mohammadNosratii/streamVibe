@@ -31,7 +31,7 @@ export default function EditAvatarContent({ src, onClose, setPreview }: { src: s
                     ref={cropRef}
                     image={src}
                     className="!w-full !h-full rounded-md"
-                    border={0}
+                    border={1}
                     borderRadius={150}
                     scale={zoomLevel / 10}
                 />
@@ -51,7 +51,7 @@ export default function EditAvatarContent({ src, onClose, setPreview }: { src: s
                 )} />
                 <div className="grid grid-cols-2 gap-4">
                     <Button onClick={onClose}>Discard</Button>
-                    <Button className="bg-red-45" onClick={handleSave}>Update Avatar</Button>
+                    <Button className="bg-red-45 text-white" onClick={handleSave}>Update Avatar</Button>
                 </div>
             </div >
         ), [control, handleSave, onClose, src, zoomLevel])

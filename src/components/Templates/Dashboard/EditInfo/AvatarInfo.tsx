@@ -1,4 +1,4 @@
-import { useMemo, useRef, useState } from 'react';
+import { useCallback, useMemo, useRef, useState } from 'react';
 import { Button, Image, useDisclosure } from '@nextui-org/react';
 import defaultUserImage from '../../../../assets/images/defaultUser.jpg';
 import TrashIcon from '../../../../assets/icons/Trash';
@@ -7,6 +7,7 @@ import UploadIcon from '../../../../assets/icons/Upload';
 import { Controller, SubmitHandler, useForm } from 'react-hook-form';
 import MainModal from '../../../Modules/Modal/MainModal';
 import EditAvatarContent from '../../../Modules/Modal/Content/EditAvatarContent';
+import toast from 'react-hot-toast';
 
 interface avatarInfo {
     avatar: string
@@ -19,12 +20,27 @@ export default function AvatarInfo() {
 
     const { isOpen, onOpenChange, onOpen, onClose } = useDisclosure()
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const fileInputRef = useRef<any>(null);
+    const fileInputRef = useRef<HTMLInputElement | null>(null);
 
     const handleFileInputClick = () => {
-        fileInputRef.current.click();
+        if (fileInputRef.current) {
+            fileInputRef.current.click();
+        }
     };
+
+    const handleFileChange = useCallback((e: React.ChangeEvent<HTMLInputElement>, onChange: (value: File) => void) => {
+        const file: File | undefined = e.target.files?.[0];
+        if (file) {
+            const fileSizeInMB = file.size / 1024 / 1024;
+            const maxSizeInMB = 10; // 10MB size limit
+            if (fileSizeInMB > maxSizeInMB) {
+                toast.error("Selected File's size must be under 10MB˝")
+                return;
+            }
+            onChange(file);
+            onOpen();
+        }
+    }, [onOpen])
 
     const submitFormHandler: SubmitHandler<avatarInfo> = (data) => {
         console.log(data);
@@ -47,11 +63,8 @@ export default function AvatarInfo() {
                                 ref={fileInputRef}
                                 type='file'
                                 className='hidden'
-                                // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                                onChange={(e: any) => {
-                                    onChange(e.target.files[0])
-                                    onOpen()
-                                }}
+                                accept='.jpg, .png, .jpeg'
+                                onChange={(e) => handleFileChange(e, onChange)}
                             />
                         )} />
                         <Button startContent={<UploadIcon />} variant='ghost' radius='full' onClick={handleFileInputClick}>
@@ -60,7 +73,7 @@ export default function AvatarInfo() {
                         <p className='text-xs'>At least 256 * 256px PNG or JPG file.</p>
                     </form>
                 </>
-            ), [control, handleSubmit, onOpen, preview])}
+            ), [control, handleFileChange, handleSubmit, preview])}
             <MainModal isOpen={isOpen} onOpenChange={onOpenChange} body={<EditAvatarContent src={avatar} onClose={onClose} setPreview={setPreview} />} />
         </div>
     );
