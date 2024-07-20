@@ -12,7 +12,7 @@ export const dashboardSidebarItem: dashboardSidebarItemProps[] = [
   {
     title: "Subscription",
     Icon: SubscriptionIcon,
-    route: "/Dashboard/subscription",
+    route: "/dashboard/subscription",
   },
   { title: "Wallet", Icon: WalletIcon, route: "/dashboard/wallet" },
   { title: "Tickets", Icon: TicketIcon, route: "/dashboard/tickets" },
