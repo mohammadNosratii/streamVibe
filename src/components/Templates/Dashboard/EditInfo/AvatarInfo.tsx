@@ -1,5 +1,5 @@
 import { useCallback, useMemo, useRef, useState } from 'react';
-import { Button, Image, useDisclosure } from '@nextui-org/react';
+import { Avatar, Button, useDisclosure } from '@nextui-org/react';
 import defaultUserImage from '../../../../assets/images/defaultUser.jpg';
 import TrashIcon from '../../../../assets/icons/Trash';
 import MainTooltip from '../../../Modules/Tooltip/MainTooltip';
@@ -29,6 +29,8 @@ export default function AvatarInfo() {
     };
 
     const handleFileChange = useCallback((e: React.ChangeEvent<HTMLInputElement>, onChange: (value: File) => void) => {
+        console.log("trigger");
+
         const file: File | undefined = e.target.files?.[0];
         if (file) {
             const fileSizeInMB = file.size / 1024 / 1024;
@@ -40,6 +42,9 @@ export default function AvatarInfo() {
             onChange(file);
             onOpen();
         }
+        if (fileInputRef.current) {
+            fileInputRef.current.value = '';
+        }
     }, [onOpen])
 
     const submitFormHandler: SubmitHandler<avatarInfo> = (data) => {
@@ -50,7 +55,7 @@ export default function AvatarInfo() {
             {useMemo(() => (
                 <>
                     <div className='relative w-max'>
-                        <Image src={preview} alt='' width={100} height={100} radius='full' />
+                        <Avatar src={preview} isBordered className='w-[100px] h-[100px]' />
                         <MainTooltip content='Remove Avatar'>
                             <Button isIconOnly radius='full' size='sm' color='danger' className='absolute right-0 bottom-0 z-10' onClick={() => setPreview(defaultUserImage)}>
                                 <TrashIcon />
