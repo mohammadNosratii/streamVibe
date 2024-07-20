@@ -26,19 +26,25 @@ const UserPopOverContent = () => {
         }}
       />
       <Divider className="my-2" />
-      <ul className="w-full child:transition-all child:duration-200 child-hover:bg-mainLight dark:child-hover:bg-black-30 child:p-2 child:rounded-lg child:cursor-pointer">
-        <li>
-          <Link to="/dashboard/">Profile</Link>
-        </li>
-        <li>
-          <Link to="/dashboard/subscription">Subscription</Link>
-        </li>
-        <li>
-          <Link to="/dashboard/wallet">Wallet</Link>
-        </li>
-        <li>
-          <Link to="/dashboard/tickets">Ticket</Link>
-        </li>
+      <ul className="w-full child:transition-all child:duration-200 child:block child-hover:bg-mainLight dark:child-hover:bg-black-30 child:p-2 child:rounded-lg child:cursor-pointer">
+        <Link to="/dashboard">
+          <li>Profile</li>
+        </Link>
+        <Link to="/dashboard/subscription">
+          <li>
+            Subscription
+          </li>
+        </Link>
+        <Link to="/dashboard/wallet">
+          <li>
+            Wallet
+          </li>
+        </Link>
+        <Link to="/dashboard/tickets">
+          <li>
+            Ticket
+          </li>
+        </Link>
       </ul>
       <Divider className="my-2" />
       <div
