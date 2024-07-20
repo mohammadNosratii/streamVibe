@@ -5,7 +5,7 @@ import { Link } from "@tanstack/react-router";
 
 export default function DashboardSidebar() {
   return (
-    <div className="dark:bg-black-6 border-2 dark:border-black-15 rounded-xl py-8 px-5 space-y-8 w-max">
+    <div className="bg-white dark:bg-black-6 border-2 dark:border-black-15 rounded-xl py-8 px-5 space-y-8 w-max">
       <div className="flex flex-col items-center gap-3 px-5">
         <Avatar size="lg" isBordered src={dune} />
         <div className="text-center">
@@ -20,7 +20,7 @@ export default function DashboardSidebar() {
           <Link
             className={`flex transition-all duration-250 p-2 rounded-lg cursor-pointer ${
               window.location.pathname === item.route
-                ? "bg-gray-60 dark:bg-red-45/80"
+                ? "bg-red-45 dark:bg-red-45/80 text-white"
                 : "hover:bg-gray-85 dark:hover:bg-black-12"
             }`}
             key={index}
