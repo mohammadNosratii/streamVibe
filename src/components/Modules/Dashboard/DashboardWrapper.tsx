@@ -7,7 +7,7 @@ export default function DashboardWrapper({
   children: ReactNode;
 }) {
   return (
-    <div className="container flex pt-24 pb-10">
+    <div className="container flex pt-24 pb-10 gap-10">
       <DashboardSidebar />
       {children}
     </div>
