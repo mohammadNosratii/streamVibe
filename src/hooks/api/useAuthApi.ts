@@ -36,7 +36,7 @@ export const useLoginApi = () => {
     onSuccess: (res) => {
       userSession(true, res.access, res.refresh);
       toast.success("Logged in successfully");
-      
+      // @ts-expect-error redirect is not a part of search structure as default
       navigate({ to: search.redirect || "/" });
     },
   });
