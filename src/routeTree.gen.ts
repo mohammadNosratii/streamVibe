@@ -13,7 +13,10 @@ import { createFileRoute } from '@tanstack/react-router'
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
+import { Route as UnAuthImport } from './routes/_unAuth'
 import { Route as DashboardAuthImport } from './routes/dashboard/_auth'
+import { Route as UnAuthRegisterImport } from './routes/_unAuth.register'
+import { Route as UnAuthLoginImport } from './routes/_unAuth.login'
 import { Route as DashboardAuthIndexImport } from './routes/dashboard/_auth.index'
 import { Route as DashboardAuthWalletImport } from './routes/dashboard/_auth.wallet'
 import { Route as DashboardAuthTicketsImport } from './routes/dashboard/_auth.tickets'
@@ -28,8 +31,6 @@ const DashboardImport = createFileRoute('/dashboard')()
 const SupportLazyImport = createFileRoute('/support')()
 const SubscriptionLazyImport = createFileRoute('/subscription')()
 const ShowsLazyImport = createFileRoute('/shows')()
-const RegisterLazyImport = createFileRoute('/register')()
-const LoginLazyImport = createFileRoute('/login')()
 const ForgetPasswordLazyImport = createFileRoute('/forget-password')()
 const IndexLazyImport = createFileRoute('/')()
 const MoviesIndexLazyImport = createFileRoute('/movies/')()
@@ -57,22 +58,17 @@ const ShowsLazyRoute = ShowsLazyImport.update({
   getParentRoute: () => rootRoute,
 } as any).lazy(() => import('./routes/shows.lazy').then((d) => d.Route))
 
-const RegisterLazyRoute = RegisterLazyImport.update({
-  path: '/register',
-  getParentRoute: () => rootRoute,
-} as any).lazy(() => import('./routes/register.lazy').then((d) => d.Route))
-
-const LoginLazyRoute = LoginLazyImport.update({
-  path: '/login',
-  getParentRoute: () => rootRoute,
-} as any).lazy(() => import('./routes/login.lazy').then((d) => d.Route))
-
 const ForgetPasswordLazyRoute = ForgetPasswordLazyImport.update({
   path: '/forget-password',
   getParentRoute: () => rootRoute,
 } as any).lazy(() =>
   import('./routes/forget-password.lazy').then((d) => d.Route),
 )
+
+const UnAuthRoute = UnAuthImport.update({
+  id: '/_unAuth',
+  getParentRoute: () => rootRoute,
+} as any)
 
 const IndexLazyRoute = IndexLazyImport.update({
   path: '/',
@@ -94,6 +90,16 @@ const MoviesMovieIdLazyRoute = MoviesMovieIdLazyImport.update({
 const DashboardAuthRoute = DashboardAuthImport.update({
   id: '/_auth',
   getParentRoute: () => DashboardRoute,
+} as any)
+
+const UnAuthRegisterRoute = UnAuthRegisterImport.update({
+  path: '/register',
+  getParentRoute: () => UnAuthRoute,
+} as any)
+
+const UnAuthLoginRoute = UnAuthLoginImport.update({
+  path: '/login',
+  getParentRoute: () => UnAuthRoute,
 } as any)
 
 const DashboardAuthIndexRoute = DashboardAuthIndexImport.update({
@@ -142,25 +148,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexLazyImport
       parentRoute: typeof rootRoute
     }
+    '/_unAuth': {
+      id: '/_unAuth'
+      path: ''
+      fullPath: ''
+      preLoaderRoute: typeof UnAuthImport
+      parentRoute: typeof rootRoute
+    }
     '/forget-password': {
       id: '/forget-password'
       path: '/forget-password'
       fullPath: '/forget-password'
       preLoaderRoute: typeof ForgetPasswordLazyImport
-      parentRoute: typeof rootRoute
-    }
-    '/login': {
-      id: '/login'
-      path: '/login'
-      fullPath: '/login'
-      preLoaderRoute: typeof LoginLazyImport
-      parentRoute: typeof rootRoute
-    }
-    '/register': {
-      id: '/register'
-      path: '/register'
-      fullPath: '/register'
-      preLoaderRoute: typeof RegisterLazyImport
       parentRoute: typeof rootRoute
     }
     '/shows': {
@@ -183,6 +182,20 @@ declare module '@tanstack/react-router' {
       fullPath: '/support'
       preLoaderRoute: typeof SupportLazyImport
       parentRoute: typeof rootRoute
+    }
+    '/_unAuth/login': {
+      id: '/_unAuth/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof UnAuthLoginImport
+      parentRoute: typeof UnAuthImport
+    }
+    '/_unAuth/register': {
+      id: '/_unAuth/register'
+      path: '/register'
+      fullPath: '/register'
+      preLoaderRoute: typeof UnAuthRegisterImport
+      parentRoute: typeof UnAuthImport
     }
     '/dashboard': {
       id: '/dashboard'
@@ -268,9 +281,11 @@ declare module '@tanstack/react-router' {
 
 export const routeTree = rootRoute.addChildren({
   IndexLazyRoute,
+  UnAuthRoute: UnAuthRoute.addChildren({
+    UnAuthLoginRoute,
+    UnAuthRegisterRoute,
+  }),
   ForgetPasswordLazyRoute,
-  LoginLazyRoute,
-  RegisterLazyRoute,
   ShowsLazyRoute,
   SubscriptionLazyRoute,
   SupportLazyRoute,

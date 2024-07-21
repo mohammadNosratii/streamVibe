@@ -13,7 +13,11 @@ export default function LoginForm() {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<loginUserProps>();
+  } = useForm<loginUserProps>({
+    defaultValues: {
+      rememberMe: true
+    }
+  });
 
   const { mutate, isPending } = useLoginApi()
 
@@ -29,7 +33,7 @@ export default function LoginForm() {
   return (
     <form
       onSubmit={handleSubmit(submitLoginFormHandler)}
-      className="flex flex-col justify-center gap-4 mt-12 w-full"
+      className="flex flex-col justify-center gap-4 mt-8 w-full"
     >
       <Input
         classNames={{

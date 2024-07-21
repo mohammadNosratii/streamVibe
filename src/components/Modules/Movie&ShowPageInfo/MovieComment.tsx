@@ -4,13 +4,19 @@ import MovieCommentBox from "./MovieCommentBox";
 import { allMoviesData } from "../../../interfaces/allMoviesData.interface";
 import AddReviewForm from "./AddReviewForm";
 import { useMemo, useState } from "react";
+import { isAuthenticated } from "../../../utils/isAuthenticated";
+import { useLocation, useNavigate } from "@tanstack/react-router";
 
 export default function MovieComment({
   movieData,
 }: {
   movieData: allMoviesData;
 }) {
+  const navigate = useNavigate()
+  const { pathname } = useLocation()
+
   const [addReviewTrigger, setAddReviewTrigger] = useState(false);
+  const isUserAuthorized = isAuthenticated()
 
   const triggerAddReviewHandler = () => {
     setAddReviewTrigger((prev) => !prev);
@@ -30,14 +36,19 @@ export default function MovieComment({
         </Button>
       </div>
       <div
-        className={`transition-all duration-250 ${
-          addReviewTrigger ? "h-[260px]" : "h-[0px]"
-        } overflow-hidden !mt-0`}
+        className={`transition-all duration-250 bg-mainLight dark:bg-black-6 rounded-lg ${addReviewTrigger ? "h-[260px] p-4" : "h-[0px]"
+          } overflow-hidden !mt-4`}
       >
-        <AddReviewForm
-          discardReview={triggerAddReviewHandler}
-          isReply={false}
-        />
+        {isUserAuthorized ?
+          <AddReviewForm
+            discardReview={triggerAddReviewHandler}
+            isReply={false}
+          /> :
+          <div className="h-full flex justify-center items-center flex-col gap-4 font-manropeMedium">
+            <p>To Reply Comments Should Login First</p>
+            <Button className="text-white bg-red-45 capitalize" onClick={() => navigate({ to: "/login", search: { redirect: pathname } })}>Login to your account</Button>
+          </div>
+        }
       </div>
       {useMemo(
         () =>
