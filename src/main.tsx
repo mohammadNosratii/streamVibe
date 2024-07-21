@@ -18,9 +18,8 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <QueryClientProvider client={queryClient}>
           <App />
           <Toaster
-            position="top-left"
             toastOptions={{
-              className: "font-manropeRegular !bg-mailLight dark:!bg-mainDark !text-black dark:!text-white"
+              className: "font-manropeMedium !bg-mailLight dark:!bg-mainDark !text-black dark:!text-white"
             }}
             reverseOrder={true} />
         </QueryClientProvider>

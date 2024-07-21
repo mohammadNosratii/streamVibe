@@ -1,10 +1,12 @@
-import { Avatar } from "@nextui-org/react";
+import { Avatar, Button } from "@nextui-org/react";
 import StarRating from "../StarRating/StarRating";
 import { movieComment } from "../../../interfaces/movieComment.interface";
 import ReplyIcon from "../../../assets/icons/Reply";
 import MainTooltip from "../Tooltip/MainTooltip";
 import { useMemo, useState } from "react";
 import AddReviewForm from "./AddReviewForm";
+import { isAuthenticated } from "../../../utils/isAuthenticated";
+import { useLocation, useNavigate } from "@tanstack/react-router";
 
 export default function MovieCommentBox({
   name,
@@ -13,6 +15,11 @@ export default function MovieCommentBox({
   commentText,
 }: movieComment) {
   const [addReplyTrigger, setAddReplyTrigger] = useState(false)
+
+  const { pathname } = useLocation()
+  const navigate = useNavigate()
+
+  const isUserAuthorized = isAuthenticated()
 
   const triggerAddReplyHandler = () => {
     setAddReplyTrigger((prev) => !prev)
@@ -41,9 +48,17 @@ export default function MovieCommentBox({
           <p className="text-sm md:text-base text-gray-60">{commentText}</p>
         </>
       ), [name, profileImg, commentRate, commentText])}
-      <div className={`transition-all duration-250 ${addReplyTrigger ? "h-[300px] p-5" : "h-[0px]"} overflow-hidden bg-white dark:bg-black-10 rounded-xl`}>
-        <p className="font-manropeRegular mb-4 text-sm">Reply Comment</p>
-        <AddReviewForm discardReview={triggerAddReplyHandler} isReply={true} />
+      <div className={`transition-all duration-250 ${addReplyTrigger ? "h-[250px] p-5" : "h-[0px]"} overflow-hidden bg-white dark:bg-black-10 rounded-xl`}>
+        {isUserAuthorized ?
+          <>
+            <p className="font-manropeRegular mb-4 text-sm">Reply Comment</p>
+            <AddReviewForm discardReview={triggerAddReplyHandler} isReply={true} />
+          </> :
+          <div className="h-full flex justify-center items-center flex-col gap-4 font-manropeMedium">
+            <p>To Reply Comments Should Login First</p>
+            <Button className="text-white bg-red-45 capitalize" onClick={() => navigate({ to: "/login", search: { redirect: pathname } })}>Login to your account</Button>
+          </div>
+        }
       </div>
     </div>
   );

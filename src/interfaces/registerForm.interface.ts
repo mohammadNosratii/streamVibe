@@ -1,10 +1,9 @@
 interface registerFormProps {
-    // fullname: string
-    username: string
-    email: string
-    password: string
-    password2: string
-    // phone: number
+  username: string;
+  email: string;
+  password: string;
+  password2: string;
+  phone: string;
 }
 
-export type {registerFormProps}
+export type { registerFormProps };

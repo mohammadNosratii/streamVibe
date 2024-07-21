@@ -8,6 +8,8 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { registerFormProps } from "../../../interfaces/registerForm.interface";
 import { Link } from "@tanstack/react-router";
 import { useRegisterApi } from "../../../hooks/api/useAuthApi";
+import AutoCompletePhone from "../../Modules/AutoCompletePhone/AutoCompletePhone";
+import PhoneIcon from "../../../assets/icons/Phone";
 
 export default function Register() {
   const {
@@ -38,9 +40,10 @@ export default function Register() {
 
   return (
     <div className="w-full">
-      <h1 className="text-3xl md:text-5xl font-bold dark:text-white text-center">
+      <h1 className="text-3xl md:text-5xl font-manropeBold dark:text-white mb-4">
         Register
       </h1>
+      <p className="font-manropeMedium text-gray-60">Create a new account</p>
       <form
         onSubmit={handleSubmit(submitRegisterFormHandler)}
         className="flex flex-col gap-4 items-center mt-12 child:w-full"
@@ -76,7 +79,7 @@ export default function Register() {
           }}
           size="sm"
           type="email"
-          label="Email (optional)"
+          label="Email"
           {...register("email", {
             required: "Email could not be empty",
             pattern: {
@@ -85,6 +88,21 @@ export default function Register() {
             }
           })}
           endContent={<MailIcon />}
+        />
+        <Input
+          startContent={<AutoCompletePhone />}
+          endContent={<PhoneIcon />}
+          classNames={{
+            mainWrapper: ["bg-transparent outline-none rounded-2xl"],
+            inputWrapper: [
+              "bg-transparent border-1 dark:border-black-15 rounded-2xl h-full ps-0 pe-3",
+            ],
+            input: ["bg-transparent"],
+            innerWrapper: ["bg-transparent"],
+          }}
+          type="number"
+          placeholder="Phone Number"
+          {...register("phone")}
         />
         <Input
           classNames={{

@@ -1,5 +1,4 @@
 interface addCommentProps {
-  name: string;
   message: string;
   score?: number;
 }

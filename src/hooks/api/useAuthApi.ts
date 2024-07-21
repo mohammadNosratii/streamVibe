@@ -9,7 +9,7 @@ import {
 import { registerUserProps } from "../../interfaces/registerUser.interface";
 import { loginUserProps } from "../../interfaces/loginUser.interface";
 import { refreshTokenProp } from "../../interfaces/refreshToken.interface";
-import { useNavigate } from "@tanstack/react-router";
+import { useLocation, useNavigate } from "@tanstack/react-router";
 import { modifyUserProps } from "../../interfaces/modifyUser.interface";
 import { resetPasswordProps } from "../../interfaces/resetPassword.interface";
 import toast from "react-hot-toast";
@@ -28,6 +28,7 @@ export const useRegisterApi = () => {
 
 export const useLoginApi = () => {
   const navigate = useNavigate({ from: "/login" });
+  const { search } = useLocation();
 
   return useMutation({
     mutationFn: (payload: loginUserProps) =>
@@ -35,7 +36,8 @@ export const useLoginApi = () => {
     onSuccess: (res) => {
       userSession(true, res.access, res.refresh);
       toast.success("Logged in successfully");
-      navigate({ to: "/" });
+      
+      navigate({ to: search.redirect || "/" });
     },
   });
 };
