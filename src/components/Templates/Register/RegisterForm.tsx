@@ -8,8 +8,6 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { registerFormProps } from "../../../interfaces/registerForm.interface";
 import { Link } from "@tanstack/react-router";
 import { useRegisterApi } from "../../../hooks/api/useAuthApi";
-import AutoCompletePhone from "../../Modules/AutoCompletePhone/AutoCompletePhone";
-import PhoneIcon from "../../../assets/icons/Phone";
 
 export default function Register() {
   const {
@@ -89,7 +87,7 @@ export default function Register() {
           })}
           endContent={<MailIcon />}
         />
-        <Input
+        {/* <Input
           startContent={<AutoCompletePhone />}
           endContent={<PhoneIcon />}
           classNames={{
@@ -103,7 +101,7 @@ export default function Register() {
           type="number"
           placeholder="Phone Number"
           {...register("phone")}
-        />
+        /> */}
         <Input
           classNames={{
             mainWrapper: ["bg-transparent outline-none rounded-2xl"],
@@ -116,7 +114,7 @@ export default function Register() {
           size="sm"
           type={`${isPasswordVisible ? "text" : "password"}`}
           label="Password"
-          {...register("password", {
+          {...register("password1", {
             required: "Password could not be empty",
             minLength: { value: 8, message: "At Least Enter 8 Character" },
           })}
@@ -125,8 +123,8 @@ export default function Register() {
               {isPasswordVisible ? <EyeSlashIcon /> : <EyeIcon />}
             </div>
           }
-          errorMessage={errors.password?.message}
-          isInvalid={Boolean(errors.password)}
+          errorMessage={errors.password1?.message}
+          isInvalid={Boolean(errors.password1)}
         />
         <Input
           classNames={{
@@ -144,7 +142,7 @@ export default function Register() {
             required: "Confirm Password could not be empty",
             minLength: { value: 8, message: "At Least Enter 8 Character" },
             validate: value =>
-              value === getValues("password") || "Passwords do not match"
+              value === getValues("password1") || "Passwords do not match"
           })}
           endContent={
             <div className="cursor-pointer" onClick={togglePassword2}>
