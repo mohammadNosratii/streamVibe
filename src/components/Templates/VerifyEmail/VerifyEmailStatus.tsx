@@ -1,7 +1,8 @@
 import { Button, Spinner } from "@nextui-org/react";
 import { useResendEmailApi, useVerifyEmailApi } from "../../../hooks/api/useAuthApi";
-import { useLocation, useNavigate } from "@tanstack/react-router";
+import { Link, useLocation, useNavigate } from "@tanstack/react-router";
 import { useEffect } from "react";
+import ArrowLeftIcon from "../../../assets/icons/ArrowLeft";
 
 export default function VerifyEmailStatus() {
     const navigate = useNavigate()
@@ -23,6 +24,7 @@ export default function VerifyEmailStatus() {
     return (
         <>
             {!key ? <div className="space-y-8">
+                <Link to='/register' className='text-sm font-manropeMedium text-gray-60 flex items-center gap-1.5 hover:text-black-6 dark:hover:text-white transition-colors'><ArrowLeftIcon /><span>Back to Register</span></Link>
                 <h1 className="text-3xl md:text-5xl font-manropeBold dark:text-white">Verify Email</h1>
                 <p className="text-gray-60 font-manropeMedium">Verification Link has been sent to your email. Please Verify your email to proceed your registeration </p>
                 <Button className="w-full dark:bg-black-10" isLoading={resendEmailPending} onClick={resendEmailHandler}>Resend Email</Button>
@@ -36,7 +38,7 @@ export default function VerifyEmailStatus() {
                     <div className="space-y-4">
                         <h1 className="font-manropeBold text-3xl dark:text-white">Congrats🎉</h1>
                         <p className="font-manropeMedium text-gray-60">Your Email has been verified. The registeration is completed</p>
-                        <Button className="dark:bg-black-10 w-full" onClick={() => navigate({ to: "/dashboard" })}>Go To Your Profile</Button>
+                        <Button className="dark:bg-black-10 w-full" onClick={() => navigate({ to: "/login" })}>Login To Your Account</Button>
                     </div> :
                     <div className="space-y-4">
                         <h1 className="font-manropeBold text-3xl dark:text-white">Oops!</h1>

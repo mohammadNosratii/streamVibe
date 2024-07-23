@@ -35,6 +35,7 @@ export default function LoginForm() {
       onSubmit={handleSubmit(submitLoginFormHandler)}
       className="flex flex-col justify-center gap-4 mt-8 w-full"
     >
+      {/* TODO should add phonenumber to identifier */}
       <Input
         classNames={{
           mainWrapper: ["bg-transparent outline-noen rounded-2xl"],

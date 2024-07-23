@@ -1,6 +1,7 @@
 import { useMutation } from "@tanstack/react-query";
 import {
   loginApi,
+  logoutApi,
   modifyUserApi,
   refreshLoginTokenApi,
   registerApi,
@@ -86,6 +87,17 @@ export const useVerifyEmailApi = () => {
     onSuccess: (res) => {
       console.log("response =>", res);
       toast.success("Your Email has been verified.");
+    },
+  });
+};
+
+export const useLogoutApi = () => {
+  return useMutation({
+    mutationFn: () => logoutApi(),
+    onSuccess: () => {
+      toast.success("Logged out successfully");
+      userSession(false);
+      window.location.reload();
     },
   });
 };

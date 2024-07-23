@@ -1,17 +1,17 @@
-import { Avatar, Chip, Divider, User } from "@nextui-org/react";
+import { Avatar, Button, Chip, Divider, User } from "@nextui-org/react";
 import profile from "../../../assets/images/joker.webp";
 import SignOut from "../../../assets/icons/SignOut";
 import SearchForm from "../SearchInput/SearchForm";
 import joker from "../../../assets/images/joker.webp";
 import roadHouse from "../../../assets/images/road-house.webp";
 import granTurismo from "../../../assets/images/granTurismo.webp";
-import { userSession } from "../../../utils/userSession";
 import { Link } from "@tanstack/react-router";
+import { useLogoutApi } from "../../../hooks/api/useAuthApi";
 
 const UserPopOverContent = () => {
+  const { mutate, isPending } = useLogoutApi()
   const signoutUserHandler = () => {
-    userSession(false);
-    window.location.reload();
+    mutate()
   };
   return (
     <div className="w-48">
@@ -47,13 +47,14 @@ const UserPopOverContent = () => {
         </Link>
       </ul>
       <Divider className="my-2" />
-      <div
+      <Button
         onClick={signoutUserHandler}
-        className="flex items-center justify-between gap-2 hover:text-white hover:bg-red-45 translate-x-0 duration-200 w-full p-2 cursor-pointer rounded-lg"
+        isLoading={isPending}
+        className="flex items-center justify-between gap-2 bg-transparent hover:text-white hover:bg-red-45 translate-x-0 duration-200 w-full p-2 cursor-pointer rounded-lg"
       >
         <span>Sign out</span>
         <SignOut />
-      </div>
+      </Button>
     </div>
   );
 };
