@@ -30,10 +30,14 @@ export const resetPasswordApi = (payload: resetPasswordProps) => {
 
 export const resendEmailApi = (payload: { email: string }) => {
   return httpService.post(
-    baseUrl +
-      baseEndPoint +
-      `registration/resend-email
-`,
+    baseUrl + baseEndPoint + `registration/resend-email`,
+    payload
+  );
+};
+
+export const verifyEmailApi = (payload: { key: string }) => {
+  return httpService.post(
+    baseUrl + baseEndPoint + `registration/verify-email`,
     payload
   );
 };
