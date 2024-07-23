@@ -41,3 +41,7 @@ export const verifyEmailApi = (payload: { key: string }) => {
     payload
   );
 };
+
+export const logoutApi = () => {
+  return httpService.post(baseUrl + baseEndPoint + `logout/`);
+};
