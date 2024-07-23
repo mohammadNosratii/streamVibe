@@ -6,6 +6,7 @@ import {
   registerApi,
   resendEmailApi,
   resetPasswordApi,
+  verifyEmailApi,
 } from "../../services/api/authApi";
 import { registerUserProps } from "../../interfaces/registerUser.interface";
 import { loginUserProps } from "../../interfaces/loginUser.interface";
@@ -75,6 +76,16 @@ export const useResendEmailApi = () => {
     mutationFn: (payload: { email: string }) => resendEmailApi(payload),
     onSuccess: () => {
       toast.success("Verification Link has been sent");
+    },
+  });
+};
+
+export const useVerifyEmailApi = () => {
+  return useMutation({
+    mutationFn: (payload: { key: string }) => verifyEmailApi(payload),
+    onSuccess: (res) => {
+      console.log("response =>", res);
+      toast.success("Your Email has been verified.");
     },
   });
 };

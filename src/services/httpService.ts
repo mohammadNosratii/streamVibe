@@ -66,7 +66,7 @@ axios.interceptors.response.use(
         }
         break;
       }
-      case 400: {
+      default: {
         const errorMessages: string[][] = Object.values(error.response.data);
         errorMessages.forEach((item: string[]) =>
           item.forEach((message: string) => {
