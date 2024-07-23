@@ -4,6 +4,7 @@ import {
   modifyUserApi,
   refreshLoginTokenApi,
   registerApi,
+  resendEmailApi,
   resetPasswordApi,
 } from "../../services/api/authApi";
 import { registerUserProps } from "../../interfaces/registerUser.interface";
@@ -17,11 +18,19 @@ import { userSession } from "../../utils/userSession";
 
 export const useRegisterApi = () => {
   // TODO should update register scenario to what next if registeration is successfull
+  const navigate = useNavigate();
+  let email: string;
+
   return useMutation({
-    mutationFn: (payload: registerUserProps) =>
-      registerApi(payload).then((data) => data.data),
-    onSuccess: (res) => {
-      toast.success(res.message);
+    mutationFn: (payload: registerUserProps) => {
+      email = payload.email;
+      return registerApi(payload).then((data) => data.data);
+    },
+    onSuccess: () => {
+      toast.success("Successfull. Please Verify your email!");
+      navigate({
+        to: `/verify-email?email=${email}`,
+      });
     },
   });
 };
@@ -58,5 +67,14 @@ export const useModifyUserApi = () => {
 export const useResetPasswordApi = () => {
   return useMutation({
     mutationFn: (payload: resetPasswordProps) => resetPasswordApi(payload),
+  });
+};
+
+export const useResendEmailApi = () => {
+  return useMutation({
+    mutationFn: (payload: { email: string }) => resendEmailApi(payload),
+    onSuccess: () => {
+      toast.success("Verification Link has been sent");
+    },
   });
 };

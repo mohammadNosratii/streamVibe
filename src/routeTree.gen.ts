@@ -15,6 +15,7 @@ import { createFileRoute } from '@tanstack/react-router'
 import { Route as rootRoute } from './routes/__root'
 import { Route as UnAuthImport } from './routes/_unAuth'
 import { Route as DashboardAuthImport } from './routes/dashboard/_auth'
+import { Route as UnAuthVerifyEmailImport } from './routes/_unAuth.verify-email'
 import { Route as UnAuthRegisterImport } from './routes/_unAuth.register'
 import { Route as UnAuthLoginImport } from './routes/_unAuth.login'
 import { Route as DashboardAuthIndexImport } from './routes/dashboard/_auth.index'
@@ -90,6 +91,11 @@ const MoviesMovieIdLazyRoute = MoviesMovieIdLazyImport.update({
 const DashboardAuthRoute = DashboardAuthImport.update({
   id: '/_auth',
   getParentRoute: () => DashboardRoute,
+} as any)
+
+const UnAuthVerifyEmailRoute = UnAuthVerifyEmailImport.update({
+  path: '/verify-email',
+  getParentRoute: () => UnAuthRoute,
 } as any)
 
 const UnAuthRegisterRoute = UnAuthRegisterImport.update({
@@ -197,6 +203,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof UnAuthRegisterImport
       parentRoute: typeof UnAuthImport
     }
+    '/_unAuth/verify-email': {
+      id: '/_unAuth/verify-email'
+      path: '/verify-email'
+      fullPath: '/verify-email'
+      preLoaderRoute: typeof UnAuthVerifyEmailImport
+      parentRoute: typeof UnAuthImport
+    }
     '/dashboard': {
       id: '/dashboard'
       path: '/dashboard'
@@ -284,6 +297,7 @@ export const routeTree = rootRoute.addChildren({
   UnAuthRoute: UnAuthRoute.addChildren({
     UnAuthLoginRoute,
     UnAuthRegisterRoute,
+    UnAuthVerifyEmailRoute,
   }),
   ForgetPasswordLazyRoute,
   ShowsLazyRoute,
