@@ -9,7 +9,6 @@ export default function PersonalInfo() {
     const submitFormHandler: SubmitHandler<editInfoProps> = (data) => {
         console.log(data);
     }
-
     return (
         <form onSubmit={handleSubmit(submitFormHandler)} className='grid grid-cols-2 gap-4'>
             <Input
@@ -98,7 +97,7 @@ export default function PersonalInfo() {
                 errorMessage={errors.phone?.message}
                 isInvalid={Boolean(errors.phone)}
             />
-            <Controller  control={control} name='birthDate' render={({ field: { onChange, value } }) => (
+            <Controller control={control} name='birthDate' render={({ field: { onChange, value } }) => (
                 <DatePicker
                     label="Birth Date"
                     variant="bordered"
