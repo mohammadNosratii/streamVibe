@@ -6,7 +6,7 @@ export default function AutoCompletePhone() {
     <Autocomplete
       variant="flat"
       defaultSelectedKey={"Iran"}
-      radius="lg"
+      radius="sm"
       aria-label="phoneFlags"
       classNames={{
         popoverContent: ["w-52"],
