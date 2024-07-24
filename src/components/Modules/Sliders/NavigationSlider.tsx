@@ -60,7 +60,7 @@ export default function NavigationSlider() {
       {handleData().isLoading ? (
         <HeaderSkeleton />
       ) : (
-        handleData().data.map((movie: movieNavigationSlider, index: number) => (
+        handleData().data?.map((movie: movieNavigationSlider, index: number) => (
           <SwiperSlide key={index}>
             <Header {...movie} />
           </SwiperSlide>
