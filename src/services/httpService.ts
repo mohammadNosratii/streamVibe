@@ -1,5 +1,5 @@
 import axios from "axios";
-import { refreshLoginTokenApi } from "./api/authApi";
+import { refreshTokenApi } from "./api/tokenApi";
 import Cookies from "js-cookie";
 import toast from "react-hot-toast";
 
@@ -16,6 +16,7 @@ axios.interceptors.request.use(
     }
     config.headers["Content-Type"] = "application/json";
     config.headers.Accept = "application/json";
+
     return config;
   },
 
@@ -30,10 +31,12 @@ axios.interceptors.response.use(
   },
   async function (error) {
     // FIXME should check if refreshTokoen scenario is completed
+    if (error.code === "ERR_NETWORK") {
+      return toast.error("Unknown Error! Please try again later");
+    }
     const originalRequest = error.config;
     const refreshToken = Cookies.get("refreshToken");
     const status = error?.response?.status;
-
     switch (status) {
       case 401: {
         if (!originalRequest._retry) {
@@ -42,7 +45,7 @@ axios.interceptors.response.use(
             failedApis.push(originalRequest);
             isRefreshTokenFetching = true;
 
-            const response = await refreshLoginTokenApi({
+            const response = await refreshTokenApi({
               refresh: refreshToken,
             });
             if (response.status !== 200) {

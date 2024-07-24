@@ -3,7 +3,6 @@ import {
   loginApi,
   logoutApi,
   modifyUserApi,
-  refreshLoginTokenApi,
   registerApi,
   resendEmailApi,
   resetPasswordApi,
@@ -11,7 +10,6 @@ import {
 } from "../../services/api/authApi";
 import { registerUserProps } from "../../interfaces/registerUser.interface";
 import { loginUserProps } from "../../interfaces/loginUser.interface";
-import { refreshTokenProp } from "../../interfaces/refreshToken.interface";
 import { useLocation, useNavigate } from "@tanstack/react-router";
 import { modifyUserProps } from "../../interfaces/modifyUser.interface";
 import { resetPasswordProps } from "../../interfaces/resetPassword.interface";
@@ -19,7 +17,6 @@ import toast from "react-hot-toast";
 import { userSession } from "../../utils/userSession";
 
 export const useRegisterApi = () => {
-  // TODO should update register scenario to what next if registeration is successfull
   const navigate = useNavigate();
   let email: string;
 
@@ -50,12 +47,6 @@ export const useLoginApi = () => {
       // @ts-expect-error redirect is not a part of search structure as default
       navigate({ to: search.redirect || "/" });
     },
-  });
-};
-
-export const useRefreshLoginTokenApi = () => {
-  return useMutation({
-    mutationFn: (payload: refreshTokenProp) => refreshLoginTokenApi(payload),
   });
 };
 
