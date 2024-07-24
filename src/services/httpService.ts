@@ -38,7 +38,7 @@ axios.interceptors.response.use(
     const refreshToken = Cookies.get("refreshToken");
     const status = error?.response?.status;
     switch (status) {
-      case 401: {
+      case 403: {
         if (!originalRequest._retry) {
           originalRequest._retry = true;
           if (!isRefreshTokenFetching) {
