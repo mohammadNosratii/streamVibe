@@ -4,11 +4,10 @@ import {
   getTopMoviesApi,
 } from "../../services/api/movieApi";
 
-export const useGetSliderNewMoviesApi = (isInMoviePage: boolean) => {
+export const useGetSliderNewMoviesApi = () => {
   return useQuery({
     queryKey: ["getSliderNewMovies"],
     queryFn: () => getSliderNewMoviesApi().then((data) => data.data),
-    enabled: !!isInMoviePage,
   });
 };
 

@@ -4,6 +4,7 @@ import { movieNavigationSlider } from "../../../../interfaces/navigationSlider.i
 import PlusIcon from "../../../../assets/icons/Plus";
 import LikeIcon from "../../../../assets/icons/Like";
 import MainTooltip from "../../../Modules/Tooltip/MainTooltip";
+import { useLocation } from "@tanstack/react-router";
 
 export default function Header({
   img,
@@ -11,6 +12,8 @@ export default function Header({
   description,
   genres,
 }: movieNavigationSlider) {
+  const { pathname } = useLocation();
+
   return (
     <div className="relative">
       <img
@@ -19,8 +22,11 @@ export default function Header({
         src={img}
       />
       <div
-        className={`container absolute w-[80%] md:w-[60%] space-y-5 ${window.location.pathname === "/movies" ? "moviesHeader" : "homeHeader"
-          }`}
+        className={`container absolute w-[80%] md:w-[60%] space-y-5 ${
+          pathname === "/movies" || pathname === "/shows"
+            ? "moviesHeader"
+            : "homeHeader"
+        }`}
       >
         <div className="items-center gap-2 rounded-2xl inline-flex">
           <div className="w-16 h-0.5 bg-mainLight"></div>
@@ -37,8 +43,9 @@ export default function Header({
             Play
           </Button>
           <div
-            className={`items-center gap-2 child:bg-black-6 child:p-2 child:rounded-lg text-white ${window.location.pathname === "/movies" ? "flex" : "hidden"
-              }`}
+            className={`items-center gap-2 child:bg-black-6 child:p-2 child:rounded-lg text-white ${
+              window.location.pathname === "/movies" ? "flex" : "hidden"
+            }`}
           >
             <MainTooltip content="Add to Favorites">
               <Button className="min-w-min">
