@@ -1,14 +1,41 @@
-import sons from "../assets/images/sons-of-anarchy-vok49wy9dzcke492.jpg";
+import sonsOfAnarchy from "../assets/images/sons-of-anarchy.jpg";
+import strangerThings from "../assets/images/stranger-things.jpg";
+import theOriginals from "../assets/images/the-originals.jpg";
+import vikings from "../assets/images/vikings.jpg";
 
 export default function showsSlider() {
   return [
     {
       id: 1,
       title: "Sons of Anarchy",
-      img: sons,
+      img: sonsOfAnarchy,
       description:
         "A biker struggles to balance being a father and being involved in an outlaw motorcycle club.",
       genres: "Crime, Drama, Thriller",
+    },
+    {
+      id: 2,
+      title: "Stranger Things",
+      img: strangerThings,
+      description:
+        "When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces and one strange little girl.",
+      genres: "Drama, Fantasy, Horror",
+    },
+    {
+      id: 3,
+      title: "The Originals",
+      img: theOriginals,
+      description:
+        "A family of power-hungry thousand-year-old vampires look to take back the city that they built and dominate all those who have done them wrong.",
+      genres: "Drama, Fantasy, Horror",
+    },
+    {
+      id: 4,
+      title: "Vikings",
+      img: vikings,
+      description:
+        "Vikings transports us to the brutal and mysterious world of Ragnar Lothbrok, a Viking warrior and farmer who yearns to explore--and raid--the distant shores across the ocean.",
+      genres: "Action, Adventure, Drama",
     },
   ];
 }
