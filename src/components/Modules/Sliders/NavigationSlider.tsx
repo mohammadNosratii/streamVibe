@@ -16,30 +16,35 @@ import { useGetSliderMoviesApi } from "../../../hooks/api/useHomeApi";
 import { useGetSliderNewMoviesApi } from "../../../hooks/api/useMovieApi";
 import { useLocation } from "@tanstack/react-router";
 import { movieNavigationSlider } from "../../../interfaces/navigationSlider.interface";
+import showsSlider from "../../../mock/shows";
 
 export default function NavigationSlider() {
   const { pathname } = useLocation();
 
-  const isInMoviePage: boolean = pathname.includes("/movies");
-
   const { data: getSliderMovies, isLoading: getSliderMoviesLoading } =
-    useGetSliderMoviesApi(isInMoviePage);
+    useGetSliderMoviesApi();
 
   const { data: getSliderNewMovies, isLoading: getSliderNewMoviesLoading } =
-    useGetSliderNewMoviesApi(isInMoviePage);
+    useGetSliderNewMoviesApi();
+
+  const getsliderShows = showsSlider();
 
   const handleData = () => {
-    switch (isInMoviePage) {
-      case true:
-        return {
-          data: getSliderNewMovies,
-          isLoading: getSliderNewMoviesLoading,
-        };
-      case false:
-        return {
-          data: getSliderMovies,
-          isLoading: getSliderMoviesLoading,
-        };
+    if (pathname.includes("/movies")) {
+      return {
+        data: getSliderNewMovies,
+        isLoading: getSliderNewMoviesLoading,
+      };
+    } else if (pathname.includes("/shows")) {
+      return {
+        data: getsliderShows,
+        isLoading: false,
+      };
+    } else {
+      return {
+        data: getSliderMovies,
+        isLoading: getSliderMoviesLoading,
+      };
     }
   };
 
@@ -60,11 +65,13 @@ export default function NavigationSlider() {
       {handleData().isLoading ? (
         <HeaderSkeleton />
       ) : (
-        handleData().data?.map((movie: movieNavigationSlider, index: number) => (
-          <SwiperSlide key={index}>
-            <Header {...movie} />
-          </SwiperSlide>
-        ))
+        handleData().data?.map(
+          (movie: movieNavigationSlider, index: number) => (
+            <SwiperSlide key={index}>
+              <Header {...movie} />
+            </SwiperSlide>
+          )
+        )
       )}
     </Swiper>
   );

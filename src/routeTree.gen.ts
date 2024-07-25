@@ -31,9 +31,9 @@ import { Route as DashboardAuthCommentsImport } from './routes/dashboard/_auth.c
 const DashboardImport = createFileRoute('/dashboard')()
 const SupportLazyImport = createFileRoute('/support')()
 const SubscriptionLazyImport = createFileRoute('/subscription')()
-const ShowsLazyImport = createFileRoute('/shows')()
 const ForgetPasswordLazyImport = createFileRoute('/forget-password')()
 const IndexLazyImport = createFileRoute('/')()
+const ShowsIndexLazyImport = createFileRoute('/shows/')()
 const MoviesIndexLazyImport = createFileRoute('/movies/')()
 const MoviesMovieIdLazyImport = createFileRoute('/movies/$movieId')()
 
@@ -54,11 +54,6 @@ const SubscriptionLazyRoute = SubscriptionLazyImport.update({
   getParentRoute: () => rootRoute,
 } as any).lazy(() => import('./routes/subscription.lazy').then((d) => d.Route))
 
-const ShowsLazyRoute = ShowsLazyImport.update({
-  path: '/shows',
-  getParentRoute: () => rootRoute,
-} as any).lazy(() => import('./routes/shows.lazy').then((d) => d.Route))
-
 const ForgetPasswordLazyRoute = ForgetPasswordLazyImport.update({
   path: '/forget-password',
   getParentRoute: () => rootRoute,
@@ -75,6 +70,11 @@ const IndexLazyRoute = IndexLazyImport.update({
   path: '/',
   getParentRoute: () => rootRoute,
 } as any).lazy(() => import('./routes/index.lazy').then((d) => d.Route))
+
+const ShowsIndexLazyRoute = ShowsIndexLazyImport.update({
+  path: '/shows/',
+  getParentRoute: () => rootRoute,
+} as any).lazy(() => import('./routes/shows/index.lazy').then((d) => d.Route))
 
 const MoviesIndexLazyRoute = MoviesIndexLazyImport.update({
   path: '/movies/',
@@ -168,13 +168,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ForgetPasswordLazyImport
       parentRoute: typeof rootRoute
     }
-    '/shows': {
-      id: '/shows'
-      path: '/shows'
-      fullPath: '/shows'
-      preLoaderRoute: typeof ShowsLazyImport
-      parentRoute: typeof rootRoute
-    }
     '/subscription': {
       id: '/subscription'
       path: '/subscription'
@@ -236,6 +229,13 @@ declare module '@tanstack/react-router' {
       path: '/movies/'
       fullPath: '/movies/'
       preLoaderRoute: typeof MoviesIndexLazyImport
+      parentRoute: typeof rootRoute
+    }
+    '/shows/': {
+      id: '/shows/'
+      path: '/shows/'
+      fullPath: '/shows/'
+      preLoaderRoute: typeof ShowsIndexLazyImport
       parentRoute: typeof rootRoute
     }
     '/dashboard/_auth/comments': {
@@ -300,7 +300,6 @@ export const routeTree = rootRoute.addChildren({
     UnAuthVerifyEmailRoute,
   }),
   ForgetPasswordLazyRoute,
-  ShowsLazyRoute,
   SubscriptionLazyRoute,
   SupportLazyRoute,
   DashboardRoute: DashboardRoute.addChildren({
@@ -316,6 +315,7 @@ export const routeTree = rootRoute.addChildren({
   }),
   MoviesMovieIdLazyRoute,
   MoviesIndexLazyRoute,
+  ShowsIndexLazyRoute,
 })
 
 /* prettier-ignore-end */
