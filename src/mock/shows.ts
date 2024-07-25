@@ -1,7 +1,7 @@
-import sonsOfAnarchy from "../assets/images/sons-of-anarchy.jpg";
-import strangerThings from "../assets/images/stranger-things.jpg";
-import theOriginals from "../assets/images/the-originals.jpg";
-import vikings from "../assets/images/vikings.jpg";
+import sonsOfAnarchy from "../assets/images/sons-of-anarchy.webp";
+import strangerThings from "../assets/images/stranger-things.webp";
+import theOriginals from "../assets/images/the-originals.webp";
+import vikings from "../assets/images/vikings.webp";
 
 export default function showsSlider() {
   return [

@@ -1,6 +1,7 @@
 import { useLocation } from "@tanstack/react-router";
 import moviesCardInfo from "../../../mock/movies";
 import MoviesCategoryBox from "../../Modules/MoviesCategoryBox/MoviesCategoryBox";
+import showsCardInfo from "../../../mock/showsInfo";
 
 export default function MoviesBoxWrapper() {
   const { pathname } = useLocation();
@@ -12,9 +13,13 @@ export default function MoviesBoxWrapper() {
           {pathname === "/movies" ? <span>Movies</span> : <span>Shows</span>}
         </div>
         <div className="space-y-24">
-          {moviesCardInfo().map((category, index) => (
-            <MoviesCategoryBox key={index} {...category} />
-          ))}
+          {pathname === "/movies"
+            ? moviesCardInfo().map((category, index) => (
+                <MoviesCategoryBox key={index} {...category} />
+              ))
+            : showsCardInfo().map((category, index) => (
+                <MoviesCategoryBox key={index} {...category} />
+              ))}
         </div>
       </div>
     </div>

@@ -4,6 +4,7 @@ interface moviesDetail {
   img: string;
   date: number;
   rate: number;
+  season?: number;
   review: number;
   des: string;
   color: string;
