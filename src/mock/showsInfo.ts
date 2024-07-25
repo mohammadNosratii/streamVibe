@@ -1,11 +1,11 @@
-import theLastOfUs from "../assets/images/the-last-of-us.jpeg";
-import shogub from "../assets/images/shogun.jpeg";
-import fallout from "../assets/images/fallout.jpeg";
-import masterOfTheAir from "../assets/images/master-of-the-air.jpeg";
-import strangerThings from "../assets/images/strangerThings.jpg";
-import halo from "../assets/images/halo.jpeg";
-import silo from "../assets/images/silo.jpeg";
-import reacher from "../assets/images/reacher.jpeg";
+import theLastOfUs from "../assets/images/the-last-of-us.webp";
+import shogub from "../assets/images/shogun.webp";
+import fallout from "../assets/images/fallout.webp";
+import masterOfTheAir from "../assets/images/master-of-the-air.webp";
+import strangerThings from "../assets/images/strangerThings.webp";
+import halo from "../assets/images/halo.webp";
+import silo from "../assets/images/silo.webp";
+import reacher from "../assets/images/reacher.webp";
 
 export default function showsCardInfo() {
   return [
