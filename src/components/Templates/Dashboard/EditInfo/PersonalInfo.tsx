@@ -9,6 +9,7 @@ export default function PersonalInfo() {
     control,
     handleSubmit,
     formState: { errors },
+    reset
   } = useForm<editInfoProps>();
 
   const submitFormHandler: SubmitHandler<editInfoProps> = (data) => {
@@ -138,7 +139,7 @@ export default function PersonalInfo() {
         >
           Update Info
         </Button>
-        <Button>Discard</Button>
+        <Button onClick={() => reset()}>Discard</Button>
       </div>
     </form>
   );

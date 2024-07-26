@@ -17,7 +17,7 @@ import {
 import { UserPopOverTrigger } from "../PopOverTrigger/PopOverTrigger";
 import { navbarHorizontalItems } from "../../../constants/navbarItems";
 import ThemeSwitch from "../ThemeSwitch/ThemeSwitch";
-import { Link } from "@tanstack/react-router";
+import { Link, useNavigate } from "@tanstack/react-router";
 import { isAuthenticated } from "../../../utils/isAuthenticated";
 import LoginIcon from "../../../assets/icons/Login";
 import MainTooltip from "../Tooltip/MainTooltip";
@@ -27,7 +27,9 @@ export default function NavbarHorizontal({
 }: {
   triggerNavbarVertical: () => void;
 }) {
+  const navigate = useNavigate()
   const [isNavbarSticky, setIsNavbarSticky] = useState<boolean>(false);
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY >= 50 && !isNavbarSticky) {
@@ -43,16 +45,15 @@ export default function NavbarHorizontal({
 
   return (
     <NextUINavbar
-      className={`z-50 py-3 transition-all fixed bg-gradient-to-b from-black-6 to-black-6/0 ${
-        isNavbarSticky
-          ? `backdrop-blur-sm bg-black-6/20 backdrop-saturate-[1.5]`
-          : `backdrop-blur-none bg-transparent backdrop-saturate-[1]`
-      }`}
+      className={`z-50 py-3 transition-all fixed bg-gradient-to-b from-black-6 to-black-6/0 ${isNavbarSticky
+        ? `backdrop-blur-sm bg-black-6/20 backdrop-saturate-[1.5]`
+        : `backdrop-blur-none bg-transparent backdrop-saturate-[1]`
+        }`}
       classNames={{
         wrapper: ["max-w-[90%]"],
       }}
     >
-      <NavbarBrand>
+      <NavbarBrand className="cursor-pointer" onClick={() => navigate({ to: '/' })}>
         <Image
           className="w-28 h-12 lg:w-36 2xl:w-40 3xl:w-48 3xl:h-14"
           src={logo}
@@ -74,11 +75,10 @@ export default function NavbarHorizontal({
           >
             <Link
               to={item.route}
-              className={`${
-                item.route === window.location.pathname
-                  ? "text-black dark:text-white font-manropeMedium"
-                  : "text-gray-75 font-manropeRegular"
-              } text-sm lg:text-base`}
+              className={`${item.route === window.location.pathname
+                ? "text-black dark:text-white font-manropeMedium"
+                : "text-gray-75 font-manropeRegular"
+                } text-sm lg:text-base`}
             >
               {item.title}
             </Link>
