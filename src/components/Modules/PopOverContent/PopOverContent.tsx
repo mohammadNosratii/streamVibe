@@ -50,10 +50,10 @@ const UserPopOverContent = () => {
       <Button
         onClick={signoutUserHandler}
         isLoading={isPending}
-        className="flex items-center justify-between gap-2 bg-transparent hover:text-white hover:bg-red-45 translate-x-0 duration-200 w-full p-2 cursor-pointer rounded-lg"
+        endContent={<SignOut />}
+        className="justify-between bg-transparent hover:text-white hover:bg-red-45 translate-x-0 duration-200 w-full p-2 cursor-pointer rounded-lg"
       >
-        <span>Sign out</span>
-        <SignOut />
+        Sign out
       </Button>
     </div>
   );

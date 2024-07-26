@@ -4,6 +4,7 @@ import ChangePassword from "../../../components/Templates/Dashboard/EditInfo/Cha
 import PersonalInfo from "../../../components/Templates/Dashboard/EditInfo/PersonalInfo";
 
 export default function DashboardEditInfo() {
+
   return (
     <DashboardWrapper>
       <div className="space-y-4">
