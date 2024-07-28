@@ -182,7 +182,7 @@ export default function showsCardInfo() {
       ],
     },
     {
-      category: "Top 250 movies",
+      category: "Top 250 Shows",
       movies: [
         {
           id: 13,
