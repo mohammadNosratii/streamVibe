@@ -12,8 +12,6 @@ axios.interceptors.request.use(
     const accessToken = Cookies.get("accessToken");
     const csrfToken = Cookies.get("csrftoken");
 
-    console.log("csrfToken =>", csrfToken);
-
     if (accessToken) {
       config.headers.Authorization = `Bearer ${accessToken}`;
     }

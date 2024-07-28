@@ -24,7 +24,7 @@ export default function MovieBanner({
           <div className="child:bg-black-6 child:p-2 child:rounded-lg flex gap-2 child:cursor-pointer">
             <MainTooltip content="Add to Favorites">
               <Button className="min-w-min">
-                <PlusIcon className="fill-white"/>
+                <PlusIcon className="fill-white" />
               </Button>
             </MainTooltip>
             <MainTooltip content="Like">

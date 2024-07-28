@@ -1,10 +1,10 @@
 import { Chip, Divider } from "@nextui-org/react";
 import Star from "../../../assets/icons/Star";
-import { moviesCardProps } from "../../../interfaces/moviesCardInfo.interface";
 import Play from "../../../assets/icons/Play";
 import { Link, useLocation } from "@tanstack/react-router";
 import formatter from "../../../utils/compactReviewNumbers";
 import formattedDate from "../../../utils/calculateTimeStamp";
+import { moviesDetail } from "../../../interfaces/moviesDetail.interface";
 
 export default function MovieCard({
   id,
@@ -18,7 +18,7 @@ export default function MovieCard({
   season,
   color,
   mainColor,
-}: moviesCardProps["movies"][0]) {
+}: moviesDetail) {
   const { pathname } = useLocation();
 
   return (
