@@ -17,7 +17,7 @@ export default function Subscription() {
   );
 
   return (
-    <div className="container my-32 space-y-20">
+    <div className="my-32 space-y-20">
       <div className="flex flex-col lg:flex-row gap-5 items-center justify-between md:gap-14 xl:gap-20 2xl:gap-24 ">
         <div className="space-y-3">
           <h2 className="text-2xl lg:text-3xl 2xl:text-4xl">

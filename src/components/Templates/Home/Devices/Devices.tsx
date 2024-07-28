@@ -3,7 +3,7 @@ import DevicesBox from "./DevicesBox";
 
 export default function Devices() {
   return (
-    <div className="container space-y-20">
+    <div className="space-y-20">
       <div className="space-y-3">
         <h2 className="text-2xl lg:text-3xl 2xl:text-4xl">
           We Provide you streaming experience across various devices
