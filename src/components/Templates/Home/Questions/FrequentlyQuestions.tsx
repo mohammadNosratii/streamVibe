@@ -3,7 +3,7 @@ import QuestionBox from "./QuestionBox";
 
 export default function FrequentlyQuestions() {
     return (
-        <div className="container my-32">
+        <div className="my-32">
             <div className="flex flex-col md:flex-row items-start md:items-end gap-4 justify-between">
                 <div className="space-y-3">
                     <h2 className="text-2xl lg:text-3xl 2xl:text-4xl">

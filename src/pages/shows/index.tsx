@@ -5,7 +5,9 @@ export default function Shows() {
   return (
     <>
       <NavigationSlider />
-      <MoviesBoxWrapper />
+      <div className="container">
+        <MoviesBoxWrapper />
+      </div>
     </>
   );
 }

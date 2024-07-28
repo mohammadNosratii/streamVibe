@@ -8,10 +8,12 @@ export default function Home() {
   return (
     <>
       <NavigationSlider />
-      <Categories />
-      <Devices />
-      <FrequentlyQuestions />
-      <Subscription />
+      <div className="container">
+        <Categories />
+        <Devices />
+        <FrequentlyQuestions />
+        <Subscription />
+      </div>
     </>
   );
 }
