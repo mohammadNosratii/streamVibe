@@ -4,8 +4,8 @@ import ContactUsForm from "./ContactUsForm";
 
 export default function ContactUs() {
   return (
-    <div className="grid grid-cols-12 gap-6">
-      <div className="col-span-5 flex flex-col gap-4">
+    <div className="grid lg:grid-cols-12 gap-6">
+      <div className="lg:col-span-5 flex flex-col gap-4">
         <h1 className="font-manropeBold text-5xl leading-[60px]">
           Welcome to our support page!
         </h1>
@@ -25,7 +25,7 @@ export default function ContactUs() {
         </div>
       </div>
       {/* //TODO should update height of inputs like figma */}
-      <div className="col-span-7 bg-white h-max dark:bg-black-6 border-2 dark:border-black-15 rounded-xl px-5 py-10">
+      <div className="lg:col-span-7 bg-white h-max dark:bg-black-6 border-2 dark:border-black-15 rounded-xl px-5 py-10">
         <ContactUsForm />
       </div>
     </div>
