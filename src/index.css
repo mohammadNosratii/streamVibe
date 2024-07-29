@@ -43,6 +43,17 @@
   .accordion-item section {
     overflow: visible !important;
   }
+  .frequencyBorder-gradient {
+    color: white;
+    border-bottom: 1px solid;
+    border-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0),
+        red,
+        rgba(0, 0, 0, 0)
+      )
+      100% 1;
+  }
 }
 
 /* Hide Input number arrows */
