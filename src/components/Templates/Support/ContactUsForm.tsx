@@ -17,10 +17,10 @@ export default function ContactUsForm() {
     console.log(data);
   };
   return (
-    <form onSubmit={handleSubmit(submitFormHandler)} className="space-y-8 h-max">
+    <form onSubmit={handleSubmit(submitFormHandler)} className="space-y-8">
       {useMemo(
         () => (
-          <div className="grid grid-cols-2 gap-8">
+          <div className="grid sm:grid-cols-2 gap-8">
             <Input
               classNames={{
                 mainWrapper: ["bg-transparent outline-noen rounded-2xl"],
@@ -85,7 +85,7 @@ export default function ContactUsForm() {
               classNames={{
                 mainWrapper: ["bg-transparent outline-none rounded-2xl"],
                 inputWrapper: [
-                  "bg-transparent border-1 dark:border-black-15 rounded-2xl h-full ps-0 pe-3",
+                  "bg-transparent border-2 dark:border-[#3f3f46] rounded-2xl h-full ps-0 pe-3",
                 ],
                 input: ["bg-transparent"],
                 innerWrapper: ["bg-transparent"],
@@ -96,7 +96,7 @@ export default function ContactUsForm() {
             />
             <Textarea
               classNames={{
-                base: ["col-span-2"],
+                base: ["col-span-1 sm:col-span-2"],
                 mainWrapper: ["bg-transparent outline-noen rounded-2xl"],
                 inputWrapper: [
                   "bg-transparent border-2 dark:border-[#3f3f46] rounded-2xl",
@@ -123,7 +123,7 @@ export default function ContactUsForm() {
           register,
         ]
       )}
-      <div className="flex justify-between items-center">
+      <div className="flex flex-col sm:flex-row gap-2 justify-between items-center">
         <Checkbox
           isSelected={isAccetpedRules}
           onValueChange={(newValue) => setIsAcceptedRules(newValue)}
