@@ -1,5 +1,5 @@
 import axios from "axios";
-import { refreshTokenApi } from "./api/tokenApi";
+import { refreshTokenApi } from "./api/authApi";
 import Cookies from "js-cookie";
 import toast from "react-hot-toast";
 

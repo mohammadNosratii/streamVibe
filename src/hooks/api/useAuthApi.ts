@@ -3,10 +3,12 @@ import {
   loginApi,
   logoutApi,
   modifyUserApi,
+  refreshTokenApi,
   registerApi,
   resendEmailApi,
   resetPasswordApi,
   verifyEmailApi,
+  verifyTokenApi,
 } from "../../services/api/authApi";
 import { registerUserProps } from "../../interfaces/registerUser.interface";
 import { loginUserProps } from "../../interfaces/loginUser.interface";
@@ -15,20 +17,22 @@ import { modifyUserProps } from "../../interfaces/modifyUser.interface";
 import { resetPasswordProps } from "../../interfaces/resetPassword.interface";
 import toast from "react-hot-toast";
 import { userSession } from "../../utils/userSession";
+import { refreshTokenProp } from "../../interfaces/refreshToken.interface";
+import { verifyTokenProps } from "../../interfaces/verifyToken.interface";
 
 export const useRegisterApi = () => {
   const navigate = useNavigate();
-  let email: string | undefined;
+  let identifier: string | undefined;
 
   return useMutation({
     mutationFn: (payload: registerUserProps) => {
-      email = payload.email;
+      identifier = payload.email;
       return registerApi(payload).then((data) => data.data);
     },
     onSuccess: () => {
       toast.success("Successfull. Please Verify your email!");
       navigate({
-        to: `/verify-email?email=${email}`,
+        to: `/verify-email?identifier=${identifier}`,
       });
     },
   });
@@ -65,7 +69,7 @@ export const useResetPasswordApi = () => {
 
 export const useResendEmailApi = () => {
   return useMutation({
-    mutationFn: (payload: { email: string }) => resendEmailApi(payload),
+    mutationFn: (payload: { identifier: string }) => resendEmailApi(payload),
     onSuccess: () => {
       toast.success("Verification Link has been sent");
     },
@@ -74,7 +78,8 @@ export const useResendEmailApi = () => {
 
 export const useVerifyEmailApi = () => {
   return useMutation({
-    mutationFn: (payload: { key: string }) => verifyEmailApi(payload),
+    mutationFn: (payload: { uid: string; token: string }) =>
+      verifyEmailApi(payload),
     onSuccess: (res) => {
       console.log("response =>", res);
       toast.success("Your Email has been verified.");
@@ -90,5 +95,16 @@ export const useLogoutApi = () => {
       userSession(false);
       window.location.reload();
     },
+  });
+};
+export const useRefreshLoginTokenApi = () => {
+  return useMutation({
+    mutationFn: (payload: refreshTokenProp) => refreshTokenApi(payload),
+  });
+};
+
+export const useVerifyTokenApi = () => {
+  return useMutation({
+    mutationFn: (payload: verifyTokenProps) => verifyTokenApi(payload),
   });
 };
