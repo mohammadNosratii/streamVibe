@@ -5,7 +5,7 @@ import { useState } from "react";
 import { useGetSubscriptionsApi } from "../../../hooks/api/useHomeApi";
 import SubscriptionBoxSkeleton from "../Skeletons/SubscriptionBoxSkeleton";
 
-export default function Subscription() {
+export default function SubscriptionWrapper() {
   const [subscriptionPlanTime, setSubscriptionPlanTime] = useState<
     string | number
   >("Monthly");
