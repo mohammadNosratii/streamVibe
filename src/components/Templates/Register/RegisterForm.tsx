@@ -8,8 +8,6 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { Link } from "@tanstack/react-router";
 import { useRegisterApi } from "../../../hooks/api/useAuthApi";
 import { registerUserProps } from "../../../interfaces/registerUser.interface";
-import AutoCompletePhone from "../../Modules/AutoCompletePhone/AutoCompletePhone";
-import PhoneIcon from "../../../assets/icons/Phone";
 import { emailRegex } from "../../../utils/combineEmailAndPhoneRegex";
 
 export default function Register() {
@@ -18,11 +16,7 @@ export default function Register() {
     handleSubmit,
     getValues,
     formState: { errors },
-  } = useForm<registerUserProps>({
-    defaultValues: {
-      phone: null
-    }
-  });
+  } = useForm<registerUserProps>();
 
   const [isPasswordVisible, setIsPasswordVisible] = useState<boolean>(false);
   const [isPassword2Visible, setIsPassword2Visible] = useState<boolean>(false);
@@ -95,21 +89,6 @@ export default function Register() {
           endContent={<MailIcon />}
           errorMessage={errors.username?.message}
           isInvalid={Boolean(errors.username)}
-        />
-        <Input
-          startContent={<AutoCompletePhone />}
-          endContent={<PhoneIcon />}
-          classNames={{
-            mainWrapper: ["bg-transparent outline-none rounded-2xl"],
-            inputWrapper: [
-              "bg-transparent border-1 dark:border-black-15 rounded-2xl h-full ps-0 pe-3",
-            ],
-            input: ["bg-transparent"],
-            innerWrapper: ["bg-transparent"],
-          }}
-          type="number"
-          placeholder="Phone Number"
-          {...register("phone")}
         />
         <Input
           classNames={{
