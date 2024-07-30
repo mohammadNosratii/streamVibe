@@ -1,8 +1,9 @@
 interface registerUserProps {
   username: string;
-  email: string;
-  password1: string;
-  password2: string;
+  email?: string;
+  phone?: string;
+  password: string;
+  re_password: string;
 }
 
 export type { registerUserProps };

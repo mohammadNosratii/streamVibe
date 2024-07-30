@@ -5,9 +5,9 @@ import UserCircle from "../../../assets/icons/UserCircle";
 import { useState } from "react";
 import EyeSlashIcon from "../../../assets/icons/EyeSlash";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { registerFormProps } from "../../../interfaces/registerForm.interface";
 import { Link } from "@tanstack/react-router";
 import { useRegisterApi } from "../../../hooks/api/useAuthApi";
+import { registerUserProps } from "../../../interfaces/registerUser.interface";
 
 export default function Register() {
   const {
@@ -15,7 +15,7 @@ export default function Register() {
     handleSubmit,
     getValues,
     formState: { errors },
-  } = useForm<registerFormProps>();
+  } = useForm<registerUserProps>();
 
   const [isPasswordVisible, setIsPasswordVisible] = useState<boolean>(false);
   const [isPassword2Visible, setIsPassword2Visible] = useState<boolean>(false);
@@ -30,7 +30,7 @@ export default function Register() {
     setIsPassword2Visible(!isPassword2Visible)
   }
 
-  const submitRegisterFormHandler: SubmitHandler<registerFormProps> = (
+  const submitRegisterFormHandler: SubmitHandler<registerUserProps> = (
     data
   ) => {
     mutate(data);
@@ -114,7 +114,7 @@ export default function Register() {
           size="sm"
           type={`${isPasswordVisible ? "text" : "password"}`}
           label="Password"
-          {...register("password1", {
+          {...register("password", {
             required: "Password could not be empty",
             minLength: { value: 8, message: "At Least Enter 8 Character" },
           })}
@@ -123,8 +123,8 @@ export default function Register() {
               {isPasswordVisible ? <EyeSlashIcon /> : <EyeIcon />}
             </div>
           }
-          errorMessage={errors.password1?.message}
-          isInvalid={Boolean(errors.password1)}
+          errorMessage={errors.password?.message}
+          isInvalid={Boolean(errors.password)}
         />
         <Input
           classNames={{
@@ -138,19 +138,19 @@ export default function Register() {
           size="sm"
           type={`${isPassword2Visible ? "text" : "password"}`}
           label="Confirm Password"
-          {...register("password2", {
+          {...register("re_password", {
             required: "Confirm Password could not be empty",
             minLength: { value: 8, message: "At Least Enter 8 Character" },
             validate: value =>
-              value === getValues("password1") || "Passwords do not match"
+              value === getValues("re_password") || "Passwords do not match"
           })}
           endContent={
             <div className="cursor-pointer" onClick={togglePassword2}>
               {isPassword2Visible ? <EyeSlashIcon /> : <EyeIcon />}
             </div>
           }
-          errorMessage={errors.password2?.message}
-          isInvalid={Boolean(errors.password2)}
+          errorMessage={errors.re_password?.message}
+          isInvalid={Boolean(errors.re_password)}
         />
         <Button
           isLoading={isPending}

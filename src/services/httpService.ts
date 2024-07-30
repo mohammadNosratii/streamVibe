@@ -73,6 +73,10 @@ axios.interceptors.response.use(
         }
         break;
       }
+      case 401: {
+        toast.error(error.response.data.detail);
+        break;
+      }
       default: {
         const errorMessages: string[][] = Object.values(error.response.data);
         errorMessages.forEach((item: string[]) =>

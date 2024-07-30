@@ -18,7 +18,7 @@ import { userSession } from "../../utils/userSession";
 
 export const useRegisterApi = () => {
   const navigate = useNavigate();
-  let email: string;
+  let email: string | undefined;
 
   return useMutation({
     mutationFn: (payload: registerUserProps) => {
