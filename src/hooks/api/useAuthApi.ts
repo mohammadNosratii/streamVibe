@@ -18,17 +18,17 @@ import { userSession } from "../../utils/userSession";
 
 export const useRegisterApi = () => {
   const navigate = useNavigate();
-  let email: string | undefined;
+  let identifier: string | undefined;
 
   return useMutation({
     mutationFn: (payload: registerUserProps) => {
-      email = payload.email;
+      identifier = payload.email;
       return registerApi(payload).then((data) => data.data);
     },
     onSuccess: () => {
       toast.success("Successfull. Please Verify your email!");
       navigate({
-        to: `/verify-email?email=${email}`,
+        to: `/verify-email?identifier=${identifier}`,
       });
     },
   });
@@ -65,7 +65,7 @@ export const useResetPasswordApi = () => {
 
 export const useResendEmailApi = () => {
   return useMutation({
-    mutationFn: (payload: { email: string }) => resendEmailApi(payload),
+    mutationFn: (payload: { identifier: string }) => resendEmailApi(payload),
     onSuccess: () => {
       toast.success("Verification Link has been sent");
     },
@@ -74,7 +74,8 @@ export const useResendEmailApi = () => {
 
 export const useVerifyEmailApi = () => {
   return useMutation({
-    mutationFn: (payload: { key: string }) => verifyEmailApi(payload),
+    mutationFn: (payload: { uid: string; token: string }) =>
+      verifyEmailApi(payload),
     onSuccess: (res) => {
       console.log("response =>", res);
       toast.success("Your Email has been verified.");

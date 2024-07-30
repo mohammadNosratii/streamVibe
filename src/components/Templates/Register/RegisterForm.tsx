@@ -8,6 +8,9 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { Link } from "@tanstack/react-router";
 import { useRegisterApi } from "../../../hooks/api/useAuthApi";
 import { registerUserProps } from "../../../interfaces/registerUser.interface";
+import AutoCompletePhone from "../../Modules/AutoCompletePhone/AutoCompletePhone";
+import PhoneIcon from "../../../assets/icons/Phone";
+import { emailRegex } from "../../../utils/combineEmailAndPhoneRegex";
 
 export default function Register() {
   const {
@@ -15,7 +18,11 @@ export default function Register() {
     handleSubmit,
     getValues,
     formState: { errors },
-  } = useForm<registerUserProps>();
+  } = useForm<registerUserProps>({
+    defaultValues: {
+      phone: null
+    }
+  });
 
   const [isPasswordVisible, setIsPasswordVisible] = useState<boolean>(false);
   const [isPassword2Visible, setIsPassword2Visible] = useState<boolean>(false);
@@ -27,8 +34,8 @@ export default function Register() {
   };
 
   const togglePassword2 = () => {
-    setIsPassword2Visible(!isPassword2Visible)
-  }
+    setIsPassword2Visible(!isPassword2Visible);
+  };
 
   const submitRegisterFormHandler: SubmitHandler<registerUserProps> = (
     data
@@ -81,13 +88,15 @@ export default function Register() {
           {...register("email", {
             required: "Email could not be empty",
             pattern: {
-              value: /(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))/g,
-              message: "Email is not valid"
-            }
+              value: emailRegex,
+              message: "Email is not valid",
+            },
           })}
           endContent={<MailIcon />}
+          errorMessage={errors.username?.message}
+          isInvalid={Boolean(errors.username)}
         />
-        {/* <Input
+        <Input
           startContent={<AutoCompletePhone />}
           endContent={<PhoneIcon />}
           classNames={{
@@ -101,7 +110,7 @@ export default function Register() {
           type="number"
           placeholder="Phone Number"
           {...register("phone")}
-        /> */}
+        />
         <Input
           classNames={{
             mainWrapper: ["bg-transparent outline-none rounded-2xl"],
@@ -141,8 +150,8 @@ export default function Register() {
           {...register("re_password", {
             required: "Confirm Password could not be empty",
             minLength: { value: 8, message: "At Least Enter 8 Character" },
-            validate: value =>
-              value === getValues("re_password") || "Passwords do not match"
+            validate: (value) =>
+              value === getValues("re_password") || "Passwords do not match",
           })}
           endContent={
             <div className="cursor-pointer" onClick={togglePassword2}>

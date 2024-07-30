@@ -5,8 +5,8 @@ import { emailRegex } from '../utils/combineEmailAndPhoneRegex'
 export const Route = createFileRoute('/_unAuth/verify-email')({
     beforeLoad: async ({ search }) => {
         // @ts-expect-error redirect is not a part of search structure as default
-        const email = search.email
-        if (!email || !emailRegex.test(email)) {
+        const identifier = search.identifier
+        if (!identifier || !emailRegex.test(identifier)) {
             throw redirect({
                 to: "/register"
             })
