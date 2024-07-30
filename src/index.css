@@ -54,6 +54,13 @@
       )
       100% 1;
   }
+  .subscriptionTable {
+    border-bottom: 1px solid #262626;
+    padding: 30px;
+  }
+  .subscriptionTable:not(:last-child) {
+    border-right: 1px solid #262626;
+  }
 }
 
 /* Hide Input number arrows */
