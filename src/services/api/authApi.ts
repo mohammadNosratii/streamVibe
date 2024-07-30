@@ -5,16 +5,18 @@ import { resetPasswordProps } from "../../interfaces/resetPassword.interface";
 import httpService from "../httpService";
 
 const baseUrl = import.meta.env.VITE_BASE_DJANGO_API;
-const baseEndPoint = "account/auth/";
+const baseEndPoint = "account/";
 
 export const registerApi = (payload: registerUserProps) => {
-  return httpService.post(baseUrl + baseEndPoint + "registration/", payload);
+  return httpService.post(
+    baseUrl + baseEndPoint + "registration/create",
+    payload
+  );
 };
 
 export const loginApi = (payload: loginUserProps) => {
-  return httpService.post(baseUrl + baseEndPoint + "login/", payload);
+  return httpService.post(baseUrl + baseEndPoint + "login/create/", payload);
 };
-
 
 export const modifyUserApi = (payload: modifyUserProps, id: number) => {
   return httpService.put(baseUrl + baseEndPoint + `modify/${id}/`, payload);
