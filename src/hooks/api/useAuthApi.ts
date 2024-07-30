@@ -3,10 +3,12 @@ import {
   loginApi,
   logoutApi,
   modifyUserApi,
+  refreshTokenApi,
   registerApi,
   resendEmailApi,
   resetPasswordApi,
   verifyEmailApi,
+  verifyTokenApi,
 } from "../../services/api/authApi";
 import { registerUserProps } from "../../interfaces/registerUser.interface";
 import { loginUserProps } from "../../interfaces/loginUser.interface";
@@ -15,6 +17,8 @@ import { modifyUserProps } from "../../interfaces/modifyUser.interface";
 import { resetPasswordProps } from "../../interfaces/resetPassword.interface";
 import toast from "react-hot-toast";
 import { userSession } from "../../utils/userSession";
+import { refreshTokenProp } from "../../interfaces/refreshToken.interface";
+import { verifyTokenProps } from "../../interfaces/verifyToken.interface";
 
 export const useRegisterApi = () => {
   const navigate = useNavigate();
@@ -91,5 +95,16 @@ export const useLogoutApi = () => {
       userSession(false);
       window.location.reload();
     },
+  });
+};
+export const useRefreshLoginTokenApi = () => {
+  return useMutation({
+    mutationFn: (payload: refreshTokenProp) => refreshTokenApi(payload),
+  });
+};
+
+export const useVerifyTokenApi = () => {
+  return useMutation({
+    mutationFn: (payload: verifyTokenProps) => verifyTokenApi(payload),
   });
 };
