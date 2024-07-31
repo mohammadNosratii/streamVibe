@@ -1,5 +1,5 @@
 import { createFileRoute, redirect } from '@tanstack/react-router'
-import VerifyEmail from '../../pages/verify-email'
+import VerifyRegister from '../../pages/register/verify'
 
 export const Route = createFileRoute('/_unAuth/register/verify')({
     beforeLoad: async ({ search }) => {
@@ -12,5 +12,5 @@ export const Route = createFileRoute('/_unAuth/register/verify')({
             })
         }
     },
-    component: () => <VerifyEmail />
+    component: () => <VerifyRegister />
 })

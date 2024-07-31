@@ -29,13 +29,13 @@ export default function VerifyEmailStatus() {
     if (hasUidAndToken) {
       verifyEmailMutate({ uid, token });
     }
-  }, [uid, token, verifyEmailMutate]);
+  }, [uid, token, verifyEmailMutate, hasUidAndToken]);
   return (
     <>
       {!hasUidAndToken ? (
         <div className="space-y-8">
           <Link
-            to="/register"
+            to="/register/"
             className="text-sm font-manropeMedium text-gray-60 flex items-center gap-1.5 hover:text-black-6 dark:hover:text-white transition-colors"
           >
             <ArrowLeftIcon />
@@ -86,7 +86,7 @@ export default function VerifyEmailStatus() {
           </p>
           <Button
             className="dark:bg-black-10 w-full"
-            onClick={() => navigate({ to: "/register" })}
+            onClick={() => navigate({ to: "/register/" })}
           >
             Back To Registeration
           </Button>
