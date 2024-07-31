@@ -14,6 +14,7 @@ import { createFileRoute } from '@tanstack/react-router'
 
 import { Route as rootRoute } from './routes/__root'
 import { Route as UnAuthImport } from './routes/_unAuth'
+import { Route as MainImport } from './routes/_main'
 import { Route as DashboardAuthImport } from './routes/dashboard/_auth'
 import { Route as UnAuthVerifyEmailImport } from './routes/_unAuth.verify-email'
 import { Route as UnAuthRegisterImport } from './routes/_unAuth.register'
@@ -29,14 +30,19 @@ import { Route as DashboardAuthCommentsImport } from './routes/dashboard/_auth.c
 // Create Virtual Routes
 
 const DashboardImport = createFileRoute('/dashboard')()
-const SupportLazyImport = createFileRoute('/support')()
-const SubscriptionLazyImport = createFileRoute('/subscription')()
-const ForgetPasswordLazyImport = createFileRoute('/forget-password')()
-const IndexLazyImport = createFileRoute('/')()
-const ShowsIndexLazyImport = createFileRoute('/shows/')()
-const MoviesIndexLazyImport = createFileRoute('/movies/')()
-const ShowsShowIdLazyImport = createFileRoute('/shows/$showId')()
-const MoviesMovieIdLazyImport = createFileRoute('/movies/$movieId')()
+const MainIndexLazyImport = createFileRoute('/_main/')()
+const MainSupportLazyImport = createFileRoute('/_main/support')()
+const mainSubscriptionLazyImport = createFileRoute('/__main/subscription')()
+const UnAuthForgetPasswordIndexLazyImport = createFileRoute(
+  '/_unAuth/forget-password/',
+)()
+const MainShowsIndexLazyImport = createFileRoute('/_main/shows/')()
+const MainMoviesIndexLazyImport = createFileRoute('/_main/movies/')()
+const UnAuthForgetPasswordVerifyLazyImport = createFileRoute(
+  '/_unAuth/forget-password/verify',
+)()
+const MainShowsShowIdLazyImport = createFileRoute('/_main/shows/$showId')()
+const MainMoviesMovieIdLazyImport = createFileRoute('/_main/movies/$movieId')()
 
 // Create/Update Routes
 
@@ -45,54 +51,32 @@ const DashboardRoute = DashboardImport.update({
   getParentRoute: () => rootRoute,
 } as any)
 
-const SupportLazyRoute = SupportLazyImport.update({
-  path: '/support',
-  getParentRoute: () => rootRoute,
-} as any).lazy(() => import('./routes/support.lazy').then((d) => d.Route))
-
-const SubscriptionLazyRoute = SubscriptionLazyImport.update({
-  path: '/subscription',
-  getParentRoute: () => rootRoute,
-} as any).lazy(() => import('./routes/subscription.lazy').then((d) => d.Route))
-
-const ForgetPasswordLazyRoute = ForgetPasswordLazyImport.update({
-  path: '/forget-password',
-  getParentRoute: () => rootRoute,
-} as any).lazy(() =>
-  import('./routes/forget-password.lazy').then((d) => d.Route),
-)
-
 const UnAuthRoute = UnAuthImport.update({
   id: '/_unAuth',
   getParentRoute: () => rootRoute,
 } as any)
 
-const IndexLazyRoute = IndexLazyImport.update({
+const MainRoute = MainImport.update({
+  id: '/_main',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const MainIndexLazyRoute = MainIndexLazyImport.update({
   path: '/',
-  getParentRoute: () => rootRoute,
-} as any).lazy(() => import('./routes/index.lazy').then((d) => d.Route))
+  getParentRoute: () => MainRoute,
+} as any).lazy(() => import('./routes/_main.index.lazy').then((d) => d.Route))
 
-const ShowsIndexLazyRoute = ShowsIndexLazyImport.update({
-  path: '/shows/',
-  getParentRoute: () => rootRoute,
-} as any).lazy(() => import('./routes/shows/index.lazy').then((d) => d.Route))
+const MainSupportLazyRoute = MainSupportLazyImport.update({
+  path: '/support',
+  getParentRoute: () => MainRoute,
+} as any).lazy(() => import('./routes/_main.support.lazy').then((d) => d.Route))
 
-const MoviesIndexLazyRoute = MoviesIndexLazyImport.update({
-  path: '/movies/',
-  getParentRoute: () => rootRoute,
-} as any).lazy(() => import('./routes/movies/index.lazy').then((d) => d.Route))
-
-const ShowsShowIdLazyRoute = ShowsShowIdLazyImport.update({
-  path: '/shows/$showId',
-  getParentRoute: () => rootRoute,
-} as any).lazy(() => import('./routes/shows/$showId.lazy').then((d) => d.Route))
-
-const MoviesMovieIdLazyRoute = MoviesMovieIdLazyImport.update({
-  path: '/movies/$movieId',
-  getParentRoute: () => rootRoute,
-} as any).lazy(() =>
-  import('./routes/movies/$movieId.lazy').then((d) => d.Route),
-)
+const mainSubscriptionLazyRoute = mainSubscriptionLazyImport
+  .update({
+    path: '/subscription',
+    getParentRoute: () => rootRoute,
+  } as any)
+  .lazy(() => import('./routes/__main.subscription.lazy').then((d) => d.Route))
 
 const DashboardAuthRoute = DashboardAuthImport.update({
   id: '/_auth',
@@ -114,10 +98,54 @@ const UnAuthLoginRoute = UnAuthLoginImport.update({
   getParentRoute: () => UnAuthRoute,
 } as any)
 
+const UnAuthForgetPasswordIndexLazyRoute =
+  UnAuthForgetPasswordIndexLazyImport.update({
+    path: '/forget-password/',
+    getParentRoute: () => UnAuthRoute,
+  } as any).lazy(() =>
+    import('./routes/_unAuth.forget-password/index.lazy').then((d) => d.Route),
+  )
+
+const MainShowsIndexLazyRoute = MainShowsIndexLazyImport.update({
+  path: '/shows/',
+  getParentRoute: () => MainRoute,
+} as any).lazy(() =>
+  import('./routes/_main.shows/index.lazy').then((d) => d.Route),
+)
+
+const MainMoviesIndexLazyRoute = MainMoviesIndexLazyImport.update({
+  path: '/movies/',
+  getParentRoute: () => MainRoute,
+} as any).lazy(() =>
+  import('./routes/_main.movies/index.lazy').then((d) => d.Route),
+)
+
 const DashboardAuthIndexRoute = DashboardAuthIndexImport.update({
   path: '/',
   getParentRoute: () => DashboardAuthRoute,
 } as any)
+
+const UnAuthForgetPasswordVerifyLazyRoute =
+  UnAuthForgetPasswordVerifyLazyImport.update({
+    path: '/forget-password/verify',
+    getParentRoute: () => UnAuthRoute,
+  } as any).lazy(() =>
+    import('./routes/_unAuth.forget-password/verify.lazy').then((d) => d.Route),
+  )
+
+const MainShowsShowIdLazyRoute = MainShowsShowIdLazyImport.update({
+  path: '/shows/$showId',
+  getParentRoute: () => MainRoute,
+} as any).lazy(() =>
+  import('./routes/_main.shows/$showId.lazy').then((d) => d.Route),
+)
+
+const MainMoviesMovieIdLazyRoute = MainMoviesMovieIdLazyImport.update({
+  path: '/movies/$movieId',
+  getParentRoute: () => MainRoute,
+} as any).lazy(() =>
+  import('./routes/_main.movies/$movieId.lazy').then((d) => d.Route),
+)
 
 const DashboardAuthWalletRoute = DashboardAuthWalletImport.update({
   path: '/wallet',
@@ -153,11 +181,11 @@ const DashboardAuthCommentsRoute = DashboardAuthCommentsImport.update({
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexLazyImport
+    '/_main': {
+      id: '/_main'
+      path: ''
+      fullPath: ''
+      preLoaderRoute: typeof MainImport
       parentRoute: typeof rootRoute
     }
     '/_unAuth': {
@@ -165,27 +193,6 @@ declare module '@tanstack/react-router' {
       path: ''
       fullPath: ''
       preLoaderRoute: typeof UnAuthImport
-      parentRoute: typeof rootRoute
-    }
-    '/forget-password': {
-      id: '/forget-password'
-      path: '/forget-password'
-      fullPath: '/forget-password'
-      preLoaderRoute: typeof ForgetPasswordLazyImport
-      parentRoute: typeof rootRoute
-    }
-    '/subscription': {
-      id: '/subscription'
-      path: '/subscription'
-      fullPath: '/subscription'
-      preLoaderRoute: typeof SubscriptionLazyImport
-      parentRoute: typeof rootRoute
-    }
-    '/support': {
-      id: '/support'
-      path: '/support'
-      fullPath: '/support'
-      preLoaderRoute: typeof SupportLazyImport
       parentRoute: typeof rootRoute
     }
     '/_unAuth/login': {
@@ -223,33 +230,26 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardAuthImport
       parentRoute: typeof DashboardRoute
     }
-    '/movies/$movieId': {
-      id: '/movies/$movieId'
-      path: '/movies/$movieId'
-      fullPath: '/movies/$movieId'
-      preLoaderRoute: typeof MoviesMovieIdLazyImport
+    '/__main/subscription': {
+      id: '/__main/subscription'
+      path: '/subscription'
+      fullPath: '/subscription'
+      preLoaderRoute: typeof mainSubscriptionLazyImport
       parentRoute: typeof rootRoute
     }
-    '/shows/$showId': {
-      id: '/shows/$showId'
-      path: '/shows/$showId'
-      fullPath: '/shows/$showId'
-      preLoaderRoute: typeof ShowsShowIdLazyImport
-      parentRoute: typeof rootRoute
+    '/_main/support': {
+      id: '/_main/support'
+      path: '/support'
+      fullPath: '/support'
+      preLoaderRoute: typeof MainSupportLazyImport
+      parentRoute: typeof MainImport
     }
-    '/movies/': {
-      id: '/movies/'
-      path: '/movies/'
-      fullPath: '/movies/'
-      preLoaderRoute: typeof MoviesIndexLazyImport
-      parentRoute: typeof rootRoute
-    }
-    '/shows/': {
-      id: '/shows/'
-      path: '/shows/'
-      fullPath: '/shows/'
-      preLoaderRoute: typeof ShowsIndexLazyImport
-      parentRoute: typeof rootRoute
+    '/_main/': {
+      id: '/_main/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof MainIndexLazyImport
+      parentRoute: typeof MainImport
     }
     '/dashboard/_auth/comments': {
       id: '/dashboard/_auth/comments'
@@ -293,6 +293,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardAuthWalletImport
       parentRoute: typeof DashboardAuthImport
     }
+    '/_main/movies/$movieId': {
+      id: '/_main/movies/$movieId'
+      path: '/movies/$movieId'
+      fullPath: '/movies/$movieId'
+      preLoaderRoute: typeof MainMoviesMovieIdLazyImport
+      parentRoute: typeof MainImport
+    }
+    '/_main/shows/$showId': {
+      id: '/_main/shows/$showId'
+      path: '/shows/$showId'
+      fullPath: '/shows/$showId'
+      preLoaderRoute: typeof MainShowsShowIdLazyImport
+      parentRoute: typeof MainImport
+    }
+    '/_unAuth/forget-password/verify': {
+      id: '/_unAuth/forget-password/verify'
+      path: '/forget-password/verify'
+      fullPath: '/forget-password/verify'
+      preLoaderRoute: typeof UnAuthForgetPasswordVerifyLazyImport
+      parentRoute: typeof UnAuthImport
+    }
     '/dashboard/_auth/': {
       id: '/dashboard/_auth/'
       path: '/'
@@ -300,21 +321,48 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardAuthIndexImport
       parentRoute: typeof DashboardAuthImport
     }
+    '/_main/movies/': {
+      id: '/_main/movies/'
+      path: '/movies/'
+      fullPath: '/movies/'
+      preLoaderRoute: typeof MainMoviesIndexLazyImport
+      parentRoute: typeof MainImport
+    }
+    '/_main/shows/': {
+      id: '/_main/shows/'
+      path: '/shows/'
+      fullPath: '/shows/'
+      preLoaderRoute: typeof MainShowsIndexLazyImport
+      parentRoute: typeof MainImport
+    }
+    '/_unAuth/forget-password/': {
+      id: '/_unAuth/forget-password/'
+      path: '/forget-password/'
+      fullPath: '/forget-password/'
+      preLoaderRoute: typeof UnAuthForgetPasswordIndexLazyImport
+      parentRoute: typeof UnAuthImport
+    }
   }
 }
 
 // Create and export the route tree
 
 export const routeTree = rootRoute.addChildren({
-  IndexLazyRoute,
+  MainRoute: MainRoute.addChildren({
+    MainSupportLazyRoute,
+    MainIndexLazyRoute,
+    MainMoviesMovieIdLazyRoute,
+    MainShowsShowIdLazyRoute,
+    MainMoviesIndexLazyRoute,
+    MainShowsIndexLazyRoute,
+  }),
   UnAuthRoute: UnAuthRoute.addChildren({
     UnAuthLoginRoute,
     UnAuthRegisterRoute,
     UnAuthVerifyEmailRoute,
+    UnAuthForgetPasswordVerifyLazyRoute,
+    UnAuthForgetPasswordIndexLazyRoute,
   }),
-  ForgetPasswordLazyRoute,
-  SubscriptionLazyRoute,
-  SupportLazyRoute,
   DashboardRoute: DashboardRoute.addChildren({
     DashboardAuthRoute: DashboardAuthRoute.addChildren({
       DashboardAuthCommentsRoute,
@@ -326,10 +374,7 @@ export const routeTree = rootRoute.addChildren({
       DashboardAuthIndexRoute,
     }),
   }),
-  MoviesMovieIdLazyRoute,
-  ShowsShowIdLazyRoute,
-  MoviesIndexLazyRoute,
-  ShowsIndexLazyRoute,
+  mainSubscriptionLazyRoute,
 })
 
 /* prettier-ignore-end */
