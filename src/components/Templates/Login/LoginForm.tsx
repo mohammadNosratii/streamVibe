@@ -91,7 +91,7 @@ export default function LoginForm() {
       <Button type="submit" className="dark:bg-mainLight text-black-6" isLoading={isPending}>Login</Button>
       <p className="text-gray-60 text-sm text-center">
         Don't have an account?{" "}
-        <Link to="/register" className="underline">
+        <Link to="/register/" className="underline">
           Register
         </Link>
       </p>
