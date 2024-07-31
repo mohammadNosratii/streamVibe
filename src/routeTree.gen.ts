@@ -16,16 +16,16 @@ import { Route as rootRoute } from './routes/__root'
 import { Route as UnAuthImport } from './routes/_unAuth'
 import { Route as MainImport } from './routes/_main'
 import { Route as DashboardAuthImport } from './routes/dashboard/_auth'
-import { Route as UnAuthVerifyEmailImport } from './routes/_unAuth.verify-email'
-import { Route as UnAuthRegisterImport } from './routes/_unAuth.register'
 import { Route as UnAuthLoginImport } from './routes/_unAuth.login'
 import { Route as DashboardAuthIndexImport } from './routes/dashboard/_auth.index'
+import { Route as UnAuthRegisterIndexImport } from './routes/_unAuth.register/index'
 import { Route as DashboardAuthWalletImport } from './routes/dashboard/_auth.wallet'
 import { Route as DashboardAuthTicketsImport } from './routes/dashboard/_auth.tickets'
 import { Route as DashboardAuthSubscriptionImport } from './routes/dashboard/_auth.subscription'
 import { Route as DashboardAuthPaymentsImport } from './routes/dashboard/_auth.payments'
 import { Route as DashboardAuthEditInfoImport } from './routes/dashboard/_auth.editInfo'
 import { Route as DashboardAuthCommentsImport } from './routes/dashboard/_auth.comments'
+import { Route as UnAuthRegisterVerifyImport } from './routes/_unAuth.register/verify'
 
 // Create Virtual Routes
 
@@ -83,16 +83,6 @@ const DashboardAuthRoute = DashboardAuthImport.update({
   getParentRoute: () => DashboardRoute,
 } as any)
 
-const UnAuthVerifyEmailRoute = UnAuthVerifyEmailImport.update({
-  path: '/verify-email',
-  getParentRoute: () => UnAuthRoute,
-} as any)
-
-const UnAuthRegisterRoute = UnAuthRegisterImport.update({
-  path: '/register',
-  getParentRoute: () => UnAuthRoute,
-} as any)
-
 const UnAuthLoginRoute = UnAuthLoginImport.update({
   path: '/login',
   getParentRoute: () => UnAuthRoute,
@@ -123,6 +113,11 @@ const MainMoviesIndexLazyRoute = MainMoviesIndexLazyImport.update({
 const DashboardAuthIndexRoute = DashboardAuthIndexImport.update({
   path: '/',
   getParentRoute: () => DashboardAuthRoute,
+} as any)
+
+const UnAuthRegisterIndexRoute = UnAuthRegisterIndexImport.update({
+  path: '/register/',
+  getParentRoute: () => UnAuthRoute,
 } as any)
 
 const UnAuthForgetPasswordVerifyLazyRoute =
@@ -177,6 +172,11 @@ const DashboardAuthCommentsRoute = DashboardAuthCommentsImport.update({
   getParentRoute: () => DashboardAuthRoute,
 } as any)
 
+const UnAuthRegisterVerifyRoute = UnAuthRegisterVerifyImport.update({
+  path: '/register/verify',
+  getParentRoute: () => UnAuthRoute,
+} as any)
+
 // Populate the FileRoutesByPath interface
 
 declare module '@tanstack/react-router' {
@@ -200,20 +200,6 @@ declare module '@tanstack/react-router' {
       path: '/login'
       fullPath: '/login'
       preLoaderRoute: typeof UnAuthLoginImport
-      parentRoute: typeof UnAuthImport
-    }
-    '/_unAuth/register': {
-      id: '/_unAuth/register'
-      path: '/register'
-      fullPath: '/register'
-      preLoaderRoute: typeof UnAuthRegisterImport
-      parentRoute: typeof UnAuthImport
-    }
-    '/_unAuth/verify-email': {
-      id: '/_unAuth/verify-email'
-      path: '/verify-email'
-      fullPath: '/verify-email'
-      preLoaderRoute: typeof UnAuthVerifyEmailImport
       parentRoute: typeof UnAuthImport
     }
     '/dashboard': {
@@ -250,6 +236,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/'
       preLoaderRoute: typeof MainIndexLazyImport
       parentRoute: typeof MainImport
+    }
+    '/_unAuth/register/verify': {
+      id: '/_unAuth/register/verify'
+      path: '/register/verify'
+      fullPath: '/register/verify'
+      preLoaderRoute: typeof UnAuthRegisterVerifyImport
+      parentRoute: typeof UnAuthImport
     }
     '/dashboard/_auth/comments': {
       id: '/dashboard/_auth/comments'
@@ -314,6 +307,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof UnAuthForgetPasswordVerifyLazyImport
       parentRoute: typeof UnAuthImport
     }
+    '/_unAuth/register/': {
+      id: '/_unAuth/register/'
+      path: '/register/'
+      fullPath: '/register/'
+      preLoaderRoute: typeof UnAuthRegisterIndexImport
+      parentRoute: typeof UnAuthImport
+    }
     '/dashboard/_auth/': {
       id: '/dashboard/_auth/'
       path: '/'
@@ -358,9 +358,9 @@ export const routeTree = rootRoute.addChildren({
   }),
   UnAuthRoute: UnAuthRoute.addChildren({
     UnAuthLoginRoute,
-    UnAuthRegisterRoute,
-    UnAuthVerifyEmailRoute,
+    UnAuthRegisterVerifyRoute,
     UnAuthForgetPasswordVerifyLazyRoute,
+    UnAuthRegisterIndexRoute,
     UnAuthForgetPasswordIndexLazyRoute,
   }),
   DashboardRoute: DashboardRoute.addChildren({
