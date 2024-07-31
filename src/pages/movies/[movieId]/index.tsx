@@ -8,7 +8,7 @@ import allMoviesInfo from "../../../mock/allMoviesInfo";
 import DownloadLink from "../../../components/Modules/Movie&ShowPageInfo/DownloadLink";
 
 export default function MovieDetailsPage() {
-  const params = useParams({ from: "/movies/$movieId" });
+  const params = useParams({ from: "/_main/movies/$movieId" });
 
   const getMovieData = allMoviesInfo().find(
     (movie) => movie.id === Number(params.movieId)

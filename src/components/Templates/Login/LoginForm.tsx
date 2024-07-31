@@ -84,7 +84,7 @@ export default function LoginForm() {
         >
           Remember Me
         </Checkbox>
-        <Link to="/forget-password" className="text-gray-60 text-sm hover:underline">
+        <Link to="/forget-password/" className="text-gray-60 text-sm hover:underline">
           Forget Password?
         </Link>
       </div>
