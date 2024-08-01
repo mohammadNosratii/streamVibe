@@ -23,7 +23,7 @@ import { Route as UnAuthRegisterVerifyImport } from './routes/_unAuth.register/v
 const MainIndexLazyImport = createFileRoute('/_main/')()
 const UnAuthLoginLazyImport = createFileRoute('/_unAuth/login')()
 const MainSupportLazyImport = createFileRoute('/_main/support')()
-const mainSubscriptionLazyImport = createFileRoute('/__main/subscription')()
+const MainSubscriptionLazyImport = createFileRoute('/_main/subscription')()
 const UnAuthRegisterIndexLazyImport = createFileRoute('/_unAuth/register/')()
 const UnAuthForgetPasswordIndexLazyImport = createFileRoute(
   '/_unAuth/forget-password/',
@@ -87,12 +87,12 @@ const MainSupportLazyRoute = MainSupportLazyImport.update({
   getParentRoute: () => MainRoute,
 } as any).lazy(() => import('./routes/_main.support.lazy').then((d) => d.Route))
 
-const mainSubscriptionLazyRoute = mainSubscriptionLazyImport
-  .update({
-    path: '/subscription',
-    getParentRoute: () => rootRoute,
-  } as any)
-  .lazy(() => import('./routes/__main.subscription.lazy').then((d) => d.Route))
+const MainSubscriptionLazyRoute = MainSubscriptionLazyImport.update({
+  path: '/subscription',
+  getParentRoute: () => MainRoute,
+} as any).lazy(() =>
+  import('./routes/_main.subscription.lazy').then((d) => d.Route),
+)
 
 const UnAuthRegisterIndexLazyRoute = UnAuthRegisterIndexLazyImport.update({
   path: '/register/',
@@ -225,12 +225,12 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof UnAuthImport
       parentRoute: typeof rootRoute
     }
-    '/__main/subscription': {
-      id: '/__main/subscription'
+    '/_main/subscription': {
+      id: '/_main/subscription'
       path: '/subscription'
       fullPath: '/subscription'
-      preLoaderRoute: typeof mainSubscriptionLazyImport
-      parentRoute: typeof rootRoute
+      preLoaderRoute: typeof MainSubscriptionLazyImport
+      parentRoute: typeof MainImport
     }
     '/_main/support': {
       id: '/_main/support'
@@ -374,6 +374,7 @@ export const routeTree = rootRoute.addChildren({
     AuthDashboardIndexLazyRoute,
   }),
   MainRoute: MainRoute.addChildren({
+    MainSubscriptionLazyRoute,
     MainSupportLazyRoute,
     MainIndexLazyRoute,
     MainMoviesMovieIdLazyRoute,
@@ -388,7 +389,6 @@ export const routeTree = rootRoute.addChildren({
     UnAuthForgetPasswordIndexLazyRoute,
     UnAuthRegisterIndexLazyRoute,
   }),
-  mainSubscriptionLazyRoute,
 })
 
 /* prettier-ignore-end */
