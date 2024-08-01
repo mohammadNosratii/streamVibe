@@ -1,12 +1,9 @@
 import { navbarVerticalItems } from "../../../constants/navbarItems";
-import { Image, User, Divider } from "@nextui-org/react";
+import { Image, Divider } from "@nextui-org/react";
 import logo from "/icons/logo-mobile.svg";
 import ThemeSwitch from "../ThemeSwitch/ThemeSwitch";
-import profile from "../../../assets/images/joker.webp";
 import { navbarVerticalProps } from "../../../interfaces/navbarVerticalProps.interface";
 import { Link } from "@tanstack/react-router";
-import { isAuthenticated } from "../../../utils/isAuthenticated";
-import LoginIcon from "../../../assets/icons/Login";
 
 export default function NavbarVertical({
   isNavbarShown,
@@ -48,24 +45,6 @@ export default function NavbarVertical({
             ))}
           </ul>
         </div>
-        {isAuthenticated() ? (
-          <User
-            classNames={{
-              base: ["rounded-md backdrop-blur-2xl p-2 cursor-pointer"],
-              description: ["text-red-45"],
-            }}
-            name="Mohammad Nosrati"
-            description="Premium"
-            avatarProps={{
-              src: profile,
-            }}
-          />
-        ) : (
-          <div className="rounded-md backdrop-blur-2xl p-2 cursor-pointer self-start flex items-center gap-2">
-            <LoginIcon />
-            <Link to="/login">Login / Sign up</Link>
-          </div>
-        )}
       </div>
     </>
   );
