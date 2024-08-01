@@ -6,12 +6,16 @@ import joker from "../../../assets/images/joker.webp";
 import roadHouse from "../../../assets/images/road-house.webp";
 import granTurismo from "../../../assets/images/granTurismo.webp";
 import { Link } from "@tanstack/react-router";
-import { useLogoutApi } from "../../../hooks/api/useAuthApi";
+import { userSession } from "../../../utils/userSession";
+// import { useLogoutApi } from "../../../hooks/api/useAuthApi";
 
 const UserPopOverContent = () => {
-  const { mutate, isPending } = useLogoutApi()
+  // const { mutate, isPending } = useLogoutApi()
   const signoutUserHandler = () => {
-    mutate()
+    userSession(false);
+    window.location.reload()
+
+    // mutate()
   };
   return (
     <div className="w-48">
@@ -27,7 +31,7 @@ const UserPopOverContent = () => {
       />
       <Divider className="my-2" />
       <ul className="w-full child:transition-all child:duration-200 child:block child-hover:bg-mainLight dark:child-hover:bg-black-30 child:p-2 child:rounded-lg child:cursor-pointer">
-        <Link to="/dashboard">
+        <Link to="/dashboard/">
           <li>Profile</li>
         </Link>
         <Link to="/dashboard/subscription">
@@ -49,7 +53,7 @@ const UserPopOverContent = () => {
       <Divider className="my-2" />
       <Button
         onClick={signoutUserHandler}
-        isLoading={isPending}
+        // isLoading={isPending}
         endContent={<SignOut />}
         className="justify-between bg-transparent hover:text-white hover:bg-red-45 translate-x-0 duration-200 w-full p-2 cursor-pointer rounded-lg"
       >
