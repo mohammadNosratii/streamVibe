@@ -6,6 +6,7 @@ import {
   Image,
 } from "@nextui-org/react";
 import logo from "/icons/logo-desktop.svg";
+import logoNontext from "/icons/logo-nontext.svg";
 import menuIcon from "/icons/bars-3.svg";
 import { useEffect, useState } from "react";
 import Search from "../../../assets/icons/Search";
@@ -27,7 +28,7 @@ export default function NavbarHorizontal({
 }: {
   triggerNavbarVertical: () => void;
 }) {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [isNavbarSticky, setIsNavbarSticky] = useState<boolean>(false);
 
   useEffect(() => {
@@ -45,18 +46,27 @@ export default function NavbarHorizontal({
 
   return (
     <NextUINavbar
-      className={`z-50 py-3 transition-all fixed bg-gradient-to-b from-black-6 to-black-6/0 ${isNavbarSticky
-        ? `backdrop-blur-sm bg-black-6/20 backdrop-saturate-[1.5]`
-        : `backdrop-blur-none bg-transparent backdrop-saturate-[1]`
-        }`}
+      className={`z-50 py-3 transition-all fixed bg-gradient-to-b from-black-6 to-black-6/0 ${
+        isNavbarSticky
+          ? `backdrop-blur-sm bg-black-6/20 backdrop-saturate-[1.5]`
+          : `backdrop-blur-none bg-transparent backdrop-saturate-[1]`
+      }`}
       classNames={{
         wrapper: ["max-w-[90%]"],
       }}
     >
-      <NavbarBrand className="cursor-pointer" onClick={() => navigate({ to: '/' })}>
+      <NavbarBrand
+        className="cursor-pointer"
+        onClick={() => navigate({ to: "/" })}
+      >
         <Image
-          className="w-28 h-12 lg:w-36 2xl:w-40 3xl:w-48 3xl:h-14"
+          className="w-28 h-12 lg:w-36 2xl:w-40 3xl:w-48 3xl:h-14 hidden sm:inline-block"
           src={logo}
+          alt=""
+        />
+        <Image
+          className="w-9 lg:w-36 2xl:w-40 3xl:w-48 3xl:h-14 sm:hidden"
+          src={logoNontext}
           alt=""
         />
       </NavbarBrand>
@@ -75,10 +85,11 @@ export default function NavbarHorizontal({
           >
             <Link
               to={item.route}
-              className={`${item.route === window.location.pathname
-                ? "text-black dark:text-white font-manropeMedium"
-                : "text-gray-75 font-manropeRegular"
-                } text-sm lg:text-base`}
+              className={`${
+                item.route === window.location.pathname
+                  ? "text-black dark:text-white font-manropeMedium"
+                  : "text-gray-75 font-manropeRegular"
+              } text-sm lg:text-base`}
             >
               {item.title}
             </Link>
@@ -98,14 +109,6 @@ export default function NavbarHorizontal({
               <Search />
             </div>
           </PopOver>
-          <div
-            className="md:hidden flex items-center justify-center w-10 h-10 bg-gray-85 dark:bg-black-10 border-2 dark:border-black-15 rounded-lg cursor-pointer"
-            onClick={triggerNavbarVertical}
-          >
-            <Image alt="" src={menuIcon} className="w-6 h-6 md:hidden" />
-          </div>
-        </NavbarItem>
-        <NavbarItem className="hidden md:inline-block">
           {isAuthenticated() ? (
             <PopOver content={<UserPopOverContent />}>
               <span className="flex items-center justify-center">
@@ -121,6 +124,12 @@ export default function NavbarHorizontal({
               </Link>
             </MainTooltip>
           )}
+          <div
+            className="md:hidden flex items-center justify-center w-10 h-10 bg-gray-85 dark:bg-black-10 border-2 dark:border-black-15 rounded-lg cursor-pointer"
+            onClick={triggerNavbarVertical}
+          >
+            <Image alt="" src={menuIcon} className="w-6 h-6 md:hidden" />
+          </div>
         </NavbarItem>
       </NavbarContent>
     </NextUINavbar>
