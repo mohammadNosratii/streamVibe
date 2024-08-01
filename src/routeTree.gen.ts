@@ -16,32 +16,44 @@ import { Route as rootRoute } from './routes/__root'
 import { Route as UnAuthImport } from './routes/_unAuth'
 import { Route as MainImport } from './routes/_main'
 import { Route as AuthImport } from './routes/_auth'
-import { Route as UnAuthLoginImport } from './routes/_unAuth.login'
-import { Route as UnAuthRegisterIndexImport } from './routes/_unAuth.register/index'
-import { Route as AuthDashboardIndexImport } from './routes/_auth.dashboard/index'
 import { Route as UnAuthRegisterVerifyImport } from './routes/_unAuth.register/verify'
-import { Route as AuthDashboardWalletImport } from './routes/_auth.dashboard/wallet'
-import { Route as AuthDashboardTicketsImport } from './routes/_auth.dashboard/tickets'
-import { Route as AuthDashboardSubscriptionImport } from './routes/_auth.dashboard/subscription'
-import { Route as AuthDashboardPaymentsImport } from './routes/_auth.dashboard/payments'
-import { Route as AuthDashboardEditInfoImport } from './routes/_auth.dashboard/editInfo'
-import { Route as AuthDashboardCommentsImport } from './routes/_auth.dashboard/comments'
 
 // Create Virtual Routes
 
 const MainIndexLazyImport = createFileRoute('/_main/')()
+const UnAuthLoginLazyImport = createFileRoute('/_unAuth/login')()
 const MainSupportLazyImport = createFileRoute('/_main/support')()
 const mainSubscriptionLazyImport = createFileRoute('/__main/subscription')()
+const UnAuthRegisterIndexLazyImport = createFileRoute('/_unAuth/register/')()
 const UnAuthForgetPasswordIndexLazyImport = createFileRoute(
   '/_unAuth/forget-password/',
 )()
 const MainShowsIndexLazyImport = createFileRoute('/_main/shows/')()
 const MainMoviesIndexLazyImport = createFileRoute('/_main/movies/')()
+const AuthDashboardIndexLazyImport = createFileRoute('/_auth/dashboard/')()
 const UnAuthForgetPasswordVerifyLazyImport = createFileRoute(
   '/_unAuth/forget-password/verify',
 )()
 const MainShowsShowIdLazyImport = createFileRoute('/_main/shows/$showId')()
 const MainMoviesMovieIdLazyImport = createFileRoute('/_main/movies/$movieId')()
+const AuthDashboardWalletLazyImport = createFileRoute(
+  '/_auth/dashboard/wallet',
+)()
+const AuthDashboardTicketsLazyImport = createFileRoute(
+  '/_auth/dashboard/tickets',
+)()
+const AuthDashboardSubscriptionLazyImport = createFileRoute(
+  '/_auth/dashboard/subscription',
+)()
+const AuthDashboardPaymentsLazyImport = createFileRoute(
+  '/_auth/dashboard/payments',
+)()
+const AuthDashboardEditInfoLazyImport = createFileRoute(
+  '/_auth/dashboard/editInfo',
+)()
+const AuthDashboardCommentsLazyImport = createFileRoute(
+  '/_auth/dashboard/comments',
+)()
 
 // Create/Update Routes
 
@@ -65,6 +77,11 @@ const MainIndexLazyRoute = MainIndexLazyImport.update({
   getParentRoute: () => MainRoute,
 } as any).lazy(() => import('./routes/_main.index.lazy').then((d) => d.Route))
 
+const UnAuthLoginLazyRoute = UnAuthLoginLazyImport.update({
+  path: '/login',
+  getParentRoute: () => UnAuthRoute,
+} as any).lazy(() => import('./routes/_unAuth.login.lazy').then((d) => d.Route))
+
 const MainSupportLazyRoute = MainSupportLazyImport.update({
   path: '/support',
   getParentRoute: () => MainRoute,
@@ -77,10 +94,12 @@ const mainSubscriptionLazyRoute = mainSubscriptionLazyImport
   } as any)
   .lazy(() => import('./routes/__main.subscription.lazy').then((d) => d.Route))
 
-const UnAuthLoginRoute = UnAuthLoginImport.update({
-  path: '/login',
+const UnAuthRegisterIndexLazyRoute = UnAuthRegisterIndexLazyImport.update({
+  path: '/register/',
   getParentRoute: () => UnAuthRoute,
-} as any)
+} as any).lazy(() =>
+  import('./routes/_unAuth.register/index.lazy').then((d) => d.Route),
+)
 
 const UnAuthForgetPasswordIndexLazyRoute =
   UnAuthForgetPasswordIndexLazyImport.update({
@@ -104,15 +123,12 @@ const MainMoviesIndexLazyRoute = MainMoviesIndexLazyImport.update({
   import('./routes/_main.movies/index.lazy').then((d) => d.Route),
 )
 
-const UnAuthRegisterIndexRoute = UnAuthRegisterIndexImport.update({
-  path: '/register/',
-  getParentRoute: () => UnAuthRoute,
-} as any)
-
-const AuthDashboardIndexRoute = AuthDashboardIndexImport.update({
+const AuthDashboardIndexLazyRoute = AuthDashboardIndexLazyImport.update({
   path: '/dashboard/',
   getParentRoute: () => AuthRoute,
-} as any)
+} as any).lazy(() =>
+  import('./routes/_auth.dashboard/index.lazy').then((d) => d.Route),
+)
 
 const UnAuthForgetPasswordVerifyLazyRoute =
   UnAuthForgetPasswordVerifyLazyImport.update({
@@ -136,39 +152,52 @@ const MainMoviesMovieIdLazyRoute = MainMoviesMovieIdLazyImport.update({
   import('./routes/_main.movies/$movieId.lazy').then((d) => d.Route),
 )
 
+const AuthDashboardWalletLazyRoute = AuthDashboardWalletLazyImport.update({
+  path: '/dashboard/wallet',
+  getParentRoute: () => AuthRoute,
+} as any).lazy(() =>
+  import('./routes/_auth.dashboard/wallet.lazy').then((d) => d.Route),
+)
+
+const AuthDashboardTicketsLazyRoute = AuthDashboardTicketsLazyImport.update({
+  path: '/dashboard/tickets',
+  getParentRoute: () => AuthRoute,
+} as any).lazy(() =>
+  import('./routes/_auth.dashboard/tickets.lazy').then((d) => d.Route),
+)
+
+const AuthDashboardSubscriptionLazyRoute =
+  AuthDashboardSubscriptionLazyImport.update({
+    path: '/dashboard/subscription',
+    getParentRoute: () => AuthRoute,
+  } as any).lazy(() =>
+    import('./routes/_auth.dashboard/subscription.lazy').then((d) => d.Route),
+  )
+
+const AuthDashboardPaymentsLazyRoute = AuthDashboardPaymentsLazyImport.update({
+  path: '/dashboard/payments',
+  getParentRoute: () => AuthRoute,
+} as any).lazy(() =>
+  import('./routes/_auth.dashboard/payments.lazy').then((d) => d.Route),
+)
+
+const AuthDashboardEditInfoLazyRoute = AuthDashboardEditInfoLazyImport.update({
+  path: '/dashboard/editInfo',
+  getParentRoute: () => AuthRoute,
+} as any).lazy(() =>
+  import('./routes/_auth.dashboard/editInfo.lazy').then((d) => d.Route),
+)
+
+const AuthDashboardCommentsLazyRoute = AuthDashboardCommentsLazyImport.update({
+  path: '/dashboard/comments',
+  getParentRoute: () => AuthRoute,
+} as any).lazy(() =>
+  import('./routes/_auth.dashboard/comments.lazy').then((d) => d.Route),
+)
+
 const UnAuthRegisterVerifyRoute = UnAuthRegisterVerifyImport.update({
   path: '/register/verify',
   getParentRoute: () => UnAuthRoute,
-} as any)
-
-const AuthDashboardWalletRoute = AuthDashboardWalletImport.update({
-  path: '/dashboard/wallet',
-  getParentRoute: () => AuthRoute,
-} as any)
-
-const AuthDashboardTicketsRoute = AuthDashboardTicketsImport.update({
-  path: '/dashboard/tickets',
-  getParentRoute: () => AuthRoute,
-} as any)
-
-const AuthDashboardSubscriptionRoute = AuthDashboardSubscriptionImport.update({
-  path: '/dashboard/subscription',
-  getParentRoute: () => AuthRoute,
-} as any)
-
-const AuthDashboardPaymentsRoute = AuthDashboardPaymentsImport.update({
-  path: '/dashboard/payments',
-  getParentRoute: () => AuthRoute,
-} as any)
-
-const AuthDashboardEditInfoRoute = AuthDashboardEditInfoImport.update({
-  path: '/dashboard/editInfo',
-  getParentRoute: () => AuthRoute,
-} as any)
-
-const AuthDashboardCommentsRoute = AuthDashboardCommentsImport.update({
-  path: '/dashboard/comments',
-  getParentRoute: () => AuthRoute,
 } as any)
 
 // Populate the FileRoutesByPath interface
@@ -196,13 +225,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof UnAuthImport
       parentRoute: typeof rootRoute
     }
-    '/_unAuth/login': {
-      id: '/_unAuth/login'
-      path: '/login'
-      fullPath: '/login'
-      preLoaderRoute: typeof UnAuthLoginImport
-      parentRoute: typeof UnAuthImport
-    }
     '/__main/subscription': {
       id: '/__main/subscription'
       path: '/subscription'
@@ -217,6 +239,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MainSupportLazyImport
       parentRoute: typeof MainImport
     }
+    '/_unAuth/login': {
+      id: '/_unAuth/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof UnAuthLoginLazyImport
+      parentRoute: typeof UnAuthImport
+    }
     '/_main/': {
       id: '/_main/'
       path: '/'
@@ -224,54 +253,54 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MainIndexLazyImport
       parentRoute: typeof MainImport
     }
-    '/_auth/dashboard/comments': {
-      id: '/_auth/dashboard/comments'
-      path: '/dashboard/comments'
-      fullPath: '/dashboard/comments'
-      preLoaderRoute: typeof AuthDashboardCommentsImport
-      parentRoute: typeof AuthImport
-    }
-    '/_auth/dashboard/editInfo': {
-      id: '/_auth/dashboard/editInfo'
-      path: '/dashboard/editInfo'
-      fullPath: '/dashboard/editInfo'
-      preLoaderRoute: typeof AuthDashboardEditInfoImport
-      parentRoute: typeof AuthImport
-    }
-    '/_auth/dashboard/payments': {
-      id: '/_auth/dashboard/payments'
-      path: '/dashboard/payments'
-      fullPath: '/dashboard/payments'
-      preLoaderRoute: typeof AuthDashboardPaymentsImport
-      parentRoute: typeof AuthImport
-    }
-    '/_auth/dashboard/subscription': {
-      id: '/_auth/dashboard/subscription'
-      path: '/dashboard/subscription'
-      fullPath: '/dashboard/subscription'
-      preLoaderRoute: typeof AuthDashboardSubscriptionImport
-      parentRoute: typeof AuthImport
-    }
-    '/_auth/dashboard/tickets': {
-      id: '/_auth/dashboard/tickets'
-      path: '/dashboard/tickets'
-      fullPath: '/dashboard/tickets'
-      preLoaderRoute: typeof AuthDashboardTicketsImport
-      parentRoute: typeof AuthImport
-    }
-    '/_auth/dashboard/wallet': {
-      id: '/_auth/dashboard/wallet'
-      path: '/dashboard/wallet'
-      fullPath: '/dashboard/wallet'
-      preLoaderRoute: typeof AuthDashboardWalletImport
-      parentRoute: typeof AuthImport
-    }
     '/_unAuth/register/verify': {
       id: '/_unAuth/register/verify'
       path: '/register/verify'
       fullPath: '/register/verify'
       preLoaderRoute: typeof UnAuthRegisterVerifyImport
       parentRoute: typeof UnAuthImport
+    }
+    '/_auth/dashboard/comments': {
+      id: '/_auth/dashboard/comments'
+      path: '/dashboard/comments'
+      fullPath: '/dashboard/comments'
+      preLoaderRoute: typeof AuthDashboardCommentsLazyImport
+      parentRoute: typeof AuthImport
+    }
+    '/_auth/dashboard/editInfo': {
+      id: '/_auth/dashboard/editInfo'
+      path: '/dashboard/editInfo'
+      fullPath: '/dashboard/editInfo'
+      preLoaderRoute: typeof AuthDashboardEditInfoLazyImport
+      parentRoute: typeof AuthImport
+    }
+    '/_auth/dashboard/payments': {
+      id: '/_auth/dashboard/payments'
+      path: '/dashboard/payments'
+      fullPath: '/dashboard/payments'
+      preLoaderRoute: typeof AuthDashboardPaymentsLazyImport
+      parentRoute: typeof AuthImport
+    }
+    '/_auth/dashboard/subscription': {
+      id: '/_auth/dashboard/subscription'
+      path: '/dashboard/subscription'
+      fullPath: '/dashboard/subscription'
+      preLoaderRoute: typeof AuthDashboardSubscriptionLazyImport
+      parentRoute: typeof AuthImport
+    }
+    '/_auth/dashboard/tickets': {
+      id: '/_auth/dashboard/tickets'
+      path: '/dashboard/tickets'
+      fullPath: '/dashboard/tickets'
+      preLoaderRoute: typeof AuthDashboardTicketsLazyImport
+      parentRoute: typeof AuthImport
+    }
+    '/_auth/dashboard/wallet': {
+      id: '/_auth/dashboard/wallet'
+      path: '/dashboard/wallet'
+      fullPath: '/dashboard/wallet'
+      preLoaderRoute: typeof AuthDashboardWalletLazyImport
+      parentRoute: typeof AuthImport
     }
     '/_main/movies/$movieId': {
       id: '/_main/movies/$movieId'
@@ -298,15 +327,8 @@ declare module '@tanstack/react-router' {
       id: '/_auth/dashboard/'
       path: '/dashboard/'
       fullPath: '/dashboard/'
-      preLoaderRoute: typeof AuthDashboardIndexImport
+      preLoaderRoute: typeof AuthDashboardIndexLazyImport
       parentRoute: typeof AuthImport
-    }
-    '/_unAuth/register/': {
-      id: '/_unAuth/register/'
-      path: '/register/'
-      fullPath: '/register/'
-      preLoaderRoute: typeof UnAuthRegisterIndexImport
-      parentRoute: typeof UnAuthImport
     }
     '/_main/movies/': {
       id: '/_main/movies/'
@@ -329,6 +351,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof UnAuthForgetPasswordIndexLazyImport
       parentRoute: typeof UnAuthImport
     }
+    '/_unAuth/register/': {
+      id: '/_unAuth/register/'
+      path: '/register/'
+      fullPath: '/register/'
+      preLoaderRoute: typeof UnAuthRegisterIndexLazyImport
+      parentRoute: typeof UnAuthImport
+    }
   }
 }
 
@@ -336,13 +365,13 @@ declare module '@tanstack/react-router' {
 
 export const routeTree = rootRoute.addChildren({
   AuthRoute: AuthRoute.addChildren({
-    AuthDashboardCommentsRoute,
-    AuthDashboardEditInfoRoute,
-    AuthDashboardPaymentsRoute,
-    AuthDashboardSubscriptionRoute,
-    AuthDashboardTicketsRoute,
-    AuthDashboardWalletRoute,
-    AuthDashboardIndexRoute,
+    AuthDashboardCommentsLazyRoute,
+    AuthDashboardEditInfoLazyRoute,
+    AuthDashboardPaymentsLazyRoute,
+    AuthDashboardSubscriptionLazyRoute,
+    AuthDashboardTicketsLazyRoute,
+    AuthDashboardWalletLazyRoute,
+    AuthDashboardIndexLazyRoute,
   }),
   MainRoute: MainRoute.addChildren({
     MainSupportLazyRoute,
@@ -353,11 +382,11 @@ export const routeTree = rootRoute.addChildren({
     MainShowsIndexLazyRoute,
   }),
   UnAuthRoute: UnAuthRoute.addChildren({
-    UnAuthLoginRoute,
+    UnAuthLoginLazyRoute,
     UnAuthRegisterVerifyRoute,
     UnAuthForgetPasswordVerifyLazyRoute,
-    UnAuthRegisterIndexRoute,
     UnAuthForgetPasswordIndexLazyRoute,
+    UnAuthRegisterIndexLazyRoute,
   }),
   mainSubscriptionLazyRoute,
 })
