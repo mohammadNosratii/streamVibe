@@ -35,11 +35,11 @@ export default function VerifyEmailStatus() {
       {!hasUidAndToken ? (
         <div className="space-y-8">
           <Link
-            to="/register/"
+            to="/login"
             className="text-sm font-manropeMedium text-gray-60 flex items-center gap-1.5 hover:text-black-6 dark:hover:text-white transition-colors"
           >
             <ArrowLeftIcon />
-            <span>Back to Register</span>
+            <span>Back to Login</span>
           </Link>
           <h1 className="text-3xl md:text-5xl font-manropeBold dark:text-white">
             Verify Email
