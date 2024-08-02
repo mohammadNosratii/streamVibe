@@ -17,6 +17,7 @@ import { Route as UnAuthImport } from './routes/_unAuth'
 import { Route as MainImport } from './routes/_main'
 import { Route as AuthImport } from './routes/_auth'
 import { Route as UnAuthRegisterVerifyImport } from './routes/_unAuth.register/verify'
+import { Route as UnAuthRegisterSendImport } from './routes/_unAuth.register/send'
 
 // Create Virtual Routes
 
@@ -200,6 +201,11 @@ const UnAuthRegisterVerifyRoute = UnAuthRegisterVerifyImport.update({
   getParentRoute: () => UnAuthRoute,
 } as any)
 
+const UnAuthRegisterSendRoute = UnAuthRegisterSendImport.update({
+  path: '/register/send',
+  getParentRoute: () => UnAuthRoute,
+} as any)
+
 // Populate the FileRoutesByPath interface
 
 declare module '@tanstack/react-router' {
@@ -252,6 +258,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/'
       preLoaderRoute: typeof MainIndexLazyImport
       parentRoute: typeof MainImport
+    }
+    '/_unAuth/register/send': {
+      id: '/_unAuth/register/send'
+      path: '/register/send'
+      fullPath: '/register/send'
+      preLoaderRoute: typeof UnAuthRegisterSendImport
+      parentRoute: typeof UnAuthImport
     }
     '/_unAuth/register/verify': {
       id: '/_unAuth/register/verify'
@@ -384,6 +397,7 @@ export const routeTree = rootRoute.addChildren({
   }),
   UnAuthRoute: UnAuthRoute.addChildren({
     UnAuthLoginLazyRoute,
+    UnAuthRegisterSendRoute,
     UnAuthRegisterVerifyRoute,
     UnAuthForgetPasswordVerifyLazyRoute,
     UnAuthForgetPasswordIndexLazyRoute,

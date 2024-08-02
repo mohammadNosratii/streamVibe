@@ -1,15 +1,15 @@
 import { createFileRoute, redirect } from '@tanstack/react-router'
-import VerifyRegister from '../../pages/register/verify'
+import SendEmailRegister from '../../pages/register/send'
 
-export const Route = createFileRoute('/_unAuth/register/verify')({
+export const Route = createFileRoute('/_unAuth/register/send')({
     beforeLoad: async ({ search }) => {
         // @ts-expect-error redirect is not a part of search structure as default
-        const { uid, token } = search
-        if (!uid || !token) {
+        const { identifier } = search
+        if (!identifier) {
             throw redirect({
                 to: "/register/"
             })
         }
     },
-    component: () => <VerifyRegister />
+    component: () => <SendEmailRegister />
 })
