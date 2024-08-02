@@ -13,8 +13,6 @@ export default function VerifyEmailStatus() {
   // @ts-expect-error redirect is not a part of search structure as default
   const { identifier, uid, token } = search;
 
-  const hasUidAndToken = uid && token;
-
   const {
     isSuccess,
     mutate: verifyEmailMutate,
@@ -29,14 +27,14 @@ export default function VerifyEmailStatus() {
   };
 
   useEffect(() => {
-    if (hasUidAndToken) {
+    if (uid && token) {
       verifyEmailMutate({ uid, token });
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [uid, token]);
   return (
     <>
-      {!hasUidAndToken ? (
+      {(!uid || !token) ? (
         <div className="space-y-8">
           <Link
             to="/login"
