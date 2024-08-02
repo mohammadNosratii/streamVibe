@@ -61,7 +61,7 @@ export default function Register() {
           label="Username"
           {...register("username", {
             required: "Username could not be empty",
-            minLength: { value: 8, message: "At Least Enter 8 Character" },
+            minLength: { value: 4, message: "At Least Enter 4 Character" },
           })}
           endContent={<UserCircle />}
           errorMessage={errors.username?.message}
