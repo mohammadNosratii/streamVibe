@@ -1,6 +1,5 @@
 import { loginUserProps } from "../../interfaces/loginUser.interface";
 import { modifyUserProps } from "../../interfaces/modifyUser.interface";
-import { refreshTokenProp } from "../../interfaces/refreshToken.interface";
 import { registerUserProps } from "../../interfaces/registerUser.interface";
 import { resetPasswordProps } from "../../interfaces/resetPassword.interface";
 import { verifyTokenProps } from "../../interfaces/verifyToken.interface";
@@ -18,10 +17,6 @@ export const registerApi = (payload: registerUserProps) => {
 
 export const loginApi = (payload: loginUserProps) => {
   return httpService.post(baseUrl + baseEndPoint + "login/create/", payload);
-};
-
-export const refreshTokenApi = (payload: refreshTokenProp) => {
-  return httpService.post(baseUrl + baseEndPoint + "login/refresh/", payload);
 };
 
 export const verifyTokenApi = (payload: verifyTokenProps) => {

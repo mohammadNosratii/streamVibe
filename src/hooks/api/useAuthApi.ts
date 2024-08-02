@@ -3,7 +3,6 @@ import {
   loginApi,
   logoutApi,
   modifyUserApi,
-  refreshTokenApi,
   registerApi,
   resendEmailApi,
   resetPasswordApi,
@@ -95,11 +94,6 @@ export const useLogoutApi = () => {
       userSession(false);
       window.location.reload();
     },
-  });
-};
-export const useRefreshLoginTokenApi = () => {
-  return useMutation({
-    mutationFn: (payload: refreshTokenProp) => refreshTokenApi(payload),
   });
 };
 
