@@ -14,11 +14,13 @@ export default function VerifyEmailStatus() {
   const { identifier, uid, token } = search;
 
   const hasUidAndToken = uid && token;
+
   const {
     isSuccess,
     mutate: verifyEmailMutate,
     isPending: verifyEmailPending,
   } = useVerifyEmailApi();
+
   const { mutate: resendEmailMutate, isPending: resendEmailPending } =
     useResendEmailApi();
 

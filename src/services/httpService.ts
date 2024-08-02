@@ -25,10 +25,9 @@ axios.interceptors.response.use(
     return response;
   },
   async function (error) {
-    // FIXME should check if refreshTokoen scenario is completed
-    if (error.code === "ERR_NETWORK") {
-      return toast.error("Unknown Error! Please try again later");
-    }
+    // if (error.code === "ERR_NETWORK") {
+    //   return toast.error("Unknown Error! Please try again later");
+    // }
     const status = error?.response?.status;
     switch (status) {
       case 403: {
