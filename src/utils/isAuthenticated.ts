@@ -1,8 +1,8 @@
 import Cookies from "js-cookie";
 
 export const isAuthenticated = () => {
-  const accessToken = Cookies.get("accessToken");
-  switch (Boolean(accessToken)) {
+  const authToken = Cookies.get("authToken");
+  switch (Boolean(authToken)) {
     case true: {
       return true;
     }
