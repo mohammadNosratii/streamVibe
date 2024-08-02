@@ -7,20 +7,20 @@ import roadHouse from "../../../assets/images/road-house.webp";
 import granTurismo from "../../../assets/images/granTurismo.webp";
 import { Link } from "@tanstack/react-router";
 import { userSession } from "../../../utils/userSession";
+import { userInfoProps } from "../../../interfaces/userDetailProps.interface";
 // import { useLogoutApi } from "../../../hooks/api/useAuthApi";
 
-const UserPopOverContent = () => {
+const UserPopOverContent = ({ user }: { user: userInfoProps }) => {
   // const { mutate, isPending } = useLogoutApi()
   const signoutUserHandler = () => {
     userSession(false);
-    window.location.reload()
-
+    window.location.reload();
     // mutate()
   };
   return (
     <div className="w-48">
       <User
-        name="Mohammad Nosrati"
+        name={user?.username}
         description="Premium"
         avatarProps={{
           src: profile,
@@ -35,19 +35,13 @@ const UserPopOverContent = () => {
           <li>Profile</li>
         </Link>
         <Link to="/dashboard/subscription">
-          <li>
-            Subscription
-          </li>
+          <li>Subscription</li>
         </Link>
         <Link to="/dashboard/wallet">
-          <li>
-            Wallet
-          </li>
+          <li>Wallet</li>
         </Link>
         <Link to="/dashboard/tickets">
-          <li>
-            Ticket
-          </li>
+          <li>Ticket</li>
         </Link>
       </ul>
       <Divider className="my-2" />

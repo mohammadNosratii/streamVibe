@@ -19,9 +19,9 @@ import { UserPopOverTrigger } from "../PopOverTrigger/PopOverTrigger";
 import { navbarHorizontalItems } from "../../../constants/navbarItems";
 import ThemeSwitch from "../ThemeSwitch/ThemeSwitch";
 import { Link, useNavigate } from "@tanstack/react-router";
-import { isAuthenticated } from "../../../utils/isAuthenticated";
 import LoginIcon from "../../../assets/icons/Login";
 import MainTooltip from "../Tooltip/MainTooltip";
+import { useGetUserInfoApi } from "../../../hooks/api/useUserApi";
 
 export default function NavbarHorizontal({
   triggerNavbarVertical,
@@ -30,6 +30,7 @@ export default function NavbarHorizontal({
 }) {
   const navigate = useNavigate();
   const [isNavbarSticky, setIsNavbarSticky] = useState<boolean>(false);
+  const { data, isSuccess } = useGetUserInfoApi();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -109,8 +110,8 @@ export default function NavbarHorizontal({
               <Search />
             </div>
           </PopOver>
-          {isAuthenticated() ? (
-            <PopOver content={<UserPopOverContent />}>
+          {isSuccess ? (
+            <PopOver content={<UserPopOverContent user={data} />}>
               <span className="flex items-center justify-center">
                 <UserPopOverTrigger />
               </span>

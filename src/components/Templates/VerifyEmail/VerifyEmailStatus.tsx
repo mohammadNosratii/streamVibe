@@ -12,6 +12,7 @@ export default function VerifyEmailStatus() {
   const { search } = useLocation();
   // @ts-expect-error redirect is not a part of search structure as default
   const { identifier, uid, token } = search;
+
   const hasUidAndToken = uid && token;
   const {
     isSuccess,

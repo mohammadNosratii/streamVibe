@@ -13,7 +13,7 @@ axios.interceptors.request.use(
     const csrfToken = Cookies.get("csrftoken");
 
     if (accessToken) {
-      config.headers.Authorization = `Bearer ${accessToken}`;
+      config.headers.Authorization = `Token ${accessToken}`;
     }
     if (csrfToken) {
       config.headers["X-CSRFToken"] = csrfToken;
