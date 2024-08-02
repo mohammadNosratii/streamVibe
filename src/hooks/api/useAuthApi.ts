@@ -16,7 +16,6 @@ import { modifyUserProps } from "../../interfaces/modifyUser.interface";
 import { resetPasswordProps } from "../../interfaces/resetPassword.interface";
 import toast from "react-hot-toast";
 import { userSession } from "../../utils/userSession";
-import { refreshTokenProp } from "../../interfaces/refreshToken.interface";
 import { verifyTokenProps } from "../../interfaces/verifyToken.interface";
 
 export const useRegisterApi = () => {
