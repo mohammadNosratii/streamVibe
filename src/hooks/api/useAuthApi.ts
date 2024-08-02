@@ -46,7 +46,7 @@ export const useLoginApi = () => {
     mutationFn: (payload: loginUserProps) =>
       loginApi(payload).then((data) => data.data),
     onSuccess: (res) => {
-      userSession(true, res.auth_token, res.auth_token);
+      userSession(true, res.auth_token);
       toast.success("Logged in successfully");
       // @ts-expect-error redirect is not a part of search structure as default
       navigate({ to: search.redirect || "/" });
