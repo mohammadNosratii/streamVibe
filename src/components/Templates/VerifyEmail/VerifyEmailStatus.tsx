@@ -32,7 +32,8 @@ export default function VerifyEmailStatus() {
     if (hasUidAndToken) {
       verifyEmailMutate({ uid, token });
     }
-  }, [uid, token, verifyEmailMutate, hasUidAndToken]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [uid, token]);
   return (
     <>
       {!hasUidAndToken ? (
