@@ -1,22 +1,16 @@
 import Cookies from "js-cookie";
 
-export const userSession = (
-  setTokens: boolean,
-  accessToken?: string,
-  refreshToken?: string
-) => {
+export const userSession = (setToken: boolean, authToken?: string) => {
   try {
-    switch (setTokens) {
+    switch (setToken) {
       case true: {
-        if (accessToken && refreshToken) {
-          Cookies.set("accessToken", accessToken);
-          Cookies.set("refreshToken", refreshToken);
+        if (authToken) {
+          Cookies.set("authToken", authToken);
         }
         break;
       }
       case false: {
-        Cookies.remove("accessToken");
-        Cookies.remove("refreshToken");
+        Cookies.remove("authToken");
         break;
       }
       default:

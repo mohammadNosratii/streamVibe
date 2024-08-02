@@ -2,15 +2,30 @@ import { Controller, SubmitHandler, useForm } from "react-hook-form";
 import { Button, DatePicker, Input } from "@nextui-org/react";
 import { editInfoProps } from "../../../../interfaces/editInfo.interface";
 import AutoCompletePhone from "../../../Modules/AutoCompletePhone/AutoCompletePhone";
+import { useGetUserInfoApi } from "../../../../hooks/api/useUserApi";
+import { useEffect } from "react";
 
 export default function PersonalInfo() {
+  const { data } = useGetUserInfoApi();
   const {
     register,
     control,
     handleSubmit,
     formState: { errors },
-    reset
+    reset,
   } = useForm<editInfoProps>();
+
+  useEffect(() => {
+    if (data) {
+      reset({
+        first_name: data?.first_name,
+        last_name: data?.last_name,
+        email: data?.email,
+        username: data?.username,
+        phone: data?.phone,
+      });
+    }
+  }, [data, reset]);
 
   const submitFormHandler: SubmitHandler<editInfoProps> = (data) => {
     console.log(data);

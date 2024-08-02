@@ -9,14 +9,10 @@ let failedApis: any[] = [];
 
 axios.interceptors.request.use(
   function (config) {
-    const accessToken = Cookies.get("accessToken");
-    const csrfToken = Cookies.get("csrftoken");
+    const authToken = Cookies.get("authToken");
 
-    if (accessToken) {
-      config.headers.Authorization = `Bearer ${accessToken}`;
-    }
-    if (csrfToken) {
-      config.headers["X-CSRFToken"] = csrfToken;
+    if (authToken) {
+      config.headers.Authorization = `Token ${authToken}`;
     }
     config.headers["Content-Type"] = "application/json";
     config.headers.Accept = "application/json";

@@ -44,6 +44,7 @@ export const resendEmailApi = (payload: { identifier: string }) => {
 };
 
 export const verifyEmailApi = (payload: { uid: string; token: string }) => {
+  console.log(payload);
   return httpService.post(
     baseUrl + baseEndPoint + `registration/activation`,
     payload
