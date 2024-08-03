@@ -30,7 +30,7 @@ export const useRegisterApi = () => {
     onSuccess: () => {
       toast.success("Successfull. Please Verify your email!");
       navigate({
-        to: `/register/verify?identifier=${identifier}`,
+        to: `/register/send?identifier=${identifier}`,
       });
     },
   });
