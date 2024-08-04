@@ -4,6 +4,6 @@ export const defaultTanstackQueryOptions = {
     refetchOnWindowFocus: false,
     refetchOnMount: false,
     refetchOnReconnect: false,
-    retry: 2,
+    retry: false,
   },
 };
