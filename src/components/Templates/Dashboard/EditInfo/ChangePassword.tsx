@@ -15,6 +15,8 @@ export default function ChangePassword() {
     reset,
   } = useForm<changePasswordProps>();
 
+  const { mutate, isPending } = useChangePasswordApi(reset);
+
   const [isPasswordVisible, setIsPasswordVisible] = useState<boolean>(false);
   const [isPassword2Visible, setIsPassword2Visible] = useState<boolean>(false);
 
@@ -25,8 +27,6 @@ export default function ChangePassword() {
   const togglePassword2 = () => {
     setIsPassword2Visible(!isPassword2Visible);
   };
-
-  const { mutate, isPending } = useChangePasswordApi(reset);
 
   const submitFormHandler: SubmitHandler<changePasswordProps> = (data) => {
     mutate(data);
@@ -44,13 +44,13 @@ export default function ChangePassword() {
             innerWrapper: ["bg-transparent"],
           }}
           size="sm"
-          label="Old Password"
-          {...register("old_password", {
-            required: "Old Password could not be empty",
+          label="Current Password"
+          {...register("current_password", {
+            required: "Current Password could not be empty",
             minLength: { value: 8, message: "At Least Enter 8 Character" },
           })}
-          errorMessage={errors.new_password1?.message}
-          isInvalid={Boolean(errors.new_password1)}
+          errorMessage={errors.current_password?.message}
+          isInvalid={Boolean(errors.current_password)}
         />
         <Input
           classNames={{
@@ -64,17 +64,19 @@ export default function ChangePassword() {
           size="sm"
           type={`${isPasswordVisible ? "text" : "password"}`}
           label="New Password"
-          {...register("new_password1", {
+          {...register("new_password", {
             required: "New Password could not be empty",
             minLength: { value: 8, message: "At Least Enter 8 Character" },
+            validate: (value) =>
+              value !== getValues("current_password") || "New Password could not be the same as your current passowrd"
           })}
           endContent={
             <div className="cursor-pointer" onClick={togglePassword}>
               {isPasswordVisible ? <EyeSlashIcon /> : <EyeIcon />}
             </div>
           }
-          errorMessage={errors.new_password1?.message}
-          isInvalid={Boolean(errors.new_password1)}
+          errorMessage={errors.new_password?.message}
+          isInvalid={Boolean(errors.new_password)}
         />
         <Input
           classNames={{
@@ -88,19 +90,19 @@ export default function ChangePassword() {
           size="sm"
           type={`${isPassword2Visible ? "text" : "password"}`}
           label="Confirm Password"
-          {...register("new_password2", {
+          {...register("re_new_password", {
             required: "Confirm Password could not be empty",
             minLength: { value: 8, message: "At Least Enter 8 Character" },
             validate: (value) =>
-              value === getValues("new_password1") || "Passwords do not match",
+              value === getValues("new_password") || "Passwords do not match",
           })}
           endContent={
             <div className="cursor-pointer" onClick={togglePassword2}>
               {isPassword2Visible ? <EyeSlashIcon /> : <EyeIcon />}
             </div>
           }
-          errorMessage={errors.new_password2?.message}
-          isInvalid={Boolean(errors.new_password2)}
+          errorMessage={errors.re_new_password?.message}
+          isInvalid={Boolean(errors.re_new_password)}
         />
       </div>
       <div className="flex items-center gap-2">

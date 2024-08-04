@@ -1,7 +1,7 @@
 interface changePasswordProps {
-  old_password: string;
-  new_password1: string;
-  new_password2: string;
+  current_password: string;
+  new_password: string;
+  re_new_password: string;
 }
 
 export type { changePasswordProps };
