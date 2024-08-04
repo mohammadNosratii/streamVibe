@@ -4,6 +4,7 @@ import {
   NavbarContent,
   NavbarItem,
   Image,
+  Skeleton,
 } from "@nextui-org/react";
 import logo from "/icons/logo-desktop.svg";
 import logoNontext from "/icons/logo-nontext.svg";
@@ -30,7 +31,7 @@ export default function NavbarHorizontal({
 }) {
   const navigate = useNavigate();
   const [isNavbarSticky, setIsNavbarSticky] = useState<boolean>(false);
-  const { data, isSuccess } = useGetUserInfoApi();
+  const { data, isLoading } = useGetUserInfoApi();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -108,7 +109,7 @@ export default function NavbarHorizontal({
               <Search />
             </div>
           </PopOver>
-          {isSuccess ? (
+          {isLoading ? <Skeleton className="rounded-full h-[45px] w-[45px]" /> : data ? (
             <PopOver content={<UserPopOverContent user={data} />}>
               <span className="flex items-center justify-center">
                 <UserPopOverTrigger />
