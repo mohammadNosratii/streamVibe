@@ -9,12 +9,8 @@ export default function DashboardDetailSkeleton() {
           className="p-5 flex flex-row items-center justify-between"
           radius="lg"
         >
-          <Skeleton className="w-[40%] rounded-lg">
-            <div className="h-5 w-full rounded-lg bg-default-200"></div>
-          </Skeleton>
-          <Skeleton className="w-[30%] rounded-lg">
-            <div className="h-3 w-full rounded-lg bg-default-200"></div>
-          </Skeleton>
+          <Skeleton className="w-[40%] h-6 rounded-md" />
+          <Skeleton className="w-[30%] h-5 rounded-md" />
         </Card>
       ))}
     </div>
