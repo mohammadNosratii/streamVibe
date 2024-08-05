@@ -1,13 +1,21 @@
 import { Autocomplete, AutocompleteItem, Avatar } from "@nextui-org/react";
 import { autoComplete } from "../../../constants/AutoComplete";
 
-export default function AutoCompletePhone() {
+export default function AutoCompletePhone({
+  onChange,
+  value,
+}: {
+  onChange: () => void;
+  value: string;
+}) {
   return (
     <Autocomplete
       variant="flat"
-      defaultSelectedKey={"Iran"}
+      defaultSelectedKey={value}
+      selectedKey={value}
       radius="sm"
       aria-label="phoneFlags"
+      onSelectionChange={onChange}
       classNames={{
         popoverContent: ["w-52"],
         base: ["w-[135px] md:w-[125px]"],
@@ -17,9 +25,9 @@ export default function AutoCompletePhone() {
       {autoComplete.map((item) => (
         <AutocompleteItem
           startContent={<Avatar className="w-6 h-6" src={item.flag} />}
-          key={item.value}
+          key={item.code}
         >
-          {item.label}
+          {item.code}
         </AutocompleteItem>
       ))}
     </Autocomplete>

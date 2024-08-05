@@ -2,11 +2,18 @@ import { Controller, SubmitHandler, useForm } from "react-hook-form";
 import { Button, DatePicker, Input } from "@nextui-org/react";
 import { editInfoProps } from "../../../../interfaces/editInfo.interface";
 import AutoCompletePhone from "../../../Modules/AutoCompletePhone/AutoCompletePhone";
-import { useGetUserInfoApi } from "../../../../hooks/api/useUserApi";
+import {
+  useGetUserInfoApi,
+  usePutUserInfoApi,
+} from "../../../../hooks/api/useUserApi";
 import { useEffect } from "react";
+import { emailRegex } from "../../../../utils/combineEmailAndPhoneRegex";
+import formatBirthDate from "../../../../utils/birthdayConverter";
 
 export default function PersonalInfo() {
   const { data } = useGetUserInfoApi();
+
+  const { mutate } = usePutUserInfoApi();
   const {
     register,
     control,
@@ -23,15 +30,19 @@ export default function PersonalInfo() {
         email: data?.email,
         username: data?.username,
         phone: data?.phone,
+        countryCode: data?.countryCode || "+98",
       });
     }
   }, [data, reset]);
 
   const submitFormHandler: SubmitHandler<editInfoProps> = (data) => {
-    console.log(data);
+    data.phone = data.countryCode + data.phone;
+    data.birthDate = formatBirthDate(data.birthDate);
+    mutate(data);
   };
 
   return (
+    //FIXME checking hover problem
     <form
       onSubmit={handleSubmit(submitFormHandler)}
       className="grid 3xs:grid-cols-2 sm:grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-4"
@@ -87,8 +98,7 @@ export default function PersonalInfo() {
         {...register("email", {
           required: "Email could not be empty",
           pattern: {
-            value:
-              /(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))/g,
+            value: emailRegex,
             message: "Email is not valid",
           },
         })}
@@ -114,7 +124,15 @@ export default function PersonalInfo() {
         isInvalid={Boolean(errors.username)}
       />
       <Input
-        startContent={<AutoCompletePhone />}
+        startContent={
+          <Controller
+            name="countryCode"
+            control={control}
+            render={({ field: { onChange, value } }) => (
+              <AutoCompletePhone onChange={onChange} value={value} />
+            )}
+          />
+        }
         classNames={{
           mainWrapper: ["bg-transparent outline-none rounded-2xl "],
           inputWrapper: [

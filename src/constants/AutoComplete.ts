@@ -4,10 +4,10 @@ import netherlandFlag from "../assets/images/netherlandFlag.jpg";
 import canadaFlag from "../assets/images/canadaFlag.png";
 
 const autoComplete = [
-  { value: "Iran", label: "+98", flag: iranFlag },
-  { value: "Usa", label: "+1", flag: usaFlag },
-  { value: "Canada", label: "+12", flag: netherlandFlag },
-  { value: "Netherland", label: "+25", flag: canadaFlag },
+  { country: "Iran", code: "+98", flag: iranFlag },
+  { country: "Usa", code: "+1", flag: usaFlag },
+  { country: "Netherland", code: "+12", flag: netherlandFlag },
+  { country: "Canada", code: "+25", flag: canadaFlag },
 ];
 
 export { autoComplete };
