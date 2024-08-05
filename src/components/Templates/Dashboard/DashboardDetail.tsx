@@ -8,9 +8,9 @@ export default function DashboardDetail() {
 
   return (
     <div className="dark:bg-black-6 border-2 space-y-5 dark:border-black-12 rounded-xl py-8 px-5">
-      <Card className="bg-red-45/70 p-4 flex flex-row items-center justify-between">
-        <p className="text-sm">You haven't subscription</p>
-        <Button className="w-max text-[10px]">Buy Subscription</Button>
+      <Card className="bg-red-45 dark:bg-red-45/80 p-4 flex flex-row items-center justify-between text-sm">
+        <p className="text-white">You haven't subscription</p>
+        <Button className="w-max">Buy Subscription</Button>
       </Card>
       {isLoading ? (
         <DashboardDetailSkeleton />
