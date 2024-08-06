@@ -1,4 +1,4 @@
-import { SubmitHandler, useForm } from "react-hook-form";
+import { Controller, SubmitHandler, useForm } from "react-hook-form";
 import { contactUsProps } from "../../../interfaces/contactUs.interface";
 import { Button, Checkbox, Input, Textarea } from "@nextui-org/react";
 import { emailRegex } from "../../../utils/combineEmailAndPhoneRegex";
@@ -9,6 +9,7 @@ export default function ContactUsForm() {
   const {
     register,
     handleSubmit,
+    control,
     formState: { errors },
   } = useForm<contactUsProps>();
   const [isAccetpedRules, setIsAcceptedRules] = useState<boolean>(false);
@@ -81,7 +82,15 @@ export default function ContactUsForm() {
               isInvalid={Boolean(errors.email)}
             />
             <Input
-              startContent={<AutoCompletePhone />}
+              startContent={
+                <Controller
+                  name="countryCode"
+                  control={control}
+                  render={({ field: { onChange, value } }) => (
+                    <AutoCompletePhone onChange={onChange} value={value} />
+                  )}
+                />
+              }
               classNames={{
                 mainWrapper: ["bg-transparent outline-none rounded-2xl"],
                 inputWrapper: [

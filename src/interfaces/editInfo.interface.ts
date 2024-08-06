@@ -1,12 +1,11 @@
-import { DateValue } from "@nextui-org/react";
-
 interface editInfoProps {
   first_name: string | null;
   last_name: string | null;
-  phone: number | null;
+  phone: number | string | null;
   email: string;
   username: string;
-  birthDate: DateValue | null | undefined;
+  birthDate: any;
+  countryCode: string;
 }
 
 export type { editInfoProps };
