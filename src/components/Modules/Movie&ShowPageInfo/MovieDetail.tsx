@@ -5,7 +5,7 @@ import StarOutline from "../../../assets/icons/StarOutline";
 import RatingsBox from "../../Modules/Movie&ShowPageInfo/RatingsBox";
 import Square2x2 from "../../../assets/icons/Square2x2";
 import CreatorMovieInfo from "./CreatorMovieInfo";
-import formattedDate from "../../../utils/calculateTimeStamp";
+import { formattedDate } from "../../../utils/dateConverters";
 import { allMoviesData } from "../../../interfaces/allMoviesData.interface";
 
 export default function MovieDetail({

@@ -6,7 +6,7 @@ export default function AutoCompletePhone({
   value,
 }: {
   onChange: () => void;
-  value: string;
+  value?: string;
 }) {
   return (
     <Autocomplete

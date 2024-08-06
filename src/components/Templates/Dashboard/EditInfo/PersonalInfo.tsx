@@ -8,19 +8,21 @@ import {
 } from "../../../../hooks/api/useUserApi";
 import { useEffect } from "react";
 import { emailRegex } from "../../../../utils/combineEmailAndPhoneRegex";
-import formatBirthDate from "../../../../utils/birthdayConverter";
+import { convertDatePickerValueToTimestamps } from "../../../../utils/dateConverters";
 
 export default function PersonalInfo() {
-  const { data } = useGetUserInfoApi();
-
-  const { mutate } = usePutUserInfoApi();
   const {
     register,
     control,
     handleSubmit,
     formState: { errors },
     reset,
+    resetField
   } = useForm<editInfoProps>();
+
+  const { data } = useGetUserInfoApi();
+
+  const { mutate, isPending: updateUserLoading } = usePutUserInfoApi(resetField);
 
   useEffect(() => {
     if (data) {
@@ -36,8 +38,16 @@ export default function PersonalInfo() {
   }, [data, reset]);
 
   const submitFormHandler: SubmitHandler<editInfoProps> = (data) => {
-    data.phone = data.countryCode + data.phone;
-    data.birthDate = formatBirthDate(data.birthDate);
+    if (data.phone && data.countryCode) {
+      data.phone = data.countryCode + data.phone;
+    }
+    if (data.date_of_birth) {
+      //@ts-expect-error we wanna to convert birthdate to timstamps
+      data.date_of_birth = convertDatePickerValueToTimestamps(data.date_of_birth)
+    }
+
+    delete data.countryCode
+
     mutate(data);
   };
 
@@ -143,15 +153,13 @@ export default function PersonalInfo() {
         }}
         type="number"
         placeholder="Phone Number"
-        {...register("phone", {
-          required: "Please Enter Your Phone Number",
-        })}
+        {...register("phone")}
         errorMessage={errors.phone?.message}
         isInvalid={Boolean(errors.phone)}
       />
       <Controller
         control={control}
-        name="birthDate"
+        name="date_of_birth"
         render={({ field: { onChange, value } }) => (
           <DatePicker
             label="Birth Date"
@@ -169,6 +177,7 @@ export default function PersonalInfo() {
         <Button
           className="bg-red-45 dark:bg-red-45/80 text-white"
           type="submit"
+          isLoading={updateUserLoading}
         >
           Update Info
         </Button>
