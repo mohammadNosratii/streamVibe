@@ -3,7 +3,7 @@ import Star from "../../../assets/icons/Star";
 import Play from "../../../assets/icons/Play";
 import { Link, useLocation } from "@tanstack/react-router";
 import formatter from "../../../utils/compactReviewNumbers";
-import formattedDate from "../../../utils/calculateTimeStamp";
+import { formattedDate } from "../../../utils/dateConverters";
 import { moviesDetail } from "../../../interfaces/moviesDetail.interface";
 
 export default function MovieCard({

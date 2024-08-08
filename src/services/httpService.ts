@@ -1,6 +1,7 @@
 import axios from "axios";
 import Cookies from "js-cookie";
 import toast from "react-hot-toast";
+import { userSession } from "../utils/userSession";
 
 axios.interceptors.request.use(
   function (config) {
@@ -36,6 +37,7 @@ axios.interceptors.response.use(
       }
       case 401: {
         toast.error(error.response.data.detail);
+        userSession(false);
         break;
       }
       default: {

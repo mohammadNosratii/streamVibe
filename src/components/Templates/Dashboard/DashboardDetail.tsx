@@ -1,6 +1,6 @@
 import { Button, Card } from "@nextui-org/react";
 import { useGetUserInfoApi } from "../../../hooks/api/useUserApi";
-import formattedDate from "../../../utils/calculateTimeStamp";
+import { formattedDate } from "../../../utils/dateConverters";
 import DashboardDetailSkeleton from "../../Modules/Skeletons/DashboardDetailSkeleton";
 
 export default function DashboardDetail() {

@@ -10,7 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@internationalized/date": "^3.5.5",
     "@nextui-org/react": "^2.4.6",
+    "@react-aria/i18n": "^3.12.1",
     "@tanstack/react-query": "^5.45.1",
     "@tanstack/react-router": "^1.32.5",
     "@types/js-cookie": "^3.0.6",
