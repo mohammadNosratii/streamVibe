@@ -48,9 +48,17 @@ export default function LoginForm() {
         {...register("identifier", {
           required: "Username / Email could not be empty",
           pattern: {
-            value: /^(?=.{1,256})([^@\s]+@[^@\s]+\.[^@\s]+|[a-zA-Z0-9._-]+)$/g,
+            value: /^(?=.{3,320})([^@\s]+@[^@\s]+\.[^@\s]+|[a-zA-Z0-9._-]+)$/g,
             message: "Username / Email is not valid"
-          }
+          },
+          minLength: {
+            value: 3,
+            message: "At least 3 characters needed"
+          },
+          maxLength: {
+            value: 320,
+            message: "Maximum 320 characters needed"
+          },
         })}
         endContent={<UserCircle />}
         errorMessage={errors.identifier?.message}
@@ -68,6 +76,14 @@ export default function LoginForm() {
         label="Password"
         {...register("password", {
           required: "Password could not be empty",
+          minLength: {
+            value: 6,
+            message: "At least 6 characters needed"
+          },
+          maxLength: {
+            value: 128,
+            message: "Maximum 128 characters needed"
+          },
         })}
         endContent={
           <div onClick={togglePassword} className="cursor-pointer">
