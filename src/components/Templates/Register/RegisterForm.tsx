@@ -61,7 +61,18 @@ export default function Register() {
           label="Username"
           {...register("username", {
             required: "Username could not be empty",
-            minLength: { value: 4, message: "At Least Enter 4 Character" },
+            pattern: {
+              value: /^[a-z0-9_-]{3,320}$/g,
+              message: "Username is not valid"
+            },
+            minLength: {
+              value: 3,
+              message: "At least 3 characters needed"
+            },
+            maxLength: {
+              value: 320,
+              message: "Maximum 320 characters needed"
+            },
           })}
           endContent={<UserCircle />}
           errorMessage={errors.username?.message}
@@ -85,10 +96,14 @@ export default function Register() {
               value: emailRegex,
               message: "Email is not valid",
             },
+            maxLength: {
+              value: 320,
+              message: "Maximum 320 characters needed"
+            },
           })}
           endContent={<MailIcon />}
-          errorMessage={errors.username?.message}
-          isInvalid={Boolean(errors.username)}
+          errorMessage={errors.email?.message}
+          isInvalid={Boolean(errors.email)}
         />
         <Input
           classNames={{
@@ -104,7 +119,14 @@ export default function Register() {
           label="Password"
           {...register("password", {
             required: "Password could not be empty",
-            minLength: { value: 8, message: "At Least Enter 8 Character" },
+            minLength: {
+              value: 6,
+              message: "At least 6 characters needed"
+            },
+            maxLength: {
+              value: 128,
+              message: "Maximum 128 characters needed"
+            },
           })}
           endContent={
             <div className="cursor-pointer" onClick={togglePassword}>

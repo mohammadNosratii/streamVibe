@@ -25,6 +25,18 @@ export default function ForgetPasswordByUsernameForm() {
                 label="Username"
                 {...register("username", {
                     required: "Username could not be empty",
+                    pattern: {
+                        value: /^[a-z0-9_-]{3,320}$/g,
+                        message: "Username is not valid",
+                    },
+                    minLength: {
+                        value: 3,
+                        message: "At least 3 characters needed"
+                    },
+                    maxLength: {
+                        value: 320,
+                        message: "Maximum 320 characters needed"
+                    },
                 })}
                 endContent={<UserCircle />}
                 errorMessage={errors.username?.message}

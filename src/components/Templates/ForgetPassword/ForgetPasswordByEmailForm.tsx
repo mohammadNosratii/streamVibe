@@ -29,6 +29,10 @@ export default function ForgetPasswordByEmilForm() {
                         message: "Email is not valid"
                     },
                     required: "Email could not be empty",
+                    maxLength: {
+                        value: 320,
+                        message: "Maximum 320 characters needed"
+                    },
                 })}
                 type="email"
                 endContent={<MailIcon />}
